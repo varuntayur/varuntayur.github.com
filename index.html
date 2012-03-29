@@ -153,33 +153,12 @@
 
 		(function($) {
 			$(document).ready(function() {
-				$('#logo').click(function() {
-					document.location.href = 'http://tayur.in/';
-				});
-			
-				/*$('#bird')
-					.sprite({fps: 3, no_of_frames: 3})
-					.spRandom({top: 50, bottom: 150, left: 300, right: 320})
-					.isDraggable()
-					.activeOnClick()
-					.active();
-				*/
+				
 				$('#clouds').pan({fps: 7, speed: 0.5, dir: 'left', depth: 10});
 				$('#hill2').pan({fps: 12, speed: 1, dir: 'left', depth: 30});
 				$('#hill1').pan({fps: 15, speed: 2, dir: 'left', depth: 70});
                                 
-				$('#hill1, #hill2, #clouds').spRelSpeed(2);			
-
-				
-				window.page = {
-					hide_panels: function() {
-						$('.panel').hide(300);
-					},
-					show_panel: function(el_id) {
-						this.hide_panels();
-						$(el_id).show(300);
-					}
-				}
+				$('#hill1, #hill2, #clouds').spRelSpeed(2);								
 				
 				
 				$("#page-wrap div.button").click(function(){
@@ -238,10 +217,7 @@
 							   promptHistory:true,
 							   welcomeMessage:"Hey! Lets' get to know each other. What's your name? Type it with quotes around it like this 'Varun' and then press enter." 
 							 });
-							 
-							 
-				var timeline = new VMM.Timeline();
-				timeline.init("data.json");			 
+ 
 				
 			});
 		})(jQuery);
@@ -261,8 +237,7 @@
 			<div id="hill1" class="stage"></div>			
 		</div>	
 	</div>	
-	<!-- div id="bird"></div> -->
-	
+		
 	<div id="page-wrap">
 		
 				<div id="home-button" class="button">
