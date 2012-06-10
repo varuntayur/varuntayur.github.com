@@ -1,281 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	
-	<title>Varun M Tayur</title>
-	<meta name="keywords" content="" />
-	
-	<meta name="viewport" content="width = 320" />
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	
-	<link href="styles/main.css" />   
-	
-	
-	<style type="text/css">
-		#stage {
-			top: 0px;
-			left: 0px;
-			z-index: 100;
-		}
-		.stage {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			min-width: 900px;
-			height: 250px;
-			overflow: hidden;
-		}
-		#bg {
-			background: #aedfe5 url(images/sky1.png) 0 0 repeat-x;
-		}
-		#clouds {
-			background: transparent url(images/cloud.png) 305px 62px repeat-x;
-		}
-		#hill2 {
-			background: transparent url(images/hill2.png) 0 178px repeat-x;
-		}
-		#hill1 {
-			background: transparent url(images/hill-with-windmill.png) 0 24px repeat-x;
-		}
-		
-		#bird {
-			background: transparent url(images/bird-forward-back.png) 0 0 no-repeat;
-			position: absolute;
-			top: 150px;
-			left: 65px;
-			width: 180px;
-			height: 123px;
-			z-index: 2000;
-			cursor: pointer;
-		}
-		
-		
-		
-		#home {
-			display: block;
-			padding: 30px;
-		}
-		#home-button {
-			opacity: 1.0;
-			border-bottom: 1px solid black;
-		}
-		
-		#about {
-			display: none;
-			padding: 30px;
-		}
-		#about-button {
-			opacity: 0.5;
-			border-bottom: 1px solid black;
-		}
-		
-		* {
-			margin: 0;
-			padding: 0;
-		}
-
-		body {
-			font-size: 62.5%;
-			font-family: Helvetica, sans-serif;
-		}
-
-		.clear {
-			clear: both;
-		}
-
-		#page-wrap {
-			position:relative;
-			bottom:-200px;
-			width: 760px;
-			background: white;			
-			margin: 20px auto;
-			padding: 20px;
-		}
-
-		.button {
-			float: left;
-			margin: 10px;
-		}
-
-		#home {
-			display: block;
-			padding: 30px;
-		}
-		#home-button {
-			opacity: 1.0;
-			border-bottom: 1px solid black;
-		}
-
-		#about {
-			display: none;
-			padding: 30px;
-		}
-		#about-button {
-			opacity: 0.5;
-			border-bottom: 1px solid black;
-		}
-
-		#contact {
-			display: none;
-			padding: 30px;
-		}
-		#contact-button {
-			opacity: 0.5;
-			border-bottom: 1px solid black;
-
-		}
-		
-		 div.console4 { font-size: 14px; margin-top:1em }
-      div.console4 div.jquery-console-inner
-       { width:700px; height:200px; background:#efefef; padding:0.5em;
-         overflow:auto }
-      div.console4 div.jquery-console-prompt-box
-       { color:#444; font-family:monospace; }
-      div.console4 div.jquery-console-focus span.jquery-console-cursor
-       { background:#444; color:#eee; font-weight:bold }
-      div.console4 div.jquery-console-message-error
-       { color:#ef0505; font-family:sans-serif; font-weight:bold;
-         padding:0.1em; }
-      div.console4 div.jquery-console-message-success
-       { color:#187718; font-family:monospace;
-         padding:0.1em; }
-      div.console4 span.jquery-console-prompt-label { font-weight:bold }
-	</style>
-		
-	
-	<script src="scripts/jquery-min.js" ></script>	
-	<script src="scripts/jquery.spritely-0.4.js" ></script>
-	<script src="scripts/jquery.console.js"></script>	
-    	
-	<script type="text/javascript">
-
-		(function($) {
-			$(document).ready(function() {
-				
-				$('#clouds').pan({fps: 7, speed: 0.5, dir: 'left', depth: 10});
-				$('#hill2').pan({fps: 12, speed: 1, dir: 'left', depth: 30});
-				$('#hill1').pan({fps: 15, speed: 2, dir: 'left', depth: 70});
-                                
-				$('#hill1, #hill2, #clouds').spRelSpeed(2);								
-				
-				
-				$("#page-wrap div.button").click(function(){
-
-					$clicked = $(this);
-
-					// if the button is not already "transformed" AND is not animated
-					if ($clicked.css("opacity") != "1" && $clicked.is(":not(animated)")) {
-
-						$clicked.animate({
-							opacity: 1,
-							borderWidth: 5
-						}, 600 );
-
-						// each button div MUST have a "xx-button" and the target div must have an id "xx"
-						var idToLoad = $clicked.attr("id").split('-');
-
-						//we search trough the content for the visible div and we fade it out
-						$("#content").find("div:visible").fadeOut("fast", function(){
-							//once the fade out is completed, we start to fade in the right div
-							$(this).parent().find("#"+idToLoad[0]).fadeIn();
-						})
-					}
-
-					//we reset the other buttons to default style
-					$clicked.siblings(".button").animate({
-						opacity: 0.5,
-						borderWidth: 1
-					}, 600 );
-
-				});
-				
-				var controller4 = $('#console4').console({
-							   promptLabel: '> ',
-							   console3CancelFlag : false,
-							   continuedPromptLabel: '  -> ',
-							   commandValidate:function(line){
-								 if (line == "") return false;
-									else return true;
-							   },
-							   commandHandle:function(line,report){
-								  setTimeout(function() {
-									   if(!this.console3CancelFlag)
-										   report("Hey, " + line + " How are you doing today ?");
-									   else {
-										   report([{msg:"User interrupt",
-											className:"jquery-console-message-error"}]);
-										   this.console3CancelFlag = false;
-									   }
-								    },500);
-							   },
-							   cancelHandle:function() {
-									this.console3CancelFlag = true;
-							   },							   
-							   animateScroll:true,
-							   promptHistory:true,
-							   welcomeMessage:"Hey! Lets' get to know each other. What's your name? Type it with quotes around it like this 'Varun' and then press enter." 
-							 });
- 
-				
-			});
-		})(jQuery);
-		
-		
-	
-	</script>
+  <title>Varun M Tayur</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
+
 <body>
-	<div id="container">
+<div id="wrapper">
+    <div id="header">
 
-		<div id="stage" class="stage">
-			<div id="tap" class="stage"></div>
-			<div id="bg" class="stage"></div>
-			<div id="clouds" class="stage"></div>
-			<div id="hill2" class="stage"></div>
-			<div id="hill1" class="stage"></div>			
-		</div>	
-	</div>	
-		
-	<div id="page-wrap">
-		
-				<div id="home-button" class="button">
-					<img src="images/menu-home.png" alt="home" class="button" />
-				</div>
-				
-				<div id="about-button" class="button">
-					<img src="images/menu-about.png" alt="about" class="button">
-				</div>
+        <div id="logo">
+        </div>
+        <div id="updates">
+			<span>Change is Constant!</span>
+        </div>
+       
+            <ul id="navigation">
 
-				<div id="contact-button" class="button">
-					<img src="images/menu-contact.png" alt="contact" class="button">
-				</div>
-				
-				<div class="clear"></div>
-				
-				<div id="content">
-					
-					<div id="home">
-						<div id="console4" class="console4"/>						
-					</div>
-					
-					<div id="about">
-						<div id="timeline"></div>
-					</div>
-					
-					<div id="contact">
+                <li class="on"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
 
-							<p>
-								<a href="https://twitter.com/varuntayur"><img src="images/icon_twitter.gif" alt="Twitter" width="64" height="25"/></a>
-								<br/>
-								<a href="http://varuntayur.wordpress.com/"><img src="images/wordpress.png" alt="Wordpress" width="128" height="128"/></a>
-								<br/>
-								<a href="http://www.facebook.com/varuntayur"><img src="images/facebook-logo.png" alt="Facebook" width="64" height="64"/></a>
-							</p>
-									
-					</div>
-				</div>
-	</div>
+            </ul>
+    <div id="content">
+		  <h4>Test Drive:</h4>
+			<ul>
+			  <li><a href="scholar-webapp/scholar/index.html">Scholar - School ERP </a></li><br/>
+			  <li><a href="http://108.167.160.4/yfs/">Youth For Seva - Patient Management System </a></li>			  
+			</ul>		  
+    </div>
+    <div id="footer">
+        <div id="copyright">&copy; 2012 All Rights Reserved. Designed by <a href="http://www.crownstyles.com">Crown</a> and coded by <a href="http://trippin.uni.cc">Trippin7464</a> for <a href="http://www.zymic.com" title="Zymic Free Templates">Zymic</a> <a href="http://www.zymic.com/free-templates">Free Templates</a>.
+    </div>
+</div>
 
 </body>
 </html>
