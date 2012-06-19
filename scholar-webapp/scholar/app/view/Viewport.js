@@ -1,7 +1,7 @@
 Ext.define('scholar.view.Viewport', {
 	extend : 'Ext.container.Viewport',
 
-	requires : [ 'scholar.view.scholarlogo', 'scholar.view.scholarmenu' ],
+	requires : [ 'scholar.view.ScholarLogo', 'scholar.view.ScholarMenu' ],
 
 	layout : {
 		type : 'border',
@@ -12,13 +12,13 @@ Ext.define('scholar.view.Viewport', {
 	},
 	items : [ {
 		region : 'north',
-		xtype : 'pageHeader',
+		xtype : 'scholarLogo',
 		split : false,
 		height : 40,
 		padding : 5
 	}, {
 		region : 'center',
-		xtype : 'scholarmenu'
+		xtype : 'scholarMenu'
 	},
 	{
         region: 'east',
