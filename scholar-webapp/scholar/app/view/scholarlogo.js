@@ -1,6 +1,6 @@
-Ext.define('scholar.view.scholarlogo', {
+Ext.define('scholar.view.ScholarLogo', {
     extend: 'Ext.Toolbar',
-    xtype : 'pageHeader',
+    xtype : 'scholarLogo',
     
     ui   : 'sencha',
     height: 53,
