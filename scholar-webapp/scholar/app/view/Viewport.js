@@ -1,7 +1,7 @@
 Ext.define('scholar.view.Viewport', {
 	extend : 'Ext.container.Viewport',
 
-	requires : [ 'scholar.view.ScholarLogo', 'scholar.view.ScholarMenu' ],
+	requires : [ 'scholar.view.scholarlogo', 'scholar.view.scholarmenu' ],
 
 	layout : {
 		type : 'border',

@@ -2,6 +2,8 @@ Ext.define('scholar.view.menu.Student', {
 	extend : 'Ext.form.FieldSet',
 	xtype : 'studentMenu',
 
+	requires : [ 'scholar.view.detail.StudentSearch' ],
+	 			
 	autoHeight : true,
 	bodyPadding : 10,
 	title : 'Student',
@@ -32,7 +34,20 @@ Ext.define('scholar.view.menu.Student', {
 	}, {
 		xtype : 'button',
 		scale : 'medium',
-		text : 'Lookup/Search'
+		text : 'Lookup/Search',
+		listeners:{
+			click: function()
+			{
+				new Ext.Window({
+			        title: 'Lookup/Search Student(s)',
+			        closable: true,
+			        plain: true,
+			        layout: 'fit',
+			        autoRender: true,
+			        items: [ new scholar.view.detail.StudentSearch() ]
+			    }).show();
+			}
+		}
 	}, {
 		xtype : 'button',
 		scale : 'large',

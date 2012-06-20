@@ -1,4 +1,4 @@
-Ext.define('scholar.view.ScholarMenu', {
+Ext.define('scholar.view.scholarmenu', {
 	extend : 'Ext.form.Panel',
 	xtype : 'scholarMenu',
 
