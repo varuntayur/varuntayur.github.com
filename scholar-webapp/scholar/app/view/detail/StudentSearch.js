@@ -1,6 +1,7 @@
 Ext.define('scholar.view.detail.StudentSearch', {
-	extend : 'scholar.view.detail.LiveSearchPanel',
-	requires : [ 'Ext.window.Window', 'scholar.view.detail.LiveSearchPanel' ],
+	extend : 'Ext.ux.LiveSearchGridPanel',
+	requires : [ 'Ext.window.Window'],
+	alias: 'widget.studentSearch',
 	store : new Ext.data.ArrayStore({
 		fields : [ {
 			name : 'admissionNumber',

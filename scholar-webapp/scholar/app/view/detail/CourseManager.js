@@ -2,7 +2,7 @@ Ext.define('scholar.view.detail.CourseManager', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
-			'scholar.view.detail.LiveSearchPanel' ],
+			'Ext.ux.LiveSearchGridPanel' ],
 	frame : true,
 	bodyPadding : 5,
 	width : 550,
@@ -15,7 +15,7 @@ Ext.define('scholar.view.detail.CourseManager', {
 
 	items : [
 			{
-				xtype : 'liveSearchPanel',
+				xtype : 'livesearchgridpanel',
 				width: 500,
 				dockedItems: [{
 				    xtype: 'toolbar',

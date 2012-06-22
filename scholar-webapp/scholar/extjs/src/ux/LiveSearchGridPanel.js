@@ -1,12 +1,19 @@
-Ext.define('scholar.view.detail.LiveSearchPanel', {
+/**
+ * @class Ext.ux.LiveSearchGridPanel
+ * @extends Ext.grid.Panel
+ * <p>A GridPanel class with live search support.</p>
+ * @author Nicolas Ferrero
+ */
+Ext.define('Ext.ux.LiveSearchGridPanel', {
     extend: 'Ext.grid.Panel',
-    xtype : 'liveSearchPanel',
     requires: [
         'Ext.toolbar.TextItem',
         'Ext.form.field.Checkbox',
         'Ext.form.field.Text',
         'Ext.ux.statusbar.StatusBar'
     ],
+	
+	alias: 'widget.livesearchgridpanel',
     
     /**
      * @private
@@ -59,7 +66,7 @@ Ext.define('scholar.view.detail.LiveSearchPanel', {
                  xtype: 'textfield',
                  name: 'searchField',
                  hideLabel: true,
-                 width: 120,
+                 width: 200,
                  listeners: {
                      change: {
                          fn: me.onTextFieldChange,
@@ -209,7 +216,7 @@ Ext.define('scholar.view.detail.LiveSearchPanel', {
              if (me.currentIndex !== null) {
                  me.getSelectionModel().select(me.currentIndex);
                  me.statusBar.setStatus({
-                     text: count + ' match(es) found.',
+                     text: count + ' matche(s) found.',
                      iconCls: 'x-status-valid'
                  });
              }
