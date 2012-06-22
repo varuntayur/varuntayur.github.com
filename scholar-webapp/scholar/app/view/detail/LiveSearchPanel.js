@@ -1,6 +1,6 @@
 Ext.define('scholar.view.detail.LiveSearchPanel', {
     extend: 'Ext.grid.Panel',
-    xtype : 'liveGridSearch',
+    xtype : 'liveSearchPanel',
     requires: [
         'Ext.toolbar.TextItem',
         'Ext.form.field.Checkbox',
@@ -59,7 +59,7 @@ Ext.define('scholar.view.detail.LiveSearchPanel', {
                  xtype: 'textfield',
                  name: 'searchField',
                  hideLabel: true,
-                 width: 200,
+                 width: 120,
                  listeners: {
                      change: {
                          fn: me.onTextFieldChange,

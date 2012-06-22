@@ -1,6 +1,8 @@
 Ext.define('scholar.view.menu.Administration', {
 	extend : 'Ext.form.FieldSet',
 	xtype : 'administrationMenu',
+	
+	requires : [ 'scholar.view.detail.CourseManager','scholar.view.detail.BatchManager' ],
 
 	title : 'Administration',
 	collapsible : true,
@@ -24,14 +26,52 @@ Ext.define('scholar.view.menu.Administration', {
 		pack : 'center',
 		align : 'stretchmax'
 	},
-	items : [ {
+	items : [
+	 {
+		xtype : 'button',
+		scale : 'large',
+		text : 'Course',
+		listeners:{
+			click: function()
+			{
+				new Ext.Window({
+			        title: 'Course Manager',
+			        closable: true,
+			        plain: true,
+			        layout: 'fit',
+			        autoRender: true,
+			        items: [ new scholar.view.detail.CourseManager() ]
+			    }).show();
+			}
+		}
+	},
+	 {
+		xtype : 'button',
+		scale : 'large',
+		text : 'Batch',
+		listeners:{
+			click: function()
+			{
+				new Ext.Window({
+			        title: 'Batch Manager',
+			        closable: true,
+			        plain: true,
+			        layout: 'fit',
+			        autoRender: true,
+			        items: [ new scholar.view.detail.BatchManager() ]
+			    }).show();
+			}
+		}
+	},
+	 {
 		xtype : 'button',
 		text : 'Payroll'
 	}, {
 		xtype : 'button',
 		scale : 'medium',
 		text : 'Fee Collection'
-	}, {
+	}, 
+	{
 		xtype : 'button',
 		scale : 'large',
 		text : 'Inventory'

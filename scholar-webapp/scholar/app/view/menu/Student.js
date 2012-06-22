@@ -2,7 +2,7 @@ Ext.define('scholar.view.menu.Student', {
 	extend : 'Ext.form.FieldSet',
 	xtype : 'studentMenu',
 
-	requires : [ 'scholar.view.detail.StudentSearch' ],
+	requires : [ 'scholar.view.detail.StudentSearch','scholar.view.detail.CourseManager' ],
 	 			
 	autoHeight : true,
 	bodyPadding : 10,
@@ -28,10 +28,7 @@ Ext.define('scholar.view.menu.Student', {
 		pack : 'center',
 		align : 'stretchmax'
 	},
-	items : [ {
-		xtype : 'button',
-		text : 'Attendance'
-	}, {
+	items : [  {
 		xtype : 'button',
 		scale : 'medium',
 		text : 'Lookup/Search',
@@ -48,14 +45,14 @@ Ext.define('scholar.view.menu.Student', {
 			    }).show();
 			}
 		}
+	},
+	{
+		xtype : 'button',
+		text : 'Attendance'
 	}, {
 		xtype : 'button',
 		scale : 'large',
-		text : 'Course/Examination'
-	}, {
-		xtype : 'button',
-		scale : 'large',
-		text : 'Reporting'
+		text : 'Examination'
 	} ]
 
 });

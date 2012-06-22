@@ -1,4 +1,4 @@
-Ext.define('scholar.view.scholarlogo', {
+Ext.define('scholar.view.ScholarLogo', {
     extend: 'Ext.Toolbar',
     xtype : 'scholarLogo',
     

@@ -1,6 +1,8 @@
 Ext.define('scholar.view.menu.Staff', {
 	extend : 'Ext.form.FieldSet',
 	xtype : 'staffMenu',
+	
+	requires : [ 'scholar.view.detail.StaffSearch' ],
 
 	title : 'Staff',
 	collapsible : true,
@@ -24,14 +26,28 @@ Ext.define('scholar.view.menu.Staff', {
 		pack : 'center',
 		align : 'stretchmax'
 	},
-	items : [ {
-		xtype : 'button',
-		text : 'Attendance'
-	}, {
+	items : [
+	         {
 		xtype : 'button',
 		scale : 'medium',
-		text : 'Lookup/Search'
-	}, {
+		text : 'Lookup/Search',
+		listeners:{
+			click: function()
+			{
+				new Ext.Window({
+			        title: 'Lookup/Search Staff(s)',
+			        closable: true,
+			        plain: true,
+			        layout: 'fit',
+			        autoRender: true,
+			        items: [ new scholar.view.detail.StaffSearch() ]
+			    }).show();
+			}
+		}
+	},{
+		xtype : 'button',
+		text : 'Attendance'
+	},  {
 		xtype : 'button',
 		scale : 'large',
 		text : 'Timetable'
