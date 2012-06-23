@@ -95,31 +95,54 @@ Ext.define('scholar.view.ScholarMainMenu', {
 		mainItem : 0,
 		items : [ {
 			xtype : 'panel',
-			title : 'Library',
+			title : 'Administrator',
 			tabTip : 'Be the administrator',
 			border : false,
 			items : [ {
 				xtype : 'administrationMenu'
 			} ]
 		}, {
-			title : 'Search',
-			tabTip : 'Student search',
-			xtype : 'studentSearch',
+			title : 'Course',
+			tabTip : 'Course Management',
+			xtype : 'courseManager',
 			margin : '10',
 			height : null
 		}, {
-			title : 'Attendance',
-			tabTip : 'Attendance',
-			xtype : 'studentSearch',
+			title : 'Batch',
+			tabTip : 'Batch Management',
+			xtype : 'batchManager',
 			margin : '10',
 			height : null
-		}, {
-			title : 'Grades',
-			tabTip : 'Student search',
-			xtype : 'studentSearch',
+		},
+		{
+			title : 'Payroll',
+			tabTip : 'Payroll',
+			xtype : 'payrollManager',
 			margin : '10',
 			height : null
-		}]
+		},
+		{
+			title : 'Fee Collection',
+			tabTip : 'Fee Collection',
+			xtype : 'feeCollectionManager',
+			margin : '10',
+			height : null
+		},
+		{
+			title : 'Inventory',
+			tabTip : 'Inventory',
+			xtype : 'inventoryManager',
+			margin : '10',
+			height : null
+		},
+		{
+			title : 'Admissions',
+			tabTip : 'Admissions',
+			xtype : 'admissionManager',
+			margin : '10',
+			height : null
+		}
+		]
 	},
 	{
 		mainItem : 0,

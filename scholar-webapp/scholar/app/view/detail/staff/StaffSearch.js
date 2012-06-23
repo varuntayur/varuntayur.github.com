@@ -1,55 +1,55 @@
-Ext.define('scholar.view.detail.LibrarySearch', {
+Ext.define('scholar.view.detail.staff.StaffSearch', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.window.Window' ],
 	store : new Ext.data.ArrayStore({
 		fields : [ {
-			name : 'isbnNumber',
+			name : 'employeeId',
 			type : 'string'
 		}, {
-			name : 'bookName',
+			name : 'staffName',
 			type : 'string'
 		}, {
-			name : 'publisher',
+			name : 'department',
 			type : 'string'
 		}, {
-			name : 'author',
+			name : 'address',
 			type : 'string'
 		}, {
-			name : 'addedDate',
+			name : 'lastChange',
 			type : 'date',
 			dateFormat : 'n/j h:ia'
 		} ],
-		data : [ [ '001-005', 'Test', 'Pub 1', 'A 1', '9/1 12:00am' ],
-				[ '001-006', 'Test 1', 'Pub 2', 'A 2', '9/1 12:00am' ],
-				[ '001-007', 'Test 2', 'Pub 3', 'A 3', '9/1 12:00am' ] ]
+		data : [ [ '001005', 'Rama', 'CS', 'Blore', '9/1 12:00am' ],
+				[ '001006', 'Krishna', 'Science', 'Blore', '9/1 12:00am' ],
+				[ '001007', 'Govinda', 'Maths', 'Blore', '9/1 12:00am' ] ]
 	}),
 	columnLines : true,
 	columns : [ {
-		text : 'ISBN',
+		text : 'Employee ID',
 		flex : 1,
 		sortable : false,
-		dataIndex : 'isbnNumber'
+		dataIndex : 'employeeId'
 	}, {
 		text : 'Name',
 		width : 75,
 		sortable : true,
-		dataIndex : 'bookName'
+		dataIndex : 'staffName'
 	}, {
-		text : 'Publisher',
+		text : 'Department',
 		width : 75,
 		sortable : true,
-		dataIndex : 'publisher'
+		dataIndex : 'department'
 	}, {
-		text : 'Author',
+		text : 'Address',
 		width : 75,
 		sortable : true,
-		dataIndex : 'author'
+		dataIndex : 'address'
 	}, {
 		xtype : 'datecolumn',
-		text : 'Date Added',
+		text : 'Last Updated',
 		width : 85,
 		sortable : true,
-		dataIndex : 'addedDate'
+		dataIndex : 'lastChange'
 	} ],
 	height : 350,
 	width : 600,

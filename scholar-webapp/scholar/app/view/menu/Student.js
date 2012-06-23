@@ -1,13 +1,13 @@
 Ext.define('scholar.view.menu.Student', {
-	extend : 'Ext.form.FieldSet',
+	extend : 'Ext.form.Panel',
 	xtype : 'studentMenu',
 
-	requires : [ 'scholar.view.detail.StudentSearch','scholar.view.detail.CourseManager' ],
-	 			
+	requires : [ 'scholar.view.detail.student.StudentSearch' ],
+
 	autoHeight : true,
 	bodyPadding : 10,
 	title : 'Student',
-	collapsible : true,
+	collapsible : false,
 	defaults : {
 		labelWidth : 89,
 		anchor : '100%',
@@ -28,31 +28,28 @@ Ext.define('scholar.view.menu.Student', {
 		pack : 'center',
 		align : 'stretchmax'
 	},
-	items : [  {
+	items : [ {
 		xtype : 'button',
 		scale : 'medium',
 		text : 'Lookup/Search',
-		listeners:{
-			click: function()
-			{
+		listeners : {
+			click : function() {
 				new Ext.Window({
-			        title: 'Lookup/Search Student(s)',
-			        closable: true,
-			        plain: true,
-			        layout: 'fit',
-			        autoRender: true,
-			        items: [ new scholar.view.detail.StudentSearch() ]
-			    }).show();
+					title : 'Lookup/Search Student(s)',
+					closable : true,
+					plain : true,
+					layout : 'fit',
+					autoRender : true,
+					items : [ new scholar.view.detail.StudentSearch() ]
+				}).show();
 			}
 		}
-	},
-	{
+	}, {
 		xtype : 'button',
 		text : 'Attendance'
 	}, {
 		xtype : 'button',
 		scale : 'large',
 		text : 'Examination'
-	} ]
-
+	}]
 });

@@ -1,8 +1,8 @@
 Ext.define('scholar.view.menu.Library', {
-	extend : 'Ext.form.FieldSet',
+	extend : 'Ext.form.Panel',
 	xtype : 'libraryMenu',
 	
-	requires : [ 'scholar.view.detail.LibrarySearch' ],
+	requires : [ 'scholar.view.detail.library.LibrarySearch' ],
 
 	title : 'Library',
 	collapsible : true,

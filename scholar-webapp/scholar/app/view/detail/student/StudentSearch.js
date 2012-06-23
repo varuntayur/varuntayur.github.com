@@ -1,4 +1,4 @@
-Ext.define('scholar.view.detail.StudentSearch', {
+Ext.define('scholar.view.detail.student.StudentSearch', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.window.Window'],
 	alias: 'widget.studentSearch',

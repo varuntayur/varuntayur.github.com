@@ -1,8 +1,13 @@
 Ext.define('scholar.view.menu.Administration', {
-	extend : 'Ext.form.FieldSet',
+	extend : 'Ext.form.Panel',
 	xtype : 'administrationMenu',
 	
-	requires : [ 'scholar.view.detail.CourseManager','scholar.view.detail.BatchManager' ],
+	requires : [ 'scholar.view.detail.administration.AdmissionManager',
+	             'scholar.view.detail.administration.BatchManager',
+	             'scholar.view.detail.administration.CourseManager',
+	             'scholar.view.detail.administration.FeeCollectionManager',
+	             'scholar.view.detail.administration.InventoryManager',
+	             'scholar.view.detail.administration.PayrollManager'],
 
 	title : 'Administration',
 	collapsible : true,

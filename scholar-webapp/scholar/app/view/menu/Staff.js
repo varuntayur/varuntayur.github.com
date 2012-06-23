@@ -1,8 +1,8 @@
 Ext.define('scholar.view.menu.Staff', {
-	extend : 'Ext.form.FieldSet',
+	extend : 'Ext.form.Panel',
 	xtype : 'staffMenu',
 	
-	requires : [ 'scholar.view.detail.StaffSearch' ],
+	requires : [ 'scholar.view.detail.staff.StaffSearch' ],
 
 	title : 'Staff',
 	collapsible : true,

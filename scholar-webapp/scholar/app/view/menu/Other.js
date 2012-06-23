@@ -1,5 +1,5 @@
 Ext.define('scholar.view.menu.Other', {
-	extend : 'Ext.form.FieldSet',
+	extend : 'Ext.form.Panel',
 	xtype : 'otherMenu',
 
 	title : 'Other',
