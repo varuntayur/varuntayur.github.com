@@ -2,7 +2,7 @@ Ext.define('scholar.view.menu.Staff', {
 	extend : 'Ext.form.Panel',
 	xtype : 'staffMenu',
 	
-	requires : [ 'scholar.view.detail.staff.StaffSearch' ],
+	requires : [ 'scholar.view.detail.staff.StaffSearch', 'scholar.view.detail.staff.TimeTableManager' , 'Ext.calendar.CalendarPanel'],
 
 	title : 'Staff',
 	collapsible : true,
@@ -26,6 +26,7 @@ Ext.define('scholar.view.menu.Staff', {
 		pack : 'center',
 		align : 'stretchmax'
 	},
+	
 	items : [
 	         {
 		xtype : 'button',
@@ -50,7 +51,22 @@ Ext.define('scholar.view.menu.Staff', {
 	},  {
 		xtype : 'button',
 		scale : 'large',
-		text : 'Timetable'
+		text : 'Timetable',
+			listeners:{
+				click: function()
+				{
+					new Ext.Window({
+				        title: 'Manage Time-Table',
+				        closable: true,
+				        plain: true,
+				        layout: 'fit',
+				        autoRender: true,
+				        items: [ 
+								{xtype: 'timeTable'}
+				               ]
+				    }).show();
+				}
+			}
 	}, {
 		xtype : 'button',
 		scale : 'large',

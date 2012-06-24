@@ -1,6 +1,7 @@
 Ext.define('scholar.view.detail.staff.StaffSearch', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.window.Window' ],
+	alias: 'widget.staffSearch',
 	store : new Ext.data.ArrayStore({
 		fields : [ {
 			name : 'employeeId',

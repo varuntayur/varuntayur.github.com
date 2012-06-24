@@ -43,8 +43,8 @@ Ext.define('scholar.view.ScholarMainMenu', {
 			} ]
 		}, {
 			title : 'Search',
-			tabTip : 'Student search',
-			xtype : 'studentSearch',
+			tabTip : 'Staff search',
+			xtype : 'staffSearch',
 			margin : '10',
 			height : null
 		}, {
@@ -54,9 +54,9 @@ Ext.define('scholar.view.ScholarMainMenu', {
 			margin : '10',
 			height : null
 		}, {
-			title : 'Grades',
-			tabTip : 'Student search',
-			xtype : 'studentSearch',
+			title : 'TimeTable',
+			tabTip : 'Manage Timetable',
+			xtype : 'timeTable',
 			margin : '10',
 			height : null
 		}]
@@ -72,19 +72,19 @@ Ext.define('scholar.view.ScholarMainMenu', {
 				xtype : 'libraryMenu'
 			} ]
 		}, {
-			title : 'Search',
+			title : 'Book Search',
 			tabTip : 'Student search',
-			xtype : 'studentSearch',
+			xtype : 'librarySearch',
 			margin : '10',
 			height : null
 		}, {
-			title : 'Attendance',
+			title : 'Inventory',
 			tabTip : 'Attendance',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
 		}, {
-			title : 'Grades',
+			title : 'OPAC',
 			tabTip : 'Student search',
 			xtype : 'studentSearch',
 			margin : '10',
@@ -155,20 +155,34 @@ Ext.define('scholar.view.ScholarMainMenu', {
 				xtype : 'otherMenu'
 			} ]
 		}, {
-			title : 'Search',
-			tabTip : 'Student search',
+			title : 'Inventory',
+			tabTip : 'Inventory search',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
 		}, {
-			title : 'Attendance',
-			tabTip : 'Attendance',
+			title : 'Transport',
+			tabTip : 'Manage Transport',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
 		}, {
-			title : 'Grades',
-			tabTip : 'Student search',
+			title : 'Memo',
+			tabTip : 'Issue Memos',
+			xtype : 'studentSearch',
+			margin : '10',
+			height : null
+		},
+		 {
+			title : 'Events',
+			tabTip : 'Publish Events',
+			xtype : 'studentSearch',
+			margin : '10',
+			height : null
+		},
+		{
+			title : 'User/Role',
+			tabTip : 'Manager User Roles',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null

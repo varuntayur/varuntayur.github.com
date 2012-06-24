@@ -1,6 +1,7 @@
 Ext.define('scholar.view.detail.library.LibrarySearch', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.window.Window' ],
+	alias: 'widget.librarySearch',
 	store : new Ext.data.ArrayStore({
 		fields : [ {
 			name : 'isbnNumber',
