@@ -21,17 +21,12 @@ Ext.define('scholar.view.menu.Student', {
 			}
 		},
 		margins : '10 10 10 10'
-	},
-	/*layout : {
-		type : 'hbox',
-		padding : '5',
-		pack : 'center',
-		align : 'stretchmax'
-	},*/	
+	},	
 	items: [
 	       Ext.create('Ext.chart.Chart', {		
 		   width: 400,
 		   height: 300,
+		   animate: true,
 		   store: Ext.create('Ext.data.JsonStore', {
 			        fields: ['name', 'data1'],
 			    	data: [
