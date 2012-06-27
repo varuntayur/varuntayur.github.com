@@ -2,7 +2,7 @@ Ext.define('scholar.view.menu.Student', {
 	extend : 'Ext.form.Panel',
 	xtype : 'studentMenu',
 
-	requires : [ 'scholar.view.detail.student.StudentSearch' ],
+	requires : [ 'scholar.view.detail.student.StudentSearch','Ext.chart.*' ],
 
 	autoHeight : true,
 	bodyPadding : 10,
@@ -22,13 +22,81 @@ Ext.define('scholar.view.menu.Student', {
 		},
 		margins : '10 10 10 10'
 	},
-	layout : {
+	/*layout : {
 		type : 'hbox',
 		padding : '5',
 		pack : 'center',
 		align : 'stretchmax'
-	},
-	items : [ {
+	},*/	
+	items: [
+	       Ext.create('Ext.chart.Chart', {		
+		   width: 400,
+		   height: 300,
+		   store: Ext.create('Ext.data.JsonStore', {
+			        fields: ['name', 'data1'],
+			    	data: [
+				        { name: 'Jan', data1: 100 },
+				        { name: 'Feb', data1: 90 },
+				        { name: 'Mar', data1: 100 },
+				        { name: 'Apr', data1: 0 },
+				        { name: 'May', data1: 0 },
+				        { name: 'Jun', data1: 70 },
+				        { name: 'Jul', data1: 90 },
+				        { name: 'Aug', data1: 91 },
+				        { name: 'Sep', data1: 99 },
+				        { name: 'Oct', data1: 80 },
+				        { name: 'Nov', data1: 90 },
+				        { name: 'Dec', data1: 80 }				 
+				    ]
+			    }),		 			    
+		  axes: [
+				{
+				    type: 'Numeric',
+				    position: 'left',
+				    fields: ['data1'],
+				    title: 'Attendance',
+				    grid: true,
+				    minimum: 0,
+				    maximum: 100
+				}, {
+				    type: 'Category',
+				    position: 'bottom',
+				    fields: ['name'],
+				    title: 'Months',
+				    label: {
+				        rotate: {
+				            degrees: 270
+				        }
+				    }
+				}
+		        /*{
+		            title: 'Temperature',
+		            type: 'Numeric',
+		            position: 'left',
+		            fields: ['temperature'],
+		            minimum: 0,
+		            maximum: 100
+		        },
+		        {
+		            title: 'Time',
+		            type: 'Time',
+		            position: 'bottom',
+		            fields: ['date'],
+		            groupBy: 'hour',
+		            dateFormat: 'ga'
+		        }*/
+		    ],
+		  series: [
+	        {
+	            type: 'line',
+	            xField: 'name',
+	            yField: 'data1'
+	        }
+	    ]
+	   })
+	]
+	/*items : [
+	         {
 		xtype : 'button',
 		scale : 'medium',
 		text : 'Lookup/Search',
@@ -51,5 +119,5 @@ Ext.define('scholar.view.menu.Student', {
 		xtype : 'button',
 		scale : 'large',
 		text : 'Examination'
-	}]
+	}]*/
 });

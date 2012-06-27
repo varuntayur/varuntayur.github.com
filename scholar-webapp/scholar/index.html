@@ -16,26 +16,21 @@
 	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/LiveSearchGridPanel.css" />
 	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/portal.css" />
 	    <link rel="stylesheet" type="text/css" href="app/view/detail/resources/css/calendar.css" />
+	    
 	    <script type="text/javascript">
-        Ext.Loader.setConfig({
-            enabled: true,
-            paths: {
-                'Ext.calendar': 'app/view/detail/calendar'
-            }
-        });
-        Ext.require([
-            //'Ext.diag.layout.Context',
-            //'Ext.diag.layout.ContextItem',
-            'Ext.calendar.App'
-        ]);
-        /*Ext.onReady(function(){
-            // launch the app:
-            Ext.create('Ext.calendar.App');
-            
-            // update the header logo date:
-            document.getElementById('logo-body').innerHTML = new Date().getDate();
-        });*/
-    </script>
+	        Ext.Loader.setConfig({
+	            enabled: true,
+	            paths: {
+	                'Ext.calendar': 'app/view/detail/calendar'
+	            }
+	        });
+	        Ext.require([
+	            //'Ext.diag.layout.Context',
+	            //'Ext.diag.layout.ContextItem',
+	            'Ext.calendar.App'
+	        ]);       
+
+    	</script>
 	    	    
 	</head>
 	<body>
