@@ -21,7 +21,7 @@ Ext.define('scholar.view.ScholarMainMenu', {
 		}, {
 			title : 'Attendance',
 			tabTip : 'Attendance',
-			xtype : 'studentSearch',
+			xtype : 'attendanceManager',
 			margin : '10',
 			height : null
 		}, {

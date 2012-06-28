@@ -2,7 +2,7 @@ Ext.define('scholar.view.menu.Student', {
 	extend : 'Ext.form.Panel',
 	xtype : 'studentMenu',
 
-	requires : [ 'scholar.view.detail.student.StudentSearch','Ext.chart.*' ],
+	requires : [ 'scholar.view.detail.student.StudentSearch','Ext.chart.*', 'scholar.view.detail.student.AttendanceManager' ],
 
 	autoHeight : true,
 	bodyPadding : 10,
