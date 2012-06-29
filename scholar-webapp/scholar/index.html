@@ -6,7 +6,7 @@
 	
 	    <link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
 	    
-	    <script type="text/javascript" src="extjs/ext-debug.js"></script>
+	    <script type="text/javascript" src="extjs/ext-all-debug.js"></script>
 	    
 	    <script type="text/javascript" src="scholar.js"></script>
 	    
@@ -21,7 +21,8 @@
 	        Ext.Loader.setConfig({
 	            enabled: true,
 	            paths: {
-	                'Ext.calendar': 'app/view/detail/calendar'
+	                'Ext.calendar': 'app/view/detail/calendar',
+	                'Ext.ux':'extjs/src/ux'
 	            }
 	        });
 	        Ext.require([
@@ -40,6 +41,7 @@
   	<div class="loading-indicator">
     	Loading...
   	</div>
+
 </div>
 	
 </html>

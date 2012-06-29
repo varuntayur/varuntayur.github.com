@@ -12,13 +12,13 @@ Ext.define('scholar.view.Viewport', {
 	},
 	items : [ {
 		region : 'north',
-		xtype : 'scholarLogo',
+		xtype : 'logo',
 		split : false,
 		height : 40,
 		padding : 5
 	}, {
 		region : 'center',
-		xtype : 'scholarMainMenu'
+		xtype : 'mainMenu'
 	},
 	{
         region: 'east',

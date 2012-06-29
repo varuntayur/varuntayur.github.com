@@ -1,7 +1,7 @@
 Ext.define('scholar.view.detail.staff.Dashboard', {
 	extend : 'Ext.form.Panel',
 	xtype : 'staffDashboard',
-	
+	requires:['Ext.chart.*'],
 	title : 'Staff Dashboard',
 	collapsible : false,
 	defaults : {

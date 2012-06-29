@@ -1,8 +1,7 @@
 Ext.define('scholar.view.detail.administration.Dashboard', {
 	extend : 'Ext.form.Panel',
-	alias : 'widget.administrationDashboard',
-	requires : [ 'Ext.chart.*' ],
-	
+	xtype : 'administrationDashboard',
+	requires:['Ext.chart.*'],
 	title : 'Administration Dashboard',
 	collapsible : false,
 	defaults : {

@@ -1,10 +1,8 @@
 Ext.define('scholar.view.MainMenu', {
 	extend : 'Ext.ux.GroupTabPanel',
-	xtype : 'scholarMainMenu',
+	xtype : 'mainMenu',
 	
 	 requires:[
-//		'scholar.view.menu.Library', 'scholar.view.menu.Other',
-		
 		'Ext.chart.*', 
 		
 		'scholar.view.detail.other.Dashboard',
@@ -90,7 +88,7 @@ Ext.define('scholar.view.MainMenu', {
 			tabTip : 'Wear the Librarian hat',
 			border : false,
 			items : [ {
-				xtype : 'libraryDashboard'
+				xtype : 'administrationDashboard'
 			} ]
 		}, {
 			title : 'Book Search',
@@ -173,7 +171,7 @@ Ext.define('scholar.view.MainMenu', {
 			tabTip : 'Manage other activities',
 			border : false,
 			items : [ {
-				xtype : 'otherDashboard'
+				xtype : 'administrationDashboard'
 			} ]
 		}, {
 			title : 'Inventory',
@@ -209,16 +207,5 @@ Ext.define('scholar.view.MainMenu', {
 			height : null
 		}]
 	}]
-
-// items : [ {
-// xtype : 'studentMenu'
-// }, {
-// xtype : 'staffMenu'
-// }, {
-// xtype : 'administrationMenu'
-// }, {
-// xtype : 'libraryMenu'
-// }, {
-// xtype : 'otherMenu'
-// } ]
+	//]
 });

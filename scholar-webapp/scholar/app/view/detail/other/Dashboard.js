@@ -1,8 +1,7 @@
 Ext.define('scholar.view.detail.other.Dashboard', {
 	extend : 'Ext.form.Panel',
 	xtype: 'otherDashboard',
-	requires : [ 'Ext.chart.*' ],
-	
+	requires:['Ext.chart.*'],
 	title : 'Management Dashboard',
 	collapsible : false,
 	defaults : {

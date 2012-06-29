@@ -1,7 +1,7 @@
 Ext.define('scholar.view.detail.library.Dashboard', {
 	extend : 'Ext.form.Panel',
 	xtype : 'libraryDashboard',
-	
+	requires:['Ext.chart.*'],
 	title : 'Library Dashboard',
 	collapsible : false,
 	defaults : {
