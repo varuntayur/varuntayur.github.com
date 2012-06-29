@@ -1,7 +1,7 @@
 Ext.define('scholar.view.Viewport', {
 	extend : 'Ext.container.Viewport',
 
-	requires : [ 'scholar.view.ScholarLogo', 'scholar.view.ScholarMenu' , 'scholar.view.ScholarMainMenu'],
+	requires : [ 'scholar.view.Logo',  'scholar.view.MainMenu'],
 
 	layout : {
 		type : 'border',
@@ -25,6 +25,7 @@ Ext.define('scholar.view.Viewport', {
         collapsible: true,
         floatable: true,
         split: true,
+        collapsed: true,
         width: 200,
         minWidth: 120,
         minHeight: 140,
@@ -43,6 +44,13 @@ Ext.define('scholar.view.Viewport', {
             xtype: 'component',
             html: 'News Feed 2'
         }]
-    }]
+    }],
+    listeners: {
+    	'afterrender': function()
+    	{
+    		 Ext.get('loading').remove();
+     	    Ext.get('loading-mask').fadeOut({remove:true});
+    	}
+    }
 
 });

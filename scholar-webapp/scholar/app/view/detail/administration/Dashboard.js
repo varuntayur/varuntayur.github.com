@@ -1,11 +1,10 @@
-Ext.define('scholar.view.menu.Staff', {
+Ext.define('scholar.view.detail.administration.Dashboard', {
 	extend : 'Ext.form.Panel',
-	xtype : 'staffMenu',
+	alias : 'widget.administrationDashboard',
+	requires : [ 'Ext.chart.*' ],
 	
-	requires : [ 'scholar.view.detail.staff.StaffSearch', 'scholar.view.detail.staff.TimeTableManager' , 'Ext.calendar.CalendarPanel'],
-
-	title : 'Staff',
-	collapsible : true,
+	title : 'Administration Dashboard',
+	collapsible : false,
 	defaults : {
 		labelWidth : 89,
 		anchor : '100%',

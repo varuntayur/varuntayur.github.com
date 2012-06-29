@@ -1,5 +1,6 @@
 Ext.define('scholar.view.detail.staff.TimeTableManager', {
 	extend : 'Ext.calendar.CalendarPanel',
+	requires : [ 'Ext.calendar.CalendarPanel'],
 	    xtype: 'timeTable',
 	    eventStore: Ext.create('Ext.calendar.data.MemoryEventStore', {
             data: Ext.calendar.data.Events.getData()

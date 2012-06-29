@@ -1,12 +1,12 @@
-Ext.define('scholar.view.menu.Student', {
+Ext.define('scholar.view.detail.student.Dashboard', {
 	extend : 'Ext.form.Panel',
-	xtype : 'studentMenu',
+	xtype : 'studentDashboard',
 
-	requires : [ 'scholar.view.detail.student.StudentSearch','Ext.chart.*', 'scholar.view.detail.student.AttendanceManager' ],
+	requires : [ 'Ext.chart.*' ],
 
 	autoHeight : true,
 	bodyPadding : 10,
-	title : 'Student',
+	title : 'Student Dashboard',
 	collapsible : false,
 	defaults : {
 		labelWidth : 89,

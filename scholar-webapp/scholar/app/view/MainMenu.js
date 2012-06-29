@@ -1,6 +1,27 @@
-Ext.define('scholar.view.ScholarMainMenu', {
+Ext.define('scholar.view.MainMenu', {
 	extend : 'Ext.ux.GroupTabPanel',
 	xtype : 'scholarMainMenu',
+	
+	 requires:[
+//		'scholar.view.menu.Library', 'scholar.view.menu.Other',
+		
+		'Ext.chart.*', 
+		
+		'scholar.view.detail.other.Dashboard',
+		
+		'scholar.view.detail.library.Dashboard',
+		'scholar.view.detail.library.LibrarySearch' ,
+		
+		'scholar.view.detail.administration.Dashboard','scholar.view.detail.administration.AdmissionManager',
+		'scholar.view.detail.administration.BatchManager',
+        'scholar.view.detail.administration.CourseManager','scholar.view.detail.administration.FeeCollectionManager',
+        'scholar.view.detail.administration.InventoryManager','scholar.view.detail.administration.PayrollManager',
+		
+		'scholar.view.detail.staff.Dashboard','scholar.view.detail.staff.Search',
+		'scholar.view.detail.staff.TimeTableManager',
+		
+		'scholar.view.detail.student.Dashboard','scholar.view.detail.student.Search',
+		'scholar.view.detail.student.AttendanceManager'],
 
 	items : [ {
 		mainItem : 0,
@@ -10,7 +31,7 @@ Ext.define('scholar.view.ScholarMainMenu', {
 			tabTip : 'Wear the Student hat',
 			border : false,
 			items : [ {
-				xtype : 'studentMenu'
+				xtype : 'studentDashboard'
 			} ]
 		}, {
 			title : 'Search',
@@ -39,7 +60,7 @@ Ext.define('scholar.view.ScholarMainMenu', {
 			tabTip : 'Wear the Staff hat',
 			border : false,
 			items : [ {
-				xtype : 'staffMenu'
+				xtype : 'staffDashboard'
 			} ]
 		}, {
 			title : 'Search',
@@ -69,7 +90,7 @@ Ext.define('scholar.view.ScholarMainMenu', {
 			tabTip : 'Wear the Librarian hat',
 			border : false,
 			items : [ {
-				xtype : 'libraryMenu'
+				xtype : 'libraryDashboard'
 			} ]
 		}, {
 			title : 'Book Search',
@@ -99,7 +120,7 @@ Ext.define('scholar.view.ScholarMainMenu', {
 			tabTip : 'Be the administrator',
 			border : false,
 			items : [ {
-				xtype : 'administrationMenu'
+				xtype : 'administrationDashboard'
 			} ]
 		}, {
 			title : 'Course',
@@ -148,11 +169,11 @@ Ext.define('scholar.view.ScholarMainMenu', {
 		mainItem : 0,
 		items : [ {
 			xtype : 'panel',
-			title : 'Other',
+			title : 'Manager',
 			tabTip : 'Manage other activities',
 			border : false,
 			items : [ {
-				xtype : 'otherMenu'
+				xtype : 'otherDashboard'
 			} ]
 		}, {
 			title : 'Inventory',
