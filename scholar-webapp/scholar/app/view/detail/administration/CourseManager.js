@@ -6,7 +6,6 @@ Ext.define('scholar.view.detail.administration.CourseManager', {
 	alias : 'widget.courseManager',
 	frame : true,
 	bodyPadding : 5,
-	width : 550,
 	// layout : 'column', // Specifies that the items will now be arranged in
 	// columns
 	fieldDefaults : {
@@ -17,7 +16,6 @@ Ext.define('scholar.view.detail.administration.CourseManager', {
 	items : [
 			{
 				xtype : 'livesearchgridpanel',
-				width : 500,
 				dockedItems : [ {
 					xtype : 'toolbar',
 					dock : 'top',
@@ -58,6 +56,7 @@ Ext.define('scholar.view.detail.administration.CourseManager', {
 				}, {
 					xtype : 'datecolumn',
 					text : 'Last Updated',
+					flex : 1,
 					width : 85,
 					sortable : true,
 					dataIndex : 'lastChange'

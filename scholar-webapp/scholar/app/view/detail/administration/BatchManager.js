@@ -6,9 +6,6 @@ Ext.define('scholar.view.detail.administration.BatchManager', {
 			alias: 'widget.batchManager',
 	frame : true,
 	bodyPadding : 5,
-	width : 550,
-	// layout : 'column', // Specifies that the items will now be arranged in
-	// columns
 	fieldDefaults : {
 		labelAlign : 'left',
 		msgTarget : 'side'
@@ -17,7 +14,6 @@ Ext.define('scholar.view.detail.administration.BatchManager', {
 	items : [
 			{
 				xtype : 'livesearchgridpanel',
-				width : 500,
 				dockedItems : [ {
 					xtype : 'toolbar',
 					dock : 'top',
@@ -92,6 +88,7 @@ Ext.define('scholar.view.detail.administration.BatchManager', {
 					xtype : 'datecolumn',
 					text : 'Last Updated',
 					width : 85,
+					flex : 1,
 					sortable : true,
 					dataIndex : 'lastChange'
 				} ],

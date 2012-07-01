@@ -27,18 +27,18 @@ Ext.define('scholar.view.detail.library.Dashboard', {
 	  		   store: Ext.create('Ext.data.JsonStore', {
 	  			        fields: ['name', 'data1'],
 	  			    	data: [
-	  				        { name: 'Jan', data1: 100 },
+	  				        { name: 'Jan', data1: 10},
 	  				        { name: 'Feb', data1: 90 },
-	  				        { name: 'Mar', data1: 100 },
+	  				        { name: 'Mar', data1: 50 },
 	  				        { name: 'Apr', data1: 0 },
 	  				        { name: 'May', data1: 0 },
-	  				        { name: 'Jun', data1: 70 },
-	  				        { name: 'Jul', data1: 90 },
-	  				        { name: 'Aug', data1: 91 },
-	  				        { name: 'Sep', data1: 99 },
-	  				        { name: 'Oct', data1: 80 },
-	  				        { name: 'Nov', data1: 90 },
-	  				        { name: 'Dec', data1: 80 }				 
+	  				        { name: 'Jun', data1: 7 },
+	  				        { name: 'Jul', data1: 8 },
+	  				        { name: 'Aug', data1: 5 },
+	  				        { name: 'Sep', data1: 9 },
+	  				        { name: 'Oct', data1: 45 },
+	  				        { name: 'Nov', data1: 78 },
+	  				        { name: 'Dec', data1: 8 }				 
 	  				    ]
 	  			    }),		 			    
 	  		  axes: [
@@ -46,10 +46,9 @@ Ext.define('scholar.view.detail.library.Dashboard', {
 	  				    type: 'Numeric',
 	  				    position: 'left',
 	  				    fields: ['data1'],
-	  				    title: 'Attendance',
+	  				    title: 'Books Added',
 	  				    grid: true,
-	  				    minimum: 0,
-	  				    maximum: 100
+	  				    minimum: 0
 	  				}, {
 	  				    type: 'Category',
 	  				    position: 'bottom',
@@ -64,9 +63,10 @@ Ext.define('scholar.view.detail.library.Dashboard', {
 	  		    ],
 	  		  series: [
 	  	        {
-	  	            type: 'line',
 	  	            xField: 'name',
-	  	            yField: 'data1'
+	  	            yField: 'data1',
+	  	        	type: 'column',
+	  	        	axis:'left'
 	  	        }]
 	         }),
 	  	      Ext.create('Ext.chart.Chart', {		
@@ -92,7 +92,7 @@ Ext.define('scholar.view.detail.library.Dashboard', {
 		  				    type: 'Numeric',
 		  				    position: 'left',
 		  				    fields: ['data1'],
-		  				    title: 'Free Periods Available',
+		  				    title: 'Library Usage',
 		  				    grid: true,
 		  				    minimum: 0,
 		  				    maximum: 10
