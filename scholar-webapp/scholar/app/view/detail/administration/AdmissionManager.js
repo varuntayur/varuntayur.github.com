@@ -6,7 +6,6 @@ Ext.define('scholar.view.detail.administration.AdmissionManager', {
 			alias: 'widget.admissionManager',
 	frame : true,
 	bodyPadding : 5,
-	width : 550,
 	// layout : 'column', // Specifies that the items will now be arranged in
 	// columns
 	fieldDefaults : {
@@ -17,7 +16,6 @@ Ext.define('scholar.view.detail.administration.AdmissionManager', {
 	items : [
 			{
 				xtype : 'livesearchgridpanel',
-				width : 500,
 				dockedItems : [ {
 					xtype : 'toolbar',
 					dock : 'top',
@@ -92,6 +90,7 @@ Ext.define('scholar.view.detail.administration.AdmissionManager', {
 					xtype : 'datecolumn',
 					text : 'Last Updated',
 					width : 85,
+					flex : 1,
 					sortable : true,
 					dataIndex : 'lastChange'
 				} ],
