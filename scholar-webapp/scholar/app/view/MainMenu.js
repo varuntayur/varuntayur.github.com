@@ -1,6 +1,7 @@
 Ext.define('scholar.view.MainMenu', {
 	extend : 'Ext.ux.GroupTabPanel',
 	xtype : 'mainMenu',
+	activeGroup: 0,
 	
 	 requires:[
 		'Ext.chart.*', 
@@ -24,22 +25,22 @@ Ext.define('scholar.view.MainMenu', {
 	items : [ {
 		mainItem : 0,
 		items : [ {
-			xtype : 'panel',
+			iconCls: 'x-icon-student',
 			title : 'Student',
 			tabTip : 'Wear the Student hat',
 			border : false,
-			items : [ {
-				xtype : 'studentDashboard'
-			} ]
+			xtype : 'studentDashboard'
 		}, {
 			title : 'Search',
 			tabTip : 'Student search',
+			iconCls: 'x-icon-search',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
 		}, {
 			title : 'Attendance',
 			tabTip : 'Attendance',
+			iconCls: 'x-icon-attendance',
 			xtype : 'attendanceManager',
 			margin : '10',
 			height : null
@@ -53,47 +54,62 @@ Ext.define('scholar.view.MainMenu', {
 	}, {
 		mainItem : 0,
 		items : [ {
-			xtype : 'panel',
 			title : 'Staff',
+			iconCls: 'x-icon-staff',
 			tabTip : 'Wear the Staff hat',
 			border : false,
-			items : [ {
 				xtype : 'staffDashboard'
-			} ]
 		}, {
 			title : 'Search',
 			tabTip : 'Staff search',
+			iconCls: 'x-icon-search',
 			xtype : 'staffSearch',
 			margin : '10',
 			height : null
 		}, {
 			title : 'Attendance',
 			tabTip : 'Attendance',
+			iconCls: 'x-icon-attendance',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
 		}, {
 			title : 'TimeTable',
 			tabTip : 'Manage Timetable',
+			iconCls:'x-icon-timetable',
 			xtype : 'timeTable',
 			margin : '10',
 			height : null
-		}]
+		},
+		{
+			title : 'Memo',
+			tabTip : 'Issue Memos',
+			xtype : 'studentSearch',
+			margin : '10',
+			height : null
+		},
+		 {
+			title : 'Events',
+			tabTip : 'Publish Events',
+			xtype : 'studentSearch',
+			margin : '10',
+			height : null
+		}
+		]
 	},
 	 {
 		mainItem : 0,
 		items : [ {
-			xtype : 'panel',
 			title : 'Library',
+			iconCls: 'x-icon-library',			
 			tabTip : 'Wear the Librarian hat',
 			border : false,
-			items : [ {
-				xtype : 'administrationDashboard'
-			} ]
+				xtype : 'libraryDashboard'
 		}, {
 			title : 'Book Search',
 			tabTip : 'Student search',
 			xtype : 'librarySearch',
+			iconCls: 'x-icon-search',
 			margin : '10',
 			height : null
 		}, {
@@ -113,13 +129,11 @@ Ext.define('scholar.view.MainMenu', {
 	{
 		mainItem : 0,
 		items : [ {
-			xtype : 'panel',
 			title : 'Administrator',
 			tabTip : 'Be the administrator',
+			iconCls: 'x-icon-administrator',
 			border : false,
-			items : [ {
 				xtype : 'administrationDashboard'
-			} ]
 		}, {
 			title : 'Course',
 			tabTip : 'Course Management',
@@ -160,45 +174,53 @@ Ext.define('scholar.view.MainMenu', {
 			xtype : 'admissionManager',
 			margin : '10',
 			height : null
+		},
+		{
+			title : 'Inventory',
+			tabTip : 'Inventory search',
+			iconCls:'x-icon-inventory',
+			xtype : 'studentSearch',
+			margin : '10',
+			height : null
+		},		
+		{
+			title : 'User/Role',
+			tabTip : 'Manager User Roles',
+			xtype : 'studentSearch',
+			margin : '10',
+			height : null
 		}
 		]
 	},
 	{
 		mainItem : 0,
 		items : [ {
+			title : 'Transport',
+			tabTip : 'Manage Transport',
+			iconCls: 'x-icon-transport',
+			border : false,
+			xtype : 'studentSearch'
+		}]
+	}
+	/*,
+	{
+		mainItem : 0,
+		items : [ {
 			xtype : 'panel',
-			title : 'Manager',
-			tabTip : 'Manage other activities',
+			title : 'Inventory',
+			tabTip : 'Manage inventory',
 			border : false,
 			items : [ {
-				xtype : 'administrationDashboard'
+				xtype : 'otherDashboard'
 			} ]
-		}, {
+		},
+		{
 			title : 'Inventory',
 			tabTip : 'Inventory search',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
-		}, {
-			title : 'Transport',
-			tabTip : 'Manage Transport',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		}, {
-			title : 'Memo',
-			tabTip : 'Issue Memos',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		},
-		 {
-			title : 'Events',
-			tabTip : 'Publish Events',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		},
+		},		
 		{
 			title : 'User/Role',
 			tabTip : 'Manager User Roles',
@@ -206,6 +228,6 @@ Ext.define('scholar.view.MainMenu', {
 			margin : '10',
 			height : null
 		}]
-	}]
+	}*/]
 	//]
 });

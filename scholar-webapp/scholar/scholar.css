@@ -1,49 +1,95 @@
 @CHARSET "ISO-8859-1";
+
 .x-toolbar-sencha {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fc33a), color-stop(100%, #739b2e));
-  background-image: -webkit-linear-gradient(top, #8fc33a, #739b2e);
-  background-image: -moz-linear-gradient(top, #8fc33a, #739b2e);
-  background-image: -o-linear-gradient(top, #8fc33a, #739b2e);
-  background-image: -ms-linear-gradient(top, #8fc33a, #739b2e);
-  background-image: linear-gradient(top, #8fc33a, #739b2e);
-  border-bottom: 1px solid #567422;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fc33a),
+		color-stop(100%, #739b2e) );
+	background-image: -webkit-linear-gradient(top, #8fc33a, #739b2e);
+	background-image: -moz-linear-gradient(top, #8fc33a, #739b2e);
+	background-image: -o-linear-gradient(top, #8fc33a, #739b2e);
+	background-image: -ms-linear-gradient(top, #8fc33a, #739b2e);
+	background-image: linear-gradient(top, #8fc33a, #739b2e);
+	border-bottom: 1px solid #567422;
 }
 
 .x-toolbar-sencha .x-logo {
-  padding: 10px 10px 10px 31px;
-  background: url(images/scholar.gif) no-repeat 15px 15px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  text-shadow: 0 1px 0 #4e691f; 
+	padding: 10px 10px 10px 31px;
+	background: url(images/scholar.gif) no-repeat 15px 15px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #4e691f;
 }
 
 #loading-mask {
-  position: absolute;
-  left:     0;
-  top:      0;
-  width:    100%;
-  height:   100%;
-  z-index:  20000;
-  background-color: white;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 20000;
+	background-color: white;
 }
 
 #loading {
-  position: absolute;
-  left:     50%;
-  top:      50%;
-  padding:  2px;
-  z-index:  20001;
-  height:   auto;
-  margin:   -35px 0 0 -30px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	padding: 2px;
+	z-index: 20001;
+	height: auto;
+	margin: -35px 0 0 -30px;
 }
 
 #loading .loading-indicator {
-  background: url(images/loading.gif) no-repeat;
-  color:      #555;
-  font:       bold 13px tahoma,arial,helvetica;
-  padding:    8px 42px;
-  margin:     0;
-  text-align: center;
-  height:     auto;
+	background: url(images/loading.gif) no-repeat;
+	color: #555;
+	font: bold 13px tahoma, arial, helvetica;
+	padding: 8px 42px;
+	margin: 0;
+	text-align: center;
+	height: auto;
+}
+
+.x-grouptabbar .x-active-tab .x-grid-cell-inner .x-icon-student {
+	background-image: url(images/student.png);
+	background-repeat:no-repeat;
+}
+
+.x-grouptabbar .x-active-tab .x-grid-cell-inner .x-icon-staff {
+	background-image: url(images/staff.png);
+	background-repeat:no-repeat;
+}
+
+.x-grouptabbar .x-active-tab .x-grid-cell-inner .x-icon-library {
+	background-image: url(images/library.png);
+	background-repeat:no-repeat;
+}
+
+.x-grouptabbar .x-active-tab .x-grid-cell-inner .x-icon-transport{
+	background-image: url(images/transport.png);
+	background-repeat:no-repeat;
+}
+
+.x-grouptabbar .x-active-tab .x-grid-cell-inner .x-icon-administrator{
+	background-image: url(images/administrator.png);
+}
+
+.x-icon-search{
+	background-image: url(images/search.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-attendance{
+	background-image: url(images/attendance.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-inventory{
+	background-image: url(images/inventory.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-timetable{
+	background-image: url(images/timetable.png);
+	background-repeat:no-repeat;
 }
