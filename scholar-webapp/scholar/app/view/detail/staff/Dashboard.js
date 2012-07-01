@@ -5,10 +5,8 @@ Ext.define('scholar.view.detail.staff.Dashboard', {
 	title : 'Staff Dashboard',
 	collapsible : false,
 	defaults : {
-		labelWidth : 89,
-		anchor : '100%',
 		layout : {
-			type : 'hbox',
+			type : 'table',
 			defaultMargins : {
 				top : 0,
 				right : 5,
@@ -64,7 +62,7 @@ Ext.define('scholar.view.detail.staff.Dashboard', {
 	  		    ],
 	  		  series: [
 	  	        {
-	  	            type: 'line',
+	  	            type: 'column',
 	  	            xField: 'name',
 	  	            yField: 'data1'
 	  	        }]
