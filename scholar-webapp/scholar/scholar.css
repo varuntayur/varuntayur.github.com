@@ -93,3 +93,50 @@
 	background-image: url(images/timetable.png);
 	background-repeat:no-repeat;
 }
+
+.x-icon-admission{
+	background-image: url(images/admission.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-fees{
+	background-image: url(images/fees.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-payroll{
+	background-image: url(images/payroll.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-batch{
+	background-image: url(images/batch.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-grades{
+	background-image: url(images/grades.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-course{
+	background-image: url(images/course.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-userrole{
+	background-image: url(images/userrole.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-memo{
+	background-image: url(images/memo.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-events{
+	background-image: url(images/events.png);
+	background-repeat:no-repeat;
+}
+
+

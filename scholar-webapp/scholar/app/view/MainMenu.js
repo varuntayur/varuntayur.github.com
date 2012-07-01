@@ -47,6 +47,7 @@ Ext.define('scholar.view.MainMenu', {
 		}, {
 			title : 'Grades',
 			tabTip : 'Student search',
+			iconCls: 'x-icon-grades',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
@@ -84,6 +85,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'Memo',
 			tabTip : 'Issue Memos',
+			iconCls:'x-icon-memo',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
@@ -91,6 +93,7 @@ Ext.define('scholar.view.MainMenu', {
 		 {
 			title : 'Events',
 			tabTip : 'Publish Events',
+			iconCls:'x-icon-events',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
@@ -113,12 +116,6 @@ Ext.define('scholar.view.MainMenu', {
 			margin : '10',
 			height : null
 		}, {
-			title : 'Inventory',
-			tabTip : 'Attendance',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		}, {
 			title : 'OPAC',
 			tabTip : 'Student search',
 			xtype : 'studentSearch',
@@ -137,12 +134,14 @@ Ext.define('scholar.view.MainMenu', {
 		}, {
 			title : 'Course',
 			tabTip : 'Course Management',
+			iconCls: 'x-icon-course',
 			xtype : 'courseManager',
 			margin : '10',
 			height : null
 		}, {
 			title : 'Batch',
 			tabTip : 'Batch Management',
+			iconCls: 'x-icon-batch',
 			xtype : 'batchManager',
 			margin : '10',
 			height : null
@@ -150,6 +149,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'Payroll',
 			tabTip : 'Payroll',
+			iconCls: 'x-icon-payroll',
 			xtype : 'payrollManager',
 			margin : '10',
 			height : null
@@ -157,6 +157,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'Fee Collection',
 			tabTip : 'Fee Collection',
+			iconCls: 'x-icon-fees',
 			xtype : 'feeCollectionManager',
 			margin : '10',
 			height : null
@@ -164,6 +165,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'Inventory',
 			tabTip : 'Inventory',
+			iconCls: 'x-icon-inventory',
 			xtype : 'inventoryManager',
 			margin : '10',
 			height : null
@@ -171,6 +173,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'Admissions',
 			tabTip : 'Admissions',
+			iconCls: 'x-icon-admission',
 			xtype : 'admissionManager',
 			margin : '10',
 			height : null
@@ -186,6 +189,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'User/Role',
 			tabTip : 'Manager User Roles',
+			iconCls:'x-icon-userrole',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
