@@ -5,16 +5,17 @@ Ext.define('scholar.view.detail.administration.Dashboard', {
 	title : 'Administration Dashboard',
 	collapsible : false,
 	defaults : {
-		labelWidth : 89,
-		anchor : '100%',
+//		labelWidth : 89,
+//		anchor : '100%',
 		layout : {
-			type : 'hbox',
+			type : 'table',
 			defaultMargins : {
 				top : 0,
 				right : 5,
 				bottom : 0,
 				left : 0
-			}
+			},
+			columns:2
 		},
 		margins : '10 10 10 10'
 	},
@@ -24,49 +25,49 @@ Ext.define('scholar.view.detail.administration.Dashboard', {
 	  		   width: 400,
 	  		   height: 300,
 	  		   animate: true,
+	  		   donut:true,
+	  		   showInLegend: true,
+	            shadow: true,
+	            legend: {
+	                position: 'right'
+	            },
+	            title: 'Fee Collection',
+	            insetPadding: 60,
+	            theme: 'Base:gradients',
 	  		   store: Ext.create('Ext.data.JsonStore', {
 	  			        fields: ['name', 'data1'],
 	  			    	data: [
 	  				        { name: 'Jan', data1: 100 },
-	  				        { name: 'Feb', data1: 90 },
 	  				        { name: 'Mar', data1: 100 },
-	  				        { name: 'Apr', data1: 0 },
-	  				        { name: 'May', data1: 0 },
+	  				        { name: 'May', data1: 10 },
 	  				        { name: 'Jun', data1: 70 },
-	  				        { name: 'Jul', data1: 90 },
 	  				        { name: 'Aug', data1: 91 },
-	  				        { name: 'Sep', data1: 99 },
 	  				        { name: 'Oct', data1: 80 },
-	  				        { name: 'Nov', data1: 90 },
 	  				        { name: 'Dec', data1: 80 }				 
 	  				    ]
 	  			    }),		 			    
-	  		  axes: [
-	  				{
-	  				    type: 'Numeric',
-	  				    position: 'left',
-	  				    fields: ['data1'],
-	  				    title: 'Attendance',
-	  				    grid: true,
-	  				    minimum: 0,
-	  				    maximum: 100
-	  				}, {
-	  				    type: 'Category',
-	  				    position: 'bottom',
-	  				    fields: ['name'],
-	  				    title: 'Months',
-	  				    label: {
-	  				        rotate: {
-	  				            degrees: 270
-	  				        }
-	  				    }
-	  				}	  		 
-	  		    ],
+ 			    
 	  		  series: [
 	  	        {
-	  	            type: 'line',
-	  	            xField: 'name',
-	  	            yField: 'data1'
+	  	            type: 'pie',
+//	  	            xField: 'name',
+	  	            field: 'data1',
+	  	          tips: {
+	                  trackMouse: true,
+	                  width: 140,
+	                  height: 28	
+	                },
+	                highlight: {
+	                  segment: {
+	                    margin: 20
+	                  }
+	                },
+	                label: {
+	                    field: 'name',
+	                    display: 'rotate',
+	                    contrast: true,
+	                    font: '18px Arial'
+	                }
 	  	        }]
 	         }),
 	  	      Ext.create('Ext.chart.Chart', {		
