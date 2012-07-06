@@ -83,6 +83,14 @@ Ext.define('scholar.view.MainMenu', {
 			height : null
 		},
 		{
+			title : 'Leave Absence',
+			tabTip : 'Manage/Apply Leaves',
+			iconCls:'x-icon-timetable',
+			xtype : 'studentSearch',
+			margin : '10',
+			height : null
+		},
+		{
 			title : 'Memo',
 			tabTip : 'Issue Memos',
 			iconCls:'x-icon-memo',
@@ -126,19 +134,29 @@ Ext.define('scholar.view.MainMenu', {
 	{
 		mainItem : 0,
 		items : [ {
-			title : 'Administrator',
+			title : 'Configuration',
 			tabTip : 'Be the administrator',
 			iconCls: 'x-icon-administrator',
 			border : false,
 				xtype : 'administrationDashboard'
-		}, {
+		},
+		{
+			title : 'Admissions',
+			tabTip : 'Admissions',
+			iconCls: 'x-icon-admission',
+			xtype : 'admissionManager',
+			margin : '10',
+			height : null
+		},	
+		{
 			title : 'Course',
 			tabTip : 'Course Management',
 			iconCls: 'x-icon-course',
 			xtype : 'courseManager',
 			margin : '10',
 			height : null
-		}, {
+		},		
+		{
 			title : 'Batch',
 			tabTip : 'Batch Management',
 			iconCls: 'x-icon-batch',
@@ -147,18 +165,10 @@ Ext.define('scholar.view.MainMenu', {
 			height : null
 		},
 		{
-			title : 'Payroll',
-			tabTip : 'Payroll',
-			iconCls: 'x-icon-payroll',
-			xtype : 'payrollManager',
-			margin : '10',
-			height : null
-		},
-		{
-			title : 'Fee Collection',
-			tabTip : 'Fee Collection',
-			iconCls: 'x-icon-fees',
-			xtype : 'feeCollectionManager',
+			title : 'Examination',
+			tabTip : 'Examination Management',
+			iconCls: 'x-icon-course',
+			xtype : 'courseManager',
 			margin : '10',
 			height : null
 		},
@@ -170,22 +180,6 @@ Ext.define('scholar.view.MainMenu', {
 			margin : '10',
 			height : null
 		},
-		{
-			title : 'Admissions',
-			tabTip : 'Admissions',
-			iconCls: 'x-icon-admission',
-			xtype : 'admissionManager',
-			margin : '10',
-			height : null
-		},
-		{
-			title : 'Inventory',
-			tabTip : 'Inventory search',
-			iconCls:'x-icon-inventory',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		},		
 		{
 			title : 'User/Role',
 			tabTip : 'Manager User Roles',
@@ -199,39 +193,61 @@ Ext.define('scholar.view.MainMenu', {
 	{
 		mainItem : 0,
 		items : [ {
-			title : 'Transport',
-			tabTip : 'Manage Transport',
-			iconCls: 'x-icon-transport',
-			border : false,
-			xtype : 'studentSearch'
-		}]
+					title : 'Transport',
+					tabTip : 'Manage Transport',
+					iconCls: 'x-icon-transport',
+					border : false,
+					xtype : 'studentSearch'
+				  },
+				  {
+						title : 'Vehicle',
+						tabTip : 'Manage Vehicle fleet',
+						iconCls: 'x-icon-transport',
+						border : false,
+						xtype : 'studentSearch'
+				  },
+				  {
+						title : 'Route',
+						tabTip : 'Manage Vehicle routes',
+						iconCls: 'x-icon-transport',
+						border : false,
+						xtype : 'studentSearch'
+				  },
+				  {
+						title : 'Fee',
+						tabTip : 'Manage transport fee',
+						iconCls: 'x-icon-transport',
+						border : false,
+						xtype : 'studentSearch'
+				  }
+		        ]
 	}
-	/*,
+	,
 	{
 		mainItem : 0,
-		items : [ {
-			xtype : 'panel',
-			title : 'Inventory',
-			tabTip : 'Manage inventory',
-			border : false,
-			items : [ {
-				xtype : 'otherDashboard'
-			} ]
-		},
-		{
-			title : 'Inventory',
-			tabTip : 'Inventory search',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		},		
-		{
-			title : 'User/Role',
-			tabTip : 'Manager User Roles',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		}]
-	}*/]
-	//]
+		items : [
+		           {
+						title : 'Finance',
+						tabTip : 'Manage Finances',
+						border : false,
+						xtype : 'otherDashboard'
+					},
+					{
+						title : 'Payroll',
+						tabTip : 'Payroll',
+						iconCls: 'x-icon-payroll',
+						xtype : 'payrollManager',
+						margin : '10',
+						height : null
+					},
+					{
+						title : 'Fee Collection',
+						tabTip : 'Fee Collection',
+						iconCls: 'x-icon-fees',
+						xtype : 'feeCollectionManager',
+						margin : '10',
+						height : null
+					}
+	             ]
+	}]
 });
