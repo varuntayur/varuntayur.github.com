@@ -19,7 +19,7 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.detail.staff.Dashboard','scholar.view.detail.staff.Search',
 		'scholar.view.detail.staff.TimeTableManager',
 		
-		'scholar.view.detail.student.Dashboard','scholar.view.detail.student.Search',
+		'scholar.view.detail.student.Dashboard','scholar.view.detail.student.Search','scholar.view.detail.student.SearchDetail',
 		'scholar.view.detail.student.AttendanceManager'],
 
 	items : [ {
@@ -34,7 +34,7 @@ Ext.define('scholar.view.MainMenu', {
 			title : 'Search',
 			tabTip : 'Student search',
 			iconCls: 'x-icon-search',
-			xtype : 'studentSearch',
+			xtype : 'studentSearchDetail',
 			margin : '10',
 			height : null
 		}, {
