@@ -15,6 +15,7 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.detail.administration.BatchManager',
         'scholar.view.detail.administration.CourseManager','scholar.view.detail.administration.FeeCollectionManager',
         'scholar.view.detail.administration.InventoryManager','scholar.view.detail.administration.PayrollManager',
+//        'scholar.view.detail.administration.SubjectManager',
 		
 		'scholar.view.detail.staff.Dashboard','scholar.view.detail.staff.Search',
 		'scholar.view.detail.staff.TimeTableManager',
@@ -164,6 +165,14 @@ Ext.define('scholar.view.MainMenu', {
 			margin : '10',
 			height : null
 		},
+//		{
+//			title : 'Subject',
+//			tabTip : 'Subject Management',
+//			iconCls: 'x-icon-batch',
+//			xtype : 'subjectManager',
+//			margin : '10',
+//			height : null
+//		},
 		{
 			title : 'Examination',
 			tabTip : 'Examination Management',

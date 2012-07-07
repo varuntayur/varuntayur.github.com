@@ -6,8 +6,13 @@ Ext.define('scholar.view.detail.administration.CourseManager', {
 	alias : 'widget.courseManager',
 	frame : true,
 	bodyPadding : 5,
-	// layout : 'column', // Specifies that the items will now be arranged in
-	// columns
+	layout: {
+        type: 'border',
+        padding: 5
+    },
+    defaults: {
+        split: true
+    },
 	fieldDefaults : {
 		labelAlign : 'left',
 		msgTarget : 'side'
@@ -16,6 +21,7 @@ Ext.define('scholar.view.detail.administration.CourseManager', {
 	items : [
 			{
 				xtype : 'livesearchgridpanel',
+				region:'center',
 				dockedItems : [ {
 					xtype : 'toolbar',
 					dock : 'top',
@@ -72,6 +78,7 @@ Ext.define('scholar.view.detail.administration.CourseManager', {
 			}, {
 				columnWidth : 0.4,
 				margin : '0 0 0 10',
+				region:'south',
 				xtype : 'fieldset',
 				title : 'Course details',
 				defaults : {

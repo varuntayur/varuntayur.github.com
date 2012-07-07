@@ -1,5 +1,5 @@
 Ext.define('scholar.view.detail.student.SearchDetail', {
-	extend : 'Ext.panel.Panel',
+	extend : 'Ext.form.Panel',
 	requires : [ 'Ext.window.Window'],
 	alias: 'widget.studentSearchDetail',
 	layout: {
@@ -17,7 +17,11 @@ Ext.define('scholar.view.detail.student.SearchDetail', {
 		        items: [ { 
 		        			xtype: 'studentSearch',
 		        			listeners:{
-		        				
+		        				selectionchange : function(model, records) {
+		    						if (records[0]) {
+		    							this.up('form').getForm().loadRecord(records[0]);
+		    						}
+		    					}
 		        			}
 		        		 } ]
     		},

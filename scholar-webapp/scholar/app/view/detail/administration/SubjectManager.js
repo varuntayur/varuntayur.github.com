@@ -1,9 +1,9 @@
-Ext.define('scholar.view.detail.administration.InventoryManager', {
+Ext.define('scholar.view.detail.administration.SubjectManager', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
 			'Ext.ux.LiveSearchGridPanel' ],
-			alias: 'widget.inventoryManager',
+			alias: 'widget.subjectManager',
 	frame : true,
 	bodyPadding : 5,
 	fieldDefaults : {
@@ -40,9 +40,18 @@ Ext.define('scholar.view.detail.administration.InventoryManager', {
 						name : 'courseName',
 						type : 'string'
 					}, {
-						name : 'section',
+						name : 'subjectName',
 						type : 'string'
-					}, {
+					},
+					{
+						name : 'subjectCode',
+						type : 'string'
+					},
+					{
+						name : 'examinationRequired',
+						type : 'boolean'
+					},
+					{
 						name : 'startDate',
 						type : 'date',
 						dateFormat : 'n/j h:ia'
@@ -75,11 +84,24 @@ Ext.define('scholar.view.detail.administration.InventoryManager', {
 					sortable : true,
 					dataIndex : 'courseName'
 				}, {
-					text : 'Section',
+					text : 'Subject Name',
 					width : 75,
 					sortable : true,
-					dataIndex : 'section'
-				}, {
+					dataIndex : 'subjectName'
+				},
+				{
+					text : 'Subject Code',
+					width : 75,
+					sortable : true,
+					dataIndex : 'subjectCode'
+				},
+				{
+					text : 'Examination Required',
+					width : 75,
+					sortable : true,
+					dataIndex : 'examinationRequired'
+				},
+				{
 					xtype : 'datecolumn',
 					text : 'Start Date',
 					width : 85,
@@ -98,52 +120,8 @@ Ext.define('scholar.view.detail.administration.InventoryManager', {
 					flex : 1,
 					sortable : true,
 					dataIndex : 'lastChange'
-				} ],
-				listeners : {
-					selectionchange : function(model, records) {
-						if (records[0]) {
-							this.up('form').getForm().loadRecord(records[0]);
-						}
-					}
-				}
-
-			}, {
-				columnWidth : 0.4,
-				margin : '0 0 0 10',
-				xtype : 'fieldset',
-				region:'south',
-				title : 'Batch details',
-				defaults : {
-					width : 300,
-					labelWidth : 90
-				},
-				defaultType : 'textfield',
-				items : [ {
-					fieldLabel : 'Batch Name',
-					name : 'batchName'
-				}, {
-					fieldLabel : 'Course Name',
-					name : 'courseName'
-				}, {
-					fieldLabel : 'Section',
-					name : 'section'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'Start Date',
-					name : 'lastChange'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'End Date',
-					name : 'lastChange'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'Last Updated',
-					name : 'lastChange'
 				} ]
-			} ],
-	buttons : [ {
-		text : 'Save'
-	}, {
-		text : 'Cancel'
-	} ]
+				
+			} ]
+	
 });

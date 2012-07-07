@@ -2,7 +2,7 @@ Ext.define('scholar.view.detail.administration.BatchManager', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
-			'Ext.ux.LiveSearchGridPanel' ],
+			'Ext.ux.LiveSearchGridPanel','scholar.view.detail.administration.SubjectManager' ],
 			alias: 'widget.batchManager',
 	frame : true,
 	bodyPadding : 5,
@@ -10,10 +10,18 @@ Ext.define('scholar.view.detail.administration.BatchManager', {
 		labelAlign : 'left',
 		msgTarget : 'side'
 	},
+	layout: {
+        type: 'border',
+        padding: 5
+    },
+    defaults: {
+        split: true
+    },
 
 	items : [
 			{
 				xtype : 'livesearchgridpanel',
+				region:'center',
 				dockedItems : [ {
 					xtype : 'toolbar',
 					dock : 'top',
@@ -100,42 +108,54 @@ Ext.define('scholar.view.detail.administration.BatchManager', {
 					}
 				}
 
-			}, {
-				columnWidth : 0.4,
-				margin : '0 0 0 10',
-				xtype : 'fieldset',
-				title : 'Batch details',
-				defaults : {
-					width : 300,
-					labelWidth : 90
+			}
+			,
+			{
+				xtype:'tabpanel',
+				region:'south',
+				items:[{
+					title : 'Batch details',
+					columnWidth : 0.4,
+					margin : '0 0 0 10',
+					xtype : 'fieldset',
+					defaults : {
+						width : 300,
+						labelWidth : 90
+					},
+					defaultType : 'textfield',
+					items : [ {
+						fieldLabel : 'Batch Name',
+						name : 'batchName'
+					}, {
+						fieldLabel : 'Course Name',
+						name : 'courseName'
+					}, {
+						fieldLabel : 'Section',
+						name : 'section'
+					}, {
+						xtype : 'datefield',
+						fieldLabel : 'Start Date',
+						name : 'lastChange'
+					}, {
+						xtype : 'datefield',
+						fieldLabel : 'End Date',
+						name : 'lastChange'
+					}, {
+						xtype : 'datefield',
+						fieldLabel : 'Last Updated',
+						name : 'lastChange'
+					}]
 				},
-				defaultType : 'textfield',
-				items : [ {
-					fieldLabel : 'Batch Name',
-					name : 'batchName'
-				}, {
-					fieldLabel : 'Course Name',
-					name : 'courseName'
-				}, {
-					fieldLabel : 'Section',
-					name : 'section'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'Start Date',
-					name : 'lastChange'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'End Date',
-					name : 'lastChange'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'Last Updated',
-					name : 'lastChange'
-				} ]
-			} ],
-	buttons : [ {
-		text : 'Save'
-	}, {
-		text : 'Cancel'
-	} ]
+				{
+					title: 'Subject Setting',
+					xtype : 'subjectManager'
+
+				}],
+			}
+			],
+	buttons: [{
+				text : 'Save'
+			}, {
+				text : 'Cancel'
+	}]
 });

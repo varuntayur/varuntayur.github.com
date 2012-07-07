@@ -10,10 +10,17 @@ Ext.define('scholar.view.detail.administration.PayrollManager', {
 		labelAlign : 'left',
 		msgTarget : 'side'
 	},
-
+	layout: {
+        type: 'border',
+        padding: 5
+    },
+    defaults: {
+        split: true
+    },
 	items : [
 			{
 				xtype : 'livesearchgridpanel',
+				region:'center',
 				dockedItems : [ {
 					xtype : 'toolbar',
 					dock : 'top',
@@ -104,6 +111,7 @@ Ext.define('scholar.view.detail.administration.PayrollManager', {
 				columnWidth : 0.4,
 				margin : '0 0 0 10',
 				xtype : 'fieldset',
+				region:'south',
 				title : 'Batch details',
 				defaults : {
 					width : 300,
