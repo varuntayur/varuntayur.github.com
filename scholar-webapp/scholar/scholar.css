@@ -139,4 +139,14 @@
 	background-repeat:no-repeat;
 }
 
+.x-icon-new{
+	background-image: url(images/new.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-delete{
+	background-image: url(images/delete.png);
+	background-repeat:no-repeat;
+}
+
 

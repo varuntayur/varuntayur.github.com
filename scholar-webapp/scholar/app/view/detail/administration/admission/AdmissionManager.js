@@ -109,6 +109,7 @@ Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
 			items : [ {
 				xtype : 'button',
 				text : 'New',
+				iconCls:'x-icon-new',
 				listeners : {
 					click : function() {
 						Ext.create('Ext.Window', {
@@ -118,6 +119,7 @@ Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
 							title : 'New Admission',
 							width : 400,
 							autoScroll : true,
+							autoRender: true,
 							closeAction : 'destroy',
 							constrain : true,
 							items : [ {
@@ -128,7 +130,8 @@ Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
 				}
 			}, {
 				xtype : 'button',
-				text : 'Delete'
+				text : 'Delete',
+				iconCls:'x-icon-delete',
 			} ]
 		} ]
 	} ]
