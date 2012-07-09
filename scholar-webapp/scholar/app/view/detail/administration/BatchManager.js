@@ -148,7 +148,7 @@ Ext.define('scholar.view.detail.administration.BatchManager', {
 				},
 				{
 					title: 'Subject Setting',
-					xtype : 'subjectManager'
+					items:[{xtype : 'subjectManager'}]
 
 				}],
 			}

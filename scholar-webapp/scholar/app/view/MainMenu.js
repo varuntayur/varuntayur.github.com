@@ -11,7 +11,7 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.detail.library.Dashboard',
 		'scholar.view.detail.library.LibrarySearch' ,
 		
-		'scholar.view.detail.administration.Dashboard','scholar.view.detail.administration.AdmissionManager',
+		'scholar.view.detail.administration.Dashboard','scholar.view.detail.administration.admission.AdmissionManager',
 		'scholar.view.detail.administration.BatchManager',
         'scholar.view.detail.administration.CourseManager','scholar.view.detail.administration.FeeCollectionManager',
         'scholar.view.detail.administration.InventoryManager','scholar.view.detail.administration.PayrollManager',
