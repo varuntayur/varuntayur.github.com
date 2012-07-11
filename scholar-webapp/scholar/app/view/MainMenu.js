@@ -86,7 +86,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'Leave Absence',
 			tabTip : 'Manage/Apply Leaves',
-			iconCls:'x-icon-timetable',
+			iconCls:'x-icon-leave',
 			xtype : 'studentSearch',
 			margin : '10',
 			height : null
@@ -176,7 +176,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'Examination',
 			tabTip : 'Examination Management',
-			iconCls: 'x-icon-course',
+			iconCls: 'x-icon-exam',
 			xtype : 'courseManager',
 			margin : '10',
 			height : null
@@ -211,21 +211,21 @@ Ext.define('scholar.view.MainMenu', {
 				  {
 						title : 'Vehicle',
 						tabTip : 'Manage Vehicle fleet',
-						iconCls: 'x-icon-transport',
+						iconCls: 'x-icon-vehicle',
 						border : false,
 						xtype : 'studentSearch'
 				  },
 				  {
 						title : 'Route',
 						tabTip : 'Manage Vehicle routes',
-						iconCls: 'x-icon-transport',
+						iconCls: 'x-icon-route',
 						border : false,
 						xtype : 'studentSearch'
 				  },
 				  {
 						title : 'Fee',
 						tabTip : 'Manage transport fee',
-						iconCls: 'x-icon-transport',
+						iconCls: 'x-icon-fees',
 						border : false,
 						xtype : 'studentSearch'
 				  }

@@ -116,7 +116,7 @@ Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
 							xtype : 'window',
 							closable : true,
 							minimizable : false,
-							title : 'New Admission',
+							title : 'New Admission: Student Details',
 							width : 400,
 							autoScroll : true,
 							autoRender: true,

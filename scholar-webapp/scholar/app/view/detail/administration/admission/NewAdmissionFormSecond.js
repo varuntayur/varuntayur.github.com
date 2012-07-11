@@ -1,9 +1,9 @@
-Ext.define('scholar.view.detail.administration.admission.NewAdmissionForm', {
+Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
-			'Ext.ux.LiveSearchGridPanel','scholar.view.detail.administration.admission.NewAdmissionFormSecond'],
-	alias : 'widget.newAdmissionForm',
+			'Ext.ux.LiveSearchGridPanel','scholar.view.detail.administration.admission.NewAdmissionFormThird' ],
+	alias : 'widget.newAdmissionFormSecond',
 	fieldDefaults : {
 		labelAlign : 'left',
 		msgTarget : 'side'
@@ -12,11 +12,8 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionForm', {
 	border : false,
 	bodyPadding : 10,
 	items : [ {
-		xtype : 'datefield',
-		fieldLabel : 'Admission Date'
-	}, {
 		xtype : 'fieldcontainer',
-		fieldLabel : 'Name',
+		fieldLabel : 'Parent Name',
 		labelStyle : 'font-weight:bold;padding:0',
 		layout : 'hbox',
 		defaultType : 'textfield',
@@ -46,19 +43,24 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionForm', {
 		} ]
 	}, {
 		xtype : 'radiogroup',
-		fieldLabel : 'Sex',
+		fieldLabel : 'Relation',
 		columns : 2,
 		vertical : true,
 		items : [ {
-			boxLabel : 'Male',
+			boxLabel : 'Father',
 			name : 'rb',
 			inputValue : '1',
 			checked : true
 		}, {
-			boxLabel : 'Female',
+			boxLabel : 'Mother',
 			name : 'rb',
 			inputValue : '2'
-		}, ]
+		},
+		{
+			boxLabel : 'Guardian',
+			name : 'rb',
+			inputValue : '3'
+		}]
 	}, Ext.create('Ext.form.ComboBox', {
 		fieldLabel : 'Blood Group	',
 		store : Ext.create('Ext.data.Store', {
@@ -131,42 +133,6 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionForm', {
 		queryMode : 'local',
 		displayField : 'name',
 		valueField : 'abbr'
-	}), Ext.create('Ext.form.ComboBox', {
-		fieldLabel : 'Course',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Standard 1"
-			}, {
-				"abbr" : "AK",
-				"name" : "Standard 2"
-			}, {
-				"abbr" : "AZ",
-				"name" : "B.E"
-			} ]
-		}),
-		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
-	}), Ext.create('Ext.form.ComboBox', {
-		fieldLabel : 'Batch',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "A"
-			}, {
-				"abbr" : "AK",
-				"name" : "C"
-			}, {
-				"abbr" : "AZ",
-				"name" : "CS 1"
-			} ]
-		}),
-		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
 	}), {
 		xtype : 'textfield',
 		fieldLabel : 'Email Address',
@@ -181,9 +147,11 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionForm', {
 		margins : '0',
 		afterLabelTextTpl : false,
 		allowBlank : false
-	}, {
-		xtype : 'datefield',
-		fieldLabel : 'Date of Birth'
+	},{
+		xtype : 'numberfield',
+		fieldLabel : 'Mobile Number',
+		afterLabelTextTpl : false,
+		allowBlank : false
 	} ],
 
 	buttons : [
@@ -192,6 +160,27 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionForm', {
 				handler : function() {
 					this.up('form').getForm().reset();
 					this.up('window').hide();
+				}
+			},
+			{
+				text : ' < Back',
+				handler : function() {
+//					this.up('form').getForm().reset();
+					this.up('window').hide();
+					Ext.create('Ext.Window', {
+						xtype : 'window',
+						closable : true,
+						minimizable : false,
+						title : 'New Admission',
+						width : 400,
+						autoScroll : true,
+						autoRender: true,
+						closeAction : 'destroy',
+						constrain : true,
+						items : [ {
+							xtype : 'newAdmissionForm'
+						} ]
+					}).show();
 				}
 			},
 			{
@@ -209,14 +198,14 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionForm', {
 							xtype : 'window',
 							closable : true,
 							minimizable : false,
-							title : 'New Admission: Parent Details',
+							title : 'New Admission: Previous Education Details',
 							width : 400,
 							autoScroll : true,
 							autoRender: true,
 							closeAction : 'destroy',
 							constrain : true,
 							items : [ {
-								xtype : 'newAdmissionFormSecond'
+								xtype : 'newAdmissionFormThird'
 							} ]
 						}).show();
 					}

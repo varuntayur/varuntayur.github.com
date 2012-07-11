@@ -149,4 +149,27 @@
 	background-repeat:no-repeat;
 }
 
+.x-icon-leave{
+	background-image: url(images/leave.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-exam{
+	background-image: url(images/exam.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-route{
+	background-image: url(images/route.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-vehicle{
+	background-image: url(images/vehicle.png);
+	background-repeat:no-repeat;
+}
+
+
+
+
 
