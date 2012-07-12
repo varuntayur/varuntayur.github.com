@@ -3,7 +3,8 @@ Ext.define('scholar.view.detail.administration.InventoryManager', {
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
 			'Ext.ux.LiveSearchGridPanel' ],
-			alias: 'widget.inventoryManager',
+	alias: 'widget.inventoryManager',
+	title:'Inventory Management',
 	frame : true,
 	bodyPadding : 5,
 	fieldDefaults : {

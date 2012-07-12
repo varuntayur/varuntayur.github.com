@@ -1,9 +1,10 @@
-Ext.define('scholar.view.detail.administration.FeeCollectionManager', {
+Ext.define('scholar.view.detail.administration.batch.BatchManager', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
-			'Ext.ux.LiveSearchGridPanel' ],
-			alias: 'widget.feeCollectionManager',
+			'Ext.ux.LiveSearchGridPanel','scholar.view.detail.administration.batch.SubjectManager' ],
+	alias: 'widget.batchManager',
+	title:'Batch Management',			
 	frame : true,
 	bodyPadding : 5,
 	fieldDefaults : {
@@ -27,9 +28,11 @@ Ext.define('scholar.view.detail.administration.FeeCollectionManager', {
 					dock : 'top',
 					items : [ {
 						xtype : 'button',
+						iconCls:'x-icon-new',
 						text : 'Add'
 					}, {
 						xtype : 'button',
+						iconCls:'x-icon-delete',
 						text : 'Delete'
 					} ]
 				} ],
@@ -108,43 +111,55 @@ Ext.define('scholar.view.detail.administration.FeeCollectionManager', {
 					}
 				}
 
-			}, {
-				columnWidth : 0.4,
-				margin : '0 0 0 10',
+			}
+			,
+			{
+				xtype:'tabpanel',
 				region:'south',
-				xtype : 'fieldset',
-				title : 'Batch details',
-				defaults : {
-					width : 300,
-					labelWidth : 90
+				items:[{
+					title : 'Batch details',
+					columnWidth : 0.4,
+					margin : '0 0 0 10',
+					xtype : 'fieldset',
+					defaults : {
+						width : 300,
+						labelWidth : 90
+					},
+					defaultType : 'textfield',
+					items : [ {
+						fieldLabel : 'Batch Name',
+						name : 'batchName'
+					}, {
+						fieldLabel : 'Course Name',
+						name : 'courseName'
+					}, {
+						fieldLabel : 'Section',
+						name : 'section'
+					}, {
+						xtype : 'datefield',
+						fieldLabel : 'Start Date',
+						name : 'lastChange'
+					}, {
+						xtype : 'datefield',
+						fieldLabel : 'End Date',
+						name : 'lastChange'
+					}, {
+						xtype : 'datefield',
+						fieldLabel : 'Last Updated',
+						name : 'lastChange'
+					}]
 				},
-				defaultType : 'textfield',
-				items : [ {
-					fieldLabel : 'Batch Name',
-					name : 'batchName'
-				}, {
-					fieldLabel : 'Course Name',
-					name : 'courseName'
-				}, {
-					fieldLabel : 'Section',
-					name : 'section'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'Start Date',
-					name : 'lastChange'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'End Date',
-					name : 'lastChange'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'Last Updated',
-					name : 'lastChange'
-				} ]
-			} ],
-	buttons : [ {
-		text : 'Save'
-	}, {
-		text : 'Cancel'
-	} ]
+				{
+					title: 'Subject Setting',
+					layout:'fit',
+					items:[{xtype : 'subjectManager'}]
+
+				}],
+			}
+			],
+	buttons: [{
+				text : 'Save'
+			}, {
+				text : 'Cancel'
+	}]
 });

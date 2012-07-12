@@ -12,13 +12,16 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.detail.library.LibrarySearch' ,
 		
 		'scholar.view.detail.administration.Dashboard','scholar.view.detail.administration.admission.AdmissionManager',
-		'scholar.view.detail.administration.BatchManager',
-        'scholar.view.detail.administration.CourseManager','scholar.view.detail.administration.FeeCollectionManager',
-        'scholar.view.detail.administration.InventoryManager','scholar.view.detail.administration.PayrollManager',
+		'scholar.view.detail.administration.batch.BatchManager',
+        'scholar.view.detail.administration.course.CourseManager','scholar.view.detail.administration.InventoryManager',
 //        'scholar.view.detail.administration.SubjectManager',
+        
+        'scholar.view.detail.finance.PayrollManager','scholar.view.detail.finance.FeeCollectionManager',
 		
 		'scholar.view.detail.staff.Dashboard','scholar.view.detail.staff.Search',
 		'scholar.view.detail.staff.TimeTableManager',
+		
+		'scholar.view.detail.parent.Dashboard',
 		
 		'scholar.view.detail.student.Dashboard','scholar.view.detail.student.Search','scholar.view.detail.student.SearchDetail',
 		'scholar.view.detail.student.AttendanceManager'],
@@ -108,30 +111,7 @@ Ext.define('scholar.view.MainMenu', {
 			height : null
 		}
 		]
-	},
-	 {
-		mainItem : 0,
-		items : [ {
-			title : 'Library',
-			iconCls: 'x-icon-library',			
-			tabTip : 'Wear the Librarian hat',
-			border : false,
-				xtype : 'libraryDashboard'
-		}, {
-			title : 'Book Search',
-			tabTip : 'Student search',
-			xtype : 'librarySearch',
-			iconCls: 'x-icon-search',
-			margin : '10',
-			height : null
-		}, {
-			title : 'OPAC',
-			tabTip : 'Student search',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		}]
-	},
+	},	
 	{
 		mainItem : 0,
 		items : [ {
@@ -198,6 +178,56 @@ Ext.define('scholar.view.MainMenu', {
 			height : null
 		}
 		]
+	},	
+	{
+		mainItem : 0,
+		items : [
+		           {
+						title : 'Finance',
+						tabTip : 'Manage Finances',
+						border : false,
+						xtype : 'otherDashboard'
+					},
+					{
+						title : 'Payroll',
+						tabTip : 'Payroll',
+						iconCls: 'x-icon-payroll',
+						xtype : 'payrollManager',
+						margin : '10',
+						height : null
+					},
+					{
+						title : 'Fee Collection',
+						tabTip : 'Fee Collection',
+						iconCls: 'x-icon-fees',
+						xtype : 'feeCollectionManager',
+						margin : '10',
+						height : null
+					}
+	             ]
+	},
+	{
+		mainItem : 0,
+		items : [ {
+			title : 'Library',
+			iconCls: 'x-icon-library',			
+			tabTip : 'Wear the Librarian hat',
+			border : false,
+				xtype : 'libraryDashboard'
+		}, {
+			title : 'Book Search',
+			tabTip : 'Student search',
+			xtype : 'librarySearch',
+			iconCls: 'x-icon-search',
+			margin : '10',
+			height : null
+		}, {
+			title : 'OPAC',
+			tabTip : 'Student search',
+			xtype : 'studentSearch',
+			margin : '10',
+			height : null
+		}]
 	},
 	{
 		mainItem : 0,
@@ -230,33 +260,17 @@ Ext.define('scholar.view.MainMenu', {
 						xtype : 'studentSearch'
 				  }
 		        ]
-	}
-	,
+	},
 	{
 		mainItem : 0,
-		items : [
-		           {
-						title : 'Finance',
-						tabTip : 'Manage Finances',
-						border : false,
-						xtype : 'otherDashboard'
-					},
-					{
-						title : 'Payroll',
-						tabTip : 'Payroll',
-						iconCls: 'x-icon-payroll',
-						xtype : 'payrollManager',
-						margin : '10',
-						height : null
-					},
-					{
-						title : 'Fee Collection',
-						tabTip : 'Fee Collection',
-						iconCls: 'x-icon-fees',
-						xtype : 'feeCollectionManager',
-						margin : '10',
-						height : null
-					}
-	             ]
-	}]
+		items : [ {
+					title : 'Parent',
+					tabTip : 'Parental View',
+					iconCls: 'x-icon-userrole',
+					border : false,
+					xtype : 'parentDashboard'
+				  }				  
+		        ]
+	}
+	]
 });

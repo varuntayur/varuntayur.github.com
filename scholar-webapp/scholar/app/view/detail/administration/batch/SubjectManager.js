@@ -1,4 +1,4 @@
-Ext.define('scholar.view.detail.administration.SubjectManager', {
+Ext.define('scholar.view.detail.administration.batch.SubjectManager', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
@@ -15,9 +15,11 @@ Ext.define('scholar.view.detail.administration.SubjectManager', {
 		dock : 'top',
 		items : [ {
 			xtype : 'button',
+			iconCls:'x-icon-new',
 			text : 'Add'
 		}, {
 			xtype : 'button',
+			iconCls:'x-icon-delete',
 			text : 'Delete'
 		} ]
 	} ],
@@ -111,7 +113,7 @@ Ext.define('scholar.view.detail.administration.SubjectManager', {
 		dataIndex : 'lastChange'
 	}  ],
 	height : 350,
-	width : 600,
+//	width : 600,
 	viewConfig : {
 		stripeRows : true
 	}

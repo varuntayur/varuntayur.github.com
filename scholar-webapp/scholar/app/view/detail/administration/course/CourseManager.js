@@ -1,15 +1,12 @@
-Ext.define('scholar.view.detail.administration.PayrollManager', {
+Ext.define('scholar.view.detail.administration.course.CourseManager', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
 			'Ext.ux.LiveSearchGridPanel' ],
-			alias: 'widget.payrollManager',
+	alias : 'widget.courseManager',
+	title:'Course Management',
 	frame : true,
 	bodyPadding : 5,
-	fieldDefaults : {
-		labelAlign : 'left',
-		msgTarget : 'side'
-	},
 	layout: {
         type: 'border',
         padding: 5
@@ -17,6 +14,11 @@ Ext.define('scholar.view.detail.administration.PayrollManager', {
     defaults: {
         split: true
     },
+	fieldDefaults : {
+		labelAlign : 'left',
+		msgTarget : 'side'
+	},
+
 	items : [
 			{
 				xtype : 'livesearchgridpanel',
@@ -26,76 +28,45 @@ Ext.define('scholar.view.detail.administration.PayrollManager', {
 					dock : 'top',
 					items : [ {
 						xtype : 'button',
+						iconCls:'x-icon-new',
 						text : 'Add'
 					}, {
 						xtype : 'button',
+						iconCls:'x-icon-delete',
 						text : 'Delete'
 					} ]
 				} ],
 				store : new Ext.data.ArrayStore({
 					fields : [ {
-						name : 'batchName',
+						name : 'courseCode',
 						type : 'string'
 					}, {
 						name : 'courseName',
 						type : 'string'
 					}, {
-						name : 'section',
-						type : 'string'
-					}, {
-						name : 'startDate',
-						type : 'date',
-						dateFormat : 'n/j h:ia'
-					}, {
-						name : 'endDate',
-						type : 'date',
-						dateFormat : 'n/j h:ia'
-					}, {
 						name : 'lastChange',
 						type : 'date',
 						dateFormat : 'n/j h:ia'
 					} ],
-					data : [
-							[ 'Batch 1', 'Standard 1', 'A', '1/5 12:00am',
-									'1/4 12:00am', '9/1 12:00am' ],
-							[ 'Batch 2', 'Standard 2', 'C', '1/5 12:00am',
-									'1/4 12:00am', '9/1 12:00am' ],
-							[ 'Batch 1', 'B.E', 'CS 1', '1/9 12:00am',
-									'1/8 12:00am', '9/1 12:00am' ] ]
+					data : [ [ '001/005', 'Standard 1', 'A', '9/1 12:00am' ],
+							[ '001/006', 'Standard 2', 'C', '9/1 12:00am' ],
+							[ '001/007', 'B.E', 'CS 1', '9/1 12:00am' ] ]
 				}),
 				columnLines : true,
 				columns : [ {
-					text : 'Batch Name',
-					width : 75,
-					sortable : true,
-					dataIndex : 'batchName'
+					text : 'Course Code',
+					sortable : false,
+					dataIndex : 'courseCode'
 				}, {
 					text : 'Course Name',
 					width : 75,
 					sortable : true,
 					dataIndex : 'courseName'
 				}, {
-					text : 'Section',
-					width : 75,
-					sortable : true,
-					dataIndex : 'section'
-				}, {
-					xtype : 'datecolumn',
-					text : 'Start Date',
-					width : 85,
-					sortable : true,
-					dataIndex : 'startDate'
-				}, {
-					xtype : 'datecolumn',
-					text : 'End Date',
-					width : 85,
-					sortable : true,
-					dataIndex : 'endDate'
-				}, {
 					xtype : 'datecolumn',
 					text : 'Last Updated',
-					width : 85,
 					flex : 1,
+					width : 85,
 					sortable : true,
 					dataIndex : 'lastChange'
 				} ],
@@ -110,31 +81,20 @@ Ext.define('scholar.view.detail.administration.PayrollManager', {
 			}, {
 				columnWidth : 0.4,
 				margin : '0 0 0 10',
-				xtype : 'fieldset',
 				region:'south',
-				title : 'Batch details',
+				xtype : 'fieldset',
+				title : 'Course details',
 				defaults : {
 					width : 300,
 					labelWidth : 90
 				},
 				defaultType : 'textfield',
 				items : [ {
-					fieldLabel : 'Batch Name',
-					name : 'batchName'
+					fieldLabel : 'Course Code',
+					name : 'courseCode'
 				}, {
 					fieldLabel : 'Course Name',
 					name : 'courseName'
-				}, {
-					fieldLabel : 'Section',
-					name : 'section'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'Start Date',
-					name : 'lastChange'
-				}, {
-					xtype : 'datefield',
-					fieldLabel : 'End Date',
-					name : 'lastChange'
 				}, {
 					xtype : 'datefield',
 					fieldLabel : 'Last Updated',
