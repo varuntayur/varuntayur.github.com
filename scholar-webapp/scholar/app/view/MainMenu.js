@@ -16,6 +16,8 @@ Ext.define('scholar.view.MainMenu', {
         'scholar.view.detail.administration.course.CourseManager','scholar.view.detail.administration.InventoryManager',
 //        'scholar.view.detail.administration.SubjectManager',
         
+        'scholar.view.detail.administration.examination.ExamManager',
+        
         'scholar.view.detail.finance.PayrollManager','scholar.view.detail.finance.FeeCollectionManager',
 		
 		'scholar.view.detail.staff.Dashboard','scholar.view.detail.staff.Search',
@@ -145,19 +147,11 @@ Ext.define('scholar.view.MainMenu', {
 			margin : '10',
 			height : null
 		},
-//		{
-//			title : 'Subject',
-//			tabTip : 'Subject Management',
-//			iconCls: 'x-icon-batch',
-//			xtype : 'subjectManager',
-//			margin : '10',
-//			height : null
-//		},
 		{
 			title : 'Examination',
 			tabTip : 'Examination Management',
 			iconCls: 'x-icon-exam',
-			xtype : 'courseManager',
+			xtype : 'examManager',
 			margin : '10',
 			height : null
 		},

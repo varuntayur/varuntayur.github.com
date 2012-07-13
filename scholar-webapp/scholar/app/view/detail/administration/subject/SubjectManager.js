@@ -1,8 +1,8 @@
-Ext.define('scholar.view.detail.administration.batch.SubjectManager', {
+Ext.define('scholar.view.detail.administration.subject.SubjectManager', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
 			'Ext.layout.container.Column', 'Ext.window.Window',
-			'Ext.ux.LiveSearchGridPanel' ],
+			'Ext.ux.LiveSearchGridPanel','scholar.view.detail.administration.subject.NewSubjectForm' ],
 	alias: 'widget.subjectManager',
 	frame : true,
 	bodyPadding : 5,
@@ -16,7 +16,25 @@ Ext.define('scholar.view.detail.administration.batch.SubjectManager', {
 		items : [ {
 			xtype : 'button',
 			iconCls:'x-icon-new',
-			text : 'Add'
+			text : 'Add',
+			listeners : {
+				click : function() {
+					Ext.create('Ext.Window', {
+						xtype : 'window',
+						closable : true,
+						minimizable : false,
+						title : 'New Subject',
+						width : 400,
+						autoScroll : true,
+						autoRender: true,
+						closeAction : 'destroy',
+						constrain : true,
+						items : [ {
+							xtype : 'newSubjectForm'
+						} ]
+					}).show();
+				}
+			}
 		}, {
 			xtype : 'button',
 			iconCls:'x-icon-delete',
