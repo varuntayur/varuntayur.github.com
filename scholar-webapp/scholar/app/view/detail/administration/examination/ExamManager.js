@@ -4,7 +4,7 @@ Ext.define('scholar.view.detail.administration.examination.ExamManager', {
 			'Ext.layout.container.Column', 'Ext.window.Window',
 			'Ext.ux.LiveSearchGridPanel','scholar.view.detail.administration.examination.ExamManagementTab' ],
 	alias : 'widget.examManager',
-	title : 'Examination Management',
+	title : 'Examination',
 	frame : true,
 	bodyPadding : 5,
 	fieldDefaults : {

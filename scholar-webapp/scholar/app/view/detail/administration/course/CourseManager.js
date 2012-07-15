@@ -4,7 +4,7 @@ Ext.define('scholar.view.detail.administration.course.CourseManager', {
 			'Ext.layout.container.Column', 'Ext.window.Window',
 			'Ext.ux.LiveSearchGridPanel' ],
 	alias : 'widget.courseManager',
-	title:'Course Management',
+	title:'Course',
 	frame : true,
 	bodyPadding : 5,
 	layout: {

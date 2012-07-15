@@ -11,22 +11,29 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.detail.library.Dashboard',
 		'scholar.view.detail.library.LibrarySearch' ,
 		
-		'scholar.view.detail.administration.Dashboard','scholar.view.detail.administration.admission.AdmissionManager',
-		'scholar.view.detail.administration.batch.BatchManager',
-        'scholar.view.detail.administration.course.CourseManager','scholar.view.detail.administration.InventoryManager',
-//        'scholar.view.detail.administration.SubjectManager',
-        
+		'scholar.view.detail.administration.Dashboard',
+		'scholar.view.detail.administration.admission.AdmissionManager',		
+		'scholar.view.detail.administration.batch.BatchManager',		
+        'scholar.view.detail.administration.course.CourseManager',        
+        'scholar.view.detail.administration.inventory.InventoryManager',        
+        'scholar.view.detail.administration.user.UserRoleManager',
         'scholar.view.detail.administration.examination.ExamManager',
         
-        'scholar.view.detail.finance.PayrollManager','scholar.view.detail.finance.FeeCollectionManager',
+        'scholar.view.detail.finance.PayrollManager',
+        'scholar.view.detail.finance.FeeCollectionManager',
 		
-		'scholar.view.detail.staff.Dashboard','scholar.view.detail.staff.Search',
-		'scholar.view.detail.staff.TimeTableManager',
+		'scholar.view.detail.staff.Dashboard',
+		'scholar.view.detail.staff.lookup.Lookup',
+		'scholar.view.detail.staff.timetable.Manager',
+		'scholar.view.detail.staff.attendance.Manager',
 		
 		'scholar.view.detail.parent.Dashboard',
 		
-		'scholar.view.detail.student.Dashboard','scholar.view.detail.student.Search','scholar.view.detail.student.SearchDetail',
-		'scholar.view.detail.student.AttendanceManager'],
+		'scholar.view.detail.student.Dashboard',
+		'scholar.view.detail.student.Search',
+		'scholar.view.detail.student.SearchDetail',
+		'scholar.view.detail.student.performance.Report',
+		'scholar.view.detail.student.attendance.Manager'],
 
 	items : [ {
 		mainItem : 0,
@@ -37,8 +44,8 @@ Ext.define('scholar.view.MainMenu', {
 			border : false,
 			xtype : 'studentDashboard'
 		}, {
-			title : 'Search',
-			tabTip : 'Student search',
+			title : 'Lookup',
+			tabTip : 'Lookup student detail',
 			iconCls: 'x-icon-search',
 			xtype : 'studentSearchDetail',
 			margin : '10',
@@ -51,10 +58,10 @@ Ext.define('scholar.view.MainMenu', {
 			margin : '10',
 			height : null
 		}, {
-			title : 'Grades',
+			title : 'Performance',
 			tabTip : 'Student search',
 			iconCls: 'x-icon-grades',
-			xtype : 'studentSearch',
+			xtype : 'performanceReport',
 			margin : '10',
 			height : null
 		} ]
@@ -67,17 +74,17 @@ Ext.define('scholar.view.MainMenu', {
 			border : false,
 				xtype : 'staffDashboard'
 		}, {
-			title : 'Search',
-			tabTip : 'Staff search',
+			title : 'Lookup',
+			tabTip : 'Lookup staff information',
 			iconCls: 'x-icon-search',
-			xtype : 'staffSearch',
+			xtype : 'staffLookup',
 			margin : '10',
 			height : null
 		}, {
 			title : 'Attendance',
 			tabTip : 'Attendance',
 			iconCls: 'x-icon-attendance',
-			xtype : 'studentSearch',
+			xtype : 'staffAttendanceManager',
 			margin : '10',
 			height : null
 		}, {
@@ -167,7 +174,7 @@ Ext.define('scholar.view.MainMenu', {
 			title : 'User/Role',
 			tabTip : 'Manager User Roles',
 			iconCls:'x-icon-userrole',
-			xtype : 'studentSearch',
+			xtype : 'userRoleManager',
 			margin : '10',
 			height : null
 		}

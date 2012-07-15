@@ -1,4 +1,4 @@
-Ext.define('scholar.view.detail.staff.TimeTableManager', {
+Ext.define('scholar.view.detail.staff.timetable.Manager', {
 	extend : 'Ext.calendar.CalendarPanel',
 	requires : [ 'Ext.calendar.CalendarPanel'],
 	    xtype: 'timeTable',

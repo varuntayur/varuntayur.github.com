@@ -1,7 +1,8 @@
-Ext.define('scholar.view.detail.student.SearchDetail', {
+Ext.define('scholar.view.detail.student.performance.Report', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'Ext.window.Window'],
-	alias: 'widget.studentSearchDetail',
+	alias: 'widget.performanceReport',
+	title:'Peformance',
 	layout: {
         type: 'border',
         padding: 5
@@ -9,7 +10,6 @@ Ext.define('scholar.view.detail.student.SearchDetail', {
     defaults: {
         split: true
     },
-    title:'Lookup',
     items: [{
 		        region: 'center',	        
 		        minHeight: 80,

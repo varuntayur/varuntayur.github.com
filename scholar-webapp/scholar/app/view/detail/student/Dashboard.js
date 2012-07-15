@@ -5,6 +5,8 @@ Ext.define('scholar.view.detail.student.Dashboard', {
 	requires : [ 'Ext.chart.*' ],
 
 	autoHeight : true,
+	frame:true,
+	borders:true,
 	bodyPadding : 10,
 	title : 'Student Dashboard',
 	collapsible : false,

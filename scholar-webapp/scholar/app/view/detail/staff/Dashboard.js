@@ -4,6 +4,8 @@ Ext.define('scholar.view.detail.staff.Dashboard', {
 	requires:['Ext.chart.*'],
 	title : 'Staff Dashboard',
 	collapsible : false,
+	frame:true,
+	borders:true,
 	defaults : {
 		layout : {
 			type : 'table',

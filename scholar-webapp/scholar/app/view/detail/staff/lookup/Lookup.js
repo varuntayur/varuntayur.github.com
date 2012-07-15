@@ -1,7 +1,7 @@
-Ext.define('scholar.view.detail.student.SearchDetail', {
+Ext.define('scholar.view.detail.staff.lookup.Lookup', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'Ext.window.Window'],
-	alias: 'widget.studentSearchDetail',
+	requires : [ 'Ext.window.Window','scholar.view.detail.staff.lookup.Search'],
+	alias: 'widget.staffLookup',
 	layout: {
         type: 'border',
         padding: 5
@@ -14,7 +14,7 @@ Ext.define('scholar.view.detail.student.SearchDetail', {
 		        region: 'center',	        
 		        minHeight: 80,
 		        layout:'fit',
-       			xtype: 'studentSearch',
+       			xtype: 'staffSearch',
        			listeners:{
 		        				selectionchange : function(model, records) {
 		    						if (records[0]) {
@@ -33,7 +33,7 @@ Ext.define('scholar.view.detail.student.SearchDetail', {
 		        items:[{
 		        		 xtype: 'tabpanel',
 		        		 items:[{
-		        		        	title:'Student Information',
+		        		        	title:'Staff Information',
 		        		        	layout:'fit',
 		        		        	items:[{
 		        						columnWidth : 0.4,
@@ -49,14 +49,14 @@ Ext.define('scholar.view.detail.student.SearchDetail', {
 		        						},
 		        						defaultType : 'textfield',
 		        						items : [ {
-		        							fieldLabel : 'Admission Number',
-		        							name : 'admissionNumber'
+		        							fieldLabel : 'Employee ID',
+		        							name : 'employeeId'
 		        						}, {
-		        							fieldLabel : 'Student Name',
-		        							name : 'studentName'
+		        							fieldLabel : 'Employee Name',
+		        							name : 'employeeName'
 		        						}, {
-		        							fieldLabel : 'Standard',
-		        							name : 'standard'
+		        							fieldLabel : 'Department',
+		        							name : 'department'
 		        						}, {
 		        							xtype : 'textarea',
 		        							fieldLabel : 'Address',
