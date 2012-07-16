@@ -27,9 +27,11 @@ Ext.define('scholar.view.detail.administration.inventory.InventoryManager', {
 					dock : 'top',
 					items : [ {
 						xtype : 'button',
+						iconCls:'x-icon-new',
 						text : 'Add'
 					}, {
 						xtype : 'button',
+						iconCls:'x-icon-delete',
 						text : 'Delete'
 					} ]
 				} ],

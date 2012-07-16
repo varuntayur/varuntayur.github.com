@@ -9,7 +9,7 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.detail.other.Dashboard',
 		
 		'scholar.view.detail.library.Dashboard',
-		'scholar.view.detail.library.LibrarySearch' ,
+		'scholar.view.detail.library.lookup.Lookup' ,
 		
 		'scholar.view.detail.administration.Dashboard',
 		'scholar.view.detail.administration.admission.AdmissionManager',		
@@ -24,6 +24,8 @@ Ext.define('scholar.view.MainMenu', {
 		
 		'scholar.view.detail.staff.Dashboard',
 		'scholar.view.detail.staff.lookup.Lookup',
+		'scholar.view.detail.staff.event.Manager',
+		'scholar.view.detail.staff.leave.Manager',
 		'scholar.view.detail.staff.timetable.Manager',
 		'scholar.view.detail.staff.attendance.Manager',
 		
@@ -99,23 +101,15 @@ Ext.define('scholar.view.MainMenu', {
 			title : 'Leave Absence',
 			tabTip : 'Manage/Apply Leaves',
 			iconCls:'x-icon-leave',
-			xtype : 'studentSearch',
+			xtype : 'leaveManager',
 			margin : '10',
 			height : null
 		},
 		{
-			title : 'Memo',
-			tabTip : 'Issue Memos',
-			iconCls:'x-icon-memo',
-			xtype : 'studentSearch',
-			margin : '10',
-			height : null
-		},
-		 {
-			title : 'Events',
-			tabTip : 'Publish Events',
+			title : 'Events/Memo',
+			tabTip : 'Issue Memos and publish Event Calendars',
 			iconCls:'x-icon-events',
-			xtype : 'studentSearch',
+			xtype : 'eventManager',
 			margin : '10',
 			height : null
 		}
@@ -215,20 +209,23 @@ Ext.define('scholar.view.MainMenu', {
 			tabTip : 'Wear the Librarian hat',
 			border : false,
 				xtype : 'libraryDashboard'
-		}, {
+		},
+		{
 			title : 'Book Search',
-			tabTip : 'Student search',
-			xtype : 'librarySearch',
+			tabTip : 'Book search',
+			xtype : 'libraryLookup',
 			iconCls: 'x-icon-search',
 			margin : '10',
 			height : null
-		}, {
+		},
+		{
 			title : 'OPAC',
-			tabTip : 'Student search',
-			xtype : 'studentSearch',
+			tabTip : 'OPAC search',
+			xtype : 'libraryLookup',
 			margin : '10',
 			height : null
-		}]
+		}
+		]
 	},
 	{
 		mainItem : 0,

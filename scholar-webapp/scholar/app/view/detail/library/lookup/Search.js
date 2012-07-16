@@ -1,4 +1,4 @@
-Ext.define('scholar.view.detail.library.LibrarySearch', {
+Ext.define('scholar.view.detail.library.lookup.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.window.Window' ],
 	alias: 'widget.librarySearch',

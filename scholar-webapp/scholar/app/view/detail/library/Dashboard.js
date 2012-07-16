@@ -3,6 +3,8 @@ Ext.define('scholar.view.detail.library.Dashboard', {
 	xtype : 'libraryDashboard',
 	requires:['Ext.chart.*'],
 	title : 'Library Dashboard',
+	frame:true,
+	borders:true,
 	collapsible : false,
 	defaults : {
 		labelWidth : 89,
