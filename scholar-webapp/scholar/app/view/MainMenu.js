@@ -8,8 +8,13 @@ Ext.define('scholar.view.MainMenu', {
 		
 		'scholar.view.detail.other.Dashboard',
 		
+		'scholar.view.detail.transport.Dashboard',
+		'scholar.view.detail.transport.lookup.LookupRoute',
+		'scholar.view.detail.transport.lookup.LookupVehicle',
+		
 		'scholar.view.detail.library.Dashboard',
 		'scholar.view.detail.library.lookup.Lookup' ,
+		'scholar.view.detail.library.lookup.OPAC' ,
 		
 		'scholar.view.detail.administration.Dashboard',
 		'scholar.view.detail.administration.admission.AdmissionManager',		
@@ -221,7 +226,7 @@ Ext.define('scholar.view.MainMenu', {
 		{
 			title : 'OPAC',
 			tabTip : 'OPAC search',
-			xtype : 'libraryLookup',
+			xtype : 'opacLookup',
 			margin : '10',
 			height : null
 		}
@@ -234,29 +239,22 @@ Ext.define('scholar.view.MainMenu', {
 					tabTip : 'Manage Transport',
 					iconCls: 'x-icon-transport',
 					border : false,
-					xtype : 'studentSearch'
+					xtype : 'parentDashboard'
 				  },
 				  {
 						title : 'Vehicle',
 						tabTip : 'Manage Vehicle fleet',
 						iconCls: 'x-icon-vehicle',
 						border : false,
-						xtype : 'studentSearch'
+						xtype : 'vehicleLookup'
 				  },
 				  {
 						title : 'Route',
 						tabTip : 'Manage Vehicle routes',
 						iconCls: 'x-icon-route',
 						border : false,
-						xtype : 'studentSearch'
-				  },
-				  {
-						title : 'Fee',
-						tabTip : 'Manage transport fee',
-						iconCls: 'x-icon-fees',
-						border : false,
-						xtype : 'studentSearch'
-				  }
+						xtype : 'routeLookup'
+				  }			  
 		        ]
 	},
 	{

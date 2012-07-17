@@ -1,7 +1,7 @@
-Ext.define('scholar.view.detail.transport.lookup.LookupVehicle', {
+Ext.define('scholar.view.detail.library.lookup.OPAC', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'Ext.window.Window','scholar.view.detail.transport.lookup.Search'],
-	alias: 'widget.vehicleLookup',
+	requires : [ 'Ext.window.Window','scholar.view.detail.library.lookup.Search'],
+	alias: 'widget.opacLookup',
 	layout: {
         type: 'border',
         padding: 5
@@ -9,12 +9,12 @@ Ext.define('scholar.view.detail.transport.lookup.LookupVehicle', {
     defaults: {
         split: true
     },
-    title:'Vehicle',
+    title:'OPAC',
     items: [{
 		        region: 'center',	        
 		        minHeight: 80,
 		        layout:'fit',
-       			xtype: 'vehicleSearch',
+       			xtype: 'librarySearch',
        			listeners:{
 		        				selectionchange : function(model, records) {
 		    						if (records[0]) {
@@ -33,7 +33,7 @@ Ext.define('scholar.view.detail.transport.lookup.LookupVehicle', {
 		        items:[{
 		        		 xtype: 'tabpanel',
 		        		 items:[{
-		        		        	title:'Route Information',
+		        		        	title:'Library Information',
 		        		        	layout:'fit',
 		        		        	items:[{
 		        						columnWidth : 0.4,

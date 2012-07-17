@@ -1,7 +1,7 @@
 Ext.define('scholar.view.detail.transport.lookup.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.window.Window' ],
-	alias: 'widget.routeSearch',
+	alias: 'widget.vehicleSearch',
 	store : new Ext.data.ArrayStore({
 		fields : [ {
 			name : 'isbnNumber',

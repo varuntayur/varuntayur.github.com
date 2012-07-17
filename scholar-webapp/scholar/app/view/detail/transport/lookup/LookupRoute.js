@@ -9,7 +9,7 @@ Ext.define('scholar.view.detail.transport.lookup.LookupRoute', {
     defaults: {
         split: true
     },
-    title:'Lookup',
+    title:'Route',
     items: [{
 		        region: 'center',	        
 		        minHeight: 80,
