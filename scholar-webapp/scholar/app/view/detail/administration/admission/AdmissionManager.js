@@ -55,22 +55,22 @@ Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
 		columnLines : true,
 		columns : [ {
 			text : 'Admission Number',
-			width : 75,
+			width : 125,
 			sortable : true,
 			dataIndex : 'admissionNumber'
 		}, {
 			text : 'Student Name',
-			width : 75,
+			width : 125,
 			sortable : true,
 			dataIndex : 'studentName'
 		}, {
 			text : 'Course Name',
-			width : 75,
+			width : 125,
 			sortable : true,
 			dataIndex : 'courseName'
 		}, {
 			text : 'Batch Name',
-			width : 75,
+			width : 125,
 			sortable : true,
 			dataIndex : 'batchName'
 		}, {
@@ -87,22 +87,6 @@ Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
 			sortable : true,
 			dataIndex : 'lastChange'
 		} ],
-		listeners : {
-			selectionchange : function(model, records) {
-				if (records[0]) {
-					Ext.create('Ext.window.Window', {
-						title : 'New Admission',
-						width : 400,
-						autoScroll : true,
-						constrain : true,
-						items : [ {
-							xtype : 'newAdmissionForm'
-						} ]
-					}).show();
-					// cw.('form').getForm().loadRecord(records[0]);
-				}
-			}
-		},
 		dockedItems : [ {
 			xtype : 'toolbar',
 			dock : 'top',
@@ -117,10 +101,12 @@ Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
 							closable : true,
 							minimizable : false,
 							title : 'New Admission: Student Details',
-							width : 400,
+							layout:'fit',
+							minHeight: 400,
+							minWidth: 400,
 							autoScroll : true,
 							autoRender: true,
-							closeAction : 'destroy',
+							closeAction : 'hide',
 							constrain : true,
 							items : [ {
 								xtype : 'newAdmissionForm'

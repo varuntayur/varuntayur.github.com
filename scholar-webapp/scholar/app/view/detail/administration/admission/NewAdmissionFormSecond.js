@@ -11,6 +11,7 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond'
 	header : false,
 	border : false,
 	bodyPadding : 10,
+	autoScroll: true,
 	items : [ {
 		xtype : 'fieldcontainer',
 		fieldLabel : 'Parent Name',
@@ -23,9 +24,8 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond'
 		},
 
 		items : [ {
-			flex : 1,
+			width: 75,
 			name : 'firstName',
-			afterLabelTextTpl : false,
 			fieldLabel : 'First',
 			allowBlank : false
 		}, {
@@ -34,9 +34,8 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond'
 			fieldLabel : 'MI',
 			margins : '0 0 0 5'
 		}, {
-			flex : 2,
+			width: 75,
 			name : 'lastName',
-			afterLabelTextTpl : false,
 			fieldLabel : 'Last',
 			allowBlank : false,
 			margins : '0 0 0 5'
@@ -44,8 +43,7 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond'
 	}, {
 		xtype : 'radiogroup',
 		fieldLabel : 'Relation',
-		columns : 2,
-		vertical : true,
+		columns : 1,
 		items : [ {
 			boxLabel : 'Father',
 			name : 'rb',
@@ -136,21 +134,16 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond'
 	}), {
 		xtype : 'textfield',
 		fieldLabel : 'Email Address',
-		afterLabelTextTpl : false,
 		vtype : 'email',
-		allowBlank : false
+		allowBlank : true
 	}, {
 		xtype : 'textareafield',
 		fieldLabel : 'Address',
-		labelAlign : 'top',
-		flex : 1,
-		margins : '0',
-		afterLabelTextTpl : false,
-		allowBlank : false
+		allowBlank : true
 	},{
 		xtype : 'numberfield',
+		hideTrigger:true,
 		fieldLabel : 'Mobile Number',
-		afterLabelTextTpl : false,
 		allowBlank : false
 	} ],
 
@@ -165,7 +158,6 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond'
 			{
 				text : ' < Back',
 				handler : function() {
-//					this.up('form').getForm().reset();
 					this.up('window').hide();
 					Ext.create('Ext.Window', {
 						xtype : 'window',
@@ -187,22 +179,18 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond'
 				text : 'Next >',
 				handler : function() {
 					if (this.up('form').getForm().isValid()) {
-						// In a real application, this would submit the form to
-						// the configured url
-						// this.up('form').getForm().submit();
-//						this.up('form').getForm().reset();
 						this.up('window').hide();
-//						Ext.MessageBox.alert('Thank you!',
-//								'Your request has been saved.');
 						Ext.create('Ext.Window', {
 							xtype : 'window',
 							closable : true,
 							minimizable : false,
 							title : 'New Admission: Previous Education Details',
-							width : 400,
+							layout:'fit',
+							minHeight: 400,
+							minWidth: 400,
 							autoScroll : true,
 							autoRender: true,
-							closeAction : 'destroy',
+							closeAction : 'hide',
 							constrain : true,
 							items : [ {
 								xtype : 'newAdmissionFormThird'

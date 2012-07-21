@@ -6,37 +6,45 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormThird',
 	alias : 'widget.newAdmissionFormThird',
 	fieldDefaults : {
 		labelAlign : 'left',
-		msgTarget : 'side'
+		msgTarget : 'side',
+		defaultType : 'textfield',
 	},
 	header : false,
 	border : false,
 	bodyPadding : 10,
+	autoScroll: true,
 	items : [ {
-			flex : 1,
-			name : 'previousInstitution',
-			afterLabelTextTpl : false,
-			fieldLabel : 'Previous Institution',
+		xtype : 'fieldcontainer',
+		fieldLabel : 'Previous Institution',
+		labelStyle : 'font-weight:bold;padding:0',
+		layout : 'hbox',
+		defaultType : 'textfield',
+
+		fieldDefaults : {
+			labelAlign : 'top'
+		},
+
+		items : [ {
+			width: 75,
+			name : 'instName',
+			fieldLabel : 'Name',
 			allowBlank : false
 		}, {
-			width : 80,
+			width : 75,
 			name : 'courseName',
-			fieldLabel : 'Course Name',
+			fieldLabel : 'Course',
 			margins : '0 0 0 5'
 		}, {
-			flex : 2,
-			name : 'Marks',
-			afterLabelTextTpl : false,
+			width: 75,
+			name : 'marks',
 			fieldLabel : 'Marks',
 			allowBlank : false,
 			margins : '0 0 0 5'
-		}, {
+		} ]
+	}, {
 		xtype : 'textareafield',
 		fieldLabel : 'Other Details',
-		labelAlign : 'top',
-		flex : 1,
-		margins : '0',
-		afterLabelTextTpl : false,
-		allowBlank : false
+		allowBlank : true
 	} ],
 
 	buttons : [
@@ -57,10 +65,12 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormThird',
 						closable : true,
 						minimizable : false,
 						title : 'New Admission',
-						width : 400,
+						layout:'fit',
+						minHeight: 400,
+						minWidth: 400,
 						autoScroll : true,
 						autoRender: true,
-						closeAction : 'destroy',
+						closeAction : 'hide',
 						constrain : true,
 						items : [ {
 							xtype : 'newAdmissionFormSecond'
@@ -72,10 +82,8 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormThird',
 				text : 'Save',
 				handler : function() {
 					if (this.up('form').getForm().isValid()) {
-						// this.up('form').getForm().submit();
-//						this.up('form').getForm().reset();
 						this.up('window').hide();
-						Ext.MessageBox.alert('Thank you!',
+						Ext.MessageBox.alert('Success!',
 								'Your request has been saved.');
 					}
 				}
