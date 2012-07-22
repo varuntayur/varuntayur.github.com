@@ -35,8 +35,6 @@ Ext.define('scholar.view.detail.administration.batch.Manager', {
 					layout:'fit',
 					items:[{xtype : 'subjectManager'}]
 
-				}],
-			}],
-	
-			
+				}]
+			}]			
 });

@@ -1,6 +1,9 @@
 Ext.define('scholar.view.detail.administration.examination.Manager', {
 	extend : 'Ext.tab.Panel',
-	requires : [ 'scholar.view.detail.administration.examination.ExamManagementTab' ],
+	requires : [ 'scholar.view.detail.administration.examination.schedule.DetailsTab',
+	             'scholar.view.detail.administration.examination.schedule.NewSchedule',
+	             'scholar.view.detail.administration.examination.schedule.ScheduleTab',
+	             'scholar.view.detail.administration.examination.schedule.Search'],
 	alias : 'widget.examManager',
 	title : 'Examination',
 	frame : true,
@@ -11,7 +14,7 @@ Ext.define('scholar.view.detail.administration.examination.Manager', {
 	},
 
 	items : [{
-				xtype:'examManagementTab'
+				xtype:'scheduleTab'
 			}
 			, {
 				title : 'Settings'
