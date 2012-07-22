@@ -1,7 +1,5 @@
-Ext.define('scholar.view.detail.administration.subject.NewSubjectForm', {
+Ext.define('scholar.view.detail.administration.subject.NewSubject', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
-			'Ext.layout.container.Column', 'Ext.window.Window'],
 	alias : 'widget.newSubjectForm',
 	fieldDefaults : {
 		labelAlign : 'left',
@@ -55,9 +53,8 @@ Ext.define('scholar.view.detail.administration.subject.NewSubjectForm', {
 				text : 'Save',
 				handler : function() {
 					if (this.up('form').getForm().isValid()) {
-//						this.up('form').getForm().reset();
 						this.up('window').hide();
-						Ext.MessageBox.alert('Thank you!',
+						Ext.MessageBox.alert('Success!',
 								'Your request has been saved.');
 					}
 				}

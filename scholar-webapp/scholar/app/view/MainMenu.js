@@ -5,6 +5,12 @@ Ext.define('scholar.view.MainMenu', {
 	
 	 requires:[
 		'Ext.chart.*', 
+		 'Ext.form.*',
+		 'Ext.data.*', 
+		 'Ext.grid.Panel',
+		 'Ext.layout.container.Column', 
+		 'Ext.window.Window',
+		 'Ext.ux.LiveSearchGridPanel',
 		
 		'scholar.view.detail.other.Dashboard',
 		
@@ -17,12 +23,12 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.detail.library.lookup.OPAC' ,
 		
 		'scholar.view.detail.administration.Dashboard',
-		'scholar.view.detail.administration.admission.AdmissionManager',		
-		'scholar.view.detail.administration.batch.BatchManager',		
-        'scholar.view.detail.administration.course.CourseManager',        
-        'scholar.view.detail.administration.inventory.InventoryManager',        
-        'scholar.view.detail.administration.user.UserRoleManager',
-        'scholar.view.detail.administration.examination.ExamManager',
+		'scholar.view.detail.administration.admission.Manager',		
+		'scholar.view.detail.administration.batch.Manager',		
+        'scholar.view.detail.administration.course.Manager',        
+        'scholar.view.detail.administration.inventory.Manager',        
+        'scholar.view.detail.administration.user.Manager',
+        'scholar.view.detail.administration.examination.Manager',
         
         'scholar.view.detail.finance.PayrollManager',
         'scholar.view.detail.finance.FeeCollectionManager',

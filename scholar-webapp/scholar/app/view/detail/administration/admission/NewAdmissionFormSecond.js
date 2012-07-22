@@ -1,8 +1,6 @@
 Ext.define('scholar.view.detail.administration.admission.NewAdmissionFormSecond', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
-			'Ext.layout.container.Column', 'Ext.window.Window',
-			'Ext.ux.LiveSearchGridPanel','scholar.view.detail.administration.admission.NewAdmissionFormThird' ],
+	requires : [ 'scholar.view.detail.administration.admission.NewAdmissionFormThird' ],
 	alias : 'widget.newAdmissionFormSecond',
 	fieldDefaults : {
 		labelAlign : 'left',

@@ -1,15 +1,6 @@
-Ext.define('scholar.view.detail.administration.subject.SubjectManager', {
+Ext.define('scholar.view.detail.administration.batch.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
-	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
-			'Ext.layout.container.Column', 'Ext.window.Window',
-			'Ext.ux.LiveSearchGridPanel','scholar.view.detail.administration.subject.NewSubjectForm' ],
-	alias: 'widget.subjectManager',
-	frame : true,
-	bodyPadding : 5,
-	fieldDefaults : {
-		labelAlign : 'left',
-		msgTarget : 'side'
-	},
+	alias: 'widget.batchSearch',
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
@@ -23,14 +14,16 @@ Ext.define('scholar.view.detail.administration.subject.SubjectManager', {
 						xtype : 'window',
 						closable : true,
 						minimizable : false,
-						title : 'New Subject',
-						width : 400,
+						title : 'New Batch',
+						layout:'fit',
+						minHeight: 400,
+						minWidth: 400,
 						autoScroll : true,
 						autoRender: true,
-						closeAction : 'destroy',
+						closeAction : 'hide',
 						constrain : true,
 						items : [ {
-							xtype : 'newSubjectForm'
+							xtype : 'newBatch'
 						} ]
 					}).show();
 				}
@@ -49,18 +42,9 @@ Ext.define('scholar.view.detail.administration.subject.SubjectManager', {
 			name : 'courseName',
 			type : 'string'
 		}, {
-			name : 'subjectName',
+			name : 'section',
 			type : 'string'
-		},
-		{
-			name : 'subjectCode',
-			type : 'string'
-		},
-		{
-			name : 'examinationRequired',
-			type : 'boolean'
-		},
-		{
+		}, {
 			name : 'startDate',
 			type : 'date',
 			dateFormat : 'n/j h:ia'
@@ -93,24 +77,11 @@ Ext.define('scholar.view.detail.administration.subject.SubjectManager', {
 		sortable : true,
 		dataIndex : 'courseName'
 	}, {
-		text : 'Subject Name',
+		text : 'Section',
 		width : 75,
 		sortable : true,
-		dataIndex : 'subjectName'
-	},
-	{
-		text : 'Subject Code',
-		width : 75,
-		sortable : true,
-		dataIndex : 'subjectCode'
-	},
-	{
-		text : 'Examination Required',
-		width : 75,
-		sortable : true,
-		dataIndex : 'examinationRequired'
-	},
-	{
+		dataIndex : 'section'
+	}, {
 		xtype : 'datecolumn',
 		text : 'Start Date',
 		width : 85,
@@ -129,11 +100,13 @@ Ext.define('scholar.view.detail.administration.subject.SubjectManager', {
 		flex : 1,
 		sortable : true,
 		dataIndex : 'lastChange'
-	}  ],
-	height : 350,
-//	width : 600,
-	viewConfig : {
-		stripeRows : true
+	} ],
+	listeners : {
+		selectionchange : function(model, records) {
+			if (records[0]) {
+				this.up('form').getForm().loadRecord(records[0]);
+			}
+		}
 	}
-	
 });
+

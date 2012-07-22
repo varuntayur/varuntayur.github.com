@@ -1,8 +1,5 @@
 Ext.define('scholar.view.detail.administration.examination.ExamManagementTab', {
 	extend : 'Ext.panel.Panel',
-	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
-			'Ext.layout.container.Column', 'Ext.window.Window',
-			'Ext.ux.LiveSearchGridPanel' ],
 	alias : 'widget.examManagementTab',
 	title : 'Exam Manager',
 	frame : true,

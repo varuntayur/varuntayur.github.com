@@ -1,9 +1,6 @@
-Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
+Ext.define('scholar.view.detail.administration.admission.Manager', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'Ext.form.*', 'Ext.data.*', 'Ext.grid.Panel',
-			'Ext.layout.container.Column', 'Ext.window.Window',
-			'Ext.ux.LiveSearchGridPanel',
-			'scholar.view.detail.administration.admission.NewAdmissionForm' ],
+	requires : ['scholar.view.detail.administration.admission.NewAdmissionForm' ],
 	alias : 'widget.admissionManager',
 	frame : true,
 	bodyPadding : 5,
@@ -87,6 +84,30 @@ Ext.define('scholar.view.detail.administration.admission.AdmissionManager', {
 			sortable : true,
 			dataIndex : 'lastChange'
 		} ],
+		listeners: {
+	        itemdblclick: {
+	            fn: function(View,  record, item, index, evt, eOpts ){
+	            	
+	            	var admForm = new scholar.view.detail.administration.admission.NewAdmissionForm();
+	            	admForm.load(record);
+	            	
+	            	Ext.create('Ext.Window', {
+						xtype : 'window',
+						closable : true,
+						minimizable : false,
+						title : 'New Admission: Student Details',
+						layout:'fit',
+						minHeight: 400,
+						minWidth: 400,
+						autoScroll : true,
+						autoRender: true,
+						closeAction : 'hide',
+						constrain : true,
+						items : [ admForm ]
+					}).show();
+	            }
+	        }
+	    },
 		dockedItems : [ {
 			xtype : 'toolbar',
 			dock : 'top',

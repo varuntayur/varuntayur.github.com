@@ -5,8 +5,6 @@ Ext.define('scholar.view.detail.administration.Dashboard', {
 	title : 'Administration Dashboard',
 	collapsible : false,
 	defaults : {
-//		labelWidth : 89,
-//		anchor : '100%',
 		layout : {
 			type : 'table',
 			defaultMargins : {
