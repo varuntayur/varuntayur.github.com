@@ -17,7 +17,7 @@ Ext.define('scholar.view.detail.administration.course.Search', {
 						minimizable : false,
 						title : 'New Course',
 						layout:'fit',
-						minHeight: 400,
+						minHeight: 200,
 						minWidth: 400,
 						autoScroll : true,
 						autoRender: true,

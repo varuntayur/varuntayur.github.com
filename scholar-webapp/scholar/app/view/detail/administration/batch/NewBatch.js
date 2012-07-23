@@ -16,10 +16,25 @@ Ext.define('scholar.view.detail.administration.batch.NewBatch', {
 	items : [ {
 		fieldLabel : 'Batch Name',
 		name : 'batchName'
-	}, {
+	}, Ext.create('Ext.form.ComboBox', {
 		fieldLabel : 'Course Name',
-		name : 'courseName'
-	}, {
+		store : Ext.create('Ext.data.Store', {
+			fields : [ 'abbr', 'name' ],
+			data : [ {
+				"abbr" : "AL",
+				"name" : "Standard 1"
+			}, {
+				"abbr" : "AL",
+				"name" : "Standard 2"
+			}, {
+				"abbr" : "AL",
+				"name" : "B.E"
+			}]
+		}),
+		queryMode : 'local',
+		displayField : 'name',
+		valueField : 'abbr'
+	}), {
 		fieldLabel : 'Section',
 		name : 'section'
 	}, {
