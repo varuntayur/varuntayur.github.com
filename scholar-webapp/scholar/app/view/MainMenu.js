@@ -44,7 +44,7 @@ Ext.define('scholar.view.MainMenu', {
 		
 		'scholar.view.detail.student.Dashboard',
 		'scholar.view.detail.student.Search',
-		'scholar.view.detail.student.SearchDetail',
+		'scholar.view.detail.student.lookup.Lookup',
 		'scholar.view.detail.student.performance.Report',
 		'scholar.view.detail.student.attendance.Manager'],
 
@@ -122,7 +122,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Lookup',
 						tabTip : 'Lookup student detail',
 						iconCls: 'x-icon-search',
-						xtype : 'studentSearchDetail',
+						xtype : 'studentLookup',
 						margin : '10',
 						height : null
 					}, {
@@ -132,14 +132,16 @@ Ext.define('scholar.view.MainMenu', {
 						xtype : 'attendanceManager',
 						margin : '10',
 						height : null
-					}, {
-						title : 'Performance',
-						tabTip : 'Student search',
-						iconCls: 'x-icon-grades',
-						xtype : 'performanceReport',
-						margin : '10',
-						height : null
 					}
+//					, 
+//					{
+//						title : 'Performance',
+//						tabTip : 'Student search',
+//						iconCls: 'x-icon-grades',
+//						xtype : 'performanceReport',
+//						margin : '10',
+//						height : null
+//					}
 				]
 	         },
 	         {

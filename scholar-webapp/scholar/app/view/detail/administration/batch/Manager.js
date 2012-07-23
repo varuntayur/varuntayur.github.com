@@ -28,11 +28,13 @@ Ext.define('scholar.view.detail.administration.batch.Manager', {
 				xtype:'tabpanel',
 				region:'south',
 				items:[{
-				       xtype:'batchDetailsTab'
+				       xtype:'batchDetailsTab',
+				       iconCls:'x-icon-info-details'
 				},
 				{
 					title: 'Subject Setting',
 					layout:'fit',
+					iconCls:'x-icon-subject',
 					items:[{xtype : 'subjectManager'}]
 
 				}]

@@ -169,6 +169,16 @@
 	background-repeat:no-repeat;
 }
 
+.x-icon-subject{
+	background-image: url(images/subject.png);
+	background-repeat:no-repeat 16px 16px;
+}
+
+.x-icon-info-details{
+	background-image: url(images/details.png);
+	background-repeat:no-repeat 16px 16px;
+}
+
 
 
 

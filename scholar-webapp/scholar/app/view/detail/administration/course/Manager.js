@@ -28,7 +28,8 @@ Ext.define('scholar.view.detail.administration.course.Manager', {
 				xtype:'tabpanel',
 				region:'south',
 				items:[{
-				       xtype:'courseDetailsTab'
+				       xtype:'courseDetailsTab',
+				       iconCls:'x-icon-info-details'
 				}]
 			} ]
 });
