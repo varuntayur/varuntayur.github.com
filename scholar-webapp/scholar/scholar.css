@@ -194,5 +194,34 @@
 	background-repeat:no-repeat;
 }
 
+.x-icon-schedule{
+	background-image: url(images/schedule.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-infrastructure{
+	background-image: url(images/infrastructure.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-electronics{
+	background-image: url(images/electronics.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-food{
+	background-image: url(images/food.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-role{
+	background-image: url(images/role.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-user{
+	background-image: url(images/user.png);
+	background-repeat:no-repeat;
+}
 
 

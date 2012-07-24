@@ -17,13 +17,16 @@ Ext.define('scholar.view.detail.administration.inventory.Manager', {
     },
 	items : [
 	         {
-				title:'Infrastructure'
+				title:'Infrastructure',
+				iconCls:'x-icon-infrastructure'
 			},
 			{
-				title:'Electronics/Laboratories'
+				title:'Electronics/Laboratories',
+				iconCls:'x-icon-electronics'
 			},
 			{
-				title:'Perishables/Canteen'
+				title:'Perishables/Canteen',
+					iconCls:'x-icon-food'
 			}
 		]
 });
