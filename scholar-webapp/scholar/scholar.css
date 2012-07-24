@@ -171,15 +171,28 @@
 
 .x-icon-subject{
 	background-image: url(images/subject.png);
-	background-repeat:no-repeat 16px 16px;
+	background-repeat:no-repeat;
 }
 
 .x-icon-info-details{
 	background-image: url(images/details.png);
-	background-repeat:no-repeat 16px 16px;
+	background-repeat:no-repeat;
 }
 
+.x-icon-register{
+	background-image: url(images/register.png);
+	background-repeat:no-repeat;
+}
 
+.x-icon-report{
+	background-image: url(images/report.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-settings{
+	background-image: url(images/settings.png);
+	background-repeat:no-repeat;
+}
 
 
 

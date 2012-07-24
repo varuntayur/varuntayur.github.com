@@ -17,9 +17,11 @@ Ext.define('scholar.view.detail.administration.examination.Manager', {
 				xtype:'scheduleTab'
 			}
 			, {
-				title : 'Settings'
+				title : 'Settings',
+				iconCls:'x-icon-settings'
 			}, {
-				title : 'Reports'
+				title : 'Reports',
+				iconCls:'x-icon-report',
 			} ]
 	
 });

@@ -8,6 +8,7 @@ Ext.define('scholar.view.detail.student.attendance.Manager', {
 	         {
 				title : 'Attendance Report',
 				layout:'fit',
+				iconCls:'x-icon-report',
 				items : [ {
 					xtype : 'studentAttendanceReport'
 				} ]
@@ -15,6 +16,7 @@ Ext.define('scholar.view.detail.student.attendance.Manager', {
 	         {
 				title : 'Attendance Register',
 				layout:'fit',
+				iconCls:'x-icon-register',
 				items : [ {
 					xtype : 'studentAttendanceRegister'
 				} ]
