@@ -4,6 +4,8 @@ Ext.define('scholar.view.detail.transport.Dashboard', {
 	requires:['Ext.chart.*'],
 	title : 'Transport Dashboard',
 	collapsible : false,
+	frame:true,
+	borders:true,
 	defaults : {
 		layout : {
 			type : 'table',
@@ -44,7 +46,7 @@ Ext.define('scholar.view.detail.transport.Dashboard', {
 	  				    type: 'Numeric',
 	  				    position: 'left',
 	  				    fields: ['data1'],
-	  				    title: 'Attendance',
+	  				    title: 'Utilization',
 	  				    grid: true,
 	  				    minimum: 0,
 	  				    maximum: 100
@@ -90,7 +92,7 @@ Ext.define('scholar.view.detail.transport.Dashboard', {
 		  				    type: 'Numeric',
 		  				    position: 'left',
 		  				    fields: ['data1'],
-		  				    title: 'Student Engagement',
+		  				    title: 'Driver Engagement',
 		  				    grid: true,
 		  				    minimum: 0,
 		  				    maximum: 10

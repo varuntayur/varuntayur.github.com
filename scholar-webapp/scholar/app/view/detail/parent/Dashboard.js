@@ -4,6 +4,8 @@ Ext.define('scholar.view.detail.parent.Dashboard', {
 	requires:['Ext.chart.*'],
 	title : 'Parent Dashboard',
 	collapsible : false,
+	frame:true,
+	borders:true,
 	defaults : {
 		layout : {
 			type : 'table',

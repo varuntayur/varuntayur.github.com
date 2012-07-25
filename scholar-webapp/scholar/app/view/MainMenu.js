@@ -32,6 +32,7 @@ Ext.define('scholar.view.MainMenu', {
         
         'scholar.view.detail.finance.PayrollManager',
         'scholar.view.detail.finance.FeeCollectionManager',
+        'scholar.view.detail.finance.Dashboard',
 		
 		'scholar.view.detail.staff.Dashboard',
 		'scholar.view.detail.staff.lookup.Lookup',
@@ -239,7 +240,7 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Finance',
 								tabTip : 'Manage Finances',
 								border : false,
-								xtype : 'otherDashboard'
+								xtype : 'financeDashboard'
 							},
 							{
 								title : 'Payroll',
@@ -268,7 +269,7 @@ Ext.define('scholar.view.MainMenu', {
 							tabTip : 'Manage Transport',
 							iconCls: 'x-icon-transport',
 							border : false,
-							xtype : 'parentDashboard'
+							xtype : 'transportDashboard'
 						  },
 						  {
 								title : 'Vehicle',

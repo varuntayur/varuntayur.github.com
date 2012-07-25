@@ -33,7 +33,7 @@ Ext.define('scholar.view.detail.library.lookup.Lookup', {
 		        items:[{
 		        		 xtype: 'tabpanel',
 		        		 items:[{
-		        		        	title:'Library Information',
+		        		        	title:'Book Information',
 		        		        	layout:'fit',
 		        		        	items:[{
 		        						columnWidth : 0.4,
@@ -67,9 +67,7 @@ Ext.define('scholar.view.detail.library.lookup.Lookup', {
 		        							name : 'lastChange'
 		        						}]
 		        					}]
-		        		        }, 
-		        		        {title:'Grades'}, 
-		        		        {title:'Attendance'}
+		        		        }
 		        		       ]
 		        	}]
     	    }]	

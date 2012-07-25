@@ -1,8 +1,8 @@
-Ext.define('scholar.view.detail.administration.Dashboard', {
+Ext.define('scholar.view.detail.finance.Dashboard', {
 	extend : 'Ext.form.Panel',
-	xtype : 'administrationDashboard',
+	xtype : 'financeDashboard',
 	requires:['Ext.chart.*'],
-	title : 'Administration Dashboard',
+	title : 'Finance Dashboard',
 	collapsible : false,
 	frame:true,
 	borders:true,
@@ -14,8 +14,7 @@ Ext.define('scholar.view.detail.administration.Dashboard', {
 				right : 5,
 				bottom : 0,
 				left : 0
-			},
-			columns:2
+			}
 		},
 		margins : '10 10 10 10'
 	},
@@ -25,49 +24,49 @@ Ext.define('scholar.view.detail.administration.Dashboard', {
 	  		   width: 400,
 	  		   height: 300,
 	  		   animate: true,
-	  		   donut:true,
-	  		   showInLegend: true,
-	            shadow: true,
-	            legend: {
-	                position: 'right'
-	            },
-	            title: 'Fee Collection',
-	            insetPadding: 60,
-	            theme: 'Base:gradients',
 	  		   store: Ext.create('Ext.data.JsonStore', {
 	  			        fields: ['name', 'data1'],
 	  			    	data: [
 	  				        { name: 'Jan', data1: 100 },
+	  				        { name: 'Feb', data1: 90 },
 	  				        { name: 'Mar', data1: 100 },
-	  				        { name: 'May', data1: 10 },
+	  				        { name: 'Apr', data1: 0 },
+	  				        { name: 'May', data1: 0 },
 	  				        { name: 'Jun', data1: 70 },
+	  				        { name: 'Jul', data1: 90 },
 	  				        { name: 'Aug', data1: 91 },
+	  				        { name: 'Sep', data1: 99 },
 	  				        { name: 'Oct', data1: 80 },
+	  				        { name: 'Nov', data1: 90 },
 	  				        { name: 'Dec', data1: 80 }				 
 	  				    ]
 	  			    }),		 			    
- 			    
+	  		  axes: [
+	  				{
+	  				    type: 'Numeric',
+	  				    position: 'left',
+	  				    fields: ['data1'],
+	  				    title: 'Utilization',
+	  				    grid: true,
+	  				    minimum: 0,
+	  				    maximum: 100
+	  				}, {
+	  				    type: 'Category',
+	  				    position: 'bottom',
+	  				    fields: ['name'],
+	  				    title: 'Months',
+	  				    label: {
+	  				        rotate: {
+	  				            degrees: 270
+	  				        }
+	  				    }
+	  				}	  		 
+	  		    ],
 	  		  series: [
 	  	        {
-	  	            type: 'pie',
-//	  	            xField: 'name',
-	  	            field: 'data1',
-	  	          tips: {
-	                  trackMouse: true,
-	                  width: 140,
-	                  height: 28	
-	                },
-	                highlight: {
-	                  segment: {
-	                    margin: 20
-	                  }
-	                },
-	                label: {
-	                    field: 'name',
-	                    display: 'rotate',
-	                    contrast: true,
-	                    font: '18px Arial'
-	                }
+	  	            type: 'column',
+	  	            xField: 'name',
+	  	            yField: 'data1'
 	  	        }]
 	         }),
 	  	      Ext.create('Ext.chart.Chart', {		
@@ -93,7 +92,7 @@ Ext.define('scholar.view.detail.administration.Dashboard', {
 		  				    type: 'Numeric',
 		  				    position: 'left',
 		  				    fields: ['data1'],
-		  				    title: 'Free Periods Available',
+		  				    title: 'Driver Engagement',
 		  				    grid: true,
 		  				    minimum: 0,
 		  				    maximum: 10
