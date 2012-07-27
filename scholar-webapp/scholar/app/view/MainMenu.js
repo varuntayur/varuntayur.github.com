@@ -217,7 +217,7 @@ Ext.define('scholar.view.MainMenu', {
 								xtype : 'libraryDashboard'
 						},
 						{
-							title : 'Book Search',
+							title : 'Lookup',
 							tabTip : 'Book search',
 							xtype : 'libraryLookup',
 							iconCls: 'x-icon-search',

@@ -4,7 +4,7 @@ Ext.define('scholar.view.detail.library.lookup.Search', {
 	alias: 'widget.librarySearch',
 	store : new Ext.data.ArrayStore({
 		fields : [ {
-			name : 'isbnNumber',
+			name : 'isbn',
 			type : 'string'
 		}, {
 			name : 'bookName',
@@ -29,7 +29,7 @@ Ext.define('scholar.view.detail.library.lookup.Search', {
 		text : 'ISBN',
 		flex : 1,
 		sortable : false,
-		dataIndex : 'isbnNumber'
+		dataIndex : 'isbn'
 	}, {
 		text : 'Name',
 		width : 75,
