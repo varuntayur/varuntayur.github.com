@@ -1,4 +1,4 @@
-Ext.define('scholar.view.detail.administration.batch.NewBatch', {
+Ext.define('scholar.view.detail.administration.settings.batch.NewBatch', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.newBatch',
 	fieldDefaults : {

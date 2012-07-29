@@ -1,4 +1,4 @@
-Ext.define('scholar.view.detail.administration.course.DetailsTab', {
+Ext.define('scholar.view.detail.administration.settings.course.DetailsTab', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.courseDetailsTab',
 	title : 'Course Details',

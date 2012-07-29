@@ -1,8 +1,8 @@
-Ext.define('scholar.view.detail.administration.course.Manager', {
+Ext.define('scholar.view.detail.administration.settings.course.Manager', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'scholar.view.detail.administration.course.DetailsTab',
-	 			'scholar.view.detail.administration.course.Search',
-	 			'scholar.view.detail.administration.course.NewCourse'],
+	requires : [ 'scholar.view.detail.administration.settings.course.DetailsTab',
+	 			'scholar.view.detail.administration.settings.course.Search',
+	 			'scholar.view.detail.administration.settings.course.NewCourse'],
 	alias : 'widget.courseManager',
 	title:'Course',
 	frame : true,

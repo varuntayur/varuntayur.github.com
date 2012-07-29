@@ -1,4 +1,4 @@
-Ext.define('scholar.view.detail.administration.subject.NewSubject', {
+Ext.define('scholar.view.detail.administration.settings.subject.NewSubject', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.newSubjectForm',
 	fieldDefaults : {

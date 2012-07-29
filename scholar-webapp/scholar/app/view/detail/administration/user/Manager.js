@@ -1,5 +1,6 @@
 	Ext.define('scholar.view.detail.administration.user.Manager', {
 	extend : 'Ext.tab.Panel',
+	requires:['scholar.view.detail.administration.user.Search'],
 	alias: 'widget.userRoleManager',
 	title:'User/Roles',
 	frame : true,
@@ -23,8 +24,7 @@
 				items:[
 				    {
 				    	region:'center',
-				    	xtype:'studentSearch',
-				    	height:'60%'
+				    	xtype:'userSearch'
 	   		        }, 
 					{
 						region:'south',

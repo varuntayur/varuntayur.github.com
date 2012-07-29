@@ -1,9 +1,9 @@
-Ext.define('scholar.view.detail.administration.batch.Manager', {
+Ext.define('scholar.view.detail.administration.settings.batch.Manager', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'scholar.view.detail.administration.subject.Manager',
-			'scholar.view.detail.administration.batch.DetailsTab',
-			'scholar.view.detail.administration.batch.Search',
-			'scholar.view.detail.administration.batch.NewBatch'],
+	requires : [ 'scholar.view.detail.administration.settings.subject.Manager',
+			'scholar.view.detail.administration.settings.batch.DetailsTab',
+			'scholar.view.detail.administration.settings.batch.Search',
+			'scholar.view.detail.administration.settings.batch.NewBatch'],
 	alias: 'widget.batchManager',
 	title:'Batch',			
 	frame : true,

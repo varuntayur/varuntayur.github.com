@@ -24,14 +24,14 @@ Ext.define('scholar.view.MainMenu', {
 		
 		'scholar.view.detail.administration.Dashboard',
 		'scholar.view.detail.administration.admission.Manager',		
-		'scholar.view.detail.administration.batch.Manager',		
-        'scholar.view.detail.administration.course.Manager',        
+		'scholar.view.detail.administration.settings.Manager',			     
         'scholar.view.detail.administration.inventory.Manager',        
         'scholar.view.detail.administration.user.Manager',
         'scholar.view.detail.administration.examination.Manager',
         
         'scholar.view.detail.finance.PayrollManager',
         'scholar.view.detail.finance.FeeCollectionManager',
+        'scholar.view.detail.finance.settings.Manager',
         'scholar.view.detail.finance.Dashboard',
 		
 		'scholar.view.detail.staff.Dashboard',
@@ -69,21 +69,13 @@ Ext.define('scholar.view.MainMenu', {
 						height : null
 					},	
 					{
-						title : 'Batch',
-						tabTip : 'Batch Management',
-						iconCls: 'x-icon-batch',
-						xtype : 'batchManager',
+						title : 'Settings',
+						tabTip : 'Settings Management',
+						iconCls: 'x-icon-settings',
+						xtype : 'settingsManager',
 						margin : '10',
 						height : null
 					},
-					{
-						title : 'Course',
-						tabTip : 'Course Management',
-						iconCls: 'x-icon-course',
-						xtype : 'courseManager',
-						margin : '10',
-						height : null
-					},		
 					{
 						title : 'Examination',
 						tabTip : 'Examination Management',
@@ -247,6 +239,14 @@ Ext.define('scholar.view.MainMenu', {
 								tabTip : 'Fee Collection',
 								iconCls: 'x-icon-fees',
 								xtype : 'feeCollectionManager',
+								margin : '10',
+								height : null
+							},
+							{
+								title : 'Settings',
+								tabTip : 'Settings related to finances',
+								iconCls: 'x-icon-settings',
+								xtype : 'financeSettingsManager',
 								margin : '10',
 								height : null
 							}

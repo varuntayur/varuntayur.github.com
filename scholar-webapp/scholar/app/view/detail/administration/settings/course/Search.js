@@ -1,6 +1,7 @@
-Ext.define('scholar.view.detail.administration.batch.Search', {
+Ext.define('scholar.view.detail.administration.settings.course.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
-	alias: 'widget.batchSearch',
+	alias: 'widget.courseSearch',
+	requires : [ 'scholar.view.detail.administration.settings.course.NewCourse'],
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
@@ -14,16 +15,16 @@ Ext.define('scholar.view.detail.administration.batch.Search', {
 						xtype : 'window',
 						closable : true,
 						minimizable : false,
-						title : 'New Batch',
+						title : 'New Course',
 						layout:'fit',
-						minHeight: 400,
+						minHeight: 200,
 						minWidth: 400,
 						autoScroll : true,
 						autoRender: true,
 						closeAction : 'hide',
 						constrain : true,
 						items : [ {
-							xtype : 'newBatch'
+							xtype : 'newCourse'
 						} ]
 					}).show();
 				}
@@ -36,68 +37,35 @@ Ext.define('scholar.view.detail.administration.batch.Search', {
 	} ],
 	store : new Ext.data.ArrayStore({
 		fields : [ {
-			name : 'batchName',
+			name : 'courseCode',
 			type : 'string'
 		}, {
 			name : 'courseName',
 			type : 'string'
 		}, {
-			name : 'section',
-			type : 'string'
-		}, {
-			name : 'startDate',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		}, {
-			name : 'endDate',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		}, {
 			name : 'lastChange',
 			type : 'date',
 			dateFormat : 'n/j h:ia'
 		} ],
-		data : [
-				[ 'Batch 1', 'Standard 1', 'A', '1/5 12:00am',
-						'1/4 12:00am', '9/1 12:00am' ],
-				[ 'Batch 2', 'Standard 2', 'C', '1/5 12:00am',
-						'1/4 12:00am', '9/1 12:00am' ],
-				[ 'Batch 1', 'B.E', 'CS 1', '1/9 12:00am',
-						'1/8 12:00am', '9/1 12:00am' ] ]
+		data : [ [ '001/005', 'Standard 1', 'A', '9/1 12:00am' ],
+				[ '001/006', 'Standard 2', 'C', '9/1 12:00am' ],
+				[ '001/007', 'B.E', 'CS 1', '9/1 12:00am' ] ]
 	}),
 	columnLines : true,
 	columns : [ {
-		text : 'Batch Name',
-		width : 75,
-		sortable : true,
-		dataIndex : 'batchName'
+		text : 'Course Code',
+		sortable : false,
+		dataIndex : 'courseCode'
 	}, {
 		text : 'Course Name',
 		width : 75,
 		sortable : true,
 		dataIndex : 'courseName'
 	}, {
-		text : 'Section',
-		width : 75,
-		sortable : true,
-		dataIndex : 'section'
-	}, {
-		xtype : 'datecolumn',
-		text : 'Start Date',
-		width : 85,
-		sortable : true,
-		dataIndex : 'startDate'
-	}, {
-		xtype : 'datecolumn',
-		text : 'End Date',
-		width : 85,
-		sortable : true,
-		dataIndex : 'endDate'
-	}, {
 		xtype : 'datecolumn',
 		text : 'Last Updated',
-		width : 85,
 		flex : 1,
+		width : 85,
 		sortable : true,
 		dataIndex : 'lastChange'
 	} ],

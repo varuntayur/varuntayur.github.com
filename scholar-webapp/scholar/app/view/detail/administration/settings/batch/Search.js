@@ -1,8 +1,6 @@
-Ext.define('scholar.view.detail.administration.subject.Manager', {
+Ext.define('scholar.view.detail.administration.settings.batch.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
-	requires : ['scholar.view.detail.administration.subject.NewSubject' ],
-	alias: 'widget.subjectManager',
-	frame : true,
+	alias: 'widget.batchSearch',
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
@@ -16,14 +14,16 @@ Ext.define('scholar.view.detail.administration.subject.Manager', {
 						xtype : 'window',
 						closable : true,
 						minimizable : false,
-						title : 'New Subject',
-						width : 400,
+						title : 'New Batch',
+						layout:'fit',
+						minHeight: 400,
+						minWidth: 400,
 						autoScroll : true,
 						autoRender: true,
-						closeAction : 'destroy',
+						closeAction : 'hide',
 						constrain : true,
 						items : [ {
-							xtype : 'newSubjectForm'
+							xtype : 'newBatch'
 						} ]
 					}).show();
 				}
@@ -42,18 +42,9 @@ Ext.define('scholar.view.detail.administration.subject.Manager', {
 			name : 'courseName',
 			type : 'string'
 		}, {
-			name : 'subjectName',
+			name : 'section',
 			type : 'string'
-		},
-		{
-			name : 'subjectCode',
-			type : 'string'
-		},
-		{
-			name : 'examinationRequired',
-			type : 'boolean'
-		},
-		{
+		}, {
 			name : 'startDate',
 			type : 'date',
 			dateFormat : 'n/j h:ia'
@@ -86,24 +77,11 @@ Ext.define('scholar.view.detail.administration.subject.Manager', {
 		sortable : true,
 		dataIndex : 'courseName'
 	}, {
-		text : 'Subject Name',
+		text : 'Section',
 		width : 75,
 		sortable : true,
-		dataIndex : 'subjectName'
-	},
-	{
-		text : 'Subject Code',
-		width : 75,
-		sortable : true,
-		dataIndex : 'subjectCode'
-	},
-	{
-		text : 'Examination Required',
-		width : 75,
-		sortable : true,
-		dataIndex : 'examinationRequired'
-	},
-	{
+		dataIndex : 'section'
+	}, {
 		xtype : 'datecolumn',
 		text : 'Start Date',
 		width : 85,
@@ -122,34 +100,13 @@ Ext.define('scholar.view.detail.administration.subject.Manager', {
 		flex : 1,
 		sortable : true,
 		dataIndex : 'lastChange'
-	}  ],
-	height : 250,
-	viewConfig : {
-		stripeRows : true
-	},
-	listeners: {
-        itemdblclick: {
-            fn: function(View,  record, item, index, evt, eOpts ){
-            	
-            	var admForm = new scholar.view.detail.administration.subject.NewSubject();
-            	admForm.load(record);
-            	
-            	Ext.create('Ext.Window', {
-					xtype : 'window',
-					closable : true,
-					minimizable : false,
-					title : 'Edit Subject',
-					layout:'fit',
-					minHeight: 400,
-					minWidth: 400,
-					autoScroll : true,
-					autoRender: true,
-					closeAction : 'hide',
-					constrain : true,
-					items : [ admForm ]
-				}).show();
-            }
-        }
-    },
-	
+	} ],
+	listeners : {
+		selectionchange : function(model, records) {
+			if (records[0]) {
+				this.up('form').getForm().loadRecord(records[0]);
+			}
+		}
+	}
 });
+

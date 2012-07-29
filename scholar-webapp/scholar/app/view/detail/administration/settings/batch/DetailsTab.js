@@ -1,4 +1,4 @@
-Ext.define('scholar.view.detail.administration.batch.DetailsTab', {
+Ext.define('scholar.view.detail.administration.settings.batch.DetailsTab', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.batchDetailsTab',
 	title : 'Batch details',
