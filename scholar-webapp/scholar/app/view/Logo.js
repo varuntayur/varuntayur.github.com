@@ -9,7 +9,7 @@ Ext.define('scholar.view.Logo', {
         {
             xtype: 'component',
             cls  : 'x-logo',
-            html : 'Scholar'
+            html : ''
         }
     ]
 });

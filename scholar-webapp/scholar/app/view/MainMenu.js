@@ -15,8 +15,8 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.detail.other.Dashboard',
 		
 		'scholar.view.detail.transport.Dashboard',
-		'scholar.view.detail.transport.lookup.LookupRoute',
-		'scholar.view.detail.transport.lookup.LookupVehicle',
+		'scholar.view.detail.transport.route.Lookup',
+		'scholar.view.detail.transport.vehicle.Lookup',
 		
 		'scholar.view.detail.library.Dashboard',
 		'scholar.view.detail.library.lookup.Lookup' ,
@@ -134,15 +134,7 @@ Ext.define('scholar.view.MainMenu', {
 						margin : '10',
 						height : null
 					}
-//					, 
-//					{
-//						title : 'Performance',
-//						tabTip : 'Student search',
-//						iconCls: 'x-icon-grades',
-//						xtype : 'performanceReport',
-//						margin : '10',
-//						height : null
-//					}
+
 				]
 	         },
 	         {

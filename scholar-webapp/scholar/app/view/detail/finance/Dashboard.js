@@ -28,17 +28,17 @@ Ext.define('scholar.view.detail.finance.Dashboard', {
 	  			        fields: ['name', 'data1'],
 	  			    	data: [
 	  				        { name: 'Jan', data1: 100 },
-	  				        { name: 'Feb', data1: 90 },
-	  				        { name: 'Mar', data1: 100 },
+	  				        { name: 'Feb', data1: 10 },
+	  				        { name: 'Mar', data1: 0 },
 	  				        { name: 'Apr', data1: 0 },
 	  				        { name: 'May', data1: 0 },
-	  				        { name: 'Jun', data1: 70 },
+	  				        { name: 'Jun', data1: 100 },
 	  				        { name: 'Jul', data1: 90 },
-	  				        { name: 'Aug', data1: 91 },
-	  				        { name: 'Sep', data1: 99 },
-	  				        { name: 'Oct', data1: 80 },
+	  				        { name: 'Aug', data1: 50 },
+	  				        { name: 'Sep', data1: 40 },
+	  				        { name: 'Oct', data1: 100 },
 	  				        { name: 'Nov', data1: 90 },
-	  				        { name: 'Dec', data1: 80 }				 
+	  				        { name: 'Dec', data1: 60 }				 
 	  				    ]
 	  			    }),		 			    
 	  		  axes: [
@@ -46,7 +46,7 @@ Ext.define('scholar.view.detail.finance.Dashboard', {
 	  				    type: 'Numeric',
 	  				    position: 'left',
 	  				    fields: ['data1'],
-	  				    title: 'Utilization',
+	  				    title: 'Fee Collection',
 	  				    grid: true,
 	  				    minimum: 0,
 	  				    maximum: 100
@@ -92,7 +92,7 @@ Ext.define('scholar.view.detail.finance.Dashboard', {
 		  				    type: 'Numeric',
 		  				    position: 'left',
 		  				    fields: ['data1'],
-		  				    title: 'Driver Engagement',
+		  				    title: 'Cash Collection',
 		  				    grid: true,
 		  				    minimum: 0,
 		  				    maximum: 10
