@@ -22,5 +22,23 @@ Ext.define('scholar.view.detail.finance.settings.general.GeneralSettings', {
 	    		xtype : 'datefield',
 	    		fieldLabel : 'Financial Year End Date'
 	    	} 
-	       ]
+	       ],
+	       buttons : [
+	      			{
+	      				text : 'Cancel',
+	      				handler : function() {
+	      					this.up('form').getForm().reset();
+	      					this.up('window').hide();
+	      				}
+	      			},
+	      			{
+	      				text : 'Save',
+	      				handler : function() {
+	      					if (this.up('form').getForm().isValid()) {
+	      						this.up('window').hide();
+	      						Ext.MessageBox.alert('Success!',
+	      								'Your request has been saved.');
+	      					}
+	      				}
+	      			} ]
 });

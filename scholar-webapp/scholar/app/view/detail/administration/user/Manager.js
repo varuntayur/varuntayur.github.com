@@ -1,6 +1,7 @@
 	Ext.define('scholar.view.detail.administration.user.Manager', {
 	extend : 'Ext.tab.Panel',
-	requires:['scholar.view.detail.administration.user.Search'],
+	requires:['scholar.view.detail.administration.user.Search',
+	          'scholar.view.detail.administration.user.roles.Manager'],
 	alias: 'widget.userRoleManager',
 	title:'User/Roles',
 	frame : true,
@@ -15,6 +16,10 @@
     },
    
 	items : [
+			{
+				title:'Roles/Permissions',
+				xtype:'roleManager'
+			},
 			{
 				title:'User',
 				layout:'border',
@@ -42,9 +47,7 @@
 						      ]
 					}
 				]
-			},
-			{
-				title:'Roles/Permissions'
 			}
+			
 	]
 });

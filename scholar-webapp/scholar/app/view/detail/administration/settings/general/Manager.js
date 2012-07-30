@@ -44,5 +44,20 @@ Ext.define('scholar.view.detail.administration.settings.general.Manager', {
 	                iconCls: 'upload-icon'
 	            }
 	        }
-	       ]
+	       ],
+	 buttons : [
+	      			{
+	      				text : 'Cancel',
+	      				handler : function() {
+	      					this.up('form').getForm().reset();
+	      					
+	      				}
+	      			},
+	      			{
+	      				text : 'Save',
+	      				handler : function() {
+      						Ext.MessageBox.alert('Success!',
+	      								'Your request has been saved.');
+	      				}
+	 } ]
 });
