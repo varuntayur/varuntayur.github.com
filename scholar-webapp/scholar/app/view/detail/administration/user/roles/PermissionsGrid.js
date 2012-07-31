@@ -1,25 +1,26 @@
 Ext.define('scholar.view.detail.administration.user.roles.PermissionsGrid', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias: 'widget.permissionsGrid',
-	title:'Roles',
+	requires:['Ext.ux.CheckColumn'],
+	title:'Permissions',
 	store : new Ext.data.ArrayStore({
 		fields : [
 		          {
 					name : 'formName',
 					type : 'string'
 		          },
-//		          {
-//		        	  type: 'bool',
-//		              name: 'read',
-//		          },
-//		          {
-//		        	  type: 'bool',
-//		              name: 'write',
-//		          },
-//		          {
-//		        	  type: 'bool',
-//		              name: 'delete',
-//		          },
+		          {
+		        	  type: 'bool',
+		              name: 'read',
+		          },
+		          {
+		        	  type: 'bool',
+		              name: 'write',
+		          },
+		          {
+		        	  type: 'bool',
+		              name: 'delete',
+		          },
 		          {	
 					name : 'lastChange',
 					type : 'date',
@@ -36,43 +37,41 @@ Ext.define('scholar.view.detail.administration.user.roles.PermissionsGrid', {
 	}),
 	columnLines : true,
 	columns : [ {
-					text : 'Role Name',
+					text : 'Form Name',
 					width : 75,
-					sortable : true,
-					dataIndex : 'roleName'
+					dataIndex : 'formName'
 				},
-//				{
-//		              xtype: 'checkcolumn',
-//		              header: 'Read?',
-//		              dataIndex: 'read',
-//		              width: 55,
-//		              stopSelection: false
-//		          },
-//		          {
-//		              xtype: 'checkcolumn',
-//		              header: 'Write?',
-//		              dataIndex: 'write',
-//		              width: 55,
-//		              stopSelection: false
-//		          },
-//		          {
-//		              xtype: 'checkcolumn',
-//		              header: 'Delete?',
-//		              dataIndex: 'delete',
-//		              width: 55,
-//		              stopSelection: false
-//		          },
+				{
+		              xtype: 'checkcolumn',
+		              header: 'Read?',
+		              dataIndex: 'read',
+		              width: 55,
+		          },
+		          {
+		              xtype: 'checkcolumn',
+		              header: 'Write?',
+		              dataIndex: 'write',
+		              width: 55
+		          },
+		          {
+		              xtype: 'checkcolumn',
+		              header: 'Delete?',
+		              dataIndex: 'delete',
+		              width: 55
+		          },
 				{
 					xtype : 'datecolumn',
 					text : 'Last Updated',
 					width : 85,
 					flex : 1,
-					sortable : true,
 					dataIndex : 'lastChange'
 				} ],
 	listeners : {
 		selectionchange : function(model, records) {
 		}
-	}
+	},
+	plugins:Ext.create('Ext.grid.plugin.CellEditing', {
+        clicksToEdit: 1
+    })
 });
 
