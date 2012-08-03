@@ -7,13 +7,13 @@ Ext.define('scholar.view.detail.administration.user.roles.Manager', {
     autoScroll:true,
     items: [
             {
-		        columnWidth: 1/3,
+		        columnWidth: 1/2,
 		        baseCls:'x-plain',
 		        bodyStyle:'padding:5px 0 5px 5px',
 		        items:[{xtype:'roleGrid'}]
 		    },
 		    {
-		        columnWidth: 2/3,
+		        columnWidth: 1/2,
 		        baseCls:'x-plain',
 		        bodyStyle:'padding:5px 0 5px 5px',
 		        items:[{

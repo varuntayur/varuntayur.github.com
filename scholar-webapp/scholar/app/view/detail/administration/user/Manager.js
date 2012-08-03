@@ -30,22 +30,7 @@
 				    {
 				    	region:'center',
 				    	xtype:'userSearch'
-	   		        }, 
-					{
-						region:'south',
-						xtype:'tabpanel',
-						items:[
-						       {
-						    	   title: 'User Information'					
-						       },
-						       {
-						    	   title: 'Roles'
-						       },
-						       {
-						    	   title: 'Permissions'
-						       }
-						      ]
-					}
+	   		        }					
 				]
 			}
 			
