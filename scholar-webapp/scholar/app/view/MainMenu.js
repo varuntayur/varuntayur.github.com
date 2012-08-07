@@ -29,7 +29,7 @@ Ext.define('scholar.view.MainMenu', {
         'scholar.view.detail.administration.user.Manager',
         'scholar.view.detail.administration.examination.Manager',
         
-        'scholar.view.detail.finance.PayrollManager',
+        'scholar.view.detail.finance.payroll.Manager',
         'scholar.view.detail.finance.FeeCollectionManager',
         'scholar.view.detail.finance.settings.Manager',
         'scholar.view.detail.finance.Dashboard',
