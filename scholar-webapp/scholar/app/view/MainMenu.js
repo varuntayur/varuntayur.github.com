@@ -30,9 +30,9 @@ Ext.define('scholar.view.MainMenu', {
         'scholar.view.detail.administration.examination.Manager',
         
         'scholar.view.detail.finance.payroll.Manager',
-        'scholar.view.detail.finance.FeeCollectionManager',
         'scholar.view.detail.finance.settings.Manager',
         'scholar.view.detail.finance.Dashboard',
+        'scholar.view.detail.finance.fees.Manager',
 		
 		'scholar.view.detail.staff.Dashboard',
 		'scholar.view.detail.staff.lookup.Lookup',
@@ -238,7 +238,7 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Fee Collection',
 								tabTip : 'Fee Collection',
 								iconCls: 'x-icon-fees',
-								xtype : 'feeCollectionManager',
+								xtype : 'feesManager',
 								margin : '10',
 								height : null
 							},

@@ -5,18 +5,31 @@ Ext.define('scholar.view.detail.finance.payroll.Search', {
 	getTbar :function()
     {
     	return ['Search',{
-            xtype: 'textfield',
-            name: 'searchField',
-            hideLabel: true,
-            width: 200,
-            listeners: {
-                change: {
-                    fn: this.onTextFieldChange,
-                    scope: this,
-                    buffer: 100
-                }
+	            xtype: 'textfield',
+	            name: 'searchField',
+	            hideLabel: true,
+	            width: 200,
+	            listeners: {
+	                change: {
+	                    fn: this.onTextFieldChange,
+	                    scope: this,
+	                    buffer: 100
+	                }
+	            }
+    		},
+            {
+                xtype: 'button',
+                name: 'setSalary',
+                text: 'Set Salary Components'
+                	
+            },
+            {
+                xtype: 'button',
+                name: 'viewPayslip',
+                text: 'View Payslip'
             }
-       }];
+                
+       ];
     },
 	
 	store : new Ext.data.ArrayStore({
