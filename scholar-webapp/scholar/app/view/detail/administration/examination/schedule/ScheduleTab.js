@@ -2,6 +2,9 @@ Ext.define('scholar.view.detail.administration.examination.schedule.ScheduleTab'
 	extend : 'Ext.panel.Panel',
 	alias : 'widget.scheduleTab',
 	title : 'Schedule',
+	requires : [ 'scholar.view.detail.administration.examination.schedule.DetailsTab',
+	             'scholar.view.detail.administration.examination.schedule.NewSchedule',	             
+	             'scholar.view.detail.administration.examination.schedule.Search'],
 	frame : true,
 	bodyPadding : 5,
 	fieldDefaults : {
