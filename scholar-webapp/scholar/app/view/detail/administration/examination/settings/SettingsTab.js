@@ -9,18 +9,12 @@ Ext.define('scholar.view.detail.administration.examination.settings.SettingsTab'
 		labelAlign : 'left',
 		msgTarget : 'side'
 	},
-	layout : {
-		 type : 'border',
-		 padding : 5
-	 },
-	 defaults : {
+	defaults : {
 		 split : true
 	 },
 
 	items : [{
-        xtype: 'checkboxgroup',
-        fieldLabel: 'Auto Layout',
-        cls: 'x-check-group-alt',
+        xtype: 'checkboxgroup',            
         items: [
             {boxLabel: 'Grades Only', name: 'cb-auto-1'},
             {boxLabel: 'Marks Only', name: 'cb-auto-2', checked: true},
