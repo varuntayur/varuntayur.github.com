@@ -65,7 +65,19 @@ Ext.define('scholar.view.detail.student.attendance.Report', {
 			  		          		flex : 1,
 			  		          		sortable : false,
 			  		          		dataIndex : 'admissionNumber'
-			  		          	} ];
+			  		          	},
+			  		          	{
+				  		      		text : 'Name',
+				  		      		width : 75,
+				  		      		sortable : true,
+				  		      		dataIndex : 'studentName'
+					  		  	},
+					  		  	{
+					  		  		text : 'Class',
+					  		  		width : 75,
+					  		  		sortable : true,
+					  		  		dataIndex : 'standard'
+					  		  	} ];
 			  		            
 			  		            var daysInMonth = Ext.Date.getDaysInMonth(Ext.ComponentQuery.query('#reportDate')[0].getValue());
 			  		            
@@ -89,7 +101,7 @@ Ext.define('scholar.view.detail.student.attendance.Report', {
 			  		            
 			  		            var store =  new Ext.data.ArrayStore({
 				  		      		fields :  dayCols ,
-				  		      		data : [ [ '001/005' ]]
+				  		      		data : [ [ '001/005','Amar', 'Standard 1',  ]]
 		  		            	});
 			  		            this.reconfigure(store,columns);
 		  		            }
