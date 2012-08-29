@@ -28,6 +28,7 @@ Ext.define('scholar.view.detail.administration.examination.schedule.ScheduleTab'
 					region:'south',
 					items:[{
 					    	   xtype:'scheduleDetailsTab',
+					    	   itemId:'scheduleDetailsTab',
 					    	   iconCls:'x-icon-info-details'
 					}]
 			 }]

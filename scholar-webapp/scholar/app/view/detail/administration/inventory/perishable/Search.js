@@ -44,7 +44,7 @@ Ext.define('scholar.view.detail.administration.inventory.perishable.Search', {
 			type : 'string'
 		},
 		{
-			name : 'Quantity',
+			name : 'quantity',
 			type : 'string'
 		},
 		{
@@ -53,12 +53,10 @@ Ext.define('scholar.view.detail.administration.inventory.perishable.Search', {
 			dateFormat : 'n/j h:ia'
 		} ],
 		data : [
-				[ 'Standard 1', 'A',
-					'Subject 1'	,'9/1 12:00am' ],
-				[ 'Standard 2', 'C',
-					'Subject 2',	'9/1 12:00am' ],
-				[ 'B.E', 'CS 1',
-					'Subject 12'	,'9/1 12:00am' ] ]
+				[ 'Bread', '','10 pounds'	,'9/1 12:00am' ],
+				[ 'Biscuit', '','100 packs',	'9/1 12:00am' ],
+				[ 'Bun', '','12 packs'	,'9/1 12:00am' ] 
+			   ]
 	}),
 	columnLines : true,
 	columns : [ {

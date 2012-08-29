@@ -6,7 +6,15 @@ Ext.define('scholar.view.detail.student.attendance.Report', {
 	// Component initialization override: adds the top and bottom toolbars and setup headers renderer.
     initComponent: function() {
         var me = this;
-        me.tbar = [ Ext.create('Ext.form.ComboBox', {
+        me.tbar = [ 
+					{
+					    xtype: 'datefield',
+					    anchor: '100%',
+					    fieldLabel: 'Date',
+					    itemId: 'reportDate',
+					    maxValue: new Date()  // limited to the current date or prior
+					},
+                    Ext.create('Ext.form.ComboBox', {
 			            fieldLabel: 'Choose Course',
 			            store: Ext.create('Ext.data.Store', {
 			                fields: ['abbr', 'name'],
@@ -58,17 +66,36 @@ Ext.define('scholar.view.detail.student.attendance.Report', {
 			  		          		sortable : false,
 			  		          		dataIndex : 'admissionNumber'
 			  		          	} ];
-			  		            var store =  new Ext.data.ArrayStore({
-					  		      		fields : [ {
+			  		            
+			  		            var daysInMonth = Ext.Date.getDaysInMonth(Ext.ComponentQuery.query('#reportDate')[0].getValue());
+			  		            
+			  		            var dayCols = [];
+			  		            dayCols.push({
 						  		  			name : 'admissionNumber',
 						  		  			type : 'string'
-					  		      			}],
-					  		      			data : [ [ '001/005' ]]
-			  		            });
+				  		      	});
+			  		            for(var i = 0 ; i < daysInMonth; i++)
+			  		            {
+			  		            	dayCols.push({
+			  		            		type: 'bool',
+			  		            		name: 'day'+i,
+			  		            	});
+			  		            	columns.push({
+			  		            		xtype: 'checkcolumn',
+			  		            		text: i+1,
+			  		            		dataIndex:'day'+i
+			  		            	});
+			  		            }
+			  		            
+			  		            var store =  new Ext.data.ArrayStore({
+				  		      		fields :  dayCols ,
+				  		      		data : [ [ '001/005' ]]
+		  		            	});
 			  		            this.reconfigure(store,columns);
 		  		            }
 	  		            }
-                   })];
+                   })
+                   ];
 
         me.bbar = Ext.create('Ext.ux.StatusBar', {
             defaultText: me.defaultStatusText,
@@ -96,15 +123,24 @@ Ext.define('scholar.view.detail.student.attendance.Report', {
 			type : 'date',
 			dateFormat : 'n/j h:ia'
 		} ],
-		data : [ [ '001/005', 'Rama', 'I', 'Blore', '9/1 12:00am' ],
-				[ '001/006', 'Krishna', 'II', 'Blore', '9/1 12:00am' ],
-				[ '001/007', 'Govinda', 'IV', 'Blore', '9/1 12:00am' ] 
+		data : [
+		        [ '001/001', 'Amar', 'Standard 1', 	  'Blore', '9/1 12:00am' ],
+				[ '001/002', 'Ishaan', 'Standard 2',  'Blore', '9/1 12:00am' ],
+				[ '001/005', 'Pran', 'Standard 3',    'Blore', '9/1 12:00am' ], 
+				[  '001/010', 'Vishnu', 'Standard 1',  'Blore', '9/1 12:00am' ],
+				[  '010/234', 'Sri Hari', 'Standard 5','Blore', '9/1 12:00am' ],
+				[  '111/286', 'Shiva', 'Standard 8',   'Blore', '9/1 12:00am' ],
+				[  '101/234', 'Jyestha', 'Standard 9', 'Blore', '9/1 12:00am' ],
+				[  '201/002', 'Laksha', 'Standard 10', 'Blore', '9/1 12:00am' ],
+				[  '501/004', 'Sangeetha', 'Standard 4','Blore', '9/1 12:00am' ],
+				[ '116/006', 'Shwetha', 'Standard 1', 'Blore', '9/1 12:00am' ],
+				[ '145/007', 'Sushma', 'Standard 7',  'Blore', '9/1 12:00am' ],
+				[ '723/007', 'Santhosh', 'Standard 5','Blore', '9/1 12:00am' ] 
 		]
 	}),
 	columnLines : true,
 	columns : [ {
-		text : 'Admission Number',
-		flex : 1,
+		text : 'Admission Number',		
 		sortable : false,
 		dataIndex : 'admissionNumber'
 	}, {
@@ -120,6 +156,7 @@ Ext.define('scholar.view.detail.student.attendance.Report', {
 	}, {
 		text : 'Address',
 		width : 75,
+		flex : 1,
 		sortable : true,
 		dataIndex : 'address'
 	}, {

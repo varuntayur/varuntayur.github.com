@@ -13,58 +13,102 @@ Ext.define('scholar.view.detail.administration.examination.schedule.DetailsTab',
 		xtype:'combo',
 		fieldLabel : 'Course Name',
 		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
+			fields : [ 'abbr', 'courseName' ],
 			data : [ {
 				"abbr" : "AL",
-				"name" : "Standard 1"
-			}, {
+				"courseName" : "Standard 1"
+			},
+			{
 				"abbr" : "AL",
-				"name" : "Standard 2"
-			}, {
+				"courseName" : "Standard 2"
+			},
+			{
 				"abbr" : "AL",
-				"name" : "B.E"
-			}]
+				"courseName" : "Standard 3"
+			},
+			{
+				"abbr" : "AL",
+				"courseName" : "Standard 4"
+			},
+			{
+				"abbr" : "AL",
+				"courseName" : "Standard 5"
+			},
+			{
+				"abbr" : "AL",
+				"courseName" : "Standard 6"
+			},
+			{
+				"abbr" : "AL",
+				"courseName" : "Standard 7"
+			},
+			{
+				"abbr" : "AL",
+				"courseName" : "Standard 8"
+			},
+			{
+				"abbr" : "AL",
+				"courseName" : "Standard 9"
+			},
+			{
+				"abbr" : "AL",
+				"courseName" : "Standard 10"
+			}
+			]
 		}),
 		queryMode : 'local',
-		displayField : 'name',
+		displayField : 'courseName',
 		valueField : 'abbr'
 	},
 	{ 
 		xtype:'combo',
 		fieldLabel : 'Batch Name',
 		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
+			fields : [ 'abbr', 'batchName' ],
 			data : [ {
 				"abbr" : "AL",
-				"name" : "Batch 1"
+				"batchName" : "A"
 			}, {
 				"abbr" : "AL",
-				"name" : "Batch 2"
+				"batchName" : "B"
+			}, {
+				"abbr" : "AL",
+				"batchName" : "C"
+			}, {
+				"abbr" : "AL",
+				"batchName" : "D"
 			}]
 		}),
 		queryMode : 'local',
-		displayField : 'name',
+		displayField : 'batchName',
 		valueField : 'abbr'
 	},
 	{ 
 		xtype:'combo',
 		fieldLabel : 'Subject Name',
 		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
+			fields : [ 'abbr', 'subjectName' ],
 			data : [ {
 				"abbr" : "AL",
-				"name" : "Subject 1"
+				"subjectName" : "Mathematics"
 			}, {
 				"abbr" : "AL",
-				"name" : "Subject 2"
+				"subjectName" : "Science"
+			}, {
+				"abbr" : "AL",
+				"subjectName" : "Social Science"
+			}, {
+				"abbr" : "AL",
+				"subjectName" : "Civics"
 			}]
 		}),
 		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
+		displayField : 'subjectName',
+		valueField : 'abbr'		
 	},
 	{
 		xtype : 'datefield',
-		fieldLabel : 'Examination Date'
+		fieldLabel : 'Examination Date',
+		name : 'examDate'
 	} ]
 });

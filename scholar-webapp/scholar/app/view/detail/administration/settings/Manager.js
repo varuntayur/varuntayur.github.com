@@ -18,15 +18,15 @@ Ext.define('scholar.view.detail.administration.settings.Manager', {
 	         {
 	        	 xtype : 'generalSettingsManager',
 	        	 iconCls:'x-icon-settings'
-	         },
-	         {
-				xtype:'batchManager',
-				iconCls: 'x-icon-batch',
-			 },
+	         },	        
 			 {
 				 xtype:'courseManager',
 				 iconCls: 'x-icon-course',
 			 },
+			 {
+					xtype:'batchManager',
+					iconCls: 'x-icon-batch',
+			 }
 //			{
 //				title : 'Reports',
 //				iconCls:'x-icon-report',

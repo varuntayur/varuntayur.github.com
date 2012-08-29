@@ -44,7 +44,7 @@ Ext.define('scholar.view.detail.administration.inventory.infra.Search', {
 			type : 'string'
 		},
 		{
-			name : 'Quantity',
+			name : 'quantity',
 			type : 'string'
 		},
 		{
@@ -53,12 +53,10 @@ Ext.define('scholar.view.detail.administration.inventory.infra.Search', {
 			dateFormat : 'n/j h:ia'
 		} ],
 		data : [
-				[ 'Standard 1', 'A',
-					'Subject 1'	,'9/1 12:00am' ],
-				[ 'Standard 2', 'C',
-					'Subject 2',	'9/1 12:00am' ],
-				[ 'B.E', 'CS 1',
-					'Subject 12'	,'9/1 12:00am' ] ]
+				[ 'Chairs', 'Nilkamal','100'	,'9/1 12:00am' ],
+				[ 'Chairs', 'National','150'	,'9/1 12:00am' ],
+				[ 'Table', 'National','250',	'9/1 12:00am' ],
+				[ 'Benches', 'Scholar','1002'	,'9/1 12:00am' ] ]
 	}),
 	columnLines : true,
 	columns : [ {

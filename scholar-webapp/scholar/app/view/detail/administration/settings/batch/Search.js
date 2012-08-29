@@ -58,12 +58,14 @@ Ext.define('scholar.view.detail.administration.settings.batch.Search', {
 			dateFormat : 'n/j h:ia'
 		} ],
 		data : [
-				[ 'Batch 1', 'Standard 1', 'A', '1/5 12:00am',
-						'1/4 12:00am', '9/1 12:00am' ],
-				[ 'Batch 2', 'Standard 2', 'C', '1/5 12:00am',
-						'1/4 12:00am', '9/1 12:00am' ],
-				[ 'Batch 1', 'B.E', 'CS 1', '1/9 12:00am',
-						'1/8 12:00am', '9/1 12:00am' ] ]
+				[ '2011', 'Standard 1', 'A', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
+				[ '2012', 'Standard 1', 'A', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
+				[ '2010', 'Standard 2', 'B', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
+				[ '2010', 'Standard 3', 'A', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
+				[ '2012', 'Standard 4', 'C', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
+				[ '2010', 'Standard 5', 'B', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
+				[ '2011', 'Standard 6', 'A', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ]
+			   ]
 	}),
 	columnLines : true,
 	columns : [ {

@@ -35,13 +35,7 @@ Ext.define('scholar.view.detail.administration.settings.subject.Manager', {
 		} ]
 	} ],
 	store : new Ext.data.ArrayStore({
-		fields : [ {
-			name : 'batchName',
-			type : 'string'
-		}, {
-			name : 'courseName',
-			type : 'string'
-		}, {
+		fields : [  {
 			name : 'subjectName',
 			type : 'string'
 		},
@@ -67,25 +61,12 @@ Ext.define('scholar.view.detail.administration.settings.subject.Manager', {
 			dateFormat : 'n/j h:ia'
 		} ],
 		data : [
-				[ 'Batch 1', 'Standard 1', 'A', '1/5 12:00am',
-						'1/4 12:00am', '9/1 12:00am' ],
-				[ 'Batch 2', 'Standard 2', 'C', '1/5 12:00am',
-						'1/4 12:00am', '9/1 12:00am' ],
-				[ 'Batch 1', 'B.E', 'CS 1', '1/9 12:00am',
-						'1/8 12:00am', '9/1 12:00am' ] ]
+				[ 'Mathematics', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
+				[ 'Science', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
+				[ 'Social', '1/9 12:00am','1/8 12:00am', '9/1 12:00am' ] ]
 	}),
 	columnLines : true,
-	columns : [ {
-		text : 'Batch Name',
-		width : 75,
-		sortable : true,
-		dataIndex : 'batchName'
-	}, {
-		text : 'Course Name',
-		width : 75,
-		sortable : true,
-		dataIndex : 'courseName'
-	}, {
+	columns : [  {
 		text : 'Subject Name',
 		width : 75,
 		sortable : true,

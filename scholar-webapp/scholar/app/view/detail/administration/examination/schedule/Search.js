@@ -53,12 +53,17 @@ Ext.define('scholar.view.detail.administration.examination.schedule.Search', {
 			dateFormat : 'n/j h:ia'
 		} ],
 		data : [
-				[ 'Standard 1', 'A',
-					'Subject 1'	,'9/1 12:00am' ],
-				[ 'Standard 2', 'C',
-					'Subject 2',	'9/1 12:00am' ],
-				[ 'B.E', 'CS 1',
-					'Subject 12'	,'9/1 12:00am' ] ]
+				[ 'Standard 1', 'A','Subject 1'	,'9/1 12:00am' ],
+				[ 'Standard 2', 'A','Subject 2',	'9/1 12:00am' ],
+				[ 'Standard 3', 'A','Subject 2',	'9/1 12:00am' ],
+				[ 'Standard 4', 'A','Subject 2',	'9/1 12:00am' ],
+				[ 'Standard 5', 'A','Subject 2',	'9/1 12:00am' ],
+				[ 'Standard 6', 'A','Subject 2',	'9/1 12:00am' ],
+				[ 'Standard 7', 'A','Subject 2',	'9/1 12:00am' ],
+				[ 'Standard 8', 'A','Subject 2',	'9/1 12:00am' ],
+				[ 'Standard 9', 'A','Subject 2',	'9/1 12:00am' ],
+				[ 'Standard 10', 'A','Subject 2',	'9/1 12:00am' ]
+			   ]
 	}),
 	columnLines : true,
 	columns : [ {
@@ -88,8 +93,7 @@ Ext.define('scholar.view.detail.administration.examination.schedule.Search', {
 	listeners : {
 		selectionchange : function(model, records) {
 			if (records[0]) {
-				this.up('form').getForm().loadRecord(
-						records[0]);
+				Ext.ComponentQuery.query('#scheduleDetailsTab')[0].loadRecord(records[0]);
 			}
 		}
 	}

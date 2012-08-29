@@ -67,15 +67,7 @@ Ext.define('scholar.view.MainMenu', {
 						xtype : 'admissionManager',
 						margin : '10',
 						height : null
-					},	
-					{
-						title : 'Settings',
-						tabTip : 'Settings Management',
-						iconCls: 'x-icon-settings',
-						xtype : 'settingsManager',
-						margin : '10',
-						height : null
-					},
+					},					
 					{
 						title : 'Examination',
 						tabTip : 'Examination Management',
@@ -97,6 +89,14 @@ Ext.define('scholar.view.MainMenu', {
 						tabTip : 'Manager User Roles',
 						iconCls:'x-icon-userrole',
 						xtype : 'userRoleManager',
+						margin : '10',
+						height : null
+					},
+					{
+						title : 'Settings',
+						tabTip : 'Settings Management',
+						iconCls: 'x-icon-settings',
+						xtype : 'settingsManager',
 						margin : '10',
 						height : null
 					}
@@ -281,4 +281,5 @@ Ext.define('scholar.view.MainMenu', {
 	         }
 	         
 	]
+	
 });
