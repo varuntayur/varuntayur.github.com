@@ -9,15 +9,15 @@ Ext.define('scholar.view.detail.staff.event.Report', {
         me.tbar = [ Ext.create('Ext.form.ComboBox', {
 			            fieldLabel: 'Choose Course',
 			            store: Ext.create('Ext.data.Store', {
-			                fields: ['abbr', 'name'],
+			                fields: ['abbr', 'courseName'],
 			                data : [
-			                    {"abbr":"AL", "name":"Standard 1"},
-			                    {"abbr":"AK", "name":"Standard 2"},
-			                    {"abbr":"AZ", "name":"B.E"}
+			                    {"abbr":"AL", "courseName":"Standard 1"},
+			                    {"abbr":"AK", "courseName":"Standard 2"},
+			                    {"abbr":"AZ", "courseName":"B.E"}
 			                ]
 			            }),
 			            queryMode: 'local',
-			            displayField: 'name',
+			            displayField: 'courseName',
 			            valueField: 'abbr'
                   	}),
                   	Ext.create('Ext.form.ComboBox', {
@@ -80,54 +80,39 @@ Ext.define('scholar.view.detail.staff.event.Report', {
 	
 	store : new Ext.data.ArrayStore({
 		fields : [ {
-			name : 'admissionNumber',
+			name : 'eventName',
 			type : 'string'
 		}, {
-			name : 'studentName',
+			name : 'eventDescription',
 			type : 'string'
 		}, {
-			name : 'standard',
-			type : 'string'
-		}, {
-			name : 'address',
-			type : 'string'
-		}, {
-			name : 'lastChange',
+			name : 'eventDate',
 			type : 'date',
 			dateFormat : 'n/j h:ia'
 		} ],
-		data : [ [ '001/005', 'Rama', 'I', 'Blore', '9/1 12:00am' ],
-				[ '001/006', 'Krishna', 'II', 'Blore', '9/1 12:00am' ],
-				[ '001/007', 'Govinda', 'IV', 'Blore', '9/1 12:00am' ] 
-		]
+		data : [
+		        [ 'Independance Day', 'Program schedule: 9.am',  '9/1 12:00am' ],
+				[ 'Krishna Janmashthami Celebrations', 'Krishna costume event at Auditorium starts 3pm', '9/1 12:00am' ]				 
+		       ]
 	}),
 	columnLines : true,
 	columns : [ {
-		text : 'Admission Number',
+		text : 'Event Name',
 		flex : 1,
 		sortable : false,
-		dataIndex : 'admissionNumber'
+		dataIndex : 'eventName'
 	}, {
-		text : 'Name',
+		text : 'Description',
 		width : 75,
+		flex : 1,
 		sortable : true,
-		dataIndex : 'studentName'
-	}, {
-		text : 'Class',
-		width : 75,
-		sortable : true,
-		dataIndex : 'standard'
-	}, {
-		text : 'Address',
-		width : 75,
-		sortable : true,
-		dataIndex : 'address'
+		dataIndex : 'eventDescription'
 	}, {
 		xtype : 'datecolumn',
-		text : 'Last Updated',
+		text : 'Event Date',
 		width : 85,
 		sortable : true,
-		dataIndex : 'lastChange'
+		dataIndex : 'eventDate'
 	} ],
 	height : 350,
 	width : 600,

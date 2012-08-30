@@ -15,7 +15,7 @@ Ext.define('scholar.view.detail.staff.lookup.DetailsTab', {
 		name : 'employeeId'
 	}, {
 		fieldLabel : 'Employee Name',
-		name : 'employeeName'
+		name : 'staffName'
 	}, {
 		fieldLabel : 'Department',
 		name : 'department'

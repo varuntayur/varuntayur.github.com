@@ -20,14 +20,18 @@ Ext.define('scholar.view.detail.staff.lookup.Search', {
 			type : 'date',
 			dateFormat : 'n/j h:ia'
 		} ],
-		data : [ [ '001005', 'Rama', 'CS', 'Blore', '9/1 12:00am' ],
-				[ '001006', 'Krishna', 'Science', 'Blore', '9/1 12:00am' ],
-				[ '001007', 'Govinda', 'Maths', 'Blore', '9/1 12:00am' ] ]
+		data : [
+		        [ '001005', 'Ram', 'CS', 'Blore', '9/1 12:00am' ],
+				[ '001006', 'Murali', 'Science', 'Blore', '9/1 12:00am' ],
+				[ '001007', 'Deepak', 'Mathematics', 'Blore', '9/1 12:00am' ],
+		        [ '001007', 'Krishna', 'Mathematics', 'Blore', '9/1 12:00am' ],
+		        [ '001007', 'Guru', 'Science', 'Blore', '9/1 12:00am' ],
+		        [ '001007', 'Uday', 'Civics', 'Blore', '9/1 12:00am' ]
+		      ]
 	}),
 	columnLines : true,
 	columns : [ {
-		text : 'Employee ID',
-		flex : 1,
+		text : 'Employee ID',		
 		sortable : false,
 		dataIndex : 'employeeId'
 	}, {
@@ -43,6 +47,7 @@ Ext.define('scholar.view.detail.staff.lookup.Search', {
 	}, {
 		text : 'Address',
 		width : 75,
+		flex : 1,
 		sortable : true,
 		dataIndex : 'address'
 	}, {

@@ -1,11 +1,18 @@
 Ext.define('scholar.view.detail.finance.fees.Manager', {
-	extend : 'Ext.panel.Panel',
+	extend : 'Ext.form.Panel',
 	alias: 'widget.feesManager',
 	requires:['scholar.view.detail.finance.fees.Search'],
     autoScroll:true,
-    layout:'fit',
+    layout: {
+        type: 'border',
+        padding: 5
+    },
+    defaults: {
+        split: true
+    },
     items: [
             	{
+            		region:'center',
             		xtype:'feeDetailSearch',
             		layout:'fit'
             	}

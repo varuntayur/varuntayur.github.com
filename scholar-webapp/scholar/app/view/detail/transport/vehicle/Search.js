@@ -6,16 +6,21 @@ Ext.define('scholar.view.detail.transport.vehicle.Search', {
 			name : 'vehicleNumber',
 			type : 'string'
 		}, {
-			name : 'Details',
+			name : 'details',
 			type : 'string'
 		}, {
 			name : 'lastUpdatedDate',
 			type : 'date',
 			dateFormat : 'n/j h:ia'
 		} ],
-		data : [ [ '001-005', 'Test', 'Pub 1', 'A 1', '9/1 12:00am' ],
-				[ '001-006', 'Test 1', 'Pub 2', 'A 2', '9/1 12:00am' ],
-				[ '001-007', 'Test 2', 'Pub 3', 'A 3', '9/1 12:00am' ] ]
+		data : [
+		        [ 'ka058145', 'Canter 48 seater',  '9/1 12:00am' ],
+				[ 'ka051457', 'Swaraj Mazda 48 seater', '9/1 12:00am' ],
+				[ 'ka056131', 'Force Motors 24 seater', '9/1 12:00am' ],
+		        [ 'ka056130', 'Force Motors 24 seater', '9/1 12:00am' ],
+		        [ 'ka056140', 'Force Motors 24 seater', '9/1 12:00am' ],
+		        [ 'ka056141', 'Force Motors 24 seater', '9/1 12:00am' ]
+		       ]
 	}),
 	columnLines : true,
 	columns : [  {

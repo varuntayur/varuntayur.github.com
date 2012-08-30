@@ -11,7 +11,7 @@ Ext.define('scholar.view.detail.student.attendance.Register', {
 					    xtype: 'datefield',
 					    anchor: '100%',
 					    fieldLabel: 'Date',
-					    itemId: 'reportDateReg',
+					    itemId: 'studentAttendanceReportDate',
 					    maxValue: new Date()  // limited to the current date or prior
 					},
                     Ext.create('Ext.form.ComboBox', {
@@ -65,7 +65,7 @@ Ext.define('scholar.view.detail.student.attendance.Register', {
 					  		  		dataIndex : 'standard'
 					  		  	} ];
 			  		            
-			  		            var daysInMonth = Ext.Date.getDaysInMonth(Ext.ComponentQuery.query('#reportDateReg')[0].getValue());
+			  		            var daysInMonth = Ext.Date.getDaysInMonth(Ext.ComponentQuery.query('#studentAttendanceReportDate')[0].getValue());
 			  		            
 			  		            var dayCols = [];
 			  		            dayCols.push({

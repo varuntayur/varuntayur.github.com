@@ -12,13 +12,19 @@ Ext.define('scholar.view.detail.administration.examination.schedule.NewSchedule'
 		width : 300,
 		labelWidth : 90
 	},
-	defaultType : 'textfield',
 	items : [
 	{ 
-		xtype:'combo',
+		xtype:'combobox',
 		fieldLabel : 'Course Name',
 		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'courseName' ],
+			fields : [ {
+							name:'abbr',
+							type : 'string'
+						},
+						{
+							name: 'courseName',
+							type : 'string' 
+						}],
 			data : [ {
 				"abbr" : "AL",
 				"courseName" : "Standard 1"
