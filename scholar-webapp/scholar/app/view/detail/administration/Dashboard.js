@@ -21,53 +21,53 @@ Ext.define('scholar.view.detail.administration.Dashboard', {
 	},
 	
 	items : [
-	         Ext.create('Ext.chart.Chart', {		
+	          Ext.create('Ext.chart.Chart', {		
 	  		   width: 400,
 	  		   height: 300,
 	  		   animate: true,
-	  		   donut:true,
-	  		   showInLegend: true,
-	            shadow: true,
-	            legend: {
-	                position: 'right'
-	            },
-	            title: 'Fee Collection',
-	            insetPadding: 60,
-	            theme: 'Base:gradients',
 	  		   store: Ext.create('Ext.data.JsonStore', {
 	  			        fields: ['name', 'data1'],
 	  			    	data: [
 	  				        { name: 'Jan', data1: 100 },
-	  				        { name: 'Mar', data1: 100 },
-	  				        { name: 'May', data1: 10 },
-	  				        { name: 'Jun', data1: 70 },
-	  				        { name: 'Aug', data1: 91 },
-	  				        { name: 'Oct', data1: 80 },
-	  				        { name: 'Dec', data1: 80 }				 
+	  				        { name: 'Feb', data1: 0 },
+	  				        { name: 'Mar', data1: 0 },
+	  				        { name: 'Apr', data1: 90 },
+	  				        { name: 'May', data1: 100 },
+	  				        { name: 'Jun', data1: 100 },
+	  				        { name: 'Jul', data1: 0 },
+	  				        { name: 'Aug', data1: 70 },
+	  				        { name: 'Sep', data1: 0 },
+	  				        { name: 'Oct', data1: 0 },
+	  				        { name: 'Nov', data1: 87 },
+	  				        { name: 'Dec', data1: 0 }				 
 	  				    ]
 	  			    }),		 			    
- 			    
+	  		  axes: [
+	  				{
+	  				    type: 'Numeric',
+	  				    position: 'left',
+	  				    fields: ['data1'],
+	  				    title: 'Fee Collection',
+	  				    grid: true,
+	  				    minimum: 0,
+	  				    maximum: 100
+	  				}, {
+	  				    type: 'Category',
+	  				    position: 'bottom',
+	  				    fields: ['name'],
+	  				    title: 'Months',
+	  				    label: {
+	  				        rotate: {
+	  				            degrees: 270
+	  				        }
+	  				    }
+	  				}	  		 
+	  		    ],
 	  		  series: [
 	  	        {
-	  	            type: 'pie',
-//	  	            xField: 'name',
-	  	            field: 'data1',
-	  	          tips: {
-	                  trackMouse: true,
-	                  width: 140,
-	                  height: 28	
-	                },
-	                highlight: {
-	                  segment: {
-	                    margin: 20
-	                  }
-	                },
-	                label: {
-	                    field: 'name',
-	                    display: 'rotate',
-	                    contrast: true,
-	                    font: '18px Arial'
-	                }
+	  	            type: 'column',
+	  	            xField: 'name',
+	  	            yField: 'data1'
 	  	        }]
 	         }),
 	  	      Ext.create('Ext.chart.Chart', {		
@@ -116,6 +116,37 @@ Ext.define('scholar.view.detail.administration.Dashboard', {
 		  	            yField: 'data1'
 		  	        }
 	  	    ]
-	  	   })	         
+	  	   }),
+	  	   Ext.create('Ext.chart.Chart', {		
+	  		   		width: 400,
+	  		   		height: 300,
+	  		   		animate: true,
+				    animate: {
+				        easing: 'elasticIn',
+				        duration: 1000
+				    },
+				    store: Ext.create('Ext.data.JsonStore', {
+	  			        fields: ['name', 'data1'],
+	  			    	data: [
+	  				        { name: 'Jan', data1: 60 }	  				       				 
+	  				    ]
+	  			    }),	
+				    insetPadding: 25,
+				    flex: 1,
+				    axes: [{
+				        type: 'gauge',
+				        position: 'gauge',
+				        minimum: 0,
+				        maximum: 100,
+				        steps: 10,
+				        margin: -10
+				    }],
+				    series: [{
+				        type: 'gauge',
+				        field: 'data1',
+				        donut: false,
+				        colorSet: ['#F49D10', '#ddd']
+				    }]
+		})
 	]
 });

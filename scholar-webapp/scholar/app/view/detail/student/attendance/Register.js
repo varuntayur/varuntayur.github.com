@@ -137,16 +137,18 @@ Ext.define('scholar.view.detail.student.attendance.Register', {
 		]
 	}),
 	columnLines : true,
-	columns : [ {
-		text : 'Admission Number',		
-		sortable : false,
-		dataIndex : 'admissionNumber'
-	}, {
+	columns : [  {
 		text : 'Name',
 		width : 75,
 		sortable : true,
 		dataIndex : 'studentName'
-	}, {
+	},
+	{
+		text : 'Admission Number',		
+		sortable : false,
+		dataIndex : 'admissionNumber'
+	},
+	{
 		text : 'Class',
 		width : 75,
 		sortable : true,

@@ -135,16 +135,18 @@ Ext.define('scholar.view.detail.staff.attendance.Register', {
 	}),
 	columnLines : true,
 	columns : [ {
-		text : 'Employee ID',
-		flex : 1,
-		sortable : false,
-		dataIndex : 'employeeId'
-	}, {
 		text : 'Name',
 		width : 75,
 		sortable : true,
 		dataIndex : 'staffName'
-	}, {
+	},
+	 {
+		text : 'Employee ID',
+		flex : 1,
+		sortable : false,
+		dataIndex : 'employeeId'
+	},
+	{
 		text : 'Department',
 		width : 75,
 		sortable : true,

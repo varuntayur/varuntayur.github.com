@@ -43,19 +43,19 @@ Ext.define('scholar.view.detail.administration.user.roles.PermissionsGrid', {
 				},
 				{
 		              xtype: 'checkcolumn',
-		              header: 'Read?',
+		              header: 'Read',
 		              dataIndex: 'read',
 		              width: 55,
 		          },
 		          {
 		              xtype: 'checkcolumn',
-		              header: 'Write?',
+		              header: 'Write',
 		              dataIndex: 'write',
 		              width: 55
 		          },
 		          {
 		              xtype: 'checkcolumn',
-		              header: 'Delete?',
+		              header: 'Delete',
 		              dataIndex: 'delete',
 		              width: 55
 		          },
