@@ -18,21 +18,21 @@
 	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/LiveSearchGridPanel.css" />
 	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/portal.css" />
 	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/CheckHeader.css" />
-	    <link rel="stylesheet" type="text/css" href="app/view/detail/resources/css/calendar.css" />
+	    <!--  <link rel="stylesheet" type="text/css" href="app/view/detail/resources/css/calendar.css" /> -->
 	    
 	    <script type="text/javascript">
 	        Ext.Loader.setConfig({
 	            enabled: true,
 	            paths: {
-	                'Ext.calendar': 'app/view/detail/calendar',
+	                //'Ext.calendar': 'app/view/detail/calendar',
 	                'Ext.ux':'extjs/src/ux'
 	            }
 	        });
-	        Ext.require([
+	        //Ext.require([
 	            //'Ext.diag.layout.Context',
 	            //'Ext.diag.layout.ContextItem',
-	            'Ext.calendar.App'
-	        ]);     
+	            //'Ext.calendar.App'
+	        //]);     
 	        
 	        Ext.form.field.ComboBox.override( {
 	            setValue: function(v) {

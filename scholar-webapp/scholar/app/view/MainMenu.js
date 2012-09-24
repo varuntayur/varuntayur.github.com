@@ -156,7 +156,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'TimeTable',
 						tabTip : 'Manage Timetable',
 						iconCls:'x-icon-timetable',
-						xtype : 'timeTable',
+						xtype : 'timetableManager',
 						margin : '10',
 						height : null
 					},
