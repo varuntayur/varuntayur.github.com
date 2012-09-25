@@ -1,0 +1,107 @@
+<html>
+	<head>
+	    <title>
+	    	Scholar
+	    </title>
+	    
+	    <meta charset="UTF-8">
+	
+	    <link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+	    
+	    <script type="text/javascript" src="extjs/ext-all-debug.js"></script>
+	    
+	    <script type="text/javascript" src="scholar.js"></script>
+	    
+	    <!-- CSS includes -->
+	    <link rel="stylesheet" type="text/css" href="scholar.css" />
+	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/GroupTabPanel.css" />
+	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/LiveSearchGridPanel.css" />
+	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/portal.css" />
+	    <link rel="stylesheet" type="text/css" href="extjs/src/ux/css/CheckHeader.css" />
+	    <!--  <link rel="stylesheet" type="text/css" href="app/view/detail/resources/css/calendar.css" /> -->
+	    
+	    <script type="text/javascript">
+	        Ext.Loader.setConfig({
+	            enabled: true,
+	            paths: {
+	                //'Ext.calendar': 'app/view/detail/calendar',
+	                'Ext.ux':'extjs/src/ux',
+	                'Ext.app': 'extjs/src/ux/portal'
+	            }
+	        });
+			Ext.require([
+            'Ext.Viewport',
+            'Ext.data.JsonStore',
+            'Ext.tip.QuickTipManager',
+            'Ext.tab.Panel',
+            'Ext.ux.GroupTabPanel',
+            'Ext.grid.*',
+            'Ext.app.PortalColumn',
+            'Ext.app.PortalDropZone',
+            'Ext.app.Portlet',
+            'Ext.app.GridPortlet',
+            'Ext.app.PortalPanel',
+            'Ext.app.ChartPortlet'
+        ]);
+		Ext.onReady(function () {
+	       Ext.create('Ext.Viewport', {
+        layout: 'fit',
+        items: [{
+            xtype: 'grouptabpanel',
+            activeGroup: 0,
+            items: [{
+                mainItem: 1,
+                items: [{
+                    title: 'Tickets',                                                          
+                    margin: '10',
+                    height: null
+					}]
+				},
+				{
+                expanded: true,
+                items: [{
+                    title: 'Configuration',                    
+                    style: 'padding: 10px;',
+                    html: ''
+                }]
+            }, {
+                expanded: false,
+                items: {
+                    title: 'Single item in third',
+                    bodyPadding: 10,
+                    html: '<h1>The third tab group only has a single entry.<br>This is to test the tab being tagged with both "first" and "last" classes to ensure rounded corners are applied top and bottom</h1>',
+                    border: false
+                }
+            }]
+        }]
+    })});    
+	        
+	        Ext.form.field.ComboBox.override( {
+	            setValue: function(v) {
+	                v = (v && v.toString) ? v.toString() : v;
+	                if(!this.store.isLoaded && this.queryMode == 'remote') {
+	                    this.store.addListener('load', function() {
+	                        this.store.isLoaded = true;
+	                        this.setValue(v);
+	                    }, this);
+	                   this.store.load();
+	                } else {
+	                    this.callOverridden(arguments);
+	                }
+	            }
+	        });
+	        
+	    </script>
+	    	    
+	</head>
+	<body>
+	</body>
+	<!-- <div id="loading-mask"></div>
+	<div id="loading">
+  	<div class="loading-indicator">
+    	Loading...
+  	</div> -->
+
+</div>
+	
+</html>

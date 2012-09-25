@@ -12,8 +12,6 @@ Ext.define('Ext.ux.LiveSearchGridPanel', {
         'Ext.form.field.Text',
         'Ext.ux.statusbar.StatusBar'
     ],
-	
-	alias: 'widget.livesearchgridpanel',
     
     /**
      * @private
@@ -59,54 +57,49 @@ Ext.define('Ext.ux.LiveSearchGridPanel', {
     
     defaultStatusText: 'Nothing Found',
     
-    getTbar :function()
-    {
-    	return ['Search',{
-            xtype: 'textfield',
-            name: 'searchField',
-            hideLabel: true,
-            width: 200,
-            listeners: {
-                change: {
-                    fn: this.onTextFieldChange,
-                    scope: this,
-                    buffer: 100
-                }
-            }
-       }, {
-           xtype: 'button',
-           text: '&lt;',
-           tooltip: 'Find Previous Row',
-           handler: this.onPreviousClick,
-           scope: this
-       },{
-           xtype: 'button',
-           text: '&gt;',
-           tooltip: 'Find Next Row',
-           handler: this.onNextClick,
-           scope: this
-       }, '-', {
-           xtype: 'checkbox',
-           hideLabel: true,
-           margin: '0 0 0 4px',
-           handler: this.regExpToggle,
-           scope: this                
-       }, 'Regular expression', {
-           xtype: 'checkbox',
-           hideLabel: true,
-           margin: '0 0 0 4px',
-           handler: this.caseSensitiveToggle,
-           scope: this
-       }, 'Case sensitive'];
-    },
-    
     // Component initialization override: adds the top and bottom toolbars and setup headers renderer.
     initComponent: function() {
         var me = this;
-        me.tbar = this.getTbar();
+        me.tbar = ['Search',{
+                 xtype: 'textfield',
+                 name: 'searchField',
+                 hideLabel: true,
+                 width: 200,
+                 listeners: {
+                     change: {
+                         fn: me.onTextFieldChange,
+                         scope: this,
+                         buffer: 100
+                     }
+                 }
+            }, {
+                xtype: 'button',
+                text: '&lt;',
+                tooltip: 'Find Previous Row',
+                handler: me.onPreviousClick,
+                scope: me
+            },{
+                xtype: 'button',
+                text: '&gt;',
+                tooltip: 'Find Next Row',
+                handler: me.onNextClick,
+                scope: me
+            }, '-', {
+                xtype: 'checkbox',
+                hideLabel: true,
+                margin: '0 0 0 4px',
+                handler: me.regExpToggle,
+                scope: me                
+            }, 'Regular expression', {
+                xtype: 'checkbox',
+                hideLabel: true,
+                margin: '0 0 0 4px',
+                handler: me.caseSensitiveToggle,
+                scope: me
+            }, 'Case sensitive'];
 
         me.bbar = Ext.create('Ext.ux.StatusBar', {
-            defaultText: this.defaultStatusText,
+            defaultText: me.defaultStatusText,
             name: 'searchStatusBar'
         });
         
