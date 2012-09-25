@@ -1,22 +1,28 @@
 Ext.define('scholar.view.detail.staff.attendance.Manager', {
-	extend : 'Ext.tab.Panel',
-	requires : [ 'scholar.view.detail.staff.attendance.Report',
-	             'scholar.view.detail.staff.attendance.Register'],
+	extend : 'Ext.form.Panel',
+	requires : [ 
+	             'scholar.view.detail.staff.attendance.Register',
+	             'scholar.view.detail.staff.attendance.ReportGrid'],
 	alias : 'widget.staffAttendanceManager',
 	title:'Attendance',
 	items : [
 	         {
-				title : 'Attendance Register',
-				layout:'fit',
-				iconCls:'x-icon-register',
-				xtype : 'staffAttendanceRegister'
-	         },
-	         {
-				title : 'Attendance Report',
-				iconCls:'x-icon-report',
-				layout:'fit',
-				xtype : 'staffAttendanceReport'
-	         }
+	        	 xtype:'tabpanel',
+	        	 items:[
+						{
+							title : 'Attendance Register',
+							layout:'fit',
+							iconCls:'x-icon-register',
+							xtype : 'staffAttendanceRegister'
+						 },
+						 {
+							title : 'Attendance Report',
+							iconCls:'x-icon-report',
+							layout:'fit',
+							xtype : 'reportGrid'
+						 }
+	        	       ]
+	         }	         
 	        ]
 });
 

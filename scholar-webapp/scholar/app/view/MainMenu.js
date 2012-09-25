@@ -64,7 +64,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Admissions',
 						tabTip : 'Admissions',
 						iconCls: 'x-icon-admission',
-						xtype : 'admissionManager',
+						items: { xtype : 'admissionManager'},
 						margin : '10',
 						height : null
 					},					
@@ -72,7 +72,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Examination',
 						tabTip : 'Examination Management',
 						iconCls: 'x-icon-exam',
-						xtype : 'examManager',
+						items: { xtype : 'examManager'},
 						margin : '10',
 						height : null
 					},
@@ -80,7 +80,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Inventory',
 						tabTip : 'Inventory',
 						iconCls: 'x-icon-inventory',
-						xtype : 'inventoryManager',
+						items: { xtype : 'inventoryManager'},
 						margin : '10',
 						height : null
 					},
@@ -88,7 +88,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'User/Role',
 						tabTip : 'Manager User Roles',
 						iconCls:'x-icon-userrole',
-						xtype : 'userRoleManager',
+						items: { xtype : 'userRoleManager'},
 						margin : '10',
 						height : null
 					},
@@ -96,7 +96,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Settings',
 						tabTip : 'Settings Management',
 						iconCls: 'x-icon-settings',
-						xtype : 'settingsManager',
+						items: { xtype : 'settingsManager'},
 						margin : '10',
 						height : null
 					}
@@ -115,14 +115,14 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Lookup',
 						tabTip : 'Lookup student detail',
 						iconCls: 'x-icon-search',
-						xtype : 'studentLookup',
+						items: { xtype : 'studentLookup'},
 						margin : '10',
 						height : null
 					}, {
 						title : 'Attendance',
 						tabTip : 'Attendance',
 						iconCls: 'x-icon-attendance',
-						xtype : 'attendanceManager',
+						items: { xtype : 'attendanceManager'},
 						margin : '10',
 						height : null
 					}
@@ -137,26 +137,31 @@ Ext.define('scholar.view.MainMenu', {
 						iconCls: 'x-icon-staff',
 						tabTip : 'Wear the Staff hat',
 						border : false,
-							xtype : 'staffDashboard'
-					}, {
+						xtype : 'staffDashboard'
+					},
+					{
 						title : 'Lookup',
 						tabTip : 'Lookup staff information',
 						iconCls: 'x-icon-search',
-						xtype : 'staffLookup',
+						items: { xtype : 'staffLookup'},
 						margin : '10',
 						height : null
-					}, {
+					},
+					{
 						title : 'Attendance',
 						tabTip : 'Attendance',
-						iconCls: 'x-icon-attendance',
-						xtype : 'staffAttendanceManager',
+						iconCls: 'x-icon-attendance',						
 						margin : '10',
-						height : null
-					}, {
+						height : null,
+				        items: {
+				        	  		xtype : 'staffAttendanceManager'
+		                }
+					},
+					{
 						title : 'TimeTable',
 						tabTip : 'Manage Timetable',
 						iconCls:'x-icon-timetable',
-						xtype : 'timetableManager',
+						items: { xtype : 'timetableManager' },
 						margin : '10',
 						height : null
 					},
@@ -164,7 +169,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Leave Absence',
 						tabTip : 'Manage/Apply Leaves',
 						iconCls:'x-icon-leave',
-						xtype : 'leaveManager',
+						items: { xtype : 'leaveManager' },
 						margin : '10',
 						height : null
 					},
@@ -172,7 +177,7 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Events/Memo',
 						tabTip : 'Issue Memos and publish Event Calendars',
 						iconCls:'x-icon-events',
-						xtype : 'eventManager',
+						items: { xtype : 'eventManager' },
 						margin : '10',
 						height : null
 					}
@@ -198,12 +203,12 @@ Ext.define('scholar.view.MainMenu', {
 							iconCls: 'x-icon-library',			
 							tabTip : 'Wear the Librarian hat',
 							border : false,
-								xtype : 'libraryDashboard'
+							items: {	xtype : 'libraryDashboard' }
 						},
 						{
 							title : 'Lookup',
 							tabTip : 'Book search',
-							xtype : 'libraryLookup',
+							items: { xtype : 'libraryLookup' },
 							iconCls: 'x-icon-search',
 							margin : '10',
 							height : null
@@ -211,7 +216,7 @@ Ext.define('scholar.view.MainMenu', {
 						{
 							title : 'OPAC',
 							tabTip : 'OPAC search',
-							xtype : 'opacLookup',
+							items: { xtype : 'opacLookup' },
 							margin : '10',
 							height : null
 						}
@@ -230,7 +235,7 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Payroll',
 								tabTip : 'Payroll',
 								iconCls: 'x-icon-payroll',
-								xtype : 'payrollManager',
+								items: { xtype : 'payrollManager'},
 								margin : '10',
 								height : null
 							},
@@ -238,7 +243,7 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Fee Collection',
 								tabTip : 'Fee Collection',
 								iconCls: 'x-icon-fees',
-								xtype : 'feesManager',
+								items: { xtype : 'feesManager'},
 								margin : '10',
 								height : null
 							},
@@ -246,7 +251,7 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Settings',
 								tabTip : 'Settings related to finances',
 								iconCls: 'x-icon-settings',
-								xtype : 'financeSettingsManager',
+								items: { xtype : 'financeSettingsManager'},
 								margin : '10',
 								height : null
 							}
@@ -268,14 +273,14 @@ Ext.define('scholar.view.MainMenu', {
 								tabTip : 'Manage Vehicle fleet',
 								iconCls: 'x-icon-vehicle',
 								border : false,
-								xtype : 'vehicleLookup'
+								items: { xtype : 'vehicleLookup'},
 						  },
 						  {
 								title : 'Route',
 								tabTip : 'Manage Vehicle routes',
 								iconCls: 'x-icon-route',
 								border : false,
-								xtype : 'routeLookup'
+								items: { xtype : 'routeLookup' }
 						  }			  
 				 ]
 	         }

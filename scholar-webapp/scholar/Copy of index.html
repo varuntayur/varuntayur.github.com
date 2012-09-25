@@ -29,17 +29,40 @@
 	            paths: {	    
 	                'Ext.ux':'extjs/src/ux'
 	            }
-	        });	  
+	        });	        
+	        Ext.onReady(function(){
+	                        Ext.create('Ext.form.ComboBox', {
+							renderTo:'simpleCombo',
+			            fieldLabel: 'Choose Course',
+			            store: Ext.create('Ext.data.ArrayStore', {
+			            	fields: [
+			            	         {type: 'string', name: 'abbr'},
+			            	         {type: 'string', name: 'course'}			            	         
+			            	     ],			                
+			            data : [
+			                    ['AL', 'Standard 1'],
+			                    ['AK', 'Standard 2'],
+			                    ['AZ', 'B.E']
+			                    ]
+			            }),
+			            queryMode: 'local',
+			            displayField: 'course',
+			            mode:'local',
+			            triggerAction: 'all'
+                  	}) 
+			})
+	        
 	    </script>
 	    	    
 	</head>
 	<body>
+		<div id="simpleCombo"></div>
 	</body>
-	<div id="loading-mask"></div>
+	<!-- <div id="loading-mask"></div>
 	<div id="loading">
   	<div class="loading-indicator">
     	Loading...
-  	</div>
+  	</div> -->
 
 </div>
 	

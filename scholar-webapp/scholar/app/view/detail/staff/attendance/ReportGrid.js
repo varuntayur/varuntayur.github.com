@@ -1,7 +1,7 @@
-Ext.define('scholar.view.detail.staff.attendance.Report', {
+Ext.define('scholar.view.detail.staff.attendance.ReportGrid', {
 	extend : 'Ext.grid.Panel',
 	requires : [ 'Ext.window.Window'],
-	alias: 'widget.staffAttendanceReport',
+	alias: 'widget.reportGrid',
 	
 	// Component initialization override: adds the top and bottom toolbars and setup headers renderer.
     initComponent: function() {
