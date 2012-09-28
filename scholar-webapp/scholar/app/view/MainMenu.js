@@ -64,7 +64,10 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Admissions',
 						tabTip : 'Admissions',
 						iconCls: 'x-icon-admission',
-						items: { xtype : 'admissionManager'},
+						layout: 'fit',
+						items: { 
+									xtype : 'admissionManager'  
+								},
 						margin : '10',
 						height : null
 					},					
@@ -72,7 +75,10 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Examination',
 						tabTip : 'Examination Management',
 						iconCls: 'x-icon-exam',
-						items: { xtype : 'examManager'},
+						layout: 'fit',
+						items: { 
+							xtype : 'examManager'  
+						},
 						margin : '10',
 						height : null
 					},
@@ -80,7 +86,10 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Inventory',
 						tabTip : 'Inventory',
 						iconCls: 'x-icon-inventory',
-						items: { xtype : 'inventoryManager'},
+						layout: 'fit',
+						items: { 
+							xtype : 'inventoryManager'  
+						},
 						margin : '10',
 						height : null
 					},
@@ -88,7 +97,10 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'User/Role',
 						tabTip : 'Manager User Roles',
 						iconCls:'x-icon-userrole',
-						items: { xtype : 'userRoleManager'},
+						layout: 'fit',
+						items: { 
+							xtype : 'userRoleManager'  
+						},
 						margin : '10',
 						height : null
 					},
@@ -96,7 +108,10 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Settings',
 						tabTip : 'Settings Management',
 						iconCls: 'x-icon-settings',
-						items: { xtype : 'settingsManager'},
+						layout: 'fit',
+						items: { 
+							xtype : 'settingsManager'  
+						},
 						margin : '10',
 						height : null
 					}
@@ -115,14 +130,20 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Lookup',
 						tabTip : 'Lookup student detail',
 						iconCls: 'x-icon-search',
-						items: { xtype : 'studentLookup'},
+						layout: 'fit',
+						items: { 
+							xtype : 'studentLookup'  
+						},
 						margin : '10',
 						height : null
 					}, {
 						title : 'Attendance',
 						tabTip : 'Attendance',
 						iconCls: 'x-icon-attendance',
-						items: { xtype : 'attendanceManager'},
+						layout: 'fit',
+						items: { 
+							xtype : 'attendanceManager'  
+						},
 						margin : '10',
 						height : null
 					}
@@ -143,7 +164,10 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Lookup',
 						tabTip : 'Lookup staff information',
 						iconCls: 'x-icon-search',
-						items: { xtype : 'staffLookup'},
+						layout: 'fit',
+						items: { 
+							xtype : 'staffLookup' 
+						},
 						margin : '10',
 						height : null
 					},
@@ -153,15 +177,19 @@ Ext.define('scholar.view.MainMenu', {
 						iconCls: 'x-icon-attendance',						
 						margin : '10',
 						height : null,
+						layout: 'fit',
 				        items: {
-				        	  		xtype : 'staffAttendanceManager'
-		                }
+				        	  		xtype : 'staffAttendanceManager'  
+						},
 					},
 					{
 						title : 'TimeTable',
 						tabTip : 'Manage Timetable',
 						iconCls:'x-icon-timetable',
-						items: { xtype : 'timetableManager' },
+						layout: 'fit',
+						items: { 
+							xtype : 'timetableManager'   
+						},
 						margin : '10',
 						height : null
 					},
@@ -169,7 +197,10 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Leave Absence',
 						tabTip : 'Manage/Apply Leaves',
 						iconCls:'x-icon-leave',
-						items: { xtype : 'leaveManager' },
+						layout: 'fit',
+						items: { 
+							xtype : 'leaveManager'   
+						},
 						margin : '10',
 						height : null
 					},
@@ -177,7 +208,10 @@ Ext.define('scholar.view.MainMenu', {
 						title : 'Events/Memo',
 						tabTip : 'Issue Memos and publish Event Calendars',
 						iconCls:'x-icon-events',
-						items: { xtype : 'eventManager' },
+						layout: 'fit',
+						items: { 
+							xtype : 'eventManager'   
+						},
 						margin : '10',
 						height : null
 					}
@@ -203,12 +237,16 @@ Ext.define('scholar.view.MainMenu', {
 							iconCls: 'x-icon-library',			
 							tabTip : 'Wear the Librarian hat',
 							border : false,
+							layout: 'fit',
 							items: {	xtype : 'libraryDashboard' }
 						},
 						{
 							title : 'Lookup',
 							tabTip : 'Book search',
-							items: { xtype : 'libraryLookup' },
+							layout: 'fit',
+							items: { 
+								xtype : 'libraryLookup'   
+							},
 							iconCls: 'x-icon-search',
 							margin : '10',
 							height : null
@@ -216,7 +254,10 @@ Ext.define('scholar.view.MainMenu', {
 						{
 							title : 'OPAC',
 							tabTip : 'OPAC search',
-							items: { xtype : 'opacLookup' },
+							layout: 'fit',
+							items: { 
+								xtype : 'opacLookup'   
+							},
 							margin : '10',
 							height : null
 						}
@@ -235,7 +276,10 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Payroll',
 								tabTip : 'Payroll',
 								iconCls: 'x-icon-payroll',
-								items: { xtype : 'payrollManager'},
+								layout: 'fit',
+								items: { 
+									xtype : 'payrollManager'  
+								},
 								margin : '10',
 								height : null
 							},
@@ -243,7 +287,10 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Fee Collection',
 								tabTip : 'Fee Collection',
 								iconCls: 'x-icon-fees',
-								items: { xtype : 'feesManager'},
+								layout: 'fit',
+								items: { 
+									xtype : 'feesManager'  
+								},
 								margin : '10',
 								height : null
 							},
@@ -251,7 +298,10 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Settings',
 								tabTip : 'Settings related to finances',
 								iconCls: 'x-icon-settings',
-								items: { xtype : 'financeSettingsManager'},
+								layout: 'fit',
+								items: { 
+									xtype : 'financeSettingsManager'  
+								},
 								margin : '10',
 								height : null
 							}
@@ -272,15 +322,21 @@ Ext.define('scholar.view.MainMenu', {
 								title : 'Vehicle',
 								tabTip : 'Manage Vehicle fleet',
 								iconCls: 'x-icon-vehicle',
+								layout: 'fit',
 								border : false,
-								items: { xtype : 'vehicleLookup'},
+								items: { 
+									xtype : 'vehicleLookup' , 
+								},
 						  },
 						  {
 								title : 'Route',
 								tabTip : 'Manage Vehicle routes',
 								iconCls: 'x-icon-route',
+								layout: 'fit',
 								border : false,
-								items: { xtype : 'routeLookup' }
+								items: { 
+									xtype : 'routeLookup'   
+								},
 						  }			  
 				 ]
 	         }

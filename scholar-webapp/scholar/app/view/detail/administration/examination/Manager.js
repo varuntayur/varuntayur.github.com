@@ -11,14 +11,14 @@ Ext.define('scholar.view.detail.administration.examination.Manager', {
 		msgTarget : 'side'
 	},
 
-	items : [{
+	items : [
+	         {
 				xtype:'scheduleTab'
-			}
-			, {
-//				title : 'Settings',
-//				iconCls:'x-icon-settings',
+			 },
+			 {
 				xtype:'examSettingsTab'
-			}, {
+			},
+			{
 				title : 'Reports',
 				iconCls:'x-icon-report',
 			} ]
