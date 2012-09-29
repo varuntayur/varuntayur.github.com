@@ -57,7 +57,8 @@ Ext.define('scholar.view.detail.administration.admission.NewAdmissionForm', {
 		} ]
 	}, Ext.create('Ext.form.ComboBox', {
 		fieldLabel : 'Blood Group	',
-		store : Ext.create('Ext.data.Store', {
+		store : 
+			Ext.create('Ext.data.Store', {
 			fields : [ 'abbr', 'name' ],
 			data : [ {
 				"abbr" : "AL",

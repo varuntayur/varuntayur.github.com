@@ -68,7 +68,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 									xtype : 'admissionManager'  
 								},
-						margin : '10',
+						margin : '1',
 						height : null
 					},					
 					{
@@ -79,7 +79,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'examManager'  
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					},
 					{
@@ -90,7 +90,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'inventoryManager'  
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					},
 					{
@@ -101,7 +101,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'userRoleManager'  
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					},
 					{
@@ -112,7 +112,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'settingsManager'  
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					}
 				]
@@ -134,7 +134,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'studentLookup'  
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					}, {
 						title : 'Attendance',
@@ -144,7 +144,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'attendanceManager'  
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					}
 
@@ -168,14 +168,14 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'staffLookup' 
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					},
 					{
 						title : 'Attendance',
 						tabTip : 'Attendance',
 						iconCls: 'x-icon-attendance',						
-						margin : '10',
+						margin : '1',
 						height : null,
 						layout: 'fit',
 				        items: {
@@ -190,7 +190,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'timetableManager'   
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					},
 					{
@@ -201,7 +201,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'leaveManager'   
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					},
 					{
@@ -212,7 +212,7 @@ Ext.define('scholar.view.MainMenu', {
 						items: { 
 							xtype : 'eventManager'   
 						},
-						margin : '10',
+						margin : '1',
 						height : null
 					}
 				]
@@ -248,7 +248,7 @@ Ext.define('scholar.view.MainMenu', {
 								xtype : 'libraryLookup'   
 							},
 							iconCls: 'x-icon-search',
-							margin : '10',
+							margin : '1',
 							height : null
 						},
 						{
@@ -258,7 +258,7 @@ Ext.define('scholar.view.MainMenu', {
 							items: { 
 								xtype : 'opacLookup'   
 							},
-							margin : '10',
+							margin : '1',
 							height : null
 						}
 					]
@@ -280,7 +280,7 @@ Ext.define('scholar.view.MainMenu', {
 								items: { 
 									xtype : 'payrollManager'  
 								},
-								margin : '10',
+								margin : '1',
 								height : null
 							},
 							{
@@ -291,7 +291,7 @@ Ext.define('scholar.view.MainMenu', {
 								items: { 
 									xtype : 'feesManager'  
 								},
-								margin : '10',
+								margin : '1',
 								height : null
 							},
 							{
@@ -302,7 +302,7 @@ Ext.define('scholar.view.MainMenu', {
 								items: { 
 									xtype : 'financeSettingsManager'  
 								},
-								margin : '10',
+								margin : '1',
 								height : null
 							}
 			     ]
