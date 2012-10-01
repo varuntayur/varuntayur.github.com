@@ -16,6 +16,7 @@ Ext.application({
     }*/
     
     controllers: [
-                  'Scholar'
+                  'Scholar',
+                  'administration.admission.Controller'
               ],
 });
