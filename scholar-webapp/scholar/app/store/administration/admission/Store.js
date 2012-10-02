@@ -1,26 +1,6 @@
 Ext.define('scholar.store.administration.admission.Store', {
     extend: 'Ext.data.Store',
-    fields : [ {
-		name : 'admissionNumber',
-		type : 'string'
-	}, {
-		name : 'studentName',
-		type : 'string'
-	}, {
-		name : 'courseName',
-		type : 'string'
-	}, {
-		name : 'batchName',
-		type : 'string'
-	}, {
-		name : 'admissionDate',
-		type : 'date',
-		dateFormat : 'n/j h:ia'
-	}, {
-		name : 'lastChange',
-		type : 'date',
-		dateFormat : 'n/j h:ia'
-	} ],
+    model: 'scholar.model.administration.admission.Model',
 	data : [
 			[ '001/001', 'Amar', 'Standard 1', '2012','4/5 12:00am', '1/4 12:00am' ],
 			[ '001/002', 'Ishaan', 'Standard 2', '2012','10/5 12:00am', '1/4 12:00am' ],
@@ -34,5 +14,6 @@ Ext.define('scholar.store.administration.admission.Store', {
 			[ '116/006', 'Shwetha', 'Standard 1', '2012','18/5 12:00am', '1/4 12:00am' ],
 			[ '145/007', 'Sushma', 'Standard 7', '2012','19/5 12:00am', '1/4 12:00am' ],
 			[ '723/007', 'Santhosh', 'Standard 5', '2012','1/9 12:00am', '1/8 12:00am' ]
-		   ]
+		   ],
+	autoLoad: true
 });
