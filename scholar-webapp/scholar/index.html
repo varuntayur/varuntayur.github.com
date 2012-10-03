@@ -29,7 +29,23 @@
 	            paths: {	    
 	                'Ext.ux':'extjs/src/ux'
 	            }
-	        });	  
+	        });
+	        Ext.onReady(function(){
+		        Ext.form.field.ComboBox.override( {
+		            setValue: function(value) {
+		                if( typeof value != 'object' && !Ext.isEmpty(value) && !this.store.isLoaded && this.queryMode == 'remote') {
+		                    value = (value && value.toString) ? value.toString() : value;
+		                    this.store.addListener('load', function() {
+		                        this.store.isLoaded = true;
+		                        this.setValue(value);
+		                    }, this);
+		                    this.store.load();
+		                } else {
+		                    this.callOverridden(arguments);
+		                }
+		            }
+		        })
+	        });
 	    </script>
 	    	    
 	</head>

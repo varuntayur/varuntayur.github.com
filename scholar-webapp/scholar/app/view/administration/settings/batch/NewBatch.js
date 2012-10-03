@@ -16,56 +16,16 @@ Ext.define('scholar.view.administration.settings.batch.NewBatch', {
 	items : [ {
 		fieldLabel : 'Batch Name',
 		name : 'batchName'
-	}, Ext.create('Ext.form.ComboBox', {
+	}, 
+	{
+		xtype:'combo',
 		fieldLabel : 'Course Name',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'courseName' ],
-			data : [ {
-				"abbr" : "AL",
-				"courseName" : "Standard 1"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 2"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 3"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 4"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 5"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 6"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 7"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 8"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 9"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 10"
-			}
-			]
-		}),
+		store : 'administration.settings.course.Store',
 		queryMode : 'local',
 		displayField : 'courseName',
 		valueField : 'abbr'
-	}), {
+	},
+	{
 		fieldLabel : 'Section',
 		name : 'section'
 	}, {

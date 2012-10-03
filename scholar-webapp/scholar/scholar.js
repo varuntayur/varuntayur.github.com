@@ -17,6 +17,8 @@ Ext.application({
     
     controllers: [
                   'Scholar',
-                  'administration.admission.Controller'
+                  'administration.admission.Controller',
+//                  'administration.settings.batch.Controller'
+                  'scholar.controller.administration.settings.batch.Controller'
               ],
 });
