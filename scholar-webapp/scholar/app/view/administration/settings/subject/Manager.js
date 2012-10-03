@@ -34,7 +34,8 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 			text : 'Delete'
 		} ]
 	} ],
-	store : new Ext.data.ArrayStore({
+	store : //'administration.settings.subject.Store',
+		new Ext.data.ArrayStore({
 		fields : [  {
 			name : 'subjectName',
 			type : 'string'

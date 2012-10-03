@@ -35,31 +35,32 @@ Ext.define('scholar.view.administration.settings.course.Search', {
 			text : 'Delete'
 		} ]
 	} ],
-	store : new Ext.data.ArrayStore({
-		fields : [ {
-			name : 'courseCode',
-			type : 'string'
-		}, {
-			name : 'courseName',
-			type : 'string'
-		}, {
-			name : 'lastChange',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		} ],
-		data : [
-		        [ '001/001', 'Standard 1', '9/1 12:00am' ],
-				[ '002/002', 'Standard 2',  '9/1 12:00am' ],
-				[ '003/003', 'Standard 3',  '9/1 12:00am' ],
-				[ '004/004', 'Standard 4',  '9/1 12:00am' ],
-				[ '005/005', 'Standard 5',  '9/1 12:00am' ],
-				[ '006/006', 'Standard 6',  '9/1 12:00am' ],
-				[ '007/007', 'Standard 7',  '9/1 12:00am' ],
-				[ '008/008', 'Standard 8',  '9/1 12:00am' ],
-				[ '009/009', 'Standard 9',  '9/1 12:00am' ],
-				[ '010/010', 'Standard 10', '9/1 12:00am' ]
-			]
-	}),
+	store : 'administration.settings.course.SearchStore',
+//		new Ext.data.ArrayStore({
+//		fields : [ {
+//			name : 'courseCode',
+//			type : 'string'
+//		}, {
+//			name : 'courseName',
+//			type : 'string'
+//		}, {
+//			name : 'lastChange',
+//			type : 'date',
+//			dateFormat : 'n/j h:ia'
+//		} ],
+//		data : [
+//		        [ '001/001', 'Standard 1', '9/1 12:00am' ],
+//				[ '002/002', 'Standard 2',  '9/1 12:00am' ],
+//				[ '003/003', 'Standard 3',  '9/1 12:00am' ],
+//				[ '004/004', 'Standard 4',  '9/1 12:00am' ],
+//				[ '005/005', 'Standard 5',  '9/1 12:00am' ],
+//				[ '006/006', 'Standard 6',  '9/1 12:00am' ],
+//				[ '007/007', 'Standard 7',  '9/1 12:00am' ],
+//				[ '008/008', 'Standard 8',  '9/1 12:00am' ],
+//				[ '009/009', 'Standard 9',  '9/1 12:00am' ],
+//				[ '010/010', 'Standard 10', '9/1 12:00am' ]
+//			]
+//	}),
 	columnLines : true,
 	columns : [ {
 		text : 'Course Code',
