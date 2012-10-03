@@ -21,6 +21,33 @@ Ext.application({
                   'scholar.controller.administration.settings.batch.Controller',
                   'scholar.controller.administration.settings.course.Controller',
                   'scholar.controller.administration.settings.general.Controller',
-                  'scholar.controller.administration.settings.subject.Controller'
+                  'scholar.controller.administration.settings.subject.Controller',                  
+                  'scholar.controller.administration.examination.schedule.Controller',
+                  'scholar.controller.administration.examination.settings.Controller',                  
+                  'scholar.controller.administration.inventory.elec.Controller',
+                  'scholar.controller.administration.inventory.infra.Controller',
+                  'scholar.controller.administration.inventory.perishable.Controller',                  
+                  'scholar.controller.administration.user.roles.Controller',
+                  
+                  'scholar.controller.finance.fees.Controller',
+                  'scholar.controller.finance.payroll.Controller',
+                  'scholar.controller.finance.settings.general.Controller',
+                  
+                  'scholar.controller.library.Controller',
+                  'scholar.controller.library.lookup.Controller',
+                  
+                  'scholar.controller.staff.attendance.Controller',
+                  'scholar.controller.staff.event.Controller',
+                  'scholar.controller.staff.leave.settings.Controller',
+                  'scholar.controller.staff.leave.Controller',
+                  'scholar.controller.staff.lookup.Controller',
+                  'scholar.controller.staff.timetable.Controller',
+                  
+                  'scholar.controller.student.attendance.Controller',
+                  'scholar.controller.student.lookup.Controller',
+                  'scholar.controller.student.performance.Controller',
+                  'scholar.controller.student.Controller'
+                  
+                  
               ],
 });
