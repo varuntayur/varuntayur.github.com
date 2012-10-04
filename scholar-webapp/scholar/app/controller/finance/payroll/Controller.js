@@ -5,10 +5,10 @@ Ext.define('scholar.controller.finance.payroll.Controller', {
 		console.log('Initialized finance.payroll.Controller!');
 	},
 
-	views : [ 'administration.admission.Manager' ],
+	views : [ 'finance.payroll.Manager' ],
 
-	stores : [ 'administration.admission.Store' ],
+	stores : [ 'finance.payroll.SearchStore' ],
 	
-	models : [ 'administration.admission.Model' ]
+	models : [ 'finance.payroll.SearchModel' ]
 
 });

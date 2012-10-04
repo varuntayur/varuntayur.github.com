@@ -46,8 +46,10 @@ Ext.application({
                   'scholar.controller.student.attendance.Controller',
                   'scholar.controller.student.lookup.Controller',
                   'scholar.controller.student.performance.Controller',
-                  'scholar.controller.student.Controller'
+                  'scholar.controller.student.Controller',
                   
-                  
+                  'scholar.controller.transport.route.Controller',
+                  'scholar.controller.transport.vehicle.Controller',
+                  'scholar.controller.transport.Controller'
               ],
 });

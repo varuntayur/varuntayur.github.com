@@ -5,10 +5,10 @@ Ext.define('scholar.controller.finance.settings.general.Controller', {
 		console.log('Initialized finance.settings.general.Controller!');
 	},
 
-	views : [ 'administration.admission.Manager' ],
+	views : [ 'finance.settings.Manager' ],
 
-	stores : [ 'administration.admission.Store' ],
+	stores : [ 'finance.settings.general.Store' ],
 	
-	models : [ 'administration.admission.Model' ]
+	models : [ 'finance.settings.general.Model' ]
 
 });

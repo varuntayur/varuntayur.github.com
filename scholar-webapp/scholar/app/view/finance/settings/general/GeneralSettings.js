@@ -16,10 +16,12 @@ Ext.define('scholar.view.finance.settings.general.GeneralSettings', {
 	items: [
 	        {
 	    		xtype : 'datefield',
+	    		name:'finYearStartDate',
 	    		fieldLabel : 'Financial Year Start Date'
 	    	},
 	    	{
 	    		xtype : 'datefield',
+	    		name:'finYearEndDate',
 	    		fieldLabel : 'Financial Year End Date'
 	    	} 
 	       ],
