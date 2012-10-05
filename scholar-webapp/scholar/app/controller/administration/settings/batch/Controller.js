@@ -7,11 +7,11 @@ Ext.define('scholar.controller.administration.settings.batch.Controller', {
 
 	views : [ 'administration.settings.batch.Manager' ],
 
-	stores : [ 'administration.settings.course.Store',
+	stores : [ 'administration.settings.batch.Store',
 	           'administration.settings.batch.SearchStore'
 	         ],
 	
-	models : [ 'administration.settings.course.Model',
+	models : [ 'administration.settings.batch.Model',
 	           'administration.settings.batch.SearchModel'
 	         ]
 

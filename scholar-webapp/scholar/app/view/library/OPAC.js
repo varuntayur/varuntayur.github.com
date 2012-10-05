@@ -1,4 +1,4 @@
-Ext.define('scholar.view.library.lookup.OPAC', {
+Ext.define('scholar.view.library.OPAC', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'scholar.view.library.lookup.Search'],
 	alias: 'widget.opacLookup',

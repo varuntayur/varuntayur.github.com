@@ -20,7 +20,7 @@ Ext.define('scholar.view.MainMenu', {
 		
 		'scholar.view.library.Dashboard',
 		'scholar.view.library.lookup.Lookup' ,
-		'scholar.view.library.lookup.OPAC' ,
+		'scholar.view.library.OPAC' ,
 		
 		'scholar.view.administration.Dashboard',
 		'scholar.view.administration.admission.Manager',		

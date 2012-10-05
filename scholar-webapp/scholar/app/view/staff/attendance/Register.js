@@ -1,6 +1,5 @@
 Ext.define('scholar.view.staff.attendance.Register', {
 	extend : 'Ext.grid.Panel',
-	requires : [ 'Ext.window.Window'],
 	alias: 'widget.staffAttendanceRegister',
 	
 	// Component initialization override: adds the top and bottom toolbars and setup headers renderer.
@@ -16,30 +15,16 @@ Ext.define('scholar.view.staff.attendance.Register', {
 					},
                     Ext.create('Ext.form.ComboBox', {
 			            fieldLabel: 'Choose Course',
-			            store: Ext.create('Ext.data.Store', {
-			                fields: ['abbr', 'name'],
-			                data : [
-			                    {"abbr":"AL", "name":"Standard 1"},
-			                    {"abbr":"AK", "name":"Standard 2"},
-			                    {"abbr":"AZ", "name":"B.E"}
-			                ]
-			            }),
+			            store: 'administration.settings.course.Store',
 			            queryMode: 'local',
-			            displayField: 'name',
+			            displayField: 'courseName',
 			            valueField: 'abbr'
                   	}),
                   	Ext.create('Ext.form.ComboBox', {
 			            fieldLabel: 'Choose Batch',
-			            store: Ext.create('Ext.data.Store', {
-			                fields: ['abbr', 'name'],
-			                data : [
-			                    {"abbr":"AL", "name":"A"},
-			                    {"abbr":"AK", "name":"C"},
-			                    {"abbr":"AZ", "name":"CS 1"}
-			                ]
-			            }),
+			            store: 'administration.settings.batch.Store',			            	
 			            queryMode: 'local',
-			            displayField: 'name',
+			            displayField: 'batchName',
 			            valueField: 'abbr',
 			            listeners:{
 		  		            scope: this,
@@ -109,30 +94,31 @@ Ext.define('scholar.view.staff.attendance.Register', {
         me.callParent(arguments);
     },
 	
-    store : new Ext.data.ArrayStore({
-		fields : [ {
-			name : 'employeeId',
-			type : 'string'
-		}, {
-			name : 'staffName',
-			type : 'string'
-		}, {
-			name : 'department',
-			type : 'string'
-		},  {
-			name : 'lastChange',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		} ],
-		data : [
-		        [ '001005', 'Ram', 'CS',  '9/1 12:00am' ],
-				[ '001006', 'Murali', 'Science',  '9/1 12:00am' ],
-				[ '001007', 'Deepak', 'Mathematics',  '9/1 12:00am' ],
-		        [ '001007', 'Krishna', 'Mathematics',  '9/1 12:00am' ],
-		        [ '001007', 'Guru', 'Science',  '9/1 12:00am' ],
-		        [ '001007', 'Uday', 'Civics', '9/1 12:00am' ]
-		      ]
-	}),
+    store : 'staff.attendance.SearchStore',
+//    	new Ext.data.ArrayStore({
+//		fields : [ {
+//			name : 'employeeId',
+//			type : 'string'
+//		}, {
+//			name : 'staffName',
+//			type : 'string'
+//		}, {
+//			name : 'department',
+//			type : 'string'
+//		},  {
+//			name : 'lastChange',
+//			type : 'date',
+//			dateFormat : 'n/j h:ia'
+//		} ],
+//		data : [
+//		        [ '001005', 'Ram', 'CS',  '9/1 12:00am' ],
+//				[ '001006', 'Murali', 'Science',  '9/1 12:00am' ],
+//				[ '001007', 'Deepak', 'Mathematics',  '9/1 12:00am' ],
+//		        [ '001007', 'Krishna', 'Mathematics',  '9/1 12:00am' ],
+//		        [ '001007', 'Guru', 'Science',  '9/1 12:00am' ],
+//		        [ '001007', 'Uday', 'Civics', '9/1 12:00am' ]
+//		      ]
+//	}),
 	columnLines : true,
 	columns : [ {
 		text : 'Name',

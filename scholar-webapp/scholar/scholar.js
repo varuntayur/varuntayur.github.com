@@ -33,7 +33,6 @@ Ext.application({
                   'scholar.controller.finance.payroll.Controller',
                   'scholar.controller.finance.settings.general.Controller',
                   
-                  'scholar.controller.library.Controller',
                   'scholar.controller.library.lookup.Controller',
                   
                   'scholar.controller.staff.attendance.Controller',
