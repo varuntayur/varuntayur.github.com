@@ -38,7 +38,7 @@ Ext.application({
                   'scholar.controller.staff.attendance.Controller',
                   'scholar.controller.staff.event.Controller',
                   'scholar.controller.staff.leave.settings.Controller',
-                  'scholar.controller.staff.leave.Controller',
+                  'scholar.controller.staff.leave.report.Controller',
                   'scholar.controller.staff.lookup.Controller',
                   'scholar.controller.staff.timetable.Controller',
                   

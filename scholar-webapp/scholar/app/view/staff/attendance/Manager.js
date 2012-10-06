@@ -1,15 +1,11 @@
 Ext.define('scholar.view.staff.attendance.Manager', {
-	extend : 'Ext.form.Panel',
+	extend : 'Ext.tab.Panel',
 	requires : [ 
 	             'scholar.view.staff.attendance.Register',
 	             'scholar.view.staff.attendance.ReportGrid'],
 	alias : 'widget.staffAttendanceManager',
 	title:'Attendance',
-	items : [
-	         {
-	        	 xtype:'tabpanel',
-	        	 items:[
-						{
+	items : [			{
 							title : 'Attendance Register',
 							layout:'fit',
 							iconCls:'x-icon-register',
@@ -21,8 +17,6 @@ Ext.define('scholar.view.staff.attendance.Manager', {
 							layout:'fit',
 							xtype : 'reportGrid'
 						 }
-	        	       ]
-	         }	         
 	        ]
 });
 

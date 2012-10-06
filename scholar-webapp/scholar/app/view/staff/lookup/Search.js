@@ -2,33 +2,7 @@ Ext.define('scholar.view.staff.lookup.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	requires : [ 'Ext.window.Window' ],
 	alias: 'widget.staffSearch',
-	store : new Ext.data.ArrayStore({
-		fields : [ {
-			name : 'employeeId',
-			type : 'string'
-		}, {
-			name : 'staffName',
-			type : 'string'
-		}, {
-			name : 'department',
-			type : 'string'
-		}, {
-			name : 'address',
-			type : 'string'
-		}, {
-			name : 'lastChange',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		} ],
-		data : [
-		        [ '001005', 'Ram', 'CS', 'Blore', '9/1 12:00am' ],
-				[ '001006', 'Murali', 'Science', 'Blore', '9/1 12:00am' ],
-				[ '001007', 'Deepak', 'Mathematics', 'Blore', '9/1 12:00am' ],
-		        [ '001007', 'Krishna', 'Mathematics', 'Blore', '9/1 12:00am' ],
-		        [ '001007', 'Guru', 'Science', 'Blore', '9/1 12:00am' ],
-		        [ '001007', 'Uday', 'Civics', 'Blore', '9/1 12:00am' ]
-		      ]
-	}),
+	store :'staff.lookup.SearchStore',
 	columnLines : true,
 	columns : [ {
 		text : 'Employee ID',		

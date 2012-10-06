@@ -5,10 +5,10 @@ Ext.define('scholar.controller.staff.leave.settings.Controller', {
 		console.log('Initialized staff.leave.settings.Controller!');
 	},
 
-	views : [ 'administration.admission.Manager' ],
+	views : [ 'staff.leave.Manager' ],
 
-	stores : [ 'administration.admission.Store' ],
+	stores : [ 'staff.leave.settings.Store' ],
 	
-	models : [ 'administration.admission.Model' ]
+	models : [ 'staff.leave.settings.Model' ]
 
 });

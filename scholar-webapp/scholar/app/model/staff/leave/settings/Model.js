@@ -1,25 +1,21 @@
 Ext.define('scholar.model.staff.leave.settings.Model', {
 	extend: 'Ext.data.Model',
-    fields : [ {
-		name : 'admissionNumber',
+	fields : [ {
+		name : 'roleName',
 		type : 'string'
-	}, {
-		name : 'studentName',
+	},
+	{
+		name : 'numOfSickCasualLeaves',
 		type : 'string'
-	}, {
-		name : 'courseName',
+	},
+	{
+		name : 'numOfEarnedLeaves',
 		type : 'string'
-	}, {
-		name : 'batchName',
-		type : 'string'
-	}, {
-		name : 'admissionDate',
-		type : 'date',
-		dateFormat : 'n/j h:ia'
-	}, {
+	},		
+	{
 		name : 'lastChange',
 		type : 'date',
 		dateFormat : 'n/j h:ia'
-	} ]
+	} ],
 	
 });

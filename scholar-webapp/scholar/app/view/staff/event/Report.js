@@ -1,6 +1,5 @@
 Ext.define('scholar.view.staff.event.Report', {
 	extend : 'Ext.grid.Panel',
-	requires : [ 'Ext.window.Window'],
 	alias: 'widget.memos',
 	
 	// Component initialization override: adds the top and bottom toolbars and setup headers renderer.
@@ -8,30 +7,16 @@ Ext.define('scholar.view.staff.event.Report', {
         var me = this;
         me.tbar = [ Ext.create('Ext.form.ComboBox', {
 			            fieldLabel: 'Choose Course',
-			            store: Ext.create('Ext.data.Store', {
-			                fields: ['abbr', 'courseName'],
-			                data : [
-			                    {"abbr":"AL", "courseName":"Standard 1"},
-			                    {"abbr":"AK", "courseName":"Standard 2"},
-			                    {"abbr":"AZ", "courseName":"B.E"}
-			                ]
-			            }),
+			            store: 'administration.settings.course.Store',
 			            queryMode: 'local',
 			            displayField: 'courseName',
 			            valueField: 'abbr'
                   	}),
                   	Ext.create('Ext.form.ComboBox', {
 			            fieldLabel: 'Choose Batch',
-			            store: Ext.create('Ext.data.Store', {
-			                fields: ['abbr', 'name'],
-			                data : [
-			                    {"abbr":"AL", "name":"A"},
-			                    {"abbr":"AK", "name":"C"},
-			                    {"abbr":"AZ", "name":"CS 1"}
-			                ]
-			            }),
+			            store: 'administration.settings.batch.Store',	
 			            queryMode: 'local',
-			            displayField: 'name',
+			            displayField: 'batchName',
 			            valueField: 'abbr'
                   	}),
                   	Ext.create('Ext.form.ComboBox', {
@@ -78,23 +63,7 @@ Ext.define('scholar.view.staff.event.Report', {
         me.callParent(arguments);
     },
 	
-	store : new Ext.data.ArrayStore({
-		fields : [ {
-			name : 'eventName',
-			type : 'string'
-		}, {
-			name : 'eventDescription',
-			type : 'string'
-		}, {
-			name : 'eventDate',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		} ],
-		data : [
-		        [ 'Independance Day', 'Program schedule: 9.am',  '9/1 12:00am' ],
-				[ 'Krishna Janmashthami Celebrations', 'Krishna costume event at Auditorium starts 3pm', '9/1 12:00am' ]				 
-		       ]
-	}),
+	store :'staff.event.SearchStore',
 	columnLines : true,
 	columns : [ {
 		text : 'Event Name',

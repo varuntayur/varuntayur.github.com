@@ -95,30 +95,6 @@ Ext.define('scholar.view.staff.attendance.Register', {
     },
 	
     store : 'staff.attendance.SearchStore',
-//    	new Ext.data.ArrayStore({
-//		fields : [ {
-//			name : 'employeeId',
-//			type : 'string'
-//		}, {
-//			name : 'staffName',
-//			type : 'string'
-//		}, {
-//			name : 'department',
-//			type : 'string'
-//		},  {
-//			name : 'lastChange',
-//			type : 'date',
-//			dateFormat : 'n/j h:ia'
-//		} ],
-//		data : [
-//		        [ '001005', 'Ram', 'CS',  '9/1 12:00am' ],
-//				[ '001006', 'Murali', 'Science',  '9/1 12:00am' ],
-//				[ '001007', 'Deepak', 'Mathematics',  '9/1 12:00am' ],
-//		        [ '001007', 'Krishna', 'Mathematics',  '9/1 12:00am' ],
-//		        [ '001007', 'Guru', 'Science',  '9/1 12:00am' ],
-//		        [ '001007', 'Uday', 'Civics', '9/1 12:00am' ]
-//		      ]
-//	}),
 	columnLines : true,
 	columns : [ {
 		text : 'Name',

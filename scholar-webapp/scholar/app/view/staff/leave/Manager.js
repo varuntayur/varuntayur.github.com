@@ -1,7 +1,7 @@
 Ext.define('scholar.view.staff.leave.Manager', {
 	extend : 'Ext.tab.Panel',
-	requires : [ 'Ext.window.Window',
-	             'scholar.view.staff.leave.Search',
+	requires : [ 
+	             'scholar.view.staff.leave.report.Search',
 	             'scholar.view.staff.leave.settings.Leave'],
 	alias: 'widget.leaveManager',
     title:'Leave Absence Manager',
@@ -12,11 +12,15 @@ Ext.define('scholar.view.staff.leave.Manager', {
             		xtype:'leaveSettings'
             	},
             	{
-            		title:'Apply Leave/Balance'
+            		title:'Apply Leave/Check Balance'
             	},
             	{
             		title:'Approve Leaves'
-            	}           
+            	},
+            	{
+            		title:'Leave Report',
+            		xtype:'leaveSearch'
+            	}
             ]
 });
 
