@@ -1,21 +1,17 @@
-Ext.define('scholar.model.student.attendance.Model', {
+Ext.define('scholar.model.student.lookup.SearchModel', {
 	extend: 'Ext.data.Model',
-    fields : [ {
+	fields : [ {
 		name : 'admissionNumber',
 		type : 'string'
 	}, {
 		name : 'studentName',
 		type : 'string'
 	}, {
-		name : 'courseName',
+		name : 'standard',
 		type : 'string'
 	}, {
-		name : 'batchName',
+		name : 'address',
 		type : 'string'
-	}, {
-		name : 'admissionDate',
-		type : 'date',
-		dateFormat : 'n/j h:ia'
 	}, {
 		name : 'lastChange',
 		type : 'date',

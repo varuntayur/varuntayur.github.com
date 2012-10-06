@@ -5,10 +5,12 @@ Ext.define('scholar.controller.student.attendance.Controller', {
 		console.log('Initialized student.attendance.Controller!');
 	},
 
-	views : [ 'administration.admission.Manager' ],
+	views : [ 'student.attendance.Manager' ],
 
-	stores : [ 'administration.admission.Store' ],
-	
-	models : [ 'administration.admission.Model' ]
+	stores : [ 'student.attendance.SearchStore',
+			'administration.settings.course.Store',
+			'administration.settings.batch.Store' ],
+
+	models : [ 'student.attendance.SearchModel' ]
 
 });

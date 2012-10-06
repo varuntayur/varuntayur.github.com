@@ -44,7 +44,7 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.parent.Dashboard',
 		
 		'scholar.view.student.Dashboard',
-		'scholar.view.student.Search',
+		'scholar.view.student.lookup.Search',
 		'scholar.view.student.lookup.Lookup',
 		'scholar.view.student.performance.Report',
 		'scholar.view.student.attendance.Manager'],

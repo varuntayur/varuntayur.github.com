@@ -5,10 +5,10 @@ Ext.define('scholar.controller.student.lookup.Controller', {
 		console.log('Initialized student.lookup.Controller!');
 	},
 
-	views : [ 'administration.admission.Manager' ],
+	views : [ 'student.lookup.Lookup' ],
 
-	stores : [ 'administration.admission.Store' ],
+	stores : [ 'student.lookup.SearchStore' ],
 	
-	models : [ 'administration.admission.Model' ]
+	models : [ 'student.lookup.SearchModel' ]
 
 });

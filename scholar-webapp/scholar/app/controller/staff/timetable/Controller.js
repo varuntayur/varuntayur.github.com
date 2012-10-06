@@ -5,10 +5,10 @@ Ext.define('scholar.controller.staff.timetable.Controller', {
 		console.log('Initialized staff.timetable.Controller!');
 	},
 
-	views : [ 'administration.admission.Manager' ],
+	views : [ 'staff.timetable.Manager' ],
 
-	stores : [ 'administration.admission.Store' ],
+	stores : [ 'staff.timetable.Store' ],
 	
-	models : [ 'administration.admission.Model' ]
+	models : [ 'staff.timetable.Model' ]
 
 });

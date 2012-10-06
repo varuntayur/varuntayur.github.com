@@ -1,6 +1,5 @@
 Ext.define('scholar.view.student.attendance.Report', {
 	extend : 'Ext.grid.Panel',
-	requires : [ 'Ext.window.Window' ],
 	alias : 'widget.studentAttendanceReport',
 
 	// Component initialization override: adds the top and bottom toolbars and
@@ -18,40 +17,16 @@ Ext.define('scholar.view.student.attendance.Report', {
 				},
 				Ext.create('Ext.form.ComboBox', {
 					fieldLabel : 'Choose Course',
-					store : Ext.create('Ext.data.Store', {
-						fields : [ 'abbr', 'name' ],
-						data : [ {
-							"abbr" : "AL",
-							"name" : "Standard 1"
-						}, {
-							"abbr" : "AK",
-							"name" : "Standard 2"
-						}, {
-							"abbr" : "AZ",
-							"name" : "B.E"
-						} ]
-					}),
+					store: 'administration.settings.course.Store',
 					queryMode : 'local',
-					displayField : 'name',
+					displayField : 'courseName',
 					valueField : 'abbr'
 				}),
 				Ext.create('Ext.form.ComboBox', {
 					fieldLabel : 'Choose Batch',
-					store : Ext.create('Ext.data.Store', {
-						fields : [ 'abbr', 'name' ],
-						data : [ {
-							"abbr" : "AL",
-							"name" : "A"
-						}, {
-							"abbr" : "AK",
-							"name" : "C"
-						}, {
-							"abbr" : "AZ",
-							"name" : "CS 1"
-						} ]
-					}),
+					store: 'administration.settings.batch.Store',
 					queryMode : 'local',
-					displayField : 'name',
+					displayField : 'batchName',
 					valueField : 'abbr'
 				}),
 				Ext.create('Ext.form.ComboBox',
@@ -142,52 +117,52 @@ Ext.define('scholar.view.student.attendance.Report', {
 
 		me.callParent(arguments);
 	},
-
-	store : new Ext.data.ArrayStore(
-			{
-				fields : [ {
-					name : 'admissionNumber',
-					type : 'string'
-				}, {
-					name : 'studentName',
-					type : 'string'
-				}, {
-					name : 'standard',
-					type : 'string'
-				}, {
-					name : 'address',
-					type : 'string'
-				}, {
-					name : 'lastChange',
-					type : 'date',
-					dateFormat : 'n/j h:ia'
-				} ],
-				data : [
-						[ '001/001', 'Amar', 'Standard 1', 'Blore',
-								'9/1 12:00am' ],
-						[ '001/002', 'Ishaan', 'Standard 2', 'Blore',
-								'9/1 12:00am' ],
-						[ '001/005', 'Pran', 'Standard 3', 'Blore',
-								'9/1 12:00am' ],
-						[ '001/010', 'Vishnu', 'Standard 1', 'Blore',
-								'9/1 12:00am' ],
-						[ '010/234', 'Sri Hari', 'Standard 5', 'Blore',
-								'9/1 12:00am' ],
-						[ '111/286', 'Shiva', 'Standard 8', 'Blore',
-								'9/1 12:00am' ],
-						[ '101/234', 'Jyestha', 'Standard 9', 'Blore',
-								'9/1 12:00am' ],
-						[ '201/002', 'Laksha', 'Standard 10', 'Blore',
-								'9/1 12:00am' ],
-						[ '501/004', 'Sangeetha', 'Standard 4', 'Blore',
-								'9/1 12:00am' ],
-						[ '116/006', 'Shwetha', 'Standard 1', 'Blore',
-								'9/1 12:00am' ],
-						[ '145/007', 'Sushma', 'Standard 7', 'Blore',
-								'9/1 12:00am' ],
-						[ '723/007', 'Santhosh', 'Standard 5', 'Blore',
-								'9/1 12:00am' ] ]
-			}),
+	store : 'student.attendance.SearchStore',
+//	store : new Ext.data.ArrayStore(
+//			{
+//				fields : [ {
+//					name : 'admissionNumber',
+//					type : 'string'
+//				}, {
+//					name : 'studentName',
+//					type : 'string'
+//				}, {
+//					name : 'standard',
+//					type : 'string'
+//				}, {
+//					name : 'address',
+//					type : 'string'
+//				}, {
+//					name : 'lastChange',
+//					type : 'date',
+//					dateFormat : 'n/j h:ia'
+//				} ],
+//				data : [
+//						[ '001/001', 'Amar', 'Standard 1', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '001/002', 'Ishaan', 'Standard 2', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '001/005', 'Pran', 'Standard 3', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '001/010', 'Vishnu', 'Standard 1', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '010/234', 'Sri Hari', 'Standard 5', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '111/286', 'Shiva', 'Standard 8', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '101/234', 'Jyestha', 'Standard 9', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '201/002', 'Laksha', 'Standard 10', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '501/004', 'Sangeetha', 'Standard 4', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '116/006', 'Shwetha', 'Standard 1', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '145/007', 'Sushma', 'Standard 7', 'Blore',
+//								'9/1 12:00am' ],
+//						[ '723/007', 'Santhosh', 'Standard 5', 'Blore',
+//								'9/1 12:00am' ] ]
+//			}),
 	columnLines : true,
 	columns : [ {
 		text : 'Name',

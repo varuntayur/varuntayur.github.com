@@ -1,7 +1,8 @@
 Ext.define('scholar.view.staff.timetable.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias:'widget.timeTableSearch',
-	store: new Ext.data.ArrayStore({
+	store: 
+		new Ext.data.ArrayStore({
 		fields : [
 		    {
 				name : 'dayTime',
