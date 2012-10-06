@@ -25,7 +25,8 @@ Ext.define('scholar.view.administration.Dashboard', {
 	  		   width: 400,
 	  		   height: 300,
 	  		   animate: true,
-	  		   store: Ext.create('Ext.data.JsonStore', {
+	  		   store: //'administration.dashboard.FeeCollectionStore',
+	  			   Ext.create('Ext.data.JsonStore', {
 	  			        fields: ['name', 'data1'],
 	  			    	data: [
 	  				        { name: 'Jan', data1: 100 },
@@ -74,7 +75,8 @@ Ext.define('scholar.view.administration.Dashboard', {
 		  		   width: 400,
 		  		   height: 300,
 		  		   animate: true,
-		  		   store: Ext.create('Ext.data.JsonStore', {
+		  		   store: //'administration.dashboard.FreePeriodStore',
+		  			   Ext.create('Ext.data.JsonStore', {
 		  			        fields: ['name', 'data1'],
 		  			    	data: [
 		  				        { name: '8am', data1: 1 },
@@ -125,7 +127,8 @@ Ext.define('scholar.view.administration.Dashboard', {
 				        easing: 'elasticIn',
 				        duration: 1000
 				    },
-				    store: Ext.create('Ext.data.JsonStore', {
+				    store: //'administration.dashboard.TodayAttendanceStore',
+				    	Ext.create('Ext.data.JsonStore', {
 	  			        fields: ['name', 'data1'],
 	  			    	data: [
 	  				        { name: 'Jan', data1: 60 }	  				       				 
@@ -134,6 +137,7 @@ Ext.define('scholar.view.administration.Dashboard', {
 				    insetPadding: 25,
 				    flex: 1,
 				    axes: [{
+				    	title: 'Todays Attendance',
 				        type: 'gauge',
 				        position: 'gauge',
 				        minimum: 0,
