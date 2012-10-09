@@ -43,38 +43,38 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 	}, {
 		xtype:'combo',
 		fieldLabel : 'Blood Group	',
-		store ://'administration.admission.BloodGroupModel', 
-			Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Unknown"
-			}, {
-				"abbr" : "AL",
-				"name" : "A+"
-			}, {
-				"abbr" : "AL",
-				"name" : "A-"
-			}, {
-				"abbr" : "AL",
-				"name" : "B+"
-			}, {
-				"abbr" : "AL",
-				"name" : "B-"
-			}, {
-				"abbr" : "AL",
-				"name" : "O+"
-			}, {
-				"abbr" : "AL",
-				"name" : "O-"
-			}, {
-				"abbr" : "AK",
-				"name" : "AB+"
-			}, {
-				"abbr" : "AZ",
-				"name" : "AB-"
-			} ]
-		}),
+		store :'administration.settings.batch.Store', 
+//			Ext.create('Ext.data.Store', {
+//			fields : [ 'abbr', 'name' ],
+//			data : [ {
+//				"abbr" : "AL",
+//				"name" : "Unknown"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "A+"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "A-"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "B+"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "B-"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "O+"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "O-"
+//			}, {
+//				"abbr" : "AK",
+//				"name" : "AB+"
+//			}, {
+//				"abbr" : "AZ",
+//				"name" : "AB-"
+//			} ]
+//		}),
 		queryMode : 'local',
 		displayField : 'name',
 		valueField : 'abbr'

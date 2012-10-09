@@ -14,7 +14,7 @@ Ext.define('scholar.controller.administration.admission.Controller', {
         console.log('Double clicked on ' + record.get('studentName'));
                     
         var admForm = Ext.widget('newAdmissionForm');
-        admForm.loadRecord(record);
+//        admForm.loadRecord(record);
         
         Ext.create('Ext.Window', {
 			xtype : 'window',
@@ -32,11 +32,13 @@ Ext.define('scholar.controller.administration.admission.Controller', {
 		}).show();
     },
 
-	views : [ 'administration.admission.Manager'
+	views : [ 'administration.admission.Manager',
+	          'administration.admission.NewAdmissionForm'
 	          ],
 
 	stores : [ 
-	           'administration.admission.SearchStore'	          
+	           'administration.admission.SearchStore',
+	           'administration.settings.batch.Store'
 	         ],
 	
 	models : [ 
