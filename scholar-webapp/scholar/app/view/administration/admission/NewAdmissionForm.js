@@ -42,8 +42,8 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 		} ]
 	}, {
 		xtype:'combo',
-		fieldLabel : 'Blood Group	',
-		store :'administration.settings.batch.Store', 
+		fieldLabel : 'Blood Group',
+		store :'administration.admission.BloodGroupStore', 
 //			Ext.create('Ext.data.Store', {
 //			fields : [ 'abbr', 'name' ],
 //			data : [ {
@@ -76,8 +76,8 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 //			} ]
 //		}),
 		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
+		displayField : 'bloodGroupName',
+		valueField : 'bloodGroupName'
 	},
 	Ext.create('Ext.form.ComboBox', {
 		fieldLabel : 'Nationality',
