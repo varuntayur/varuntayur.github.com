@@ -13,35 +13,13 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 	items : [ {
 		xtype : 'datefield',
 		fieldLabel : 'Admission Date'
-	}, {
-		xtype : 'fieldcontainer',
+	},
+	{
+		xtype : 'textfield',
 		fieldLabel : 'Name',
-		labelStyle : 'font-weight:bold;padding:0',
-		layout : 'hbox',
-		defaultType : 'textfield',
-
-		fieldDefaults : {
-			labelAlign : 'top'
-		},
-
-		items : [ {
-			width: 75,
-			name : 'firstName',
-			fieldLabel : 'First',
-			allowBlank : false
-		}, {
-			width : 30,
-			name : 'middleInitial',
-			fieldLabel : 'MI',
-			margins : '0 0 0 5'
-		}, {
-			width: 75,
-			name : 'lastName',
-			fieldLabel : 'Last',
-			allowBlank : false,
-			margins : '0 0 0 5'
-		} ]
-	}, {
+		allowBlank : true
+	},
+	{
 		xtype : 'radiogroup',
 		fieldLabel : 'Sex',
 		columns : 1,
