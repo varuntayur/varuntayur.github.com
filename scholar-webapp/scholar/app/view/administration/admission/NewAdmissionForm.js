@@ -12,30 +12,38 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 	autoScroll: true,
 	items : [ {
 		xtype : 'datefield',
-		fieldLabel : 'Admission Date'
+		fieldLabel : 'Admission Date',
+		name: 'admissionDate'
 	},
 	{
 		xtype : 'textfield',
+		fieldLabel : 'Admission Number',
+		name: 'admissionNumber'
+	},
+	{
+		xtype : 'textfield',
+		name:'studentName',
 		fieldLabel : 'Name',
 		allowBlank : true
 	},
 	{
 		xtype : 'radiogroup',
 		fieldLabel : 'Sex',
-		columns : 1,
+		columns : 2,
 		items : [ {
 			boxLabel : 'Male',
-			name : 'rb',
-			inputValue : '1',
+			name : 'sex',
+			inputValue : 'Male',
 			checked : true
 		}, {
 			boxLabel : 'Female',
-			name : 'rb',
-			inputValue : '2'
+			name : 'sex',
+			inputValue : 'Female'
 		} ]
-	}, Ext.create('Ext.form.ComboBox', {
+	}, {
+		xtype:'combo',
 		fieldLabel : 'Blood Group	',
-		store : 
+		store ://'administration.admission.BloodGroupModel', 
 			Ext.create('Ext.data.Store', {
 			fields : [ 'abbr', 'name' ],
 			data : [ {
@@ -70,7 +78,8 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 		queryMode : 'local',
 		displayField : 'name',
 		valueField : 'abbr'
-	}), Ext.create('Ext.form.ComboBox', {
+	},
+	Ext.create('Ext.form.ComboBox', {
 		fieldLabel : 'Nationality',
 		store : Ext.create('Ext.data.Store', {
 			fields : [ 'abbr', 'name' ],

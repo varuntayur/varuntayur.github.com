@@ -1,4 +1,4 @@
-Ext.define('scholar.model.administration.admission.Model', {
+Ext.define('scholar.model.administration.admission.SearchModel', {
 	extend: 'Ext.data.Model',
     fields : [ {
 		name : 'admissionNumber',
@@ -6,7 +6,12 @@ Ext.define('scholar.model.administration.admission.Model', {
 	}, {
 		name : 'studentName',
 		type : 'string'
-	}, {
+	},
+	{
+		name : 'sex',
+		type : 'string'
+	},
+	{
 		name : 'courseName',
 		type : 'string'
 	}, {

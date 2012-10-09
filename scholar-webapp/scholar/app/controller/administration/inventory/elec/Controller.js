@@ -7,8 +7,8 @@ Ext.define('scholar.controller.administration.inventory.elec.Controller', {
 
 	views : [ 'administration.admission.Manager' ],
 
-	stores : [ 'administration.admission.Store' ],
+	stores : [ 'administration.admission.SearchStore' ],
 	
-	models : [ 'administration.admission.Model' ]
+	models : [ 'administration.admission.SearchModel' ]
 
 });

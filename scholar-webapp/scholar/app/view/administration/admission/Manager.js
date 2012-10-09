@@ -1,6 +1,6 @@
 Ext.define('scholar.view.administration.admission.Manager', {
 	extend : 'Ext.form.Panel',
-	requires : ['scholar.view.administration.admission.NewAdmissionForm','scholar.store.administration.admission.Store' ],
+	requires : ['scholar.view.administration.admission.NewAdmissionForm' ],
 	alias : 'widget.admissionManager',
 	frame : true,
 	bodyPadding : 5,
@@ -20,7 +20,7 @@ Ext.define('scholar.view.administration.admission.Manager', {
 		xtype : 'livesearchgridpanel',
 		id: 'admissionsGrid',
 		region : 'center',
-		store : 'administration.admission.Store',
+		store : 'administration.admission.SearchStore',
 		columnLines : true,
 		columns : [ {
 			text : 'Admission Number',
@@ -32,7 +32,14 @@ Ext.define('scholar.view.administration.admission.Manager', {
 			width : 125,
 			sortable : true,
 			dataIndex : 'studentName'
-		}, {
+		},
+		{
+			text : 'Sex',
+			width : 50,
+			sortable : true,
+			dataIndex : 'sex'
+		},
+		{
 			text : 'Course Name',
 			width : 125,
 			sortable : true,
