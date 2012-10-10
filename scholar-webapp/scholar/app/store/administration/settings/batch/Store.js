@@ -4,7 +4,8 @@ Ext.define('scholar.store.administration.settings.batch.Store', {
 	data : [
                    ["AL", "A"],
                    ["AK", "C"],
-                   ["AZ", "CS 1"]
+                   ["AZ", "CS 1"],
+                   ["AZ", "2012"]
            ],
 	autoLoad : true
 });

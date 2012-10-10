@@ -11,125 +11,32 @@ Ext.define('scholar.view.administration.admission.NewAdmissionFormSecond', {
 	bodyPadding : 10,
 	autoScroll: true,
 	items : [ {
-		xtype : 'fieldcontainer',
+		xtype : 'textfield',
+		name:'parentName',
 		fieldLabel : 'Parent Name',
-		labelStyle : 'font-weight:bold;padding:0',
-		layout : 'hbox',
-		defaultType : 'textfield',
-
-		fieldDefaults : {
-			labelAlign : 'top'
-		},
-
-		items : [ {
-			width: 75,
-			name : 'firstName',
-			fieldLabel : 'First',
-			allowBlank : false
-		}, {
-			width : 30,
-			name : 'middleInitial',
-			fieldLabel : 'MI',
-			margins : '0 0 0 5'
-		}, {
-			width: 75,
-			name : 'lastName',
-			fieldLabel : 'Last',
-			allowBlank : false,
-			margins : '0 0 0 5'
-		} ]
-	}, {
+		allowBlank : true
+	},
+	{
 		xtype : 'radiogroup',
 		fieldLabel : 'Relation',
-		columns : 1,
+		columns : 3,
 		items : [ {
 			boxLabel : 'Father',
 			name : 'rb',
-			inputValue : '1',
+			inputValue : 'father',
 			checked : true
 		}, {
 			boxLabel : 'Mother',
 			name : 'rb',
-			inputValue : '2'
+			inputValue : 'mother'
 		},
 		{
 			boxLabel : 'Guardian',
 			name : 'rb',
-			inputValue : '3'
+			inputValue : 'guardian'
 		}]
-	}, Ext.create('Ext.form.ComboBox', {
-		fieldLabel : 'Blood Group	',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Unknown"
-			}, {
-				"abbr" : "AL",
-				"name" : "A+"
-			}, {
-				"abbr" : "AL",
-				"name" : "A-"
-			}, {
-				"abbr" : "AL",
-				"name" : "B+"
-			}, {
-				"abbr" : "AL",
-				"name" : "B-"
-			}, {
-				"abbr" : "AL",
-				"name" : "O+"
-			}, {
-				"abbr" : "AL",
-				"name" : "O-"
-			}, {
-				"abbr" : "AK",
-				"name" : "AB+"
-			}, {
-				"abbr" : "AZ",
-				"name" : "AB-"
-			} ]
-		}),
-		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
-	}), Ext.create('Ext.form.ComboBox', {
-		fieldLabel : 'Nationality',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Indian"
-			}, {
-				"abbr" : "AK",
-				"name" : "Other"
-			} ]
-		}),
-		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
-	}), Ext.create('Ext.form.ComboBox', {
-		fieldLabel : 'Category',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "General"
-			}, {
-				"abbr" : "AL",
-				"name" : "OBC"
-			}, {
-				"abbr" : "AL",
-				"name" : "SC"
-			}, {
-				"abbr" : "AL",
-				"name" : "ST"
-			} ]
-		}),
-		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
-	}), {
+	}, 
+	{
 		xtype : 'textfield',
 		fieldLabel : 'Email Address',
 		vtype : 'email',

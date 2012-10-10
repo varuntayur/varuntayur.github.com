@@ -44,12 +44,41 @@ Ext.define('scholar.view.administration.admission.Manager', {
 			width : 125,
 			sortable : true,
 			dataIndex : 'courseName'
-		}, {
+		},
+		{
+			text : 'Section',
+			width : 125,
+			sortable : true,
+			dataIndex : 'section'
+		},
+		{
 			text : 'Batch Name',
 			width : 125,
 			sortable : true,
 			dataIndex : 'batchName'
-		}, {
+		},
+		{
+			xtype : 'datecolumn',
+			text : 'Date Of Birth',
+			dataIndex : 'dateOfBirth',
+			sortable : true
+		},
+		{
+			text : 'Blood Group',
+			dataIndex : 'bloodGroupName',
+			sortable : true
+		},
+		{
+			text : 'Nationality',
+			dataIndex : 'nationality',
+			sortable : true
+		},
+		{
+			text : 'Category',
+			dataIndex : 'categoryName',
+			sortable : true
+		},
+		{
 			xtype : 'datecolumn',
 			text : 'Admission Date',
 			width : 85,
@@ -63,32 +92,6 @@ Ext.define('scholar.view.administration.admission.Manager', {
 			sortable : true,
 			dataIndex : 'lastChange'
 		} ],
-		listeners: {
-//	        itemdblclick: {
-//	            fn: function(View,  record, item, index, evt, eOpts ){
-//	            	
-////	            	var admForm = new scholar.view.detail.administration.admission.NewAdmissionForm();
-////	            	admForm.load(record);
-//	            	
-//	            	Ext.create('Ext.Window', {
-//						xtype : 'window',
-//						closable : true,
-//						minimizable : false,
-//						title : 'New Admission: Student Details',
-//						layout:'fit',
-//						minHeight: 400,
-//						minWidth: 400,
-//						autoScroll : true,
-//						autoRender: true,
-//						closeAction : 'hide',
-//						constrain : true,
-//						items : [  {
-//							xtype : 'newAdmissionForm'
-//						} ]
-//					}).show();
-//	            }
-//	        }
-	    },
 		dockedItems : [ {
 			xtype : 'toolbar',
 			dock : 'top',

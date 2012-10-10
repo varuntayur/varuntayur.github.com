@@ -3,16 +3,16 @@ Ext.define('scholar.store.administration.admission.CategoryStore', {
 	model : 'scholar.model.administration.admission.CategoryModel',
 	data : [ {
 		"abbr" : "AL",
-		"name" : "General"
+		"categoryName" : "General"
 	}, {
 		"abbr" : "AL",
-		"name" : "OBC"
+		"categoryName" : "OBC"
 	}, {
 		"abbr" : "AL",
-		"name" : "SC"
+		"categoryName" : "SC"
 	}, {
 		"abbr" : "AL",
-		"name" : "ST"
+		"categoryName" : "ST"
 	} ],
 	autoLoad : true
 });

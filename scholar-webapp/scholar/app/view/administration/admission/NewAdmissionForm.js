@@ -60,63 +60,29 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 		xtype:'combo',
 		fieldLabel : 'Category',
 		store :'administration.admission.CategoryStore',
-//			Ext.create('Ext.data.Store', {
-//			fields : [ 'abbr', 'name' ],
-//			data : [ {
-//				"abbr" : "AL",
-//				"name" : "General"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "OBC"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "SC"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "ST"
-//			} ]
-//		}),
 		queryMode : 'local',
-		displayField : 'name',
+		displayField : 'categoryName',
 		valueField : 'abbr'
 	},
-	Ext.create('Ext.form.ComboBox', {
+	{
+		xtype:'combo',
 		fieldLabel : 'Course',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Standard 1"
-			}, {
-				"abbr" : "AK",
-				"name" : "Standard 2"
-			}, {
-				"abbr" : "AZ",
-				"name" : "B.E"
-			} ]
-		}),
+		store : 'administration.settings.course.Store',
 		queryMode : 'local',
-		displayField : 'name',
+		name:'courseName',
+		displayField : 'courseName',
 		valueField : 'abbr'
-	}), Ext.create('Ext.form.ComboBox', {
+	},
+	{
+		xtype:'combo',
 		fieldLabel : 'Batch',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "A"
-			}, {
-				"abbr" : "AK",
-				"name" : "C"
-			}, {
-				"abbr" : "AZ",
-				"name" : "CS 1"
-			} ]
-		}),
+		store : 'administration.settings.batch.Store',
+		name:'batchName',
 		queryMode : 'local',
-		displayField : 'name',
+		displayField : 'batchName',
 		valueField : 'abbr'
-	}), {
+	},
+	{
 		xtype : 'textfield',
 		fieldLabel : 'Email Address',
 		vtype : 'email',
