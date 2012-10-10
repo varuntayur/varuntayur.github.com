@@ -44,78 +44,43 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 		xtype:'combo',
 		fieldLabel : 'Blood Group',
 		store :'administration.admission.BloodGroupStore', 
-//			Ext.create('Ext.data.Store', {
-//			fields : [ 'abbr', 'name' ],
-//			data : [ {
-//				"abbr" : "AL",
-//				"name" : "Unknown"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "A+"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "A-"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "B+"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "B-"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "O+"
-//			}, {
-//				"abbr" : "AL",
-//				"name" : "O-"
-//			}, {
-//				"abbr" : "AK",
-//				"name" : "AB+"
-//			}, {
-//				"abbr" : "AZ",
-//				"name" : "AB-"
-//			} ]
-//		}),
 		queryMode : 'local',
 		displayField : 'bloodGroupName',
 		valueField : 'bloodGroupName'
 	},
-	Ext.create('Ext.form.ComboBox', {
+	{
+		xtype:'combo',
 		fieldLabel : 'Nationality',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Indian"
-			}, {
-				"abbr" : "AK",
-				"name" : "Other"
-			} ]
-		}),
+		store : 'administration.admission.NationalityStore',
 		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
-	}), Ext.create('Ext.form.ComboBox', {
+		displayField : 'nationality',
+		valueField : 'nationality'
+	},
+	{
+		xtype:'combo',
 		fieldLabel : 'Category',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "General"
-			}, {
-				"abbr" : "AL",
-				"name" : "OBC"
-			}, {
-				"abbr" : "AL",
-				"name" : "SC"
-			}, {
-				"abbr" : "AL",
-				"name" : "ST"
-			} ]
-		}),
+		store :'administration.admission.CategoryStore',
+//			Ext.create('Ext.data.Store', {
+//			fields : [ 'abbr', 'name' ],
+//			data : [ {
+//				"abbr" : "AL",
+//				"name" : "General"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "OBC"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "SC"
+//			}, {
+//				"abbr" : "AL",
+//				"name" : "ST"
+//			} ]
+//		}),
 		queryMode : 'local',
 		displayField : 'name',
 		valueField : 'abbr'
-	}), Ext.create('Ext.form.ComboBox', {
+	},
+	Ext.create('Ext.form.ComboBox', {
 		fieldLabel : 'Course',
 		store : Ext.create('Ext.data.Store', {
 			fields : [ 'abbr', 'name' ],

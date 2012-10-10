@@ -38,13 +38,16 @@ Ext.define('scholar.controller.administration.admission.Controller', {
 
 	stores : [ 
 	           'administration.admission.SearchStore',
-	           'administration.settings.batch.Store',
-	           'administration.admission.BloodGroupStore'
+	           'administration.admission.BloodGroupStore',
+	           'administration.admission.NationalityStore',
+	           'administration.admission.CategoryStore'
 	         ],
 	
 	models : [ 
 	           'administration.admission.SearchModel',
-	           'administration.admission.BloodGroupModel'
+	           'administration.admission.BloodGroupModel',
+	           'administration.admission.NationalityModel',
+	           'administration.admission.CategoryModel'
 	         ]
 
 });
