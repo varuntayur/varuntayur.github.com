@@ -7,8 +7,38 @@ Ext.define('scholar.controller.administration.examination.schedule.Controller', 
 		this.control({
             '#examScheduleSearchGrid': {
             	itemdblclick: this.editExaminationSchedule
+            },
+            'scheduleSearch button[action=add]' : {
+            	click: this.addSchedule
+            },
+            'scheduleSearch button[action=delete]' : {
+            	click: this.deleteSchedule
             }
+            
         });
+	},
+	
+	deleteSchedule: function()
+	{
+		
+	},
+	
+	addSchedule: function()
+	{
+		Ext.create('Ext.Window', {
+			xtype : 'window',
+			closable : true,
+			minimizable : false,
+			title : 'Exam Schedule Details',
+			layout:'fit',
+			autoScroll : true,
+			autoRender: true,
+			closeAction : 'hide',
+			constrain : true,
+			items : [ {
+				xtype : 'scheduleDetailsTab'
+			} ]
+		}).show();
 	},
 	
 	editExaminationSchedule: function(grid, record) {

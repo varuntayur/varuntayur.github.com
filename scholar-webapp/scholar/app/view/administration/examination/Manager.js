@@ -13,10 +13,12 @@ Ext.define('scholar.view.administration.examination.Manager', {
 
 	items : [
 	         {
-				xtype:'scheduleTab'
+				xtype:'scheduleTab',
+				iconCls:'x-icon-timetable'
 			 },
 			 {
-				xtype:'examSettingsTab'
+				xtype:'examSettingsTab',
+				iconCls: 'x-icon-settings'
 			},
 			{
 				title : 'Reports',

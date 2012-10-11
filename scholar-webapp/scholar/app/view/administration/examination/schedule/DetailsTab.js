@@ -17,7 +17,8 @@ Ext.define('scholar.view.administration.examination.schedule.DetailsTab', {
 		store : 'administration.settings.course.Store',
 		queryMode : 'local',
 		displayField : 'courseName',
-		valueField : 'abbr'
+		valueField : 'abbr',
+		name:'courseName'
 	},
 	{ 
 		xtype:'combo',
@@ -25,7 +26,8 @@ Ext.define('scholar.view.administration.examination.schedule.DetailsTab', {
 		store :'administration.settings.batch.Store',
 		queryMode : 'local',
 		displayField : 'batchName',
-		valueField : 'abbr'
+		valueField : 'abbr',
+		name:'batchName'
 	},
 	{ 
 		xtype:'combo',
@@ -48,11 +50,31 @@ Ext.define('scholar.view.administration.examination.schedule.DetailsTab', {
 		}),
 		queryMode : 'local',
 		displayField : 'subjectName',
-		valueField : 'abbr'		
+		valueField : 'abbr',
+		name: 'subjectName'
 	},
 	{
 		xtype : 'datefield',
 		fieldLabel : 'Examination Date',
 		name : 'examDate'
-	} ]
+	} ],
+	buttons : [
+				{
+					text : 'Cancel',
+					handler : function() {
+						this.up('form').getForm().reset();
+						this.up('window').hide();
+					}
+				},
+				{
+					text : 'Save',
+					handler : function() {
+						if (this.up('form').getForm().isValid()) {
+							
+							this.up('window').hide();
+							
+							Ext.MessageBox.alert('Success!','Your request has been saved.');
+						}
+					}
+				} ]
 });

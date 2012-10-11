@@ -2,7 +2,6 @@ Ext.define('scholar.view.administration.examination.schedule.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias: 'widget.scheduleSearch',
 	id: 'examScheduleSearchGrid',
-	requires : [ 'scholar.view.administration.examination.schedule.NewSchedule'],
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
@@ -10,30 +9,12 @@ Ext.define('scholar.view.administration.examination.schedule.Search', {
 			xtype : 'button',
 			iconCls:'x-icon-new',
 			text : 'Add',
-			listeners : {
-				click : function() {
-					Ext.create('Ext.Window', {
-						xtype : 'window',
-						closable : true,
-						minimizable : false,
-						title : 'New Schedule',
-						layout:'fit',
-						minHeight: 250,
-						minWidth: 400,
-						autoScroll : true,
-						autoRender: true,
-						closeAction : 'hide',
-						constrain : true,
-						items : [ {
-							xtype : 'newExamSchedule'
-						} ]
-					}).show();
-				}
-			}
+			action:'add',
 		}, {
 			xtype : 'button',
 			iconCls:'x-icon-delete',
-			text : 'Delete'
+			text : 'Delete',
+			action:'delete',
 		} ]
 	} ],
 	store : 'administration.examination.schedule.SearchStore',
@@ -61,13 +42,7 @@ Ext.define('scholar.view.administration.examination.schedule.Search', {
 		width : 85,
 		sortable : true,
 		dataIndex : 'examDate'
-	} ],
-//	listeners : {
-//		selectionchange : function(model, records) {
-//			if (records[0]) {
-//				Ext.ComponentQuery.query('#scheduleDetailsTab')[0].loadRecord(records[0]);
-//			}
-//		}
-//	}
+	} ]
+
 });
 
