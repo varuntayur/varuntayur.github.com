@@ -1,9 +1,9 @@
 Ext.define('scholar.view.administration.settings.batch.Manager', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'scholar.view.administration.settings.subject.Manager',
-			'scholar.view.administration.settings.batch.DetailsTab',
-			'scholar.view.administration.settings.batch.Search',
-			'scholar.view.administration.settings.batch.NewBatch'],
+	requires : [ 
+			'scholar.view.administration.settings.batch.Detail',
+			'scholar.view.administration.settings.batch.Search'
+			],
 	alias: 'widget.batchManager',
 	title:'Batch',			
 	frame : true,
@@ -23,20 +23,6 @@ Ext.define('scholar.view.administration.settings.batch.Manager', {
 				xtype : 'batchSearch',
 				region:'center'			
 
-			},
-			{
-				xtype:'tabpanel',
-				region:'south',
-				items:[{
-				       xtype:'batchDetailsTab',
-				       iconCls:'x-icon-info-details'
-				},
-				{
-					title: 'Subject Setting',
-					layout:'fit',
-					iconCls:'x-icon-subject',
-					items:[{xtype : 'subjectManager'}]
-
-				}]
-			}]			
+			}
+			]
 });

@@ -36,7 +36,7 @@ Ext.define('scholar.controller.administration.examination.schedule.Controller', 
 			closeAction : 'hide',
 			constrain : true,
 			items : [ {
-				xtype : 'scheduleDetailsTab'
+				xtype : 'scheduleDetail'
 			} ]
 		}).show();
 	},
@@ -44,7 +44,7 @@ Ext.define('scholar.controller.administration.examination.schedule.Controller', 
 	editExaminationSchedule: function(grid, record) {
         console.log('Double clicked on ' + record.get('courseName'));
                     
-        var admForm = Ext.widget('scheduleDetailsTab');
+        var admForm = Ext.widget('scheduleDetail');
         admForm.loadRecord(record);
         
         Ext.create('Ext.Window', {
@@ -62,7 +62,7 @@ Ext.define('scholar.controller.administration.examination.schedule.Controller', 
     },
 
 	views : [ 'administration.examination.schedule.Search',
-	          'administration.examination.schedule.DetailsTab' ],
+	          'administration.examination.schedule.Detail' ],
 
 	stores : [ 'administration.examination.schedule.SearchStore' ],
 	

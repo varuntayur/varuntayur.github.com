@@ -17,7 +17,6 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 						closable : true,
 						minimizable : false,
 						title : 'New Subject',
-						width : 400,
 						autoScroll : true,
 						autoRender: true,
 						closeAction : 'destroy',
@@ -34,38 +33,7 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 			text : 'Delete'
 		} ]
 	} ],
-	store : //'administration.settings.subject.Store',
-		new Ext.data.ArrayStore({
-		fields : [  {
-			name : 'subjectName',
-			type : 'string'
-		},
-		{
-			name : 'subjectCode',
-			type : 'string'
-		},
-		{
-			name : 'examinationRequired',
-			type : 'boolean'
-		},
-		{
-			name : 'startDate',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		}, {
-			name : 'endDate',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		}, {
-			name : 'lastChange',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		} ],
-		data : [
-				[ 'Mathematics', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
-				[ 'Science', '1/5 12:00am','1/4 12:00am', '9/1 12:00am' ],
-				[ 'Social', '1/9 12:00am','1/8 12:00am', '9/1 12:00am' ] ]
-	}),
+	store : 'administration.settings.subject.SearchStore',
 	columnLines : true,
 	columns : [  {
 		text : 'Subject Name',
@@ -106,6 +74,7 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 		dataIndex : 'lastChange'
 	}  ],
 	height : 250,
+	width: 500,
 	viewConfig : {
 		stripeRows : true
 	},

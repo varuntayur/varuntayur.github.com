@@ -1,8 +1,8 @@
 Ext.define('scholar.view.administration.settings.course.Manager', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'scholar.view.administration.settings.course.DetailsTab',
-	 			'scholar.view.administration.settings.course.Search',
-	 			'scholar.view.administration.settings.course.NewCourse'],
+	requires : [ 'scholar.view.administration.settings.course.Detail',
+	 			'scholar.view.administration.settings.course.Search'
+	 			],
 	alias : 'widget.courseManager',
 	title:'Course',
 	frame : true,
@@ -23,13 +23,6 @@ Ext.define('scholar.view.administration.settings.course.Manager', {
 				xtype : 'courseSearch',
 				region:'center'			
 			
-			},
-			{
-				xtype:'tabpanel',
-				region:'south',
-				items:[{
-				       xtype:'courseDetailsTab',
-				       iconCls:'x-icon-info-details'
-				}]
-			} ]
+			}
+			]
 });

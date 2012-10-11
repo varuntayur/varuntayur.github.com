@@ -1,6 +1,6 @@
-Ext.define('scholar.view.administration.examination.schedule.DetailsTab', {
+Ext.define('scholar.view.administration.examination.schedule.Detail', {
 	extend : 'Ext.form.Panel',
-	alias : 'widget.scheduleDetailsTab',
+	alias : 'widget.scheduleDetail',
 	title : 'Schedule Details',
 	fieldDefaults : {
 		labelAlign : 'left',
@@ -32,22 +32,7 @@ Ext.define('scholar.view.administration.examination.schedule.DetailsTab', {
 	{ 
 		xtype:'combo',
 		fieldLabel : 'Subject Name',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'subjectName' ],
-			data : [ {
-				"abbr" : "AL",
-				"subjectName" : "Mathematics"
-			}, {
-				"abbr" : "AL",
-				"subjectName" : "Science"
-			}, {
-				"abbr" : "AL",
-				"subjectName" : "Social Science"
-			}, {
-				"abbr" : "AL",
-				"subjectName" : "Civics"
-			}]
-		}),
+		store : 'administration.settings.subject.SearchStore',
 		queryMode : 'local',
 		displayField : 'subjectName',
 		valueField : 'abbr',

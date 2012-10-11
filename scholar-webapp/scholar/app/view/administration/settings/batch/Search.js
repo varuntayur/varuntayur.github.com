@@ -1,6 +1,7 @@
 Ext.define('scholar.view.administration.settings.batch.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias: 'widget.batchSearch',
+	id: 'settingsBatchSearch',
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
@@ -8,30 +9,12 @@ Ext.define('scholar.view.administration.settings.batch.Search', {
 			xtype : 'button',
 			iconCls:'x-icon-new',
 			text : 'Add',
-			listeners : {
-				click : function() {
-					Ext.create('Ext.Window', {
-						xtype : 'window',
-						closable : true,
-						minimizable : false,
-						title : 'New Batch',
-						layout:'fit',
-						minHeight: 400,
-						minWidth: 400,
-						autoScroll : true,
-						autoRender: true,
-						closeAction : 'hide',
-						constrain : true,
-						items : [ {
-							xtype : 'newBatch'
-						} ]
-					}).show();
-				}
-			}
+			action:'add',
 		}, {
 			xtype : 'button',
 			iconCls:'x-icon-delete',
-			text : 'Delete'
+			text : 'Delete',
+			action:'delete',
 		} ]
 	} ],
 	store : 'administration.settings.batch.SearchStore',
@@ -70,13 +53,6 @@ Ext.define('scholar.view.administration.settings.batch.Search', {
 		flex : 1,
 		sortable : true,
 		dataIndex : 'lastChange'
-	} ],
-	listeners : {
-		selectionchange : function(model, records) {
-			if (records[0]) {
-				this.up('form').getForm().loadRecord(records[0]);
-			}
-		}
-	}
+	} ]	
 });
 

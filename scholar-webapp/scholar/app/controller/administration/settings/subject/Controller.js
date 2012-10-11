@@ -7,8 +7,8 @@ Ext.define('scholar.controller.administration.settings.subject.Controller', {
 
 	views : [ 'administration.settings.subject.Manager' ],
 
-	stores : [ 'administration.settings.subject.Store' ],
+	stores : [ 'administration.settings.subject.SearchStore' ],
 
-	models : [ 'administration.settings.subject.Model' ]
+	models : [ 'administration.settings.subject.SearchModel' ]
 
 });

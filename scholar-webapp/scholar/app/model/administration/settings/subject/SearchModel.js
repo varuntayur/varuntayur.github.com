@@ -1,4 +1,4 @@
-Ext.define('scholar.model.administration.settings.subject.Model', {
+Ext.define('scholar.model.administration.settings.subject.SearchModel', {
 	extend : 'Ext.data.Model',
 	fields : [  {
 		name : 'subjectName',
@@ -24,6 +24,6 @@ Ext.define('scholar.model.administration.settings.subject.Model', {
 		name : 'lastChange',
 		type : 'date',
 		dateFormat : 'n/j h:ia'
-	} ],
+	} ]
 
 });
