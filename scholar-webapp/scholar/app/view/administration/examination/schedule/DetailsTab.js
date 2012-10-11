@@ -2,60 +2,19 @@ Ext.define('scholar.view.administration.examination.schedule.DetailsTab', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.scheduleDetailsTab',
 	title : 'Schedule Details',
-	columnWidth : 0.4,
-	margin : '10 10 10 10',
-	defaults : {
-		width : 300,
-		labelWidth : 90
+	fieldDefaults : {
+		labelAlign : 'left',
+		msgTarget : 'side'
 	},
+	header : false,
+	border : false,
+	bodyPadding : 10,
+	autoScroll: true,
 	defaultType : 'textfield',
 	items : [ { 
 		xtype:'combo',
 		fieldLabel : 'Course Name',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'courseName' ],
-			data : [ {
-				"abbr" : "AL",
-				"courseName" : "Standard 1"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 2"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 3"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 4"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 5"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 6"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 7"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 8"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 9"
-			},
-			{
-				"abbr" : "AL",
-				"courseName" : "Standard 10"
-			}
-			]
-		}),
+		store : 'administration.settings.course.Store',
 		queryMode : 'local',
 		displayField : 'courseName',
 		valueField : 'abbr'
@@ -63,22 +22,7 @@ Ext.define('scholar.view.administration.examination.schedule.DetailsTab', {
 	{ 
 		xtype:'combo',
 		fieldLabel : 'Batch Name',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'batchName' ],
-			data : [ {
-				"abbr" : "AL",
-				"batchName" : "A"
-			}, {
-				"abbr" : "AL",
-				"batchName" : "B"
-			}, {
-				"abbr" : "AL",
-				"batchName" : "C"
-			}, {
-				"abbr" : "AL",
-				"batchName" : "D"
-			}]
-		}),
+		store :'administration.settings.batch.Store',
 		queryMode : 'local',
 		displayField : 'batchName',
 		valueField : 'abbr'

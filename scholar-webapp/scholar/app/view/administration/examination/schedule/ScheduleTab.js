@@ -23,14 +23,16 @@ Ext.define('scholar.view.administration.examination.schedule.ScheduleTab', {
 	         {		
 	        	 	xtype:'scheduleSearch',
 	        	 	region:'center'
-			 },
-			 {
-				    xtype:'tabpanel',
-					region:'south',
-					items:[{
-					    	   xtype:'scheduleDetailsTab',
-					    	   itemId:'scheduleDetailsTab',
-					    	   iconCls:'x-icon-info-details'
-					}]
-			 }]
+			 }
+//	         ,
+//			 {
+//				    xtype:'tabpanel',
+//					region:'south',
+//					items:[{
+//					    	   xtype:'scheduleDetailsTab',
+//					    	   itemId:'scheduleDetailsTab',
+//					    	   iconCls:'x-icon-info-details'
+//					}]
+//			 }
+			 ]
 });

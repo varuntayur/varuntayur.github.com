@@ -1,6 +1,7 @@
 Ext.define('scholar.view.administration.examination.schedule.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias: 'widget.scheduleSearch',
+	id: 'examScheduleSearchGrid',
 	requires : [ 'scholar.view.administration.examination.schedule.NewSchedule'],
 	dockedItems : [ {
 		xtype : 'toolbar',
@@ -35,36 +36,7 @@ Ext.define('scholar.view.administration.examination.schedule.Search', {
 			text : 'Delete'
 		} ]
 	} ],
-	store : new Ext.data.ArrayStore({
-		fields : [ {
-			name : 'courseName',
-			type : 'string'
-		}, {
-			name : 'batchName',
-			type : 'string'
-		},
-		{
-			name : 'subjectName',
-			type : 'string'
-		},
-		{
-			name : 'examDate',
-			type : 'date',
-			dateFormat : 'n/j h:ia'
-		} ],
-		data : [
-				[ 'Standard 1', 'A','Subject 1'	,'9/1 12:00am' ],
-				[ 'Standard 2', 'A','Subject 2',	'9/1 12:00am' ],
-				[ 'Standard 3', 'A','Subject 2',	'9/1 12:00am' ],
-				[ 'Standard 4', 'A','Subject 2',	'9/1 12:00am' ],
-				[ 'Standard 5', 'A','Subject 2',	'9/1 12:00am' ],
-				[ 'Standard 6', 'A','Subject 2',	'9/1 12:00am' ],
-				[ 'Standard 7', 'A','Subject 2',	'9/1 12:00am' ],
-				[ 'Standard 8', 'A','Subject 2',	'9/1 12:00am' ],
-				[ 'Standard 9', 'A','Subject 2',	'9/1 12:00am' ],
-				[ 'Standard 10', 'A','Subject 2',	'9/1 12:00am' ]
-			   ]
-	}),
+	store : 'administration.examination.schedule.SearchStore',
 	columnLines : true,
 	columns : [ {
 		text : 'Course Name',
@@ -90,12 +62,12 @@ Ext.define('scholar.view.administration.examination.schedule.Search', {
 		sortable : true,
 		dataIndex : 'examDate'
 	} ],
-	listeners : {
-		selectionchange : function(model, records) {
-			if (records[0]) {
-				Ext.ComponentQuery.query('#scheduleDetailsTab')[0].loadRecord(records[0]);
-			}
-		}
-	}
+//	listeners : {
+//		selectionchange : function(model, records) {
+//			if (records[0]) {
+//				Ext.ComponentQuery.query('#scheduleDetailsTab')[0].loadRecord(records[0]);
+//			}
+//		}
+//	}
 });
 

@@ -46,7 +46,8 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 		store :'administration.admission.BloodGroupStore', 
 		queryMode : 'local',
 		displayField : 'bloodGroupName',
-		valueField : 'bloodGroupName'
+		valueField : 'bloodGroupName',
+		name:'bloodGroupName'
 	},
 	{
 		xtype:'combo',
@@ -54,7 +55,8 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 		store : 'administration.admission.NationalityStore',
 		queryMode : 'local',
 		displayField : 'nationality',
-		valueField : 'nationality'
+		valueField : 'nationality',
+		name:'nationality'
 	},
 	{
 		xtype:'combo',
@@ -62,7 +64,8 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 		store :'administration.admission.CategoryStore',
 		queryMode : 'local',
 		displayField : 'categoryName',
-		valueField : 'abbr'
+		valueField : 'abbr',
+		name:'categoryName'
 	},
 	{
 		xtype:'combo',
