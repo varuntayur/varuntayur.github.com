@@ -29,6 +29,7 @@ Ext.application({
                   'scholar.controller.administration.inventory.infra.Controller',
                   'scholar.controller.administration.inventory.perishable.Controller',                  
                   'scholar.controller.administration.user.roles.Controller',
+                  'scholar.controller.administration.user.Controller',
                   
                   'scholar.controller.finance.fees.Controller',
                   'scholar.controller.finance.payroll.Controller',
