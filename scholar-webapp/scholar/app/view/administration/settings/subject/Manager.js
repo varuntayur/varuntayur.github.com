@@ -1,8 +1,8 @@
 Ext.define('scholar.view.administration.settings.subject.Manager', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
-	requires : ['scholar.view.administration.settings.subject.NewSubject' ],
 	alias: 'widget.subjectManager',
 	frame : true,
+	id:'settingsSubjectSearch',
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
@@ -10,27 +10,12 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 			xtype : 'button',
 			iconCls:'x-icon-new',
 			text : 'Add',
-			listeners : {
-				click : function() {
-					Ext.create('Ext.Window', {
-						xtype : 'window',
-						closable : true,
-						minimizable : false,
-						title : 'New Subject',
-						autoScroll : true,
-						autoRender: true,
-						closeAction : 'destroy',
-						constrain : true,
-						items : [ {
-							xtype : 'newSubjectForm'
-						} ]
-					}).show();
-				}
-			}
+			action:'add',
 		}, {
 			xtype : 'button',
 			iconCls:'x-icon-delete',
-			text : 'Delete'
+			text : 'Delete',
+			action:'delete',
 		} ]
 	} ],
 	store : 'administration.settings.subject.SearchStore',
@@ -78,29 +63,29 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 	viewConfig : {
 		stripeRows : true
 	},
-	listeners: {
-        itemdblclick: {
-            fn: function(View,  record, item, index, evt, eOpts ){
-            	
-            	var admForm = new scholar.view.administration.subject.NewSubject();
-            	admForm.load(record);
-            	
-            	Ext.create('Ext.Window', {
-					xtype : 'window',
-					closable : true,
-					minimizable : false,
-					title : 'Edit Subject',
-					layout:'fit',
-					minHeight: 400,
-					minWidth: 400,
-					autoScroll : true,
-					autoRender: true,
-					closeAction : 'hide',
-					constrain : true,
-					items : [ admForm ]
-				}).show();
-            }
-        }
-    },
+//	listeners: {
+//        itemdblclick: {
+//            fn: function(View,  record, item, index, evt, eOpts ){
+//            	
+//            	var admForm = new scholar.view.administration.subject.NewSubject();
+//            	admForm.load(record);
+//            	
+//            	Ext.create('Ext.Window', {
+//					xtype : 'window',
+//					closable : true,
+//					minimizable : false,
+//					title : 'Edit Subject',
+//					layout:'fit',
+//					minHeight: 400,
+//					minWidth: 400,
+//					autoScroll : true,
+//					autoRender: true,
+//					closeAction : 'hide',
+//					constrain : true,
+//					items : [ admForm ]
+//				}).show();
+//            }
+//        }
+//    },
 	
 });

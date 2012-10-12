@@ -1,6 +1,6 @@
-Ext.define('scholar.view.administration.settings.subject.NewSubject', {
+Ext.define('scholar.view.administration.settings.subject.Detail', {
 	extend : 'Ext.form.Panel',
-	alias : 'widget.newSubjectForm',
+	alias : 'widget.subjectDetail',
 	fieldDefaults : {
 		labelAlign : 'left',
 		msgTarget : 'side'
@@ -10,11 +10,13 @@ Ext.define('scholar.view.administration.settings.subject.NewSubject', {
 	bodyPadding : 10,
 	items : [ {
 		xtype : 'textfield',
-		fieldLabel : 'Subject Name'
+		fieldLabel : 'Subject Name',
+		name:'subjectName'
 	}, {
 		xtype : 'textfield',
 		fieldLabel : 'Subject Code',
 		afterLabelTextTpl : false,
+		name:'subjectCode'
 	},
 	Ext.create('Ext.form.ComboBox', {
 		fieldLabel : 'Examination Required',
@@ -28,17 +30,20 @@ Ext.define('scholar.view.administration.settings.subject.NewSubject', {
 				"name" : "No"
 			} ]
 		}),
+		name:'examinationRequired',
 		queryMode : 'local',
 		displayField : 'name',
 		valueField : 'abbr'
 	}),
 	{
 		xtype : 'datefield',
-		fieldLabel : 'Start Date'
+		fieldLabel : 'Start Date',
+		name:'startDate'
 	},
 	{
 		xtype : 'datefield',
-		fieldLabel : 'End Date'
+		fieldLabel : 'End Date',
+		name:'endDate'
 	}],
 
 	buttons : [

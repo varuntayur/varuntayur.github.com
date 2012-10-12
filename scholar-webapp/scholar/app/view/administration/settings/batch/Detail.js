@@ -25,7 +25,8 @@ Ext.define('scholar.view.administration.settings.batch.Detail', {
 						store : 'administration.settings.course.Store',
 						queryMode : 'local',
 						displayField : 'courseName',
-						valueField : 'abbr'
+						valueField : 'abbr',
+						name:'courseName'
 					},
 					{
 						fieldLabel : 'Section',
@@ -33,16 +34,18 @@ Ext.define('scholar.view.administration.settings.batch.Detail', {
 					}, {
 						xtype : 'datefield',
 						fieldLabel : 'Start Date',
-						name : 'lastChange'
+						name : 'startDate'
 					}, {
 						xtype : 'datefield',
 						fieldLabel : 'End Date',
-						name : 'lastChange'
-					}, {
-						xtype : 'datefield',
-						fieldLabel : 'Last Updated',
-						name : 'lastChange'
-					}]
+						name : 'endDate'
+					}
+//					, {
+//						xtype : 'datefield',
+//						fieldLabel : 'Last Updated',
+//						name : 'lastChange'
+//					}
+					]
 	         },
 	         {
 	        	 xtype:'fieldset',
