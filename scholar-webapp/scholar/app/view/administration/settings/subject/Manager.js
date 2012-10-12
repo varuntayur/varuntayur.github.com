@@ -63,29 +63,4 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 	viewConfig : {
 		stripeRows : true
 	},
-//	listeners: {
-//        itemdblclick: {
-//            fn: function(View,  record, item, index, evt, eOpts ){
-//            	
-//            	var admForm = new scholar.view.administration.subject.NewSubject();
-//            	admForm.load(record);
-//            	
-//            	Ext.create('Ext.Window', {
-//					xtype : 'window',
-//					closable : true,
-//					minimizable : false,
-//					title : 'Edit Subject',
-//					layout:'fit',
-//					minHeight: 400,
-//					minWidth: 400,
-//					autoScroll : true,
-//					autoRender: true,
-//					closeAction : 'hide',
-//					constrain : true,
-//					items : [ admForm ]
-//				}).show();
-//            }
-//        }
-//    },
-	
 });

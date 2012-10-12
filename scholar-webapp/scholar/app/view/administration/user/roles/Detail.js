@@ -1,6 +1,6 @@
-Ext.define('scholar.view.administration.user.roles.NewRole', {
+Ext.define('scholar.view.administration.user.roles.Detail', {
 	extend : 'Ext.form.Panel',
-	alias : 'widget.newRole',
+	alias : 'widget.roleDetail',
 	fieldDefaults : {
 		labelAlign : 'left',
 		msgTarget : 'side'
@@ -13,10 +13,16 @@ Ext.define('scholar.view.administration.user.roles.NewRole', {
 		labelWidth : 90
 	},
 	defaultType : 'textfield',
-	items : [ {
-		fieldLabel : 'Role Name',
-		name : 'roleName'
-	}],
+	items : [
+	         {
+	        	 fieldLabel : 'Role Name',
+	        	 name : 'roleName'
+	         },
+	         {
+	        	 xtype:'permissionsGrid',
+	        	 layout:'fit'
+	         }
+			 ],
 	buttons : [
 			{
 				text : 'Cancel',

@@ -1,9 +1,8 @@
 Ext.define('scholar.view.administration.user.roles.Manager', {
 	extend : 'Ext.form.Panel',
 	alias: 'widget.roleManager',
-	requires:['scholar.view.administration.user.roles.RoleGrid',
-	          'scholar.view.administration.user.roles.PermissionsGrid'],
-	//layout:'column',
+	requires:['scholar.view.administration.user.roles.Permissions',
+	          'scholar.view.administration.user.roles.Role'],
 	layout: {
 	      type: 'border'
 	},
@@ -12,14 +11,10 @@ Ext.define('scholar.view.administration.user.roles.Manager', {
         split: true
     },
     items: [
-            {
-		        flex: 2,
+		    {
+		        flex: 1,
             	xtype:'roleGrid',
            		region:'center'
-		    },
-		    {
-		    	xtype:'permissionsGrid',
-		    	region: 'south'
 		    }
 		   ]	
 });
