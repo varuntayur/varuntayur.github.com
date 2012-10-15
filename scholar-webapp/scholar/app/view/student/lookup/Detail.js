@@ -1,7 +1,6 @@
-Ext.define('scholar.view.student.lookup.DetailsTab', {
+Ext.define('scholar.view.student.lookup.Detail', {
 	extend : 'Ext.form.Panel',
-	alias : 'widget.studentDetailsTab',
-	title : 'Student Details',
+	alias : 'widget.studentDetail',
 	columnWidth : 0.4,
 	margin : '10 10 10 10',
 	xtype : 'fieldset',
