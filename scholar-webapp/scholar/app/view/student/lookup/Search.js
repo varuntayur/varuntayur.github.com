@@ -6,17 +6,24 @@ Ext.define('scholar.view.student.lookup.Search', {
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
-		items : [ {
-			xtype : 'button',
-			iconCls:'x-icon-new',
-			text : 'Add',
-			action:'add',
-		}, {
-			xtype : 'button',
-			iconCls:'x-icon-delete',
-			text : 'Delete',
-			action:'delete',
-		} ]
+		items : [{
+		        	 xtype : 'button',
+		        	 iconCls:'x-icon-info-details',
+		        	 text : 'View Student Detail',
+		        	 action:'viewStudentDetails',
+		         },
+		         {
+					xtype : 'button',
+					iconCls:'x-icon-attendance',
+					text : 'View Attendance',
+					action:'viewAttendance',
+				},
+				{
+					xtype : 'button',
+					iconCls:'x-icon-grades',
+					text : 'View Grades',
+					action:'viewGrades',
+				}]
 	} ],
 	columnLines : true,
 	columns : [ {

@@ -12,22 +12,28 @@ Ext.define('scholar.view.student.attendance.Report', {
 					anchor : '100%',
 					fieldLabel : 'Date',
 					itemId : 'reportDate',
-					maxValue : new Date()
+					maxValue : new Date(),
+					width:150,
+					labelWidth:50
 				// limited to the current date or prior
 				},
 				Ext.create('Ext.form.ComboBox', {
-					fieldLabel : 'Choose Course',
+					fieldLabel : 'Course',
 					store: 'administration.settings.course.Store',
 					queryMode : 'local',
 					displayField : 'courseName',
-					valueField : 'abbr'
+					valueField : 'abbr',
+					width:150,
+					labelWidth:50
 				}),
 				Ext.create('Ext.form.ComboBox', {
-					fieldLabel : 'Choose Batch',
+					fieldLabel : 'Batch',
 					store: 'administration.settings.batch.Store',
 					queryMode : 'local',
 					displayField : 'batchName',
-					valueField : 'abbr'
+					valueField : 'abbr',
+					width:150,
+					labelWidth:50
 				}),
 				Ext.create('Ext.form.ComboBox',
 						{
@@ -48,6 +54,8 @@ Ext.define('scholar.view.student.attendance.Report', {
 							queryMode : 'local',
 							displayField : 'name',
 							valueField : 'abbr',
+							width:150,
+							labelWidth:50,
 							listeners : {
 								scope : this,
 								'select' : function() {
@@ -114,55 +122,44 @@ Ext.define('scholar.view.student.attendance.Report', {
 			defaultText : me.defaultStatusText,
 			name : 'searchStatusBar'
 		});
+		
+		var daysInMonth = Ext.Date.getDaysInMonth(new Date());
+
+		var dayCols = [];
+		dayCols.push({
+			name : 'admissionNumber',
+			type : 'string'
+		});
+		
+		dayCols.push({
+			name : 'studentName',
+			type : 'string'
+		});
+		dayCols.push({
+			name : 'standard',
+			type : 'string'
+		});
+		for ( var i = 0; i < daysInMonth; i++) {
+			dayCols.push({
+				type : 'bool',
+				name : 'day' + i,
+			});
+			this.columns.push({
+				xtype : 'checkcolumn',
+				text : i + 1,
+				dataIndex : 'day' + i
+			});
+		}
+		
+		this.store = new Ext.data.ArrayStore({
+			fields : dayCols,
+			data : [ [ '001/005', 'Amar','Standard 1', ] ]
+		});
+//		this.reconfigure(store, this.columns);
 
 		me.callParent(arguments);
 	},
 	store : 'student.attendance.SearchStore',
-//	store : new Ext.data.ArrayStore(
-//			{
-//				fields : [ {
-//					name : 'admissionNumber',
-//					type : 'string'
-//				}, {
-//					name : 'studentName',
-//					type : 'string'
-//				}, {
-//					name : 'standard',
-//					type : 'string'
-//				}, {
-//					name : 'address',
-//					type : 'string'
-//				}, {
-//					name : 'lastChange',
-//					type : 'date',
-//					dateFormat : 'n/j h:ia'
-//				} ],
-//				data : [
-//						[ '001/001', 'Amar', 'Standard 1', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '001/002', 'Ishaan', 'Standard 2', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '001/005', 'Pran', 'Standard 3', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '001/010', 'Vishnu', 'Standard 1', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '010/234', 'Sri Hari', 'Standard 5', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '111/286', 'Shiva', 'Standard 8', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '101/234', 'Jyestha', 'Standard 9', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '201/002', 'Laksha', 'Standard 10', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '501/004', 'Sangeetha', 'Standard 4', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '116/006', 'Shwetha', 'Standard 1', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '145/007', 'Sushma', 'Standard 7', 'Blore',
-//								'9/1 12:00am' ],
-//						[ '723/007', 'Santhosh', 'Standard 5', 'Blore',
-//								'9/1 12:00am' ] ]
-//			}),
 	columnLines : true,
 	columns : [ {
 		text : 'Name',
@@ -178,19 +175,7 @@ Ext.define('scholar.view.student.attendance.Report', {
 		width : 75,
 		sortable : true,
 		dataIndex : 'standard'
-	}, {
-		text : 'Address',
-		width : 75,
-		flex : 1,
-		sortable : true,
-		dataIndex : 'address'
-	}, {
-		xtype : 'datecolumn',
-		text : 'Last Updated',
-		width : 85,
-		sortable : true,
-		dataIndex : 'lastChange'
-	} ],
+	}],
 	height : 350,
 	width : 600,
 	viewConfig : {

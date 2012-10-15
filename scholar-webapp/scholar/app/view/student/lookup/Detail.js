@@ -1,9 +1,15 @@
 Ext.define('scholar.view.student.lookup.Detail', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.studentDetail',
-	columnWidth : 0.4,
-	margin : '10 10 10 10',
-	xtype : 'fieldset',
+	fieldDefaults : {
+		labelAlign : 'left',
+		msgTarget : 'side'
+	},
+	header : false,
+	border : false,
+	bodyPadding : 10,
+	autoScroll: true,
+	defaultType : 'textfield',
 	defaults : {
 		width : 300,
 		labelWidth : 90
