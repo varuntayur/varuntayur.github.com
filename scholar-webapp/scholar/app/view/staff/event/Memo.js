@@ -1,4 +1,4 @@
-Ext.define('scholar.view.staff.event.Report', {
+Ext.define('scholar.view.staff.event.Memo', {
 	extend : 'Ext.grid.Panel',
 	alias: 'widget.memos',
 	
@@ -63,25 +63,25 @@ Ext.define('scholar.view.staff.event.Report', {
         me.callParent(arguments);
     },
 	
-	store :'staff.event.SearchStore',
+	store :'staff.event.MemoStore',
 	columnLines : true,
 	columns : [ {
-		text : 'Event Name',
+		text : 'Memo Name',
 		flex : 1,
 		sortable : false,
-		dataIndex : 'eventName'
+		dataIndex : 'memoName'
 	}, {
 		text : 'Description',
 		width : 75,
 		flex : 1,
 		sortable : true,
-		dataIndex : 'eventDescription'
+		dataIndex : 'memoDescription'
 	}, {
 		xtype : 'datecolumn',
-		text : 'Event Date',
+		text : 'Memo Date',
 		width : 85,
 		sortable : true,
-		dataIndex : 'eventDate'
+		dataIndex : 'memoDate'
 	} ],
 	height : 350,
 	width : 600,

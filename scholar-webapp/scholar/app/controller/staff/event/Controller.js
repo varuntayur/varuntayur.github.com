@@ -7,8 +7,13 @@ Ext.define('scholar.controller.staff.event.Controller', {
 
 	views : [ 'staff.event.Manager' ],
 
-	stores : [ 'staff.event.SearchStore','administration.settings.course.Store','administration.settings.batch.Store' ],
+	stores : [ 'staff.event.MemoStore',
+	           'staff.event.EventStore',
+	           'administration.settings.course.Store',
+	           'administration.settings.batch.Store' ],
 	
-	models : [ 'staff.event.SearchModel' ]
+	models : [ 'staff.event.MemoModel',
+	           'staff.event.EventModel'
+	         ]
 
 });

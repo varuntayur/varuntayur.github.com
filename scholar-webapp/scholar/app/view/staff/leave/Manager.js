@@ -19,6 +19,7 @@ Ext.define('scholar.view.staff.leave.Manager', {
             	},
             	{
             		title:'Leave Report',
+            		iconCls:'x-icon-report',
             		xtype:'leaveSearch'
             	}
             ]

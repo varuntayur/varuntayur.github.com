@@ -21,8 +21,8 @@ Ext.define('scholar.controller.staff.lookup.Controller', {
 	
 	viewTimeTable: function(grid, record) {
                  
-	     var admForm = Ext.widget('timetableManager');
-	     admForm.loadRecord(record);
+	     var admForm = Ext.widget('timeTableSearch');
+//	     admForm.loadRecord(record);
 	     
 	     Ext.create('Ext.Window', {
 				xtype : 'window',
@@ -76,7 +76,7 @@ Ext.define('scholar.controller.staff.lookup.Controller', {
 			}).show();
 	},
 
-	views : [ 'staff.lookup.Lookup' ],
+	views : [ 'staff.lookup.Lookup','scholar.view.staff.timetable.Manager' ],
 
 	stores : [ 'staff.lookup.SearchStore' ],
 	

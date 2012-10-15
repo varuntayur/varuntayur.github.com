@@ -1,4 +1,4 @@
-Ext.define('scholar.model.staff.event.SearchModel', {
+Ext.define('scholar.model.staff.event.EventModel', {
 	extend: 'Ext.data.Model',
 	fields : [ {
 		name : 'eventName',

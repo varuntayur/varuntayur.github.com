@@ -1,60 +1,7 @@
 Ext.define('scholar.view.staff.timetable.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias:'widget.timeTableSearch',
-	store: 
-		new Ext.data.ArrayStore({
-		fields : [
-		    {
-				name : 'dayTime',
-				type : 'string'
-			},
-			{
-				name : 'period1',
-				type : 'string'
-			},
-			{
-				name : 'period2',
-				type : 'string'
-			},
-			{
-				name : 'period3',
-				type : 'string'
-			},
-			{
-				name : 'period4',
-				type : 'string',
-			},
-			{
-				name : 'period5',
-				type : 'string'
-			},
-			{
-				name : 'period6',
-				type : 'string'
-			},
-			{
-				name : 'period7',
-				type : 'string'
-			},
-			{
-				name : 'period8',
-				type : 'string'
-			},
-			{
-				name : 'period9',
-				type : 'string'
-			}
-		],
-		data : [
-		        [ 'Monday',   'Maths', 'Social-Science', 'General-Science', 'Short-Break','English','','Lunch','Hindi','Library' ],
-				[ 'Tuesday',  'Social-Science', 'Maths', '', 'Short-Break','General-Science','','Lunch','','Moral-Science' ],
-				[ 'Wednesday', 'English', 'General-Science', 'Maths', 'Short-Break','','General-Science','Lunch','','Physical-Training'  ],
-				[ 'Thursday', 'General-Science', 'Hindi', '', 'Short-Break','Maths','Kannada','Lunch','English','Games' ],
-		        [ 'Friday',   'Hindi', 'Kannada', 'Social-Science', 'Short-Break','General-Science','Maths','Lunch','English','Crafts/Hobbies' ],
-		        [ 'Saturday', 'Social-Science', 'Maths', 'General-Science', 'Short-Break' ],
-		        [ 'Sunday' ]
-		      ]
-	}),
+	store: 'staff.timetable.Store',
     stateful: true,
     collapsible: false,
     multiSelect: true,

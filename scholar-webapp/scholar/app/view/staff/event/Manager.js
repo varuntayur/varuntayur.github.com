@@ -1,20 +1,20 @@
 Ext.define('scholar.view.staff.event.Manager', {
 	extend : 'Ext.tab.Panel',
-	requires : [ 'Ext.window.Window','scholar.view.staff.event.Report' ],
+	requires : [ 'scholar.view.staff.event.Event','scholar.view.staff.event.Memo' ],
 	alias : 'widget.eventManager',
-	title:'Event/Memo',
-	items : [
-	         {
+	title:'Events/Memos',
+	items : [{
 	        	 title : 'Event Register',
 	        	 layout:'fit',
-	        	 xtype : 'memos',
-	        		 iconCls:'x-icon-events'
+	        	 xtype : 'events',
+	        	 iconCls:'x-icon-events'
 	         },
 	         {
 	        	 title : 'Memos',
 	        	 layout:'fit',
 	        	 xtype : 'memos',
 	        	 iconCls:'x-icon-memo'
-	         } ]
+	         }
+	        ]
 });
 

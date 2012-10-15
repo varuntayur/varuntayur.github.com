@@ -3,32 +3,6 @@ Ext.define('scholar.view.staff.leave.settings.Leave', {
 	alias: 'widget.leaveSettings',
 	title:'Leave Settings',
 	store : 'staff.leave.settings.Store',
-//		new Ext.data.ArrayStore({
-//		fields : [ {
-//			name : 'roleName',
-//			type : 'string'
-//		},
-//		{
-//			name : 'numOfSickCasualLeaves',
-//			type : 'string'
-//		},
-//		{
-//			name : 'numOfEarnedLeaves',
-//			type : 'string'
-//		},		
-//		{
-//			name : 'lastChange',
-//			type : 'date',
-//			dateFormat : 'n/j h:ia'
-//		} ],
-//		data : [
-//				[ 'Admin','10','1.5','1/5 12:00am' ],
-//				[ 'Staff','12','1.5','9/1 12:00am' ],
-//				[ 'Student','NA','NA','9/1 12:00am' ],
-//				[ 'Librarian','12','1.5','9/1 12:00am' ],
-//				[ 'Parent','NA','NA','9/1 12:00am' ]
-//			   ]
-//	}),
 	columnLines : true,
 	columns : [ {
 		text : 'Role Name',
@@ -55,10 +29,7 @@ Ext.define('scholar.view.staff.leave.settings.Leave', {
 		flex : 1,
 		sortable : true,
 		dataIndex : 'lastChange'
-	} ],
-	listeners : {
-		selectionchange : function(model, records) {
-		}
-	}
+	} ]
+	
 });
 

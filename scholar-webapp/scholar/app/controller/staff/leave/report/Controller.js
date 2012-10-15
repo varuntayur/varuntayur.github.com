@@ -7,8 +7,8 @@ Ext.define('scholar.controller.staff.leave.report.Controller', {
 
 	views : [ 'staff.leave.report.Search' ],
 
-	stores : [ 'staff.leave.report.Store' ],
+	stores : [ 'staff.leave.report.SearchStore' ],
 	
-	models : [ 'staff.leave.report.Model' ]
+	models : [ 'staff.leave.report.SearchModel' ]
 
 });

@@ -1,29 +1,7 @@
 Ext.define('scholar.view.staff.leave.report.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias: 'widget.leaveSearch',
-	store : 
-		new Ext.data.ArrayStore({
-			fields : [ {
-				name : 'employeeId',
-				type : 'string'
-			}, {
-				name : 'staffName',
-				type : 'string'
-			}, {
-				name : 'department',
-				type : 'string'
-			}, {
-				name : 'address',
-				type : 'string'
-			}, {
-				name : 'lastChange',
-				type : 'date',
-				dateFormat : 'n/j h:ia'
-			} ],
-		data : [ [ '001005', 'Rama', 'CS', 'Blore', '9/1 12:00am' ],
-				[ '001006', 'Krishna', 'Science', 'Blore', '9/1 12:00am' ],
-				[ '001007', 'Govinda', 'Maths', 'Blore', '9/1 12:00am' ] ]
-	}),
+	store : 'staff.leave.report.SearchStore',
 	columnLines : true,
 	columns : [ {
 		text : 'Employee ID',
@@ -40,11 +18,6 @@ Ext.define('scholar.view.staff.leave.report.Search', {
 		width : 75,
 		sortable : true,
 		dataIndex : 'department'
-	}, {
-		text : 'Address',
-		width : 75,
-		sortable : true,
-		dataIndex : 'address'
 	}, {
 		xtype : 'datecolumn',
 		text : 'Last Updated',

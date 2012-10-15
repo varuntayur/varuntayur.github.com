@@ -1,4 +1,4 @@
-Ext.define('scholar.model.staff.leave.report.Model', {
+Ext.define('scholar.model.staff.leave.report.SearchModel', {
 	extend: 'Ext.data.Model',
 	fields : [ {
 		name : 'employeeId',
@@ -9,13 +9,10 @@ Ext.define('scholar.model.staff.leave.report.Model', {
 	}, {
 		name : 'department',
 		type : 'string'
-	}, {
-		name : 'address',
-		type : 'string'
-	}, {
+	},  {
 		name : 'lastChange',
 		type : 'date',
 		dateFormat : 'n/j h:ia'
-	} ],
+	} ]
 	
 });
