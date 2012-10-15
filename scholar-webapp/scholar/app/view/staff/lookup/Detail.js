@@ -1,14 +1,15 @@
-Ext.define('scholar.view.staff.lookup.DetailsTab', {
+Ext.define('scholar.view.staff.lookup.Detail', {
 	extend : 'Ext.form.Panel',
-	alias : 'widget.staffDetailsTab',
+	alias : 'widget.staffDetail',
 	title : 'Staff Details',
-	columnWidth : 0.4,
-	margin : '10 10 10 10',
-	xtype : 'fieldset',
-	defaults : {
-		width : 300,
-		labelWidth : 90
+	fieldDefaults : {
+		labelAlign : 'left',
+		msgTarget : 'side'
 	},
+	header : false,
+	border : false,
+	bodyPadding : 10,
+	autoScroll: true,
 	defaultType : 'textfield',
 	items : [ {
 		fieldLabel : 'Employee ID',

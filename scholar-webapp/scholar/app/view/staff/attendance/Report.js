@@ -1,6 +1,6 @@
-Ext.define('scholar.view.staff.attendance.ReportGrid', {
+Ext.define('scholar.view.staff.attendance.Report', {
 	extend : 'Ext.grid.Panel',
-	alias: 'widget.reportGrid',
+	alias: 'widget.staffAttendanceReport',
 	
 	// Component initialization override: adds the top and bottom toolbars and setup headers renderer.
     initComponent: function() {
@@ -11,21 +11,27 @@ Ext.define('scholar.view.staff.attendance.ReportGrid', {
 					    anchor: '100%',
 					    fieldLabel: 'Date',
 					    itemId: 'staffAttendanceReportDate',
-					    maxValue: new Date()  // limited to the current date or prior
+					    maxValue: new Date(),  // limited to the current date or prior
+						width:150,
+						labelWidth:50
 					},
                     Ext.create('Ext.form.ComboBox', {
 			            fieldLabel: 'Choose Course',
 			            store: 'administration.settings.course.Store',
 			            queryMode: 'local',
 			            displayField: 'courseName',
-			            valueField: 'abbr'
+			            valueField: 'abbr',
+			            width:150,
+						labelWidth:50
                   	}),
                   	Ext.create('Ext.form.ComboBox', {
 			            fieldLabel: 'Choose Batch',
 			            store: 'administration.settings.batch.Store',
 			            queryMode: 'local',
 			            displayField: 'name',
-			            valueField: 'abbr'
+			            valueField: 'abbr',
+			            width:150,
+						labelWidth:50
                   	}),
                   	Ext.create('Ext.form.ComboBox', {
 	  		            fieldLabel: 'Report Type',
@@ -40,6 +46,8 @@ Ext.define('scholar.view.staff.attendance.ReportGrid', {
 	  		            queryMode: 'local',
 	  		            displayField: 'name',
 	  		            valueField: 'abbr',
+	  		            width:150,
+						labelWidth:50,
 	  		            listeners:{
 		  		            scope: this,
 		  		            'select': function()
@@ -103,6 +111,36 @@ Ext.define('scholar.view.staff.attendance.ReportGrid', {
             defaultText: me.defaultStatusText,
             name: 'searchStatusBar'
         });
+        
+        var daysInMonth = Ext.Date.getDaysInMonth(new Date());
+
+		var dayCols = [];
+		dayCols.push({
+	  			name : 'employeeId',
+	  			type : 'string'
+		}, {
+			name : 'staffName',
+			type : 'string'
+		}, {
+			name : 'department',
+			type : 'string'
+		});
+		for ( var i = 0; i < daysInMonth; i++) {
+			dayCols.push({
+				type : 'bool',
+				name : 'day' + i,
+			});
+			this.columns.push({
+				xtype : 'checkcolumn',
+				text : i + 1,
+				dataIndex : 'day' + i
+			});
+		}
+		
+		this.store = new Ext.data.ArrayStore({
+			fields : dayCols,
+			data : [ [ '001005','Ram', 'Science' ] ]
+		});
         
         me.callParent(arguments);
     },

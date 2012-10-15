@@ -1,7 +1,6 @@
 Ext.define('scholar.view.student.attendance.Manager', {
 	extend : 'Ext.form.Panel',
-	requires : ['scholar.view.student.attendance.Report',
-	            'scholar.view.student.attendance.Register'],
+	requires : ['scholar.view.student.attendance.Report'],
 	alias : 'widget.attendanceManager',
 	title:'Attendance',
 	layout:'fit',

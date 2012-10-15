@@ -3,6 +3,29 @@ Ext.define('scholar.view.staff.lookup.Search', {
 	requires : [ 'Ext.window.Window' ],
 	alias: 'widget.staffSearch',
 	store :'staff.lookup.SearchStore',
+	id:'staffLookup',
+	dockedItems : [ {
+		xtype : 'toolbar',
+		dock : 'top',
+		items : [{
+		        	 xtype : 'button',
+		        	 iconCls:'x-icon-info-details',
+		        	 text : 'View Staff Detail',
+		        	 action:'viewStudentDetails',
+		         },
+		         {
+					xtype : 'button',
+					iconCls:'x-icon-attendance',
+					text : 'View Attendance',
+					action:'viewAttendance',
+				},
+				{
+					xtype : 'button',
+					iconCls:'x-icon-schedule',
+					text : 'View Time-Table',
+					action:'viewTimeTable',
+				}]
+	} ],
 	columnLines : true,
 	columns : [ {
 		text : 'Employee ID',		
