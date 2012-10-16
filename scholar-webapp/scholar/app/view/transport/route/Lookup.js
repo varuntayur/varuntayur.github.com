@@ -15,14 +15,7 @@ Ext.define('scholar.view.transport.route.Lookup', {
 		        region: 'center',	        
 		        minHeight: 80,
 		        layout:'fit',
-       			xtype: 'routeSearch',
-       			listeners:{
-		        				selectionchange : function(model, records) {
-		    						if (records[0]) {
-		    							this.up('form').getForm().loadRecord(records[0]);
-		    						}
-		    					}
-      			}
+       			xtype: 'routeSearch'       			
     		}
     	    ]	
 });

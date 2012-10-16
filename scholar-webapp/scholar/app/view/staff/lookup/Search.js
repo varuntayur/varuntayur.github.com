@@ -1,23 +1,29 @@
 Ext.define('scholar.view.staff.lookup.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
-	requires : [ 'Ext.window.Window' ],
 	alias: 'widget.staffSearch',
 	store :'staff.lookup.SearchStore',
 	id:'staffLookup',
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
-		items : [{
-		        	 xtype : 'button',
-		        	 iconCls:'x-icon-info-details',
-		        	 text : 'View Staff Detail',
-		        	 action:'viewStudentDetails',
-		         },
+		items : [
+		         {
+			       	 xtype : 'button',
+			    	 iconCls:'x-icon-new',
+			    	 text : 'Add',
+			    	 action:'addStaff',
+			     },	
+			     {
+			       	 xtype : 'button',
+			    	 iconCls:'x-icon-delete',
+			    	 text : 'Retire',
+			    	 action:'retireStaff',
+			     },	
 		         {
 					xtype : 'button',
 					iconCls:'x-icon-attendance',
 					text : 'View Attendance',
-					action:'viewAttendance',
+					action:'viewStaffAttendance',
 				},
 				{
 					xtype : 'button',

@@ -7,10 +7,10 @@ Ext.define('scholar.controller.staff.lookup.Controller', {
 	            '#staffLookup': {
 	            	itemdblclick: this.editStaffInfo
 	            },
-	            '#staffLookup button[action=viewStudentDetails]':{
+	            '#staffLookup button[action=retireStaff]':{
 	            	click: this.editStaffInfo
 	            },
-	            '#staffLookup button[action=viewAttendance]':{
+	            '#staffLookup button[action=viewStaffAttendance]':{
 	            	click: this.viewAttendance
 	            },
 	            '#staffLookup button[action=viewTimeTable]':{

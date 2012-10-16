@@ -40,36 +40,42 @@ Ext.define('scholar.view.finance.payroll.Search', {
 	columns : [  {
 		text : 'User Name',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'userName'
 	},
 	{
 		text : 'User Role',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'userRole'
 	},
 	{
 		text : 'Date of Joining',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'dateOfJoining'
 	},
 	{
 		text : 'Grade',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'grade'
 	},
 	{
 		text : 'Relevant experience',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'experience'
 	},
 	{
 		xtype : 'datecolumn',
 		text : 'Last Updated',
+		flex:1,
 		width : 85,
 		sortable : true,
 		dataIndex : 'lastChange'

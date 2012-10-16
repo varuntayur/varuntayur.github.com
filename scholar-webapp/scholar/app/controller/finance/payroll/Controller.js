@@ -19,7 +19,7 @@ Ext.define('scholar.controller.finance.payroll.Controller', {
 	
 	setSalaryComponents:function(grid,record)
 	{
-		
+			console.log('Button clicked.To be implemented.');
 	},
 	
 	viewPayslip: function()
