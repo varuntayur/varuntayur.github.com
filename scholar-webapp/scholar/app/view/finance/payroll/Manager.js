@@ -13,7 +13,7 @@ Ext.define('scholar.view.finance.payroll.Manager', {
     items: [
             	{
             		region:'center',
-            		xtype:'payrollUserSearch',
+            		xtype:'payrollSearch',
             		layout:'fit'
             	}
 		   ]	
