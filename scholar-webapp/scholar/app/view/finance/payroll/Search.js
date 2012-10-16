@@ -2,6 +2,21 @@ Ext.define('scholar.view.finance.payroll.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias: 'widget.payrollUserSearch',
 	title:'Payroll Management',
+	dockedItems : [ {
+		xtype : 'toolbar',
+		dock : 'top',
+		items : [ {
+			xtype : 'button',
+			iconCls:'x-icon-new',
+			text : 'Set Salary Components',
+			action:'setSalaryComponents',
+		}, {
+			xtype : 'button',
+			iconCls:'x-icon-delete',
+			text : 'View Payslip',
+			action:'viewPayslip',
+		} ]
+	} ],
 	getTbar :function()
     {
     	return ['Search',{
@@ -44,34 +59,6 @@ Ext.define('scholar.view.finance.payroll.Search', {
     },
 	
 	store : 'finance.payroll.SearchStore',
-//		new Ext.data.ArrayStore({
-//		fields : [  {
-//			name : 'userName',
-//			type : 'string'
-//		}, {
-//			name : 'userRole',
-//			type : 'string'
-//		}, {
-//			name : 'lastChange',
-//			type : 'date',
-//			dateFormat : 'n/j h:ia'
-//		} ],
-//		data : [
-//				[ 'Ram', 'Admin',  '9/1 12:00am' ],
-//				[  'Purushotham', 'Staff', '9/1 12:00am' ],
-//				[  'Amar', 'Staff', '9/1 12:00am' ],
-//				[  'Shanthi', 'Staff', '9/1 12:00am' ],
-//				[  'Shwetha', 'Staff', '9/1 12:00am' ],
-//				[  'Saavan', 'Staff', '9/1 12:00am' ],
-//				[  'Saathvik', 'Staff', '9/1 12:00am' ],
-//				[  'Uday', 'Staff', '9/1 12:00am' ],
-//				[  'Raju', 'Staff', '9/1 12:00am' ],
-//				[ 'Murali', 'Staff',  '9/1 12:00am' ],
-//				[ 'Deepak', 'Staff',  '9/1 12:00am' ],
-//				[ 'Krishna', 'Staff', '9/1 12:00am' ],
-//				[ 'Guru', 'Staff',  '9/1 12:00am' ]
-//		       ]
-//	}),
 	columnLines : true,
 	columns : [  {
 		text : 'User Name',
