@@ -7,12 +7,6 @@ Ext.define('scholar.view.student.lookup.Search', {
 		xtype : 'toolbar',
 		dock : 'top',
 		items : [{
-		        	 xtype : 'button',
-		        	 iconCls:'x-icon-info-details',
-		        	 text : 'View Student Detail',
-		        	 action:'viewStudentDetails',
-		         },
-		         {
 					xtype : 'button',
 					iconCls:'x-icon-attendance',
 					text : 'View Attendance',

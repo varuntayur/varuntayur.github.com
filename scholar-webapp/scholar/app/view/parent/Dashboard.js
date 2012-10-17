@@ -18,7 +18,7 @@ Ext.define('scholar.view.parent.Dashboard', {
 		},
 		margins : '10 10 10 10'
 	},
-	
+	autoScroll: true,
 	items : [
 	         Ext.create('Ext.chart.Chart', {		
 	  		   width: 400,

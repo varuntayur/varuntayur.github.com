@@ -20,7 +20,7 @@ Ext.define('scholar.view.library.Dashboard', {
 		},
 		margins : '10 10 10 10'
 	},
-	
+	autoScroll: true,
 	items : [
 	         Ext.create('Ext.chart.Chart', {		
 	  		   width: 400,

@@ -6,11 +6,11 @@ Ext.define('scholar.view.staff.leave.Manager', {
 	alias: 'widget.leaveManager',
     title:'Leave Absence Manager',
     items: [
-            	{
-            		title:'Settings',
-            		iconCls:'x-icon-settings',
-            		xtype:'leaveSettings'
-            	},
+				{
+					title:'Leave Report',
+					iconCls:'x-icon-report',
+					xtype:'leaveSearch'
+				},
             	{
             		title:'Apply Leave/Check Balance'
             	},
@@ -18,10 +18,11 @@ Ext.define('scholar.view.staff.leave.Manager', {
             		title:'Approve Leaves'
             	},
             	{
-            		title:'Leave Report',
-            		iconCls:'x-icon-report',
-            		xtype:'leaveSearch'
+            		title:'Settings',
+            		iconCls:'x-icon-settings',
+            		xtype:'leaveSettings'
             	}
+            	
             ]
 });
 
