@@ -12,10 +12,12 @@ Ext.define('scholar.view.staff.leave.Manager', {
 					xtype:'leaveSearch'
 				},
             	{
-            		title:'Apply Leave/Check Balance'
+            		title:'Apply Leave/Check Balance',
+            		iconCls:'x-icon-apply-leave'
             	},
             	{
-            		title:'Approve Leaves'
+            		title:'Approve Leaves',
+            		iconCls:'x-icon-approve-leave'
             	},
             	{
             		title:'Settings',

@@ -15,7 +15,7 @@ Ext.define('scholar.view.staff.lookup.Search', {
 			     },	
 			     {
 			       	 xtype : 'button',
-			    	 iconCls:'x-icon-delete',
+			    	 iconCls:'x-icon-apply-retire',
 			    	 text : 'Retire',
 			    	 action:'retireStaff',
 			     },	

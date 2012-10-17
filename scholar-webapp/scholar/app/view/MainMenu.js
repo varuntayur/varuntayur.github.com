@@ -240,17 +240,17 @@ Ext.define('scholar.view.MainMenu', {
 							layout: 'fit',
 							items: {	xtype : 'libraryDashboard' }
 						},
-						{
-							title : 'Lookup',
-							tabTip : 'Book search',
-							layout: 'fit',
-							items: { 
-								xtype : 'libraryLookup'   
-							},
-							iconCls: 'x-icon-search',
-							margin : '1',
-							height : null
-						},
+//						{
+//							title : 'Lookup',
+//							tabTip : 'Book search',
+//							layout: 'fit',
+//							items: { 
+//								xtype : 'libraryLookup'   
+//							},
+//							iconCls: 'x-icon-search',
+//							margin : '1',
+//							height : null
+//						},
 						{
 							title : 'OPAC',
 							tabTip : 'OPAC search',
@@ -258,6 +258,7 @@ Ext.define('scholar.view.MainMenu', {
 							items: { 
 								xtype : 'opacLookup'   
 							},
+							iconCls: 'x-icon-search',
 							margin : '1',
 							height : null
 						}

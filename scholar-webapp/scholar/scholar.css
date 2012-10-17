@@ -224,4 +224,42 @@
 	background-repeat:no-repeat;
 }
 
+.x-icon-settings-wheel{
+	background-image: url(images/settings-wheel.png);
+	background-repeat:no-repeat;
+}
 
+.x-icon-approve-leave{
+	background-image: url(images/approve-leave.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-apply-leave{
+	background-image: url(images/apply-leave.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-apply-retire{
+	background-image: url(images/retire.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-apply-reserve{
+	background-image: url(images/reserveBook.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-apply-return{
+	background-image: url(images/returnBook.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-apply-issue{
+	background-image: url(images/issueBook.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-apply-request{
+	background-image: url(images/requestBook.png);
+	background-repeat:no-repeat;
+}

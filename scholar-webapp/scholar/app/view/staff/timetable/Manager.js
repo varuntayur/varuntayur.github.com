@@ -12,7 +12,7 @@ Ext.define('scholar.view.staff.timetable.Manager', {
 	         },
 	         {
 					title : 'Timetable Factory',
-					iconCls:'x-icon-settings',
+					iconCls:'x-icon-settings-wheel',
 					layout:'fit'
 		     },
 	         {
