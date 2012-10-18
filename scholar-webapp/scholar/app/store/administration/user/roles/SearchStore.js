@@ -6,6 +6,7 @@ Ext.define('scholar.store.administration.user.roles.SearchStore', {
 			[ 'Staff', '9/1 12:00am' ],
 			[ 'Student','9/1 12:00am' ],
 			[ 'Librarian','9/1 12:00am' ],
+			[ 'Driver','9/1 12:00am' ],
 			[ 'Parent','9/1 12:00am' ]
 		   ],
 	autoLoad: true

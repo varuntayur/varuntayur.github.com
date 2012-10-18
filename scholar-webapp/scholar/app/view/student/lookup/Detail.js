@@ -32,5 +32,5 @@ Ext.define('scholar.view.student.lookup.Detail', {
 		xtype : 'datefield',
 		fieldLabel : 'End Date',
 		name : 'lastChange'
-	}]
+	}]	
 });

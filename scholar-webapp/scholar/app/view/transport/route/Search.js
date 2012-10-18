@@ -17,13 +17,8 @@ Ext.define('scholar.view.transport.route.Search', {
 			iconCls:'x-icon-delete',
 			text : 'Delete',
 			action:'deleteRoute',
-		},
-		{
-			xtype : 'button',
-			iconCls:'x-icon-delete',
-			text : 'Manage Route',
-			action:'manageRoute',
-		}]
+		}
+		]
 	} ],
 	columnLines : true,
 	columns : [
