@@ -8,7 +8,7 @@ Ext.define('scholar.controller.finance.fees.Controller', {
 				itemdblclick: this.viewReceipt
 			},
 			'#feeDetailSearch button[action=setFeeStructure]' : {
-				click: this.viewReceipt
+				click: this.viewFeeStructure
 			},
 			'#feeDetailSearch button[action=newFeeCollection]' : {
 				click: this.viewReceipt
@@ -19,14 +19,35 @@ Ext.define('scholar.controller.finance.fees.Controller', {
 		});
 	},
 	
+	viewFeeStructure: function()
+	{
+		Ext.create('Ext.Window', {
+			xtype : 'window',
+			closable : true,
+			minimizable : false,
+			title : 'Fee Structure',
+			layout:'fit',
+			autoScroll : true,
+			autoRender: true,			
+			closeAction : 'hide',
+			constrain : true,
+			items : [ {
+				xtype : 'feeStructure',
+				layout:'fit',
+				width:450,
+				height: 400
+			} ]
+		}).show();
+	},
+	
 	viewReceipt:function(grid,rec)
 	{
 		console.log('Button clicked.To be implemented.');
 	},
 
-	views : [ 'finance.fees.Manager' ],
+	views : [ 'finance.fees.Manager' ,'scholar.view.finance.fees.FeeStructure'],
 
-	stores : [ 'finance.fees.SearchStore' ],
+	stores : [ 'finance.fees.SearchStore','finance.fees.FeeStructureStore' ],
 	
 	models : [ 'finance.fees.SearchModel' ]
 
