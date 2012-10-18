@@ -31,7 +31,7 @@ Ext.define('scholar.view.transport.vehicle.Search', {
 		width : 75,
 		flex:1,
 		sortable : true,
-		dataIndex : 'details'
+		dataIndex : 'vehicleDetails'
 	}, {
 		xtype : 'datecolumn',
 		text : 'Last Updated Date',

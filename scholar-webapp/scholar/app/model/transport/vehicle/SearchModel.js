@@ -4,7 +4,7 @@ Ext.define('scholar.model.transport.vehicle.SearchModel', {
 		name : 'vehicleNumber',
 		type : 'string'
 	}, {
-		name : 'details',
+		name : 'vehicleDetails',
 		type : 'string'
 	}, {
 		name : 'lastUpdatedDate',
