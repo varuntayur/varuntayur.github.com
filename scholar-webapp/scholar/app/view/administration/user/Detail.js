@@ -14,8 +14,12 @@ Ext.define('scholar.view.administration.user.Detail', {
 			 },
 			 {
 				 fieldLabel:'Role',
-				name : 'userRole',
-				type : 'string'
+				 xtype:'combo',
+				 store:'administration.user.roles.SearchStore',
+				 valueField:'roleName',
+				 queryMode : 'local',
+				 displayField:'roleName',
+				 name : 'userRole',
 			 }
 			 ],
 	buttons : [

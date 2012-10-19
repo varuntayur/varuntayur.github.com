@@ -2,7 +2,6 @@ Ext.define('scholar.view.administration.user.roles.Role', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias: 'widget.roleGrid',
 	id:'userRoles',
-	title:'Roles',
 	dockedItems : [ {
 		xtype : 'toolbar',
 		dock : 'top',
@@ -19,23 +18,6 @@ Ext.define('scholar.view.administration.user.roles.Role', {
 		} ]
 	} ],
 	store : 'administration.user.roles.SearchStore',
-//		new Ext.data.ArrayStore({
-//		fields : [ {
-//			name : 'roleName',
-//			type : 'string'
-//		},{
-//			name : 'lastChange',
-//			type : 'date',
-//			dateFormat : 'n/j h:ia'
-//		} ],
-//		data : [
-//				[ 'Admin', '1/5 12:00am' ],
-//				[ 'Staff', '9/1 12:00am' ],
-//				[ 'Student','9/1 12:00am' ],
-//				[ 'Librarian','9/1 12:00am' ],
-//				[ 'Parent','9/1 12:00am' ]
-//			   ]
-//	}),
 	columnLines : true,
 	columns : [ {
 		text : 'Role Name',
@@ -50,9 +32,5 @@ Ext.define('scholar.view.administration.user.roles.Role', {
 		sortable : true,
 		dataIndex : 'lastChange'
 	} ],
-//	listeners : {
-//		selectionchange : function(model, records) {
-//		}
-//	}
 });
 
