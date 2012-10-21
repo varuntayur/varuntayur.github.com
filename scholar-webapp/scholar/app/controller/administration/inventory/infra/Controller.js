@@ -5,20 +5,20 @@ Ext.define('scholar.controller.administration.inventory.infra.Controller', {
 		console.log('Initialized inventory.infra.Controller!');
 		this.control({
 			'#inventoryInfraSearch':{
-				itemdblclick: this.editInventory
+				itemdblclick: this.editInfraInventory
 			},
 			'#inventoryInfraSearch button[action=addInfra]':{
-				itemdblclick: this.addInfraInventory
+				click: this.addInfraInventory
 			},
 			'#inventoryInfraSearch button[action=deleteInfra]':{
-				itemdblclick: this.deleteInfraInventory
+				click: this.deleteInfraInventory
 			}
 		});
 	},
 	
 	editInfraInventory: function(grid,record)
 	{
-		var admForm = Ext.widget('newInfratricInv');
+		var admForm = Ext.widget('newInfraInv');
         admForm.loadRecord(record);
 	
 		Ext.create('Ext.Window', {
@@ -39,7 +39,7 @@ Ext.define('scholar.controller.administration.inventory.infra.Controller', {
 	
 	addInfraInventory: function(grid,record)
 	{
-		 var admForm = Ext.widget('newInfratricInv');
+		 var admForm = Ext.widget('newInfraInv');
 		
 		Ext.create('Ext.Window', {
 			xtype : 'window',
@@ -62,10 +62,10 @@ Ext.define('scholar.controller.administration.inventory.infra.Controller', {
 		
 	},
 
-	views : [ 'administration.admission.Manager' ],
+	views : [ 'administration.inventory.infra.Search','administration.inventory.infra.NewInfra'  ],
 
-	stores : [ 'administration.admission.SearchStore' ],
+	stores : [ 'administration.inventory.infra.SearchStore' ],
 	
-	models : [ 'administration.admission.SearchModel' ]
+	models : [ 'administration.inventory.infra.SearchModel' ]
 
 });

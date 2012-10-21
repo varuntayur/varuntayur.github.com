@@ -14,64 +14,27 @@ Ext.define('scholar.view.administration.inventory.elec.NewElectricInv', {
 	},
 	defaultType : 'textfield',
 	items : [
-	{ 
-		xtype:'combo',
-		fieldLabel : 'Course Name',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Standard 1"
-			}, {
-				"abbr" : "AL",
-				"name" : "Standard 2"
-			}, {
-				"abbr" : "AL",
-				"name" : "B.E"
-			}]
-		}),
-		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
-	},
-	{ 
-		xtype:'combo',
-		fieldLabel : 'Batch Name',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Batch 1"
-			}, {
-				"abbr" : "AL",
-				"name" : "Batch 2"
-			}]
-		}),
-		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
-	},
-	{ 
-		xtype:'combo',
-		fieldLabel : 'Subject Name',
-		store : Ext.create('Ext.data.Store', {
-			fields : [ 'abbr', 'name' ],
-			data : [ {
-				"abbr" : "AL",
-				"name" : "Subject 1"
-			}, {
-				"abbr" : "AL",
-				"name" : "Subject 2"
-			}]
-		}),
-		queryMode : 'local',
-		displayField : 'name',
-		valueField : 'abbr'
-	},
-	{
-		xtype : 'datefield',
-		fieldLabel : 'Examination Date'
-	}],
+	         {
+	     		fieldLabel : 'Item ID',
+	     		name : 'itemId'
+	     	}, {
+	     		fieldLabel : 'Item Name',
+	     		name : 'itemName'
+	     	},
+	     	{
+	     		fieldLabel : 'Item Description',
+	     		name : 'itemDescription'
+	     	},
+	     	{
+	     		fieldLabel : 'Quantity',
+	     		name : 'quantity'
+	     	},
+	     	{
+	     		fieldLabel : 'Acquisition Date',
+	     		name : 'itemAcquisitionDate',
+	     		xtype:'datefield'
+	     	}
+	],
 	buttons : [
 			{
 				text : 'Cancel',

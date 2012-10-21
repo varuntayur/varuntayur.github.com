@@ -8,10 +8,6 @@ Ext.define('scholar.model.administration.inventory.infra.SearchModel', {
 		type : 'string'
 	},
 	{
-		name : 'itemDescription',
-		type : 'string'
-	},
-	{
 		name : 'quantity',
 		type : 'string'
 	},
@@ -19,5 +15,5 @@ Ext.define('scholar.model.administration.inventory.infra.SearchModel', {
 		name : 'itemAcquisitionDate',
 		type : 'date',
 		dateFormat : 'n/j h:ia'
-	}  ]
+	} ]
 });

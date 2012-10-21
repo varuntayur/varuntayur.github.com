@@ -6,13 +6,13 @@ Ext.define('scholar.controller.administration.inventory.elec.Controller', {
 		
 		this.control({
 			'#inventoryElecSearch':{
-				itemdblclick: this.editInventory
+				itemdblclick: this.editElecInventory
 			},
 			'#inventoryElecSearch button[action=addElec]':{
-				itemdblclick: this.addElecInventory
+				click: this.addElecInventory
 			},
 			'#inventoryElecSearch button[action=deleteElec]':{
-				itemdblclick: this.deleteElecInventory
+				click: this.deleteElecInventory
 			}
 		});
 	},
@@ -63,7 +63,7 @@ Ext.define('scholar.controller.administration.inventory.elec.Controller', {
 		
 	},
 
-	views : [ 'administration.inventory.elec.Search' ],
+	views : [ 'administration.inventory.elec.Search','administration.inventory.elec.NewElectricInv' ],
 
 	stores : [ 'administration.inventory.elec.SearchStore' ],
 	

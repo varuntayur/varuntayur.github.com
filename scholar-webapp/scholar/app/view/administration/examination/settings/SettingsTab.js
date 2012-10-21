@@ -23,5 +23,18 @@ Ext.define('scholar.view.administration.examination.settings.SettingsTab', {
 		                {boxLabel: 'Grades and Marks', name: 'cb-auto-3'}            
 		            ]
                 }]
-    }]
+    }],
+    buttons : [
+				{
+					text : 'Cancel',
+					handler : function() {
+					}
+				},
+				{
+					text : 'Save',
+					handler : function() {
+							
+							Ext.MessageBox.alert('Success!','Your request has been saved.');
+					}
+				} ]
 });
