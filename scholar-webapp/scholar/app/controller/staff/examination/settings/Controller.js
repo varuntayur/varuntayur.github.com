@@ -1,4 +1,4 @@
-Ext.define('scholar.controller.administration.examination.settings.Controller', {
+Ext.define('scholar.controller.staff.examination.settings.Controller', {
 	extend : 'Ext.app.Controller',
 
 	init : function() {

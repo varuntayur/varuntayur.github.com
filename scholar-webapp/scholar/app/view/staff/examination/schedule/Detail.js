@@ -1,4 +1,4 @@
-Ext.define('scholar.view.administration.examination.schedule.Detail', {
+Ext.define('scholar.view.staff.examination.schedule.Detail', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.scheduleDetail',
 	title : 'Schedule Details',

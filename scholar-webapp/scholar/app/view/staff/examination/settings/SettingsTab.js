@@ -1,4 +1,4 @@
-Ext.define('scholar.view.administration.examination.settings.SettingsTab', {
+Ext.define('scholar.view.staff.examination.settings.SettingsTab', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.examSettingsTab',
 	title : 'Settings',

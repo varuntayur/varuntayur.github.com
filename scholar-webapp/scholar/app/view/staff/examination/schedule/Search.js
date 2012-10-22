@@ -1,4 +1,4 @@
-Ext.define('scholar.view.administration.examination.schedule.Search', {
+Ext.define('scholar.view.staff.examination.schedule.Search', {
 	extend : 'Ext.ux.LiveSearchGridPanel',
 	alias: 'widget.scheduleSearch',
 	id: 'examScheduleSearchGrid',
@@ -17,7 +17,7 @@ Ext.define('scholar.view.administration.examination.schedule.Search', {
 			action:'delete',
 		} ]
 	} ],
-	store : 'administration.examination.schedule.SearchStore',
+	store : 'staff.examination.schedule.SearchStore',
 	columnLines : true,
 	columns : [ {
 		text : 'Course Name',

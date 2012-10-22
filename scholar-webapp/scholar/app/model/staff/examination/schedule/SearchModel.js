@@ -1,4 +1,4 @@
-Ext.define('scholar.model.administration.examination.schedule.SearchModel', {
+Ext.define('scholar.model.staff.examination.schedule.SearchModel', {
 	extend: 'Ext.data.Model',		
 	fields : [ {
 			name : 'courseName',

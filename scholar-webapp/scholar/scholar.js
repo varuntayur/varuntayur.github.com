@@ -23,8 +23,6 @@ Ext.application({
                   'scholar.controller.administration.settings.course.Controller',
                   'scholar.controller.administration.settings.general.Controller',
                   'scholar.controller.administration.settings.subject.Controller',                  
-                  'scholar.controller.administration.examination.schedule.Controller',
-                  'scholar.controller.administration.examination.settings.Controller',                  
                   'scholar.controller.administration.inventory.elec.Controller',
                   'scholar.controller.administration.inventory.infra.Controller',
                   'scholar.controller.administration.inventory.perishable.Controller',                  
@@ -37,6 +35,8 @@ Ext.application({
                   
                   'scholar.controller.library.lookup.Controller',
                   
+                  'scholar.controller.staff.examination.schedule.Controller',
+                  'scholar.controller.staff.examination.settings.Controller',                  
                   'scholar.controller.staff.attendance.Controller',
                   'scholar.controller.staff.event.Controller',
                   'scholar.controller.staff.leave.settings.Controller',

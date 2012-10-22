@@ -27,13 +27,13 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.administration.settings.Manager',			     
         'scholar.view.administration.inventory.Manager',        
         'scholar.view.administration.user.Manager',
-        'scholar.view.administration.examination.Manager',
         
         'scholar.view.finance.payroll.Manager',
         'scholar.view.finance.settings.Manager',
         'scholar.view.finance.Dashboard',
         'scholar.view.finance.fees.Manager',
 		
+        'scholar.view.staff.examination.Manager',
 		'scholar.view.staff.Dashboard',
 		'scholar.view.staff.lookup.Lookup',
 		'scholar.view.staff.event.Manager',
@@ -71,17 +71,6 @@ Ext.define('scholar.view.MainMenu', {
 						margin : '1',
 						height : null
 					},					
-					{
-						title : 'Examination',
-						tabTip : 'Examination Management',
-						iconCls: 'x-icon-exam',
-						layout: 'fit',
-						items: { 
-							xtype : 'examManager'  
-						},
-						margin : '1',
-						height : null
-					},
 					{
 						title : 'Inventory',
 						tabTip : 'Inventory',
@@ -181,6 +170,17 @@ Ext.define('scholar.view.MainMenu', {
 				        items: {
 				        	  		xtype : 'staffAttendanceManager'  
 						},
+					},
+					{
+						title : 'Examination',
+						tabTip : 'Examination Management',
+						iconCls: 'x-icon-exam',
+						layout: 'fit',
+						items: { 
+							xtype : 'examManager'  
+						},
+						margin : '1',
+						height : null
 					},
 					{
 						title : 'TimeTable',

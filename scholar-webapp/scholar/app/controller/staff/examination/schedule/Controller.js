@@ -1,4 +1,4 @@
-Ext.define('scholar.controller.administration.examination.schedule.Controller', {
+Ext.define('scholar.controller.staff.examination.schedule.Controller', {
 	extend : 'Ext.app.Controller',
 
 	init : function() {
@@ -61,11 +61,11 @@ Ext.define('scholar.controller.administration.examination.schedule.Controller', 
 		}).show();
     },
 
-	views : [ 'administration.examination.schedule.Search',
-	          'administration.examination.schedule.Detail' ],
+	views : [ 'staff.examination.schedule.Search',
+	          'staff.examination.schedule.Detail' ],
 
-	stores : [ 'administration.examination.schedule.SearchStore' ],
+	stores : [ 'staff.examination.schedule.SearchStore' ],
 	
-	models : [ 'administration.examination.schedule.SearchModel' ]
+	models : [ 'staff.examination.schedule.SearchModel' ]
 
 });
