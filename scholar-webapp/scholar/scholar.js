@@ -17,7 +17,6 @@ Ext.application({
     
     controllers: [
                   'Scholar',
-                  'administration.admission.Controller',
                   'scholar.controller.administration.DashboardController',
                   'scholar.controller.administration.settings.batch.Controller',
                   'scholar.controller.administration.settings.course.Controller',
@@ -44,6 +43,7 @@ Ext.application({
                   'scholar.controller.staff.lookup.Controller',
                   'scholar.controller.staff.timetable.Controller',
                   
+                  'student.admission.Controller',
                   'scholar.controller.student.attendance.Controller',
                   'scholar.controller.student.lookup.Controller',
                   'scholar.controller.student.performance.Controller',

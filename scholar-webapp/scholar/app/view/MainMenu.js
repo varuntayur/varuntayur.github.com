@@ -23,7 +23,6 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.library.OPAC' ,
 		
 		'scholar.view.administration.Dashboard',
-		'scholar.view.administration.admission.Manager',		
 		'scholar.view.administration.settings.Manager',			     
         'scholar.view.administration.inventory.Manager',        
         'scholar.view.administration.user.Manager',
@@ -43,6 +42,7 @@ Ext.define('scholar.view.MainMenu', {
 		
 		'scholar.view.parent.Dashboard',
 		
+		'scholar.view.student.admission.Manager',		
 		'scholar.view.student.Dashboard',
 		'scholar.view.student.lookup.Search',
 		'scholar.view.student.lookup.Lookup',
@@ -50,15 +50,16 @@ Ext.define('scholar.view.MainMenu', {
 		'scholar.view.student.attendance.Manager'],
 
 	items : [
-			{
+			
+	        {
 				mainItem : 0,
 				items : [
 					{
-						title : 'Administrator',
-						tabTip : 'Be the administrator',
-						iconCls: 'x-icon-administrator',
+						iconCls: 'x-icon-student',
+						title : 'Student',
+						tabTip : 'Wear the Student hat',
 						border : false,
-						xtype : 'administrationDashboard'
+						xtype : 'studentDashboard'
 					},
 					{
 						title : 'Admissions',
@@ -70,68 +71,26 @@ Ext.define('scholar.view.MainMenu', {
 								},
 						margin : '1',
 						height : null
-					},					
+					},	
+					
 					{
-						title : 'Inventory',
-						tabTip : 'Inventory',
-						iconCls: 'x-icon-inventory',
-						layout: 'fit',
-						items: { 
-							xtype : 'inventoryManager'  
-						},
-						margin : '1',
-						height : null
-					},
-					{
-						title : 'User/Role',
-						tabTip : 'Manager User Roles',
-						iconCls:'x-icon-userrole',
-						layout: 'fit',
-						items: { 
-							xtype : 'userRoleManager'  
-						},
-						margin : '1',
-						height : null
-					},
-					{
-						title : 'Settings',
-						tabTip : 'Settings Management',
-						iconCls: 'x-icon-settings',
-						layout: 'fit',
-						items: { 
-							xtype : 'settingsManager'  
-						},
-						margin : '1',
-						height : null
-					}
-				]
-			},
-	        {
-				mainItem : 0,
-				items : [
-					{
-						iconCls: 'x-icon-student',
-						title : 'Student',
-						tabTip : 'Wear the Student hat',
-						border : false,
-						xtype : 'studentDashboard'
-					}, {
-						title : 'Lookup',
-						tabTip : 'Lookup student detail',
-						iconCls: 'x-icon-search',
-						layout: 'fit',
-						items: { 
-							xtype : 'studentLookup'  
-						},
-						margin : '1',
-						height : null
-					}, {
 						title : 'Attendance',
 						tabTip : 'Attendance',
 						iconCls: 'x-icon-attendance',
 						layout: 'fit',
 						items: { 
 							xtype : 'attendanceManager'  
+						},
+						margin : '1',
+						height : null
+					},
+					{
+						title : 'Lookup',
+						tabTip : 'Lookup student detail',
+						iconCls: 'x-icon-search',
+						layout: 'fit',
+						items: { 
+							xtype : 'studentLookup'  
 						},
 						margin : '1',
 						height : null
@@ -150,17 +109,6 @@ Ext.define('scholar.view.MainMenu', {
 						xtype : 'staffDashboard'
 					},
 					{
-						title : 'Lookup',
-						tabTip : 'Lookup staff information',
-						iconCls: 'x-icon-search',
-						layout: 'fit',
-						items: { 
-							xtype : 'staffLookup' 
-						},
-						margin : '1',
-						height : null
-					},
-					{
 						title : 'Attendance',
 						tabTip : 'Attendance',
 						iconCls: 'x-icon-attendance',						
@@ -169,7 +117,18 @@ Ext.define('scholar.view.MainMenu', {
 						layout: 'fit',
 				        items: {
 				        	  		xtype : 'staffAttendanceManager'  
+						}
+					},
+					{
+						title : 'Events/Memo',
+						tabTip : 'Issue Memos and publish Event Calendars',
+						iconCls:'x-icon-events',
+						layout: 'fit',
+						items: { 
+							xtype : 'eventManager'   
 						},
+						margin : '1',
+						height : null
 					},
 					{
 						title : 'Examination',
@@ -178,17 +137,6 @@ Ext.define('scholar.view.MainMenu', {
 						layout: 'fit',
 						items: { 
 							xtype : 'examManager'  
-						},
-						margin : '1',
-						height : null
-					},
-					{
-						title : 'TimeTable',
-						tabTip : 'Manage Timetable',
-						iconCls:'x-icon-timetable',
-						layout: 'fit',
-						items: { 
-							xtype : 'timetableManager'   
 						},
 						margin : '1',
 						height : null
@@ -205,12 +153,23 @@ Ext.define('scholar.view.MainMenu', {
 						height : null
 					},
 					{
-						title : 'Events/Memo',
-						tabTip : 'Issue Memos and publish Event Calendars',
-						iconCls:'x-icon-events',
+						title : 'Lookup',
+						tabTip : 'Lookup staff information',
+						iconCls: 'x-icon-search',
 						layout: 'fit',
 						items: { 
-							xtype : 'eventManager'   
+							xtype : 'staffLookup' 
+						},
+						margin : '1',
+						height : null
+					},
+					{
+						title : 'TimeTable',
+						tabTip : 'Manage Timetable',
+						iconCls:'x-icon-timetable',
+						layout: 'fit',
+						items: { 
+							xtype : 'timetableManager'   
 						},
 						margin : '1',
 						height : null
@@ -274,23 +233,23 @@ Ext.define('scholar.view.MainMenu', {
 								xtype : 'financeDashboard'
 							},
 							{
-								title : 'Payroll',
-								tabTip : 'Payroll',
-								iconCls: 'x-icon-payroll',
-								layout: 'fit',
-								items: { 
-									xtype : 'payrollManager'  
-								},
-								margin : '1',
-								height : null
-							},
-							{
 								title : 'Fee Collection',
 								tabTip : 'Fee Collection',
 								iconCls: 'x-icon-fees',
 								layout: 'fit',
 								items: { 
 									xtype : 'feesManager'  
+								},
+								margin : '1',
+								height : null
+							},
+							{
+								title : 'Payroll',
+								tabTip : 'Payroll',
+								iconCls: 'x-icon-payroll',
+								layout: 'fit',
+								items: { 
+									xtype : 'payrollManager'  
 								},
 								margin : '1',
 								height : null
@@ -308,6 +267,52 @@ Ext.define('scholar.view.MainMenu', {
 							}
 			     ]
 	         },
+	         {
+					mainItem : 0,
+					items : [
+						{
+							title : 'Administrator',
+							tabTip : 'Be the administrator',
+							iconCls: 'x-icon-administrator',
+							border : false,
+							xtype : 'administrationDashboard'
+						},
+										
+						{
+							title : 'Inventory',
+							tabTip : 'Inventory',
+							iconCls: 'x-icon-inventory',
+							layout: 'fit',
+							items: { 
+								xtype : 'inventoryManager'  
+							},
+							margin : '1',
+							height : null
+						},
+						{
+							title : 'Settings',
+							tabTip : 'Settings Management',
+							iconCls: 'x-icon-settings',
+							layout: 'fit',
+							items: { 
+								xtype : 'settingsManager'  
+							},
+							margin : '1',
+							height : null
+						},
+						{
+							title : 'User/Role',
+							tabTip : 'Manager User Roles',
+							iconCls:'x-icon-userrole',
+							layout: 'fit',
+							items: { 
+								xtype : 'userRoleManager'  
+							},
+							margin : '1',
+							height : null
+						}
+					]
+				},
 	         
 	         {
 				mainItem : 0,

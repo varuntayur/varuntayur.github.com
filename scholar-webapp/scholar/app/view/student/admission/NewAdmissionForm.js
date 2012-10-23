@@ -1,6 +1,6 @@
-Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
+Ext.define('scholar.view.student.admission.NewAdmissionForm', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'scholar.view.administration.admission.NewAdmissionFormSecond'],
+	requires : [ 'scholar.view.student.admission.NewAdmissionFormSecond'],
 	alias : 'widget.newAdmissionForm',
 	fieldDefaults : {
 		labelAlign : 'left',
@@ -40,10 +40,11 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 			name : 'sex',
 			inputValue : 'Female'
 		} ]
-	}, {
+	},
+	{
 		xtype:'combo',
 		fieldLabel : 'Blood Group',
-		store :'administration.admission.BloodGroupStore', 
+		store :'student.admission.BloodGroupStore', 
 		queryMode : 'local',
 		displayField : 'bloodGroupName',
 		valueField : 'bloodGroupName',
@@ -52,7 +53,7 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 	{
 		xtype:'combo',
 		fieldLabel : 'Nationality',
-		store : 'administration.admission.NationalityStore',
+		store : 'student.admission.NationalityStore',
 		queryMode : 'local',
 		displayField : 'nationality',
 		valueField : 'nationality',
@@ -61,7 +62,7 @@ Ext.define('scholar.view.administration.admission.NewAdmissionForm', {
 	{
 		xtype:'combo',
 		fieldLabel : 'Category',
-		store :'administration.admission.CategoryStore',
+		store :'student.admission.CategoryStore',
 		queryMode : 'local',
 		displayField : 'categoryName',
 		valueField : 'abbr',

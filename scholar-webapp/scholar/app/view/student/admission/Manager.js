@@ -1,9 +1,25 @@
-Ext.define('scholar.view.administration.admission.Manager', {
+Ext.define('scholar.view.student.admission.Manager', {
 	extend : 'Ext.form.Panel',
-	requires : ['scholar.view.administration.admission.NewAdmissionForm' ],
+	requires : ['scholar.view.student.admission.NewAdmissionForm' ],
 	alias : 'widget.admissionManager',
+	id:'studentAdmission',
 	frame : true,
 	bodyPadding : 5,
+	dockedItems : [ {
+		xtype : 'toolbar',
+		dock : 'top',
+		items : [ {
+			xtype : 'button',
+			iconCls:'x-icon-new',
+			text : 'Add',
+			action:'newAdmission',
+		}, {
+			xtype : 'button',
+			iconCls:'x-icon-delete',
+			text : 'Delete',
+			action:'deleteAdmission',
+		} ]
+	} ],
 	layout : {
 		type : 'border',
 		padding : 5
@@ -15,12 +31,13 @@ Ext.define('scholar.view.administration.admission.Manager', {
 		labelAlign : 'left',
 		msgTarget : 'side'
 	},
+	
 	title : 'Admissions',
 	items : [ {
 		xtype : 'livesearchgridpanel',
 		id: 'admissionsGrid',
 		region : 'center',
-		store : 'administration.admission.SearchStore',
+		store : 'student.admission.SearchStore',
 		columnLines : true,
 		columns : [ {
 			text : 'Admission Number',
@@ -91,39 +108,39 @@ Ext.define('scholar.view.administration.admission.Manager', {
 			flex : 1,
 			sortable : true,
 			dataIndex : 'lastChange'
-		} ],
-		dockedItems : [ {
-			xtype : 'toolbar',
-			dock : 'top',
-			items : [ {
-				xtype : 'button',
-				text : 'New',
-				iconCls:'x-icon-new',
-				listeners : {
-					click : function() {
-						Ext.create('Ext.Window', {
-							xtype : 'window',
-							closable : true,
-							minimizable : false,
-							title : 'New Admission: Student Details',
-							layout:'fit',
-							minHeight: 400,
-							minWidth: 400,
-							autoScroll : true,
-							autoRender: true,
-							closeAction : 'hide',
-							constrain : true,
-							items : [ {
-								xtype : 'newAdmissionForm'
-							} ]
-						}).show();
-					}
-				}
-			}, {
-				xtype : 'button',
-				text : 'Delete',
-				iconCls:'x-icon-delete',
-			} ]
 		} ]
+//		dockedItems : [ {
+//			xtype : 'toolbar',
+//			dock : 'top',
+//			items : [ {
+//				xtype : 'button',
+//				text : 'New',
+//				iconCls:'x-icon-new',
+//				listeners : {
+//					click : function() {
+//						Ext.create('Ext.Window', {
+//							xtype : 'window',
+//							closable : true,
+//							minimizable : false,
+//							title : 'New Admission: Student Details',
+//							layout:'fit',
+//							minHeight: 400,
+//							minWidth: 400,
+//							autoScroll : true,
+//							autoRender: true,
+//							closeAction : 'hide',
+//							constrain : true,
+//							items : [ {
+//								xtype : 'newAdmissionForm'
+//							} ]
+//						}).show();
+//					}
+//				}
+//			}, {
+//				xtype : 'button',
+//				text : 'Delete',
+//				iconCls:'x-icon-delete',
+//			} ]
+//		} ]
 	} ]
 });

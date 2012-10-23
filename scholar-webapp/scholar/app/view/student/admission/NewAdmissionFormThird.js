@@ -1,4 +1,4 @@
-Ext.define('scholar.view.administration.admission.NewAdmissionFormThird', {
+Ext.define('scholar.view.student.admission.NewAdmissionFormThird', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.newAdmissionFormThird',
 	fieldDefaults : {

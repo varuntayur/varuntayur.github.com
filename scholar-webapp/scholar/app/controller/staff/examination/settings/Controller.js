@@ -5,10 +5,10 @@ Ext.define('scholar.controller.staff.examination.settings.Controller', {
 		console.log('Initialized examination.settings.Controller!');
 	},
 
-	views : [ 'administration.admission.Manager' ],
-
-	stores : [ 'administration.admission.SearchStore' ],
-	
-	models : [ 'administration.admission.SearchModel' ]
+//	views : [ 'administration.admission.Manager' ],
+//
+//	stores : [ 'administration.admission.SearchStore' ],
+//	
+//	models : [ 'administration.admission.SearchModel' ]
 
 });

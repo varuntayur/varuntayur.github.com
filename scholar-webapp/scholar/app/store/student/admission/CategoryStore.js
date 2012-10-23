@@ -1,6 +1,6 @@
-Ext.define('scholar.store.administration.admission.CategoryStore', {
+Ext.define('scholar.store.student.admission.CategoryStore', {
 	extend : 'Ext.data.Store',
-	model : 'scholar.model.administration.admission.CategoryModel',
+	model : 'scholar.model.student.admission.CategoryModel',
 	data : [ {
 		"abbr" : "AL",
 		"categoryName" : "General"

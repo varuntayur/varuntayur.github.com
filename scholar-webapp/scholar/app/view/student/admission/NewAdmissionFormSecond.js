@@ -1,6 +1,6 @@
-Ext.define('scholar.view.administration.admission.NewAdmissionFormSecond', {
+Ext.define('scholar.view.student.admission.NewAdmissionFormSecond', {
 	extend : 'Ext.form.Panel',
-	requires : [ 'scholar.view.administration.admission.NewAdmissionFormThird' ],
+	requires : [ 'scholar.view.student.admission.NewAdmissionFormThird' ],
 	alias : 'widget.newAdmissionFormSecond',
 	fieldDefaults : {
 		labelAlign : 'left',

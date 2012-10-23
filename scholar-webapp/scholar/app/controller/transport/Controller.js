@@ -5,10 +5,10 @@ Ext.define('scholar.controller.transport.Controller', {
 		console.log('Initialized transport.Controller!');
 	},
 
-	views : [ 'administration.admission.Manager' ],
-
-	stores : [ 'administration.admission.SearchStore' ],
-	
-	models : [ 'administration.admission.SearchModel' ]
+//	views : [ 'administration.admission.Manager' ],
+//
+//	stores : [ 'administration.admission.SearchStore' ],
+//	
+//	models : [ 'administration.admission.SearchModel' ]
 
 });

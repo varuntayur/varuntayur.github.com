@@ -1,6 +1,6 @@
-Ext.define('scholar.store.administration.admission.BloodGroupStore', {
+Ext.define('scholar.store.student.admission.BloodGroupStore', {
 	extend : 'Ext.data.Store',
-	model : 'scholar.model.administration.admission.BloodGroupModel',
+	model : 'scholar.model.student.admission.BloodGroupModel',
 	data : [ {
 		"abbr" : "AL",
 		"bloodGroupName" : "Unknown"

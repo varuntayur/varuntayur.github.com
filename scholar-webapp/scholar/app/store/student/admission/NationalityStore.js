@@ -1,6 +1,6 @@
-Ext.define('scholar.store.administration.admission.NationalityStore', {
+Ext.define('scholar.store.student.admission.NationalityStore', {
 	extend : 'Ext.data.Store',
-	model : 'scholar.model.administration.admission.NationalityModel',
+	model : 'scholar.model.student.admission.NationalityModel',
 	data : [ {
 		"abbr" : "AL",
 		"nationality" : "Indian"

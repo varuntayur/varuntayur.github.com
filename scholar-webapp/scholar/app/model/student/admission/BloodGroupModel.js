@@ -1,10 +1,10 @@
-Ext.define('scholar.model.administration.admission.CategoryModel', {
+Ext.define('scholar.model.student.admission.BloodGroupModel', {
 	extend: 'Ext.data.Model',
     fields : [ {
 		name : 'abbr',
 		type : 'string'
 	}, {
-		name : 'categoryName',
+		name : 'bloodGroupName',
 		type : 'string'
 	}
 	]

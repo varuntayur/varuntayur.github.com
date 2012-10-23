@@ -1,6 +1,6 @@
-Ext.define('scholar.store.administration.admission.SearchStore', {
+Ext.define('scholar.store.student.admission.SearchStore', {
 	extend : 'Ext.data.Store',
-	model : 'scholar.model.administration.admission.SearchModel',
+	model : 'scholar.model.student.admission.SearchModel',
 	data : [
 			[ '001/001', 'Amar', 'Male', 'Standard 1', 'A', '2012',
 					'2007-01-01', 'O+', 'Indian', 'GM', '4/5 12:00am',

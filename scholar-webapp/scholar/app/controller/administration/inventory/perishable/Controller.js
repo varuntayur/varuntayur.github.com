@@ -62,10 +62,10 @@ Ext.define('scholar.controller.administration.inventory.perishable.Controller', 
 		
 	},
 
-	views : [ 'administration.admission.Manager' ],
-
-	stores : [ 'administration.admission.SearchStore' ],
-	
-	models : [ 'administration.admission.SearchModel' ]
+//	views : [ 'administration.inventory.infra.Search','administration.inventory.infra.NewInfra' ],
+//
+//	stores : [ 'administration.inventory.infra.SearchStore' ],
+//	
+//	models : [ 'administration.inventory.infra.SearchModel'  ]
 
 });

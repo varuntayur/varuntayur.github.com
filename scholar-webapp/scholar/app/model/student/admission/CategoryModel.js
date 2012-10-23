@@ -1,10 +1,10 @@
-Ext.define('scholar.model.administration.admission.NationalityModel', {
+Ext.define('scholar.model.student.admission.CategoryModel', {
 	extend: 'Ext.data.Model',
     fields : [ {
 		name : 'abbr',
 		type : 'string'
 	}, {
-		name : 'nationality',
+		name : 'categoryName',
 		type : 'string'
 	}
 	]
