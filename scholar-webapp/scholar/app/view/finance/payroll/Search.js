@@ -13,7 +13,7 @@ Ext.define('scholar.view.finance.payroll.Search', {
 			action:'setSalaryComponents',
 		}, {
 			xtype : 'button',
-			iconCls:'x-icon-delete',
+			iconCls:'x-icon-print-preview',
 			text : 'View Payslip',
 			action:'viewPayslip',
 		} ]

@@ -263,3 +263,18 @@
 	background-image: url(images/requestBook.png);
 	background-repeat:no-repeat;
 }
+
+.x-icon-print{
+	background-image: url(images/print.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-print-preview{
+	background-image: url(images/print-preview.png);
+	background-repeat:no-repeat;
+}
+
+.x-icon-fee-structure{
+	background-image: url(images/fee-structure.png);
+	background-repeat:no-repeat;
+}

@@ -8,19 +8,19 @@ Ext.define('scholar.view.finance.fees.Search', {
 		dock : 'top',
 		items : [ {
 			xtype : 'button',
-			iconCls:'x-icon-new',
+			iconCls:'x-icon-fee-structure',
 			text : 'Set Fee Structure',
 			action:'setFeeStructure',
 		},
 		{
 			xtype : 'button',
-			iconCls:'x-icon-delete',
+			iconCls:'x-icon-new',
 			text : 'New Fee Collection',
 			action:'newFeeCollection',
 		},
 		{
 			xtype : 'button',
-			iconCls:'x-icon-delete',
+			iconCls:'x-icon-print-preview',
 			text : 'View/Print Receipt',
 			action:'viewReceipt',
 		}]
