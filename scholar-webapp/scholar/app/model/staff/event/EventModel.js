@@ -6,10 +6,16 @@ Ext.define('scholar.model.staff.event.EventModel', {
 	}, {
 		name : 'eventDescription',
 		type : 'string'
-	}, {
-		name : 'eventDate',
+	},
+	{
+		name : 'eventStartDate',
 		type : 'date',
 		dateFormat : 'n/j h:ia'
-	} ],
+	},
+	{
+		name : 'eventEndDate',
+		type : 'date',
+		dateFormat : 'n/j h:ia'
+	}],
 	
 });

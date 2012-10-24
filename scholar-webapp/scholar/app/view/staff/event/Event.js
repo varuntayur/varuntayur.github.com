@@ -1,7 +1,22 @@
 Ext.define('scholar.view.staff.event.Event', {
 	extend : 'Ext.grid.Panel',
 	alias: 'widget.events',
-	
+	id:'staffEvent',
+	dockedItems : [ {
+		xtype : 'toolbar',
+		dock : 'top',
+		items : [ {
+			xtype : 'button',
+			iconCls:'x-icon-new',
+			text : 'Add',
+			action:'addEvent',
+		}, {
+			xtype : 'button',
+			iconCls:'x-icon-delete',
+			text : 'Delete',
+			action:'deleteEvent',
+		} ]
+	} ],
 	// Component initialization override: adds the top and bottom toolbars and setup headers renderer.
     initComponent: function() {
         var me = this;
@@ -76,13 +91,23 @@ Ext.define('scholar.view.staff.event.Event', {
 		flex : 1,
 		sortable : true,
 		dataIndex : 'eventDescription'
-	}, {
+	},
+	{
 		xtype : 'datecolumn',
-		text : 'Event Date',
+		text : 'Event Start Date',
 		width : 85,
+		flex : 1,
 		sortable : true,
-		dataIndex : 'eventDate'
-	} ],
+		dataIndex : 'eventStartDate'
+	},
+	{
+		xtype : 'datecolumn',
+		text : 'Event End Date',
+		width : 85,
+		flex : 1,
+		sortable : true,
+		dataIndex : 'eventEndDate'
+	}],
 	height : 350,
 	width : 600,
 	viewConfig : {

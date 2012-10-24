@@ -1,7 +1,22 @@
 Ext.define('scholar.view.staff.event.Memo', {
 	extend : 'Ext.grid.Panel',
 	alias: 'widget.memos',
-	
+	id:'staffMemo',
+	dockedItems : [ {
+		xtype : 'toolbar',
+		dock : 'top',
+		items : [ {
+			xtype : 'button',
+			iconCls:'x-icon-new',
+			text : 'Add',
+			action:'addMemo',
+		}, {
+			xtype : 'button',
+			iconCls:'x-icon-delete',
+			text : 'Delete',
+			action:'deleteMemo',
+		} ]
+	} ],
 	// Component initialization override: adds the top and bottom toolbars and setup headers renderer.
     initComponent: function() {
         var me = this;
@@ -80,6 +95,7 @@ Ext.define('scholar.view.staff.event.Memo', {
 		xtype : 'datecolumn',
 		text : 'Memo Date',
 		width : 85,
+		flex : 1,
 		sortable : true,
 		dataIndex : 'memoDate'
 	} ],
