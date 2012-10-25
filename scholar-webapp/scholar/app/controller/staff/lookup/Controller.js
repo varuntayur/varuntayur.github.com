@@ -7,6 +7,9 @@ Ext.define('scholar.controller.staff.lookup.Controller', {
 	            '#staffLookup': {
 	            	itemdblclick: this.editStaffInfo
 	            },
+	            '#staffLookup button[action=addStaff]':{
+	            	click: this.addStaff
+	            },
 	            '#staffLookup button[action=retireStaff]':{
 	            	click: this.editStaffInfo
 	            },
@@ -56,6 +59,24 @@ Ext.define('scholar.controller.staff.lookup.Controller', {
 				items : [  admForm ]
 			}).show();
  	},
+ 	
+ 	addStaff: function() {
+        
+	     var admForm = Ext.widget('staffDetail');
+	     
+	     Ext.create('Ext.Window', {
+				xtype : 'window',
+				closable : true,
+				minimizable : false,
+				title : 'Staff Details',
+				layout:'fit',			
+				autoScroll : true,
+				autoRender: true,
+				closeAction : 'hide',
+				constrain : true,
+				items : [  admForm ]
+			}).show();
+	},
 	
  	editStaffInfo: function(grid, record) {
                  
@@ -76,10 +97,17 @@ Ext.define('scholar.controller.staff.lookup.Controller', {
 			}).show();
 	},
 
-	views : [ 'staff.lookup.Lookup','scholar.view.staff.timetable.Manager' ],
+	views : [ 'staff.lookup.Lookup',
+	          'staff.timetable.Manager' 
+	          ,'staff.lookup.SubjectAllocation'
+	          ],
 
-	stores : [ 'staff.lookup.SearchStore' ],
+	stores : [ 'staff.lookup.SearchStore' ,
+	           'staff.lookup.SubjectAllocationStore'
+	           ],
 	
-	models : [ 'staff.lookup.SearchModel' ]
+	models : [ 'staff.lookup.SearchModel',
+	           'staff.lookup.SubjectAllocationModel'
+	           ]
 
 });

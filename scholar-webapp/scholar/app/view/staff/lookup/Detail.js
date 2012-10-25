@@ -2,6 +2,7 @@ Ext.define('scholar.view.staff.lookup.Detail', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.staffDetail',
 	title : 'Staff Details',
+	requires :['scholar.view.staff.lookup.SubjectAllocation'],
 	fieldDefaults : {
 		labelAlign : 'left',
 		msgTarget : 'side'
@@ -17,10 +18,9 @@ Ext.define('scholar.view.staff.lookup.Detail', {
 	}, {
 		fieldLabel : 'Employee Name',
 		name : 'staffName'
-	}, {
-		fieldLabel : 'Department',
-		name : 'department'
-	}, {
+	},
+	
+	{
 		xtype : 'textarea',
 		fieldLabel : 'Address',
 		name : 'address'
@@ -28,5 +28,30 @@ Ext.define('scholar.view.staff.lookup.Detail', {
 		xtype : 'datefield',
 		fieldLabel : 'End Date',
 		name : 'lastChange'
-	}]
+	},
+	{
+		fieldLabel : 'Department',
+		name : 'department',
+		xtype:'combo',
+		store:'administration.settings.department.SearchStore',
+		queryMode: 'local',
+		valueField:'departmentName',
+		displayField:'departmentName'
+	},	
+    {
+	   	 xtype:'fieldset',
+	   	 collapsible: true,
+		 border : false,
+		 bodyPadding : 10,
+		 autoScroll: true,	
+		 frame : true,	
+	   	 title:'Subject Information',
+	   	 width: 500,
+	   	 layout:'fit',
+	   	 items:[{
+	   		 	layout:'fit',	        		 	
+	   		 	xtype:'subjectAllocation'
+	   	 }]
+    }
+	]
 });
