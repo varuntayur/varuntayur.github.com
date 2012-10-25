@@ -22,10 +22,12 @@ Ext.define('scholar.view.administration.settings.course.Search', {
 	columns : [ {
 		text : 'Course Code',
 		sortable : false,
+		flex:1,
 		dataIndex : 'courseCode'
 	}, {
 		text : 'Course Name',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'courseName'
 	}, {

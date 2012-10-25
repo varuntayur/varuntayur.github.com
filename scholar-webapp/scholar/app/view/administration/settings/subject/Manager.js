@@ -23,18 +23,21 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 	columns : [  {
 		text : 'Subject Name',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'subjectName'
 	},
 	{
 		text : 'Subject Code',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'subjectCode'
 	},
 	{
 		text : 'Examination Required',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'examinationRequired'
 	},
@@ -42,12 +45,14 @@ Ext.define('scholar.view.administration.settings.subject.Manager', {
 		xtype : 'datecolumn',
 		text : 'Start Date',
 		width : 85,
+		flex:1,
 		sortable : true,
 		dataIndex : 'startDate'
 	}, {
 		xtype : 'datecolumn',
 		text : 'End Date',
 		width : 85,
+		flex:1,
 		sortable : true,
 		dataIndex : 'endDate'
 	}, {

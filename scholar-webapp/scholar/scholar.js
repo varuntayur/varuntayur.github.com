@@ -19,6 +19,7 @@ Ext.application({
                   'Scholar',
                   'scholar.controller.administration.DashboardController',
                   'scholar.controller.administration.settings.batch.Controller',
+                  'scholar.controller.administration.settings.department.Controller',
                   'scholar.controller.administration.settings.course.Controller',
                   'scholar.controller.administration.settings.general.Controller',
                   'scholar.controller.administration.settings.subject.Controller',                  

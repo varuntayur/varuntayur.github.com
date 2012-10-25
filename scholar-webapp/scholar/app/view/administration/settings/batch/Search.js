@@ -22,28 +22,33 @@ Ext.define('scholar.view.administration.settings.batch.Search', {
 	columns : [ {
 		text : 'Batch Name',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'batchName'
 	}, {
 		text : 'Course Name',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'courseName'
 	}, {
 		text : 'Section',
 		width : 75,
+		flex:1,
 		sortable : true,
 		dataIndex : 'section'
 	}, {
 		xtype : 'datecolumn',
 		text : 'Start Date',
 		width : 85,
+		flex:1,
 		sortable : true,
 		dataIndex : 'startDate'
 	}, {
 		xtype : 'datecolumn',
 		text : 'End Date',
 		width : 85,
+		flex:1,
 		sortable : true,
 		dataIndex : 'endDate'
 	}, {
